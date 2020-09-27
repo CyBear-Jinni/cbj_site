@@ -1,5 +1,5 @@
 # CyBear Jinni Site
 
-This code is "the face behind the company" the Site of CyBear Jinni.
+This repository is "the face behind the company" the **Site** of CyBear Jinni Smart Home.
 
-You can find the full project with the instructions and code [here](https://github.com/CyBear-Jinni/CBJ_Smart-Home.git).
+#[For the project itself click here](https://github.com/CyBear-Jinni/CBJ_Smart-Home.git).

@@ -8,6 +8,8 @@
 [<div align="center"><img alt="CyBear Jinni image" height="400" src="https://raw.githubusercontent.com/CyBear-Jinni/CBJ_Site/master/assets/fan_art/after_editing/logo_no_background.png">](https://github.com/CyBear-Jinni/CBJ_Smart-Home)
 </div>
 
+# Hello There
+
 Have you ever wondered if there is an open source project to make your own smart home?, cause you just found part of one! 😎.
 
 This repository is "the face behind the company" the **Site** of [CyBear Jinni Smart Home](https://github.com/CyBear-Jinni/CBJ_Smart-Home.git).

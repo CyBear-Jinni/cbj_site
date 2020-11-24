@@ -1,6 +1,7 @@
-import 'package:cybear_jinni_site/features/home_page/tabs/about.dart';
-import 'package:cybear_jinni_site/features/home_page/tabs/home.dart';
-import 'package:cybear_jinni_site/features/home_page/tabs/news.dart';
+
+import 'package:cybear_jinni_site/features/application/usecases/home_page/tabs/about.dart';
+import 'package:cybear_jinni_site/features/application/usecases/home_page/tabs/home/home.dart';
+import 'package:cybear_jinni_site/features/application/usecases/home_page/tabs/news.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -10,7 +11,6 @@ class LandingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
-      padding: const EdgeInsets.all(5.0),
       decoration: BoxDecoration(
         gradient: LinearGradient(
           // Where the linear gradient begins and ends
@@ -30,7 +30,7 @@ class LandingPage extends StatelessWidget {
         length: 3,
         child: Scaffold(
           backgroundColor: Colors.transparent,
-          body: TabBarView(children: [
+          body: TabBarView(children: <Widget>[
             HomeTab(),
             AboutTab(),
             NewsTab(),

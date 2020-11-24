@@ -1,4 +1,4 @@
-import 'package:cybear_jinni_site/features/home_page/landing_page.dart';
+import 'package:cybear_jinni_site/features/application/usecases/home_page/landing_page.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 

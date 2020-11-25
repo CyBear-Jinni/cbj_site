@@ -38,8 +38,6 @@ dependencies:
   lint: ^1.3.0
   # Internationalization (Easy translations)
   easy_localization: ^2.3.3
-  # Cross-fades to the loaded image
-  image_fade: ^0.2.1
 
 dev_dependencies:
   flutter_test:
@@ -58,6 +56,7 @@ flutter:
 
   assets:
     - assets/
+    - assets/fan_art/after_editing/
     - assets/translations/
     - assets/images/
 

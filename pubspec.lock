@@ -126,13 +126,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "8.10.0"
-  image_fade:
-    dependency: "direct main"
-    description:
-      name: image_fade
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.2.1"
   intl:
     dependency: transitive
     description:

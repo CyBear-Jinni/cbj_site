@@ -60,6 +60,7 @@ flutter:
 
   assets:
     - assets/
+    - assets/fan_art/
     - assets/fan_art/after_editing/
     - assets/translations/
     - assets/images/

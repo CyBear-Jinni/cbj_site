@@ -10,13 +10,12 @@ class BottomNavigationMenu extends StatelessWidget{
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
-        const SizedBox(height: 500,),
+        const SizedBox(height: 100,),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 100,
             vertical: 5,),
           child: Column(
             children: <Widget>[
-
               Divider(
                 color: Theme.of(context).textTheme.bodyText1.color,
                 thickness: 1,
@@ -28,21 +27,13 @@ class BottomNavigationMenu extends StatelessWidget{
                   Column(
                     children: <Widget>[
                       const Text('Apps',
-                        style: TextStyle(fontSize: 30,
+                        style: TextStyle(fontSize: 40,
                           decoration: TextDecoration.underline,
                         ),),
                       Row(
                           mainAxisAlignment:
                           MainAxisAlignment.spaceBetween,
                           children: const <Widget>[
-                            SizedBox(width: 40,),
-                            Tab(
-                              icon: Icon(FontAwesomeIcons.googlePlay,
-                                  color: Colors.white),
-                              child: Text(
-                                'Play Store',
-                              ),
-                            ),
                             SizedBox(width: 40,),
                             Tab(
                               icon: Icon(FontAwesomeIcons.appStoreIos,
@@ -52,13 +43,21 @@ class BottomNavigationMenu extends StatelessWidget{
                               ),
                             ),
                             SizedBox(width: 40,),
+                            Tab(
+                              icon: Icon(FontAwesomeIcons.googlePlay,
+                                  color: Colors.white),
+                              child: Text(
+                                'Play Store',
+                              ),
+                            ),
+                            SizedBox(width: 40,),
                           ]),
                     ],
                   ),
                   Column(
                     children: <Widget>[
                       const Text('Follow Us',
-                        style: TextStyle(fontSize: 30,
+                        style: TextStyle(fontSize: 40,
                           decoration: TextDecoration.underline,
                         ),
                       ),
@@ -80,7 +79,7 @@ class BottomNavigationMenu extends StatelessWidget{
                               ),
                             ),
 
-                            SizedBox(width: 20,),
+                            const SizedBox(width: 20,),
 
 
                             GestureDetector(
@@ -95,7 +94,7 @@ class BottomNavigationMenu extends StatelessWidget{
                               ),
                             ),
 
-                            SizedBox(width: 20,),
+                            const SizedBox(width: 20,),
 
                             GestureDetector(
                               onTap: () {
@@ -109,7 +108,7 @@ class BottomNavigationMenu extends StatelessWidget{
                               ),
                             ),
 
-                            SizedBox(width: 20,),
+                            const SizedBox(width: 20,),
 
                             GestureDetector(
                               onTap: () {
@@ -122,9 +121,7 @@ class BottomNavigationMenu extends StatelessWidget{
                                 child: Text(''),
                               ),
                             ),
-
-                            SizedBox(width: 40,),
-
+                            const SizedBox(width: 40,),
                           ]
                       ),
                     ],

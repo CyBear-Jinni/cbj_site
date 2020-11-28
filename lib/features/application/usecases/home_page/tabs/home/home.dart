@@ -1,7 +1,11 @@
+import 'package:cybear_jinni_site/features/application/shared_widgets/bottom_navigation_menu.dart';
+import 'package:cybear_jinni_site/features/application/shared_widgets/top_navigation_menu.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:linkable/linkable.dart';
 
+/// Home and lending page of the site
 class HomeTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -31,8 +35,9 @@ class HomeTab extends StatelessWidget {
                           child: Column(
                             // crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
-                                const Text('What Do We Offer',
-                                    style: TextStyle(fontSize: 50),
+                                Text('What Do We Offer',
+                                    style: TextStyle(fontSize: 50, color:
+                                    Theme.of(context).textTheme.bodyText1.color),
                                     textAlign: TextAlign.center),
                                 const SizedBox(height: 10,),
                                 Padding(
@@ -41,24 +46,27 @@ class HomeTab extends StatelessWidget {
                                   child: Column(
                                     crossAxisAlignment: CrossAxisAlignment
                                         .start,
-                                    children: const <Widget>[
-                                      Text(
+                                    children: <Widget>[
+                                      const Text(
                                         '● Installation of the system at your'
                                             ' home and providing a warranty for'
                                             ' a fair price.',
                                         style: TextStyle(fontSize: 20,),
                                       ),
-                                      Text(
+                                      const Text(
                                         '● Devices can be purchased online for '
                                             'self-installation.',
                                         style: TextStyle(fontSize: 20),),
-                                      Text(
-                                        '● Open source code and instructions '
-                                            'for makers and tinkerers to build',
-                                        style: TextStyle(fontSize: 20),),
-                                      Text(
-                                        '   their version of the system.',
-                                        style: TextStyle(fontSize: 20),),
+                                      Linkable(
+                                          textColor: Theme.of(context).
+                                          textTheme.bodyText2.color,
+                                          style: const TextStyle(fontSize: 20),
+                                          text: '● Open source code and '
+                                              'instructions '
+                                              'for makers and tinkerers to '
+                                              'build\n   their version of the'
+                                              ' system.              '
+                                              'Link: github.com/CyBear-Jinni'),
                                     ],
                                   ),
 
@@ -72,8 +80,10 @@ class HomeTab extends StatelessWidget {
                           child: Column(
                             // crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
-                                const Text('About Us',
-                                    style: TextStyle(fontSize: 50),
+                                Text('About Us',
+                                    style: TextStyle(fontSize: 50, color:
+                                    Theme.of(context).textTheme.
+                                    bodyText1.color),
                                     textAlign: TextAlign.center),
                                 const SizedBox(height: 10,),
                                 Padding(
@@ -85,19 +95,13 @@ class HomeTab extends StatelessWidget {
                                     children: const <Widget>[
                                       Text(
                                         '● Our goal is to raise the quality of '
-                                            'life for everyone.',
+                                            'life for everyone.\n'
+                                            '   We are doing this by making'
+                                            ' Smart Home more affordable\n'
+                                            '   and accessible for the common'
+                                            ' person.',
                                         style: TextStyle(fontSize: 20,),
                                       ),
-                                      Text(
-                                        '   We are doing this by making Smart '
-                                            'Home more affordable',
-                                        style: TextStyle(fontSize: 20),),
-
-                                      Text(
-                                        '   and accessible for the common'
-                                            ' person.',
-                                        style: TextStyle(fontSize: 20),),
-
                                     ],
                                   ),
 
@@ -108,12 +112,11 @@ class HomeTab extends StatelessWidget {
                         ),
                       ],
                     ),
-                    const SizedBox(height: 10000,),
-
+                    BottomNavigationMenu(),
                   ],
                 ),
 
-                const SizedBox(height: 100,),
+                const SizedBox(height: 50,),
 
               ],
             ),
@@ -125,7 +128,7 @@ class HomeTab extends StatelessWidget {
                   ClipPath(
                     clipper: CrosRightSizde(),
                     child: Container(
-                      color: Colors.black,
+                      color: Colors.black87,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: const <Widget>[
@@ -145,9 +148,10 @@ class HomeTab extends StatelessWidget {
                           SizedBox(width: 10,),
 
                           Tab(
-                            icon: Icon(FontAwesomeIcons.phone, color: Colors.white),
+                            icon: Icon(FontAwesomeIcons.phoneAlt,
+                                color: Colors.white),
                             child: Text(
-                              '052-234-1429',
+                              'Contact Us',
                             ),
                           ),
                           SizedBox(width: 70,)
@@ -162,63 +166,7 @@ class HomeTab extends StatelessWidget {
                     height: 1,
                   ),
 
-
-                    ClipPath(
-                      clipper: CrosLeftSizde(),
-                      child: Container(
-                        color: Colors.black,
-
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: const <Widget>[
-                            SizedBox(width: 50,),
-                            Tab(
-                              icon: Icon(FontAwesomeIcons.history, color: Colors.white),
-                              child: Text(
-                                'Home_Page',
-                              ),
-                            ),
-                            Tab(
-                              icon: Icon(FontAwesomeIcons.cube, color: Colors.white),
-                              child: Text(
-                                'About',
-                              ),
-                            ),
-                            Tab(
-                              icon: Icon(FontAwesomeIcons.solidLightbulb, color: Colors.white),
-                              child: Text(
-                                'News',
-                              ),
-                            ),
-                            Tab(
-                              icon: Icon(FontAwesomeIcons.history, color: Colors.white),
-                              child: Text(
-                                'Home_Page',
-                              ),
-                            ),
-                            Tab(
-                              icon: Icon(FontAwesomeIcons.cube, color: Colors.white),
-                              child: Text(
-                                'About',
-                              ),
-                            ),
-                            Tab(
-                              icon: Icon(FontAwesomeIcons.solidLightbulb, color: Colors.white),
-                              child: Text(
-                                'News',
-                              ),
-                            ),
-                            Tab(
-                              icon: Icon(FontAwesomeIcons.history, color: Colors.white),
-                              child: Text(
-                                'Home_Page',
-                              ),
-                            ),
-
-                          ],
-                        ),
-                      ),
-                    ),
+                  TopNavigationMenu(),
                 ],
               ),
             )
@@ -249,9 +197,9 @@ class CrosLeftSizde extends CustomClipper<Path> {
   Path getClip(Size size) {
     final path = Path();
     path.lineTo(0, 0);
-    path.lineTo(size.width/15, size.height);
+    path.lineTo(size.width / 15, size.height);
     path.lineTo(size.width, size.height);
-    path.lineTo(size.width , 0);
+    path.lineTo(size.width, 0);
     path.close();
     return path;
   }

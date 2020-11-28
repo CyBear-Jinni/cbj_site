@@ -1,8 +1,11 @@
 import 'package:cybear_jinni_site/features/application/shared_widgets/bottom_navigation_menu.dart';
+import 'package:cybear_jinni_site/features/application/shared_widgets/contact_us_popup.dart';
 import 'package:cybear_jinni_site/features/application/shared_widgets/top_navigation_menu.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:linkable/linkable.dart';
+
 
 /// Home and lending page of the site
 class HomePage extends StatelessWidget {
@@ -115,43 +118,52 @@ class HomePage extends StatelessWidget {
                 ),
                 Column(
                   children: <Widget>[
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.pushNamed(context, 'aboutPage',
+                    FlatButton(
+                      textColor: Theme
+                          .of(context)
+                          .textTheme
+                          .bodyText1
+                          .color,
+                      color: Colors.black38,
+                      height: 500.0,
+                      onPressed: () {
+                        Navigator.pushNamed(context, 'devicesPage',
                         );
                       },
-                      child: Container(
-                        color: Colors.black38,
-                        height: 500.0,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: <Widget>[
-                            Container(),
-                            Container(),
-                            Container(),
-                            Container(),
-                            Text('Devices',
-                                style: TextStyle(fontSize: 50, color:
-                                Theme
-                                    .of(context)
-                                    .textTheme
-                                    .bodyText1
-                                    .color),
-                                textAlign: TextAlign.center),
-                            Container(),
-                            Container(
-                              alignment: Alignment.center,
-                              child: Image.network(
-                                'https://user-images.githubusercontent.com/9304740/97103272-19572d00-16b4-11eb-8e47-394ec18b3809.png',
-                                height: 400.0,
-                              ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: <Widget>[
+                          Container(),
+                          Container(),
+                          Container(),
+                          Container(),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              Text('Click here to reach the devices page',
+                                  style: TextStyle(fontSize: 30, color:
+                                  Theme
+                                      .of(context)
+                                      .textTheme
+                                      .bodyText1
+                                      .color),
+                                  textAlign: TextAlign.center),
+                              const SizedBox(height: 50,),
+                            ],
+                          ),
+                          Container(),
+                          Container(
+                            alignment: Alignment.center,
+                            child: Image.network(
+                              'https://user-images.githubusercontent.com/9304740/97103272-19572d00-16b4-11eb-8e47-394ec18b3809.png',
+                              height: 400.0,
                             ),
-                            Container(),
-                            Container(),
-                            Container(),
-                            Container(),
-                          ],
-                        ),
+                          ),
+                          Container(),
+                          Container(),
+                          Container(),
+                          Container(),
+                        ],
                       ),
 
                     ),
@@ -185,17 +197,22 @@ class HomePage extends StatelessWidget {
                                           crossAxisAlignment: CrossAxisAlignment
                                               .start,
                                           children: <Widget>[
-                                            const Text(
-                                              '● Installation of the system at your'
-                                                  ' home and providing a warranty for'
-                                                  ' a fair price.',
-                                              style: TextStyle(fontSize: 20,),
-                                            ),
-                                            const Text(
-                                              '● Devices can be purchased online for '
-                                                  'self-installation.',
-                                              style: TextStyle(fontSize: 20),),
-                                            Linkable(
+                                            FlatButton(
+                                              textColor: Theme
+                                                  .of(context)
+                                                  .textTheme
+                                                  .bodyText2
+                                                  .color,
+                                              onPressed: () {
+                                                showDialog(
+                                                  context: context,
+                                                  builder: (
+                                                      BuildContext context) {
+                                                    return ContactUsPopup();
+                                                  },
+                                                );
+                                              },
+                                              child: Linkable(
                                                 textColor: Theme
                                                     .of(context)
                                                     .
@@ -204,12 +221,54 @@ class HomePage extends StatelessWidget {
                                                     .color,
                                                 style: const TextStyle(
                                                     fontSize: 20),
-                                                text: '● Open source code and '
-                                                    'instructions '
-                                                    'for makers and tinkerers to '
-                                                    'build\n   their version of the'
-                                                    ' system.              '
-                                                    'Link: github.com/CyBear-Jinni'),
+                                                text:
+                                                '● Installation of the system at your'
+                                                    ' home and providing a warranty for'
+                                                    ' a\n   fair price.',
+                                              ),
+                                            ),
+                                            FlatButton(
+                                              textColor: Theme
+                                                  .of(context)
+                                                  .textTheme
+                                                  .bodyText2
+                                                  .color,
+                                              onPressed: () {
+                                                Navigator.pushNamed(
+                                                    context, 'devicesPage');
+                                              },
+                                              child: Linkable(
+                                                textColor: Theme
+                                                    .of(context)
+                                                    .
+                                                textTheme
+                                                    .bodyText2
+                                                    .color,
+                                                style: const TextStyle(
+                                                    fontSize: 20),
+                                                text:
+                                                '● Devices can be purchased online for '
+                                                    'self-installation.',
+                                              ),
+                                            ),
+                                            FlatButton(
+                                              onPressed: () {},
+                                              child: Linkable(
+                                                  textColor: Theme
+                                                      .of(context)
+                                                      .
+                                                  textTheme
+                                                      .bodyText2
+                                                      .color,
+                                                  style: const TextStyle(
+                                                      fontSize: 20),
+                                                  text: '● Open source code and '
+                                                      'instructions '
+                                                      'for makers and tinkerers to '
+                                                      'build\n   their version of the'
+                                                      ' system.              '
+                                                      'Link: github.com/CyBear-Jinni'),
+                                            )
                                           ],
                                         ),
 
@@ -238,16 +297,32 @@ class HomePage extends StatelessWidget {
                                         child: Column(
                                           crossAxisAlignment: CrossAxisAlignment
                                               .start,
-                                          children: const <Widget>[
-                                            Text(
-                                              '● Our goal is to raise the'
-                                                  ' quality of life for '
-                                                  'everyone.\n   We are doing '
-                                                  'this by making Smart Home '
-                                                  'more affordable\n   and '
-                                                  'accessible for the common'
-                                                  ' person.',
-                                              style: TextStyle(fontSize: 20,),
+                                          children: <Widget>[
+                                            FlatButton( // ignore: missing_required_param
+                                              textColor: Theme
+                                                  .of(context)
+                                                  .textTheme
+                                                  .bodyText2
+                                                  .color,
+                                              child: Linkable(
+                                                textColor: Theme
+                                                    .of(context)
+                                                    .
+                                                textTheme
+                                                    .bodyText2
+                                                    .color,
+                                                style: const TextStyle(
+                                                    fontSize: 20),
+                                                text:
+                                                '● Our goal is to raise the'
+                                                    ' quality of life for '
+                                                    'everyone.\n   We are doing'
+                                                    ' this by making Smart Home'
+                                                    ' more affordable\n   and '
+                                                    'accessible for the common'
+                                                    ' person.',
+                                              ),
+
                                             ),
                                           ],
                                         ),

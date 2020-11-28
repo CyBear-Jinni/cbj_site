@@ -24,7 +24,7 @@ class _ContactUsPopup extends State<ContactUsPopup> {
           width: MediaQuery
               .of(context)
               .size
-              .width /1.1,
+              .width / 1.1,
           height: MediaQuery
               .of(context)
               .size
@@ -47,12 +47,14 @@ class _ContactUsPopup extends State<ContactUsPopup> {
                     ),
                     actions: <Widget>[
                       FlatButton(
+                        textColor: Theme.of(context).textTheme.bodyText1.color,
                         onPressed: () {
                           Navigator.of(context).pop();
                         },
                         child: const Text('Cancel'),
                       ),
                       FlatButton(
+                        textColor: Theme.of(context).textTheme.bodyText1.color,
                         onPressed: () {},
                         child: const Text('Add'),
                       ),

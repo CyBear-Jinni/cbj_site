@@ -1,3 +1,4 @@
+import 'package:cybear_jinni_site/core/my_singleton.dart';
 import 'package:cybear_jinni_site/features/application/usecases/home_page/landing_page.dart';
 import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/about_page/about_page.dart';
 import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/devices_page/devices_page.dart';
@@ -65,36 +66,46 @@ class MyApp extends StatelessWidget {
         fontFamily: 'gidole_regular',
       ),
       routes: <String, WidgetBuilder>{
-        '/': (BuildContext context) => LandingPage(),
-        '/home': (BuildContext context) => LandingPage(),
+        '/': (BuildContext context) {
+          MySingleton.setCurrentPageName('landingPage');
+          return LandingPage();
+          },
+    '/home': (BuildContext context)
+    {
+      MySingleton.setCurrentPageName('homePage');
+      return LandingPage();
+    },
         //        '/home_settings': (BuildContext context) => SettingsPage(),
       },
       onGenerateRoute: (RouteSettings settings) {
         final List<String> pathElements = settings.name.split('/');
         if (pathElements[0] == 'homePage') {
+          MySingleton.setCurrentPageName('homePage');
           return MaterialPageRoute(
               builder: (BuildContext context) => HomePage());
         }
         else if (pathElements[0] == 'aboutPage') {
+          MySingleton.setCurrentPageName('aboutPage');
           return MaterialPageRoute(
               builder: (BuildContext context) => AboutPage());
         }
         else if (pathElements[0] == 'faqPage') {
-        return MaterialPageRoute(
+          MySingleton.setCurrentPageName('faqPage');
+          return MaterialPageRoute(
         builder: (BuildContext context) => FAQPage());
         }
         else if (pathElements[0] == 'devicesPage') {
+          MySingleton.setCurrentPageName('devicesPage');
           return MaterialPageRoute(
               builder: (BuildContext context) => DevicesPage());
         }
         else {
+          MySingleton.setCurrentPageName('homePage');
           MaterialPageRoute(
               builder: (BuildContext context) => HomePage());
         }
         return null;
       },
-
-
     );
   }
 }

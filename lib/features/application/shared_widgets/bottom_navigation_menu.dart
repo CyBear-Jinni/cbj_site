@@ -67,8 +67,9 @@ class BottomNavigationMenu extends StatelessWidget{
                           children:  <Widget>[
                             const SizedBox(width: 40,),
 
-                            GestureDetector(
-                              onTap: () {
+                            FlatButton(
+                              textColor: Theme.of(context).textTheme.bodyText1.color,
+                              onPressed: () {
                                 launch('https://www.facebook.com/CyBearJinniHome');
                               },
                               child:  const Tab(
@@ -82,8 +83,9 @@ class BottomNavigationMenu extends StatelessWidget{
                             const SizedBox(width: 20,),
 
 
-                            GestureDetector(
-                              onTap: () {
+                            FlatButton(
+                              textColor: Theme.of(context).textTheme.bodyText1.color,
+                              onPressed: () {
                                 launch('https://instagram.com/cybearjinni?igshid=rfllj6qbv6l8');
                               },
                               child:  const Tab(
@@ -96,8 +98,9 @@ class BottomNavigationMenu extends StatelessWidget{
 
                             const SizedBox(width: 20,),
 
-                            GestureDetector(
-                              onTap: () {
+                            FlatButton(
+                              textColor: Theme.of(context).textTheme.bodyText1.color,
+                              onPressed: () {
                                 launch('https://www.linkedin.com/company/cybear-jinni');
                               },
                               child:  const Tab(
@@ -110,8 +113,9 @@ class BottomNavigationMenu extends StatelessWidget{
 
                             const SizedBox(width: 20,),
 
-                            GestureDetector(
-                              onTap: () {
+                            FlatButton(
+                              textColor: Theme.of(context).textTheme.bodyText1.color,
+                              onPressed: () {
                                 launch('https://github.com/CyBear-Jinni');
                               },
                               child:  const Tab(

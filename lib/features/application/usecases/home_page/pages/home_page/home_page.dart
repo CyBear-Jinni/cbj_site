@@ -5,55 +5,155 @@ import 'package:flutter/widgets.dart';
 import 'package:linkable/linkable.dart';
 
 /// Home and lending page of the site
-class HomeTab extends StatelessWidget {
+class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return
-      Stack(
+    return Container(
+      width: MediaQuery
+          .of(context)
+          .size
+          .width,
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          // Where the linear gradient begins and ends
+          begin: Alignment.topRight,
+          end: Alignment.bottomCenter,
+          // Add one stop for each color. Stops should increase from 0 to 1
+          stops: const <double>[0, 0, 0, 1],
+          colors: <Color>[
+            Theme
+                .of(context)
+                .primaryColor,
+            Theme
+                .of(context)
+                .accentColor,
+            Theme
+                .of(context)
+                .accentColor,
+            Theme
+                .of(context)
+                .primaryColor
+          ],
+        ),
+      ),
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        body: Stack(
           children: <Widget>[
             ListView(
               children: <Widget>[
-                SizedBox(
-                  height: MediaQuery
-                      .of(context)
-                      .size
-                      .height,
-                  child: Image.asset(
-                    'assets/images/home_moc_image.jpg',
-                    fit: BoxFit.cover,
-                  ),
-                ),
+                Stack(
+                  children: <Widget>[
+                    SizedBox(
+                      width: MediaQuery
+                          .of(context)
+                          .size
+                          .width,
+                      height: MediaQuery
+                          .of(context)
+                          .size
+                          .height,
+                      child: Image.asset(
+                        'assets/images/home_moc_image.jpg',
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    SizedBox(
+                      width: MediaQuery
+                          .of(context)
+                          .size
+                          .width,
+                      child: Container(
+                        margin: const EdgeInsets.only(top: 100, left: 100),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Container(
+                              decoration: BoxDecoration(
+                                  color: Colors.black.withOpacity(0.8),
+                                  borderRadius:
+                                  const BorderRadius.all(Radius.circular(20))
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text('CyBear Jinni',
+                                  style: TextStyle(fontSize: 60, color: Theme
+                                      .of(context)
+                                      .textTheme
+                                      .bodyText1
+                                      .color),
+                                ),
+                              ),
+                            ),
 
+                            Container(
+                              margin: const EdgeInsets.only(left: 204,
+                                  top: 0.5),
+                              decoration: BoxDecoration(
+                                  color: Colors.black.withOpacity(0.8),
+                                  borderRadius:
+                                  const BorderRadius.all(Radius.circular(20))
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text('Smart Home',
+                                  style: TextStyle(fontSize: 21, color: Theme
+                                      .of(context)
+                                      .textTheme
+                                      .bodyText1
+                                      .color,
+                                      fontWeight: FontWeight.w700),),
+                              ),
+                            ),
+
+                          ],
+                        ),
+                      ),
+                    ),
+
+                  ],
+                ),
                 Column(
                   children: <Widget>[
-                    Container(
-                      color: Colors.black38,
-                      height: 500.0,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: <Widget>[
-                          Container(),
-                          Container(),
-                          Container(),
-                          Container(),
-                          Text('Devices',
-                              style: TextStyle(fontSize: 50, color:
-                              Theme.of(context).textTheme.bodyText1.color),
-                              textAlign: TextAlign.center),
-                          Container(),
-                          Container(
-                            alignment: Alignment.center,
-                            child: Image.network(
-                              'https://user-images.githubusercontent.com/9304740/97103272-19572d00-16b4-11eb-8e47-394ec18b3809.png',
-                              height: 400.0,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, 'aboutPage',
+                        );
+                      },
+                      child: Container(
+                        color: Colors.black38,
+                        height: 500.0,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Container(),
+                            Container(),
+                            Container(),
+                            Container(),
+                            Text('Devices',
+                                style: TextStyle(fontSize: 50, color:
+                                Theme
+                                    .of(context)
+                                    .textTheme
+                                    .bodyText1
+                                    .color),
+                                textAlign: TextAlign.center),
+                            Container(),
+                            Container(
+                              alignment: Alignment.center,
+                              child: Image.network(
+                                'https://user-images.githubusercontent.com/9304740/97103272-19572d00-16b4-11eb-8e47-394ec18b3809.png',
+                                height: 400.0,
+                              ),
                             ),
-                          ),
-                          Container(),
-                          Container(),
-                          Container(),
-                          Container(),
-                        ],
+                            Container(),
+                            Container(),
+                            Container(),
+                            Container(),
+                          ],
+                        ),
                       ),
+
                     ),
 
                     Container(
@@ -102,7 +202,8 @@ class HomeTab extends StatelessWidget {
                                                 textTheme
                                                     .bodyText2
                                                     .color,
-                                                style: const TextStyle(fontSize: 20),
+                                                style: const TextStyle(
+                                                    fontSize: 20),
                                                 text: '● Open source code and '
                                                     'instructions '
                                                     'for makers and tinkerers to '
@@ -121,7 +222,7 @@ class HomeTab extends StatelessWidget {
                               Expanded(
                                 child: Column(
                                     children: <Widget>[
-                                      Text('About Us',
+                                      Text('Our Vision',
                                           style: TextStyle(fontSize: 50, color:
                                           Theme
                                               .of(context)
@@ -174,7 +275,11 @@ class HomeTab extends StatelessWidget {
                           Container(),
                           Text('Fan Art',
                               style: TextStyle(fontSize: 50, color:
-                              Theme.of(context).textTheme.bodyText1.color),
+                              Theme
+                                  .of(context)
+                                  .textTheme
+                                  .bodyText1
+                                  .color),
                               textAlign: TextAlign.center),
                           Container(),
                           Container(
@@ -199,8 +304,10 @@ class HomeTab extends StatelessWidget {
               ],
             ),
             TopNavigationMenu(),
-          ]
-      );
+          ],
+        ),
+      ),
+    );
   }
 }
 
@@ -224,7 +331,7 @@ class CrosRightSizde extends CustomClipper<Path> {
 class CrosLeftSizde extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
-    final Path path = Path();
+    final path = Path();
     path.lineTo(0, 0);
     path.lineTo(size.width / 15, size.height);
     path.lineTo(size.width, size.height);

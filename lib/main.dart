@@ -1,4 +1,8 @@
 import 'package:cybear_jinni_site/features/application/usecases/home_page/landing_page.dart';
+import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/about_page/about_page.dart';
+import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/devices_page/devices_page.dart';
+import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/faq_page/faq_page.dart';
+import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/home_page/home_page.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
@@ -67,8 +71,25 @@ class MyApp extends StatelessWidget {
       },
       onGenerateRoute: (RouteSettings settings) {
         final List<String> pathElements = settings.name.split('/');
-        if (pathElements[0] != '') {
-          return null;
+        if (pathElements[0] == 'homePage') {
+          return MaterialPageRoute(
+              builder: (BuildContext context) => HomePage());
+        }
+        else if (pathElements[0] == 'aboutPage') {
+          return MaterialPageRoute(
+              builder: (BuildContext context) => AboutPage());
+        }
+        else if (pathElements[0] == 'faqPage') {
+        return MaterialPageRoute(
+        builder: (BuildContext context) => FAQPage());
+        }
+        else if (pathElements[0] == 'devicesPage') {
+          return MaterialPageRoute(
+              builder: (BuildContext context) => DevicesPage());
+        }
+        else {
+          MaterialPageRoute(
+              builder: (BuildContext context) => HomePage());
         }
         return null;
       },

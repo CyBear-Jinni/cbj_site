@@ -140,7 +140,8 @@ class HomePage extends StatelessWidget {
                           Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
-                              Text('Click here to reach the devices page',
+                              Text('Click here for more details about our'
+                                  ' devices',
                                   style: TextStyle(fontSize: 30, color:
                                   Theme
                                       .of(context)
@@ -165,7 +166,6 @@ class HomePage extends StatelessWidget {
                           Container(),
                         ],
                       ),
-
                     ),
 
                     Container(

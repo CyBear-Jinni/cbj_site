@@ -76,11 +76,6 @@ class TopNavigationMenu extends StatelessWidget {
               ),
             ),
 
-            const SizedBox(
-              width: 500,
-              height: 1,
-            ),
-
             ClipPath(
               clipper: CrosLeftSizde(),
               child: Container(

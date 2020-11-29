@@ -1,5 +1,5 @@
-import 'package:cybear_jinni_site/features/application/shared_widgets/bottom_navigation_menu.dart';
-import 'package:cybear_jinni_site/features/application/shared_widgets/top_navigation_menu.dart';
+import 'package:cybear_jinni_site/features/application/shared_widgets/bottom_navigation_menu/bottom_navigation_menu.dart';
+import 'package:cybear_jinni_site/features/application/shared_widgets/top_navigation_menu/top_navigation_menu.dart';
 import 'package:flutter/material.dart';
 
 

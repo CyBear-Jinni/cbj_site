@@ -1,8 +1,12 @@
-import 'package:cybear_jinni_site/features/application/shared_widgets/navigation_drawer/drawer_item_with_background.dart';
+import 'package:cybear_jinni_site/core/route_names.dart';
+import 'package:cybear_jinni_site/features/application/shared_widgets/contact_us_popup.dart';
+import 'package:cybear_jinni_site/features/application/shared_widgets/navigation_drawer/drawer_item_on_click_route_page.dart';
 import 'package:cybear_jinni_site/features/application/shared_widgets/navigation_drawer/navigation_drawer_header.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import 'drawer_item_on_click_start_function.dart';
 
 /// Navigation drawer for small screen sizes, replace the top navigation menu
 class NavigationDrawer extends StatelessWidget{
@@ -36,15 +40,15 @@ class NavigationDrawer extends StatelessWidget{
       child: Column(
         children: <Widget>[
           NavigationDrawerHeader(),
-          const DrawerItemWithBackground('Home', FontAwesomeIcons.home),
+          const DrawerItemOnClickRoutePage('Home', FontAwesomeIcons.home, homeRoute),
           const SizedBox(height: 13,),
-          const DrawerItemWithBackground('Devices', FontAwesomeIcons.lightbulb),
+          const DrawerItemOnClickRoutePage('Devices', FontAwesomeIcons.lightbulb, devicesRoute),
           const SizedBox(height: 13,),
-          const DrawerItemWithBackground('FAQ', FontAwesomeIcons.questionCircle),
+          const DrawerItemOnClickRoutePage('FAQ', FontAwesomeIcons.questionCircle, faqRoute),
           const SizedBox(height: 13,),
-          const DrawerItemWithBackground('About', FontAwesomeIcons.addressCard),
+          const DrawerItemOnClickRoutePage('About', FontAwesomeIcons.addressCard, aboutRoute),
           const SizedBox(height: 13,),
-          const DrawerItemWithBackground('Contact Us', FontAwesomeIcons.phoneAlt),
+          const DrawerItemOnClickStartFunction('Contact Us', FontAwesomeIcons.phoneAlt, ContactUsPlaceHolder),
         ],
       ),
     );

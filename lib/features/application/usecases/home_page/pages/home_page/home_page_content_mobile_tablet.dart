@@ -1,3 +1,4 @@
+import 'package:cybear_jinni_site/core/route_names.dart';
 import 'package:cybear_jinni_site/features/application/shared_widgets/bottom_navigation_menu/bottom_navigation_menu.dart';
 import 'package:cybear_jinni_site/features/application/shared_widgets/contact_us_popup.dart';
 import 'package:flutter/cupertino.dart';
@@ -33,48 +34,53 @@ class HomePageContentMobileTablet extends StatelessWidget{
                   .size
                   .width,
               child: Container(
-                margin: const EdgeInsets.only(top: 100, left: 100),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                margin: const EdgeInsets.only(top: 100),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    Container(
-                      decoration: BoxDecoration(
-                          color: Colors.black.withOpacity(0.8),
-                          borderRadius:
-                          const BorderRadius.all(Radius.circular(20))
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text('CyBear Jinni',
-                          style: TextStyle(fontSize: 60, color: Theme
-                              .of(context)
-                              .textTheme
-                              .bodyText1
-                              .color),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Container(
+                          decoration: BoxDecoration(
+                              color: Colors.black.withOpacity(0.8),
+                              borderRadius:
+                              const BorderRadius.all(Radius.circular(20))
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text('CyBear Jinni',
+                              style: TextStyle(fontSize: 60, color: Theme
+                                  .of(context)
+                                  .textTheme
+                                  .bodyText1
+                                  .color),
+                            ),
+                          ),
                         ),
-                      ),
-                    ),
 
-                    Container(
-                      margin: const EdgeInsets.only(left: 204,
-                          top: 0.5),
-                      decoration: BoxDecoration(
-                          color: Colors.black.withOpacity(0.8),
-                          borderRadius:
-                          const BorderRadius.all(Radius.circular(20))
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text('Smart Home',
-                          style: TextStyle(fontSize: 21, color: Theme
-                              .of(context)
-                              .textTheme
-                              .bodyText1
-                              .color,
-                              fontWeight: FontWeight.w700),),
-                      ),
-                    ),
+                        Container(
+                          margin: const EdgeInsets.only(left: 204,
+                              top: 0.5),
+                          decoration: BoxDecoration(
+                              color: Colors.black.withOpacity(0.8),
+                              borderRadius:
+                              const BorderRadius.all(Radius.circular(20))
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text('Smart Home',
+                              style: TextStyle(fontSize: 21, color: Theme
+                                  .of(context)
+                                  .textTheme
+                                  .bodyText1
+                                  .color,
+                                  fontWeight: FontWeight.w700),),
+                          ),
+                        ),
 
+                      ],
+                    ),
                   ],
                 ),
               ),
@@ -93,7 +99,7 @@ class HomePageContentMobileTablet extends StatelessWidget{
               color: Colors.black38,
               height: 500.0,
               onPressed: () {
-                Navigator.pushNamed(context, 'devicesPage',
+                Navigator.pushNamed(context, devicesRoute,
                 );
               },
               child: Column(
@@ -193,7 +199,7 @@ class HomePageContentMobileTablet extends StatelessWidget{
                                         .color,
                                     onPressed: () {
                                       Navigator.pushNamed(
-                                          context, 'devicesPage');
+                                          context, devicesRoute);
                                     },
                                     child: Linkable(
                                       textColor: Theme

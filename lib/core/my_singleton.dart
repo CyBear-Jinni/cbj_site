@@ -1,5 +1,7 @@
 
 
+import 'package:cybear_jinni_site/core/route_names.dart';
+
 /// Singleton for all the site
 class MySingleton {
 
@@ -16,7 +18,7 @@ class MySingleton {
   static String _currentPageName;
 
   /// Getting the current page name
-  static String get getCurrentPageName => _currentPageName ??= 'homePage';
+  static String get getCurrentPageName => _currentPageName ??= homeRoute;
 
   /// Set the current page name
   static Set<String> setCurrentPageName(String currentPageName) {

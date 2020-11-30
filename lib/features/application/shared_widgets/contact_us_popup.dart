@@ -2,6 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 
+Future<dynamic> ContactUsPlaceHolder(BuildContext context) {
+  return showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      return ContactUsPopup();
+    },
+  );
+}
+
 
 /// Top navigation menu for the site
 class ContactUsPopup extends StatefulWidget {
@@ -37,24 +46,39 @@ class _ContactUsPopup extends State<ContactUsPopup> {
                 children: <Widget>[
                   AlertDialog(
                     title: const Text('Write To Us'),
-                    content: SingleChildScrollView(
-                      child: TextFormField(
-                        keyboardType: TextInputType.number,
-                        decoration: const InputDecoration(
-                          labelText: 'Email',
+                    content: Column(
+                      children: <Widget>[
+                        TextFormField(
+                          keyboardType: TextInputType.number,
+                          decoration: const InputDecoration(
+                            labelText: 'Full Name',
+                          ),
                         ),
-                      ),
+
+                        TextFormField(
+                          keyboardType: TextInputType.number,
+                          decoration: const InputDecoration(
+                            labelText: 'Phone Number',
+                          ),
+                        ),
+
+                        TextFormField(
+                          keyboardType: TextInputType.number,
+                          decoration: const InputDecoration(
+                            labelText: 'Email',
+                          ),
+                        ),
+                      ],
                     ),
                     actions: <Widget>[
                       FlatButton(
-                        textColor: Theme.of(context).textTheme.bodyText1.color,
+                        // textColor: Theme.of(context).textTheme.bodyText1.color,
                         onPressed: () {
                           Navigator.of(context).pop();
                         },
                         child: const Text('Cancel'),
                       ),
                       FlatButton(
-                        textColor: Theme.of(context).textTheme.bodyText1.color,
                         onPressed: () {},
                         child: const Text('Add'),
                       ),

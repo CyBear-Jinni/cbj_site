@@ -50,7 +50,7 @@ class HomePageContentMobileTablet extends StatelessWidget{
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Text('CyBear Jinni',
-                              style: TextStyle(fontSize: 60, color: Theme
+                              style: TextStyle(fontSize: 59, color: Theme
                                   .of(context)
                                   .textTheme
                                   .bodyText1

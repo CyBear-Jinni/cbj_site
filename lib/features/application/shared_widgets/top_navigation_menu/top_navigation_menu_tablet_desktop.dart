@@ -56,7 +56,7 @@ class TopNavigationMenuTabletDesktop extends StatelessWidget{
                       ContactUsPlaceHolder(context);
                     },
                     child: const Tab(
-                      icon: Icon(FontAwesomeIcons.phoneAlt,
+                      icon: FaIcon(FontAwesomeIcons.phoneAlt,
                           color: Colors.white),
                       child: Text(
                         'Contact Us',
@@ -91,7 +91,7 @@ class TopNavigationMenuTabletDesktop extends StatelessWidget{
                       }
                     },
                     child: const Tab(
-                      icon: Icon(FontAwesomeIcons.addressCard,
+                      icon: FaIcon(FontAwesomeIcons.addressCard,
                           color: Colors.white),
                       child: Text(
                         'About',
@@ -111,7 +111,7 @@ class TopNavigationMenuTabletDesktop extends StatelessWidget{
                       }
                     },
                     child: const Tab(
-                      icon: Icon(FontAwesomeIcons.questionCircle,
+                      icon: FaIcon(FontAwesomeIcons.questionCircle,
                           color: Colors.white),
                       child: Text(
                         'FAQ',
@@ -131,7 +131,7 @@ class TopNavigationMenuTabletDesktop extends StatelessWidget{
                       }
                     },
                     child: const Tab(
-                      icon: Icon(FontAwesomeIcons.lightbulb,
+                      icon: FaIcon(FontAwesomeIcons.lightbulb,
                           color: Colors.white),
                       child: Text(
                         'Devices',
@@ -151,7 +151,7 @@ class TopNavigationMenuTabletDesktop extends StatelessWidget{
                       }
                     },
                     child: const Tab(
-                      icon: Icon(FontAwesomeIcons.home,
+                      icon: FaIcon(FontAwesomeIcons.home,
                           color: Colors.white),
                       child: Text(
                         'Home',

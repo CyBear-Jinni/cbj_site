@@ -35,7 +35,7 @@ class BottomNavigationMenuMobileTablet extends StatelessWidget{
                           children: const <Widget>[
                               SizedBox(width: 40,),
                             Tab(
-                              icon: Icon(FontAwesomeIcons.appStoreIos,
+                              icon: FaIcon(FontAwesomeIcons.appStoreIos,
                                   color: Colors.white),
                               child: Text(
                                 'App Store',
@@ -43,7 +43,7 @@ class BottomNavigationMenuMobileTablet extends StatelessWidget{
                             ),
                             SizedBox(width: 40,),
                             Tab(
-                              icon: Icon(FontAwesomeIcons.googlePlay,
+                              icon: FaIcon(FontAwesomeIcons.googlePlay,
                                   color: Colors.white),
                               child: Text(
                                 'Play Store',
@@ -71,7 +71,7 @@ class BottomNavigationMenuMobileTablet extends StatelessWidget{
                               },
                               child:  const Tab(
                                 icon:
-                                Icon(FontAwesomeIcons.linkedin,
+                                FaIcon(FontAwesomeIcons.linkedin,
                                     color: Colors.white),
                                 child: Text(''),
                               ),
@@ -84,7 +84,7 @@ class BottomNavigationMenuMobileTablet extends StatelessWidget{
                               },
                               child:  const Tab(
                                 icon:
-                                Icon(FontAwesomeIcons.instagram,
+                                FaIcon(FontAwesomeIcons.instagram,
                                     color: Colors.white),
                                 child: Text(''),
                               ),
@@ -99,7 +99,7 @@ class BottomNavigationMenuMobileTablet extends StatelessWidget{
                               },
                               child:  const Tab(
                                 icon:
-                                Icon(FontAwesomeIcons.facebook,
+                                FaIcon(FontAwesomeIcons.facebook,
                                     color: Colors.white),
                                 child: Text(''),
                               ),
@@ -113,7 +113,7 @@ class BottomNavigationMenuMobileTablet extends StatelessWidget{
                               },
                               child:  const Tab(
                                 icon:
-                                Icon(FontAwesomeIcons.github,
+                                FaIcon(FontAwesomeIcons.github,
                                     color: Colors.white),
                                 child: Text(''),
                               ),

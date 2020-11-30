@@ -17,7 +17,7 @@ class TopNavigationMenuMobile extends StatelessWidget{
             onPressed: (){
               Scaffold.of(context).openDrawer();
             },
-            icon: Icon(FontAwesomeIcons.bars,
+            icon: FaIcon(FontAwesomeIcons.bars,
             color: Theme.of(context).textTheme.bodyText1.color ,
           ),
           )

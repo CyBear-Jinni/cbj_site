@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 
 /// Draw the items in the drawer
@@ -21,7 +22,7 @@ class DrawerItem extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
         child: Row(children: <Widget>[
-          Icon(icon, color: Colors.white,),
+          FaIcon(icon, color: Colors.white,),
           const SizedBox(width: 30,),
           Text(title),
         ],),

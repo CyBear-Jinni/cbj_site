@@ -27,9 +27,8 @@ class BottomNavigationMenuDesktop extends StatelessWidget{
                   Column(
                     children: <Widget>[
                       const Text('Apps',
-                        style: TextStyle(fontSize: 40,
-                          decoration: TextDecoration.underline,
-                        ),),
+                        style: TextStyle(fontSize: 40),
+                      ),
                       Row(
                           mainAxisAlignment:
                           MainAxisAlignment.spaceBetween,
@@ -58,7 +57,6 @@ class BottomNavigationMenuDesktop extends StatelessWidget{
                     children: <Widget>[
                       const Text('Follow Us',
                         style: TextStyle(fontSize: 40,
-                          decoration: TextDecoration.underline,
                         ),
                       ),
                       Row(

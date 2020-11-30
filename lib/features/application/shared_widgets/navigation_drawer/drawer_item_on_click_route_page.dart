@@ -2,18 +2,26 @@ import 'package:cybear_jinni_site/features/application/shared_widgets/navigation
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+/// Adding on click and dark background functionality to DrawerItem
+class DrawerItemOnClickRoutePage extends StatelessWidget {
 
-class DrawerItemWithBackground extends StatelessWidget {
+  /// Setting the text, icon, page to move on click
+  const DrawerItemOnClickRoutePage(this.title, this.icon, this.onClickRoute);
 
-  const DrawerItemWithBackground(this.title, this.icon);
-
+  /// The text in the card
   final String title;
+
+  /// The icon to show
   final IconData icon;
+
+  /// What page to move to if clicked
+  final String onClickRoute;
+
 
   @override
   Widget build(BuildContext context) {
     return FlatButton(
-      padding: EdgeInsets.all(0),
+      padding: const EdgeInsets.all(0),
       textColor: Theme
           .of(context)
           .textTheme
@@ -21,7 +29,7 @@ class DrawerItemWithBackground extends StatelessWidget {
           .color,
       color: Colors.black38,
       onPressed: () {
-        Navigator.pushNamed(context, 'devicesPage',
+        Navigator.pushNamed(context, onClickRoute,
         );
       },
       child: DrawerItem(title, icon),

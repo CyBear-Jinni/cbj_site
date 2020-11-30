@@ -1,3 +1,4 @@
+import 'package:cybear_jinni_site/core/route_names.dart';
 import 'package:cybear_jinni_site/features/application/shared_widgets/bottom_navigation_menu/bottom_navigation_menu.dart';
 import 'package:cybear_jinni_site/features/application/shared_widgets/contact_us_popup.dart';
 import 'package:flutter/cupertino.dart';
@@ -98,7 +99,7 @@ class HomePageContentMobileTablet extends StatelessWidget{
               color: Colors.black38,
               height: 500.0,
               onPressed: () {
-                Navigator.pushNamed(context, 'devicesPage',
+                Navigator.pushNamed(context, devicesRoute,
                 );
               },
               child: Column(
@@ -198,7 +199,7 @@ class HomePageContentMobileTablet extends StatelessWidget{
                                         .color,
                                     onPressed: () {
                                       Navigator.pushNamed(
-                                          context, 'devicesPage');
+                                          context, devicesRoute);
                                     },
                                     child: Linkable(
                                       textColor: Theme

@@ -1,4 +1,5 @@
 import 'package:cybear_jinni_site/core/my_singleton.dart';
+import 'package:cybear_jinni_site/core/route_names.dart';
 import 'package:cybear_jinni_site/features/application/shared_widgets/contact_us_popup.dart';
 import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/home_page/home_page.dart';
 import 'package:flutter/material.dart';
@@ -26,12 +27,12 @@ class TopNavigationMenuTabletDesktop extends StatelessWidget{
                     textColor: Theme.of(context).textTheme.bodyText1.color,
                     onPressed: () {
                       if (MySingleton.getCurrentPageName != 'landingPage' &&
-                          MySingleton.getCurrentPageName != 'homePage') {
-                        Navigator.pushNamed(context, 'homePage',
+                          MySingleton.getCurrentPageName != homeRoute) {
+                        Navigator.pushNamed(context, homeRoute,
                         );
                       }
                       else {
-                        Navigator.pushReplacementNamed(context, 'homePage');
+                        Navigator.pushReplacementNamed(context, homeRoute);
                       }
                     },
                     child: const
@@ -52,12 +53,7 @@ class TopNavigationMenuTabletDesktop extends StatelessWidget{
                   FlatButton(
                     textColor: Theme.of(context).textTheme.bodyText1.color,
                     onPressed: () {
-                      showDialog(
-                        context: context,
-                        builder: (BuildContext context) {
-                          return ContactUsPopup();
-                        },
-                      );
+                      ContactUsPlaceHolder(context);
                     },
                     child: const Tab(
                       icon: Icon(FontAwesomeIcons.phoneAlt,
@@ -87,11 +83,11 @@ class TopNavigationMenuTabletDesktop extends StatelessWidget{
                   FlatButton(
                     textColor: Theme.of(context).textTheme.bodyText1.color,
                     onPressed: () {
-                      if (MySingleton.getCurrentPageName != 'aboutPage') {
-                        Navigator.pushNamed(context, 'aboutPage');
+                      if (MySingleton.getCurrentPageName != aboutRoute) {
+                        Navigator.pushNamed(context, aboutRoute);
                       }
                       else {
-                        Navigator.pushReplacementNamed(context, 'aboutPage');
+                        Navigator.pushReplacementNamed(context, aboutRoute);
                       }
                     },
                     child: const Tab(
@@ -107,11 +103,11 @@ class TopNavigationMenuTabletDesktop extends StatelessWidget{
                   FlatButton(
                     textColor: Theme.of(context).textTheme.bodyText1.color,
                     onPressed: () {
-                      if (MySingleton.getCurrentPageName != 'faqPage') {
-                        Navigator.pushNamed(context, 'faqPage');
+                      if (MySingleton.getCurrentPageName != faqRoute) {
+                        Navigator.pushNamed(context, faqRoute);
                       }
                       else {
-                        Navigator.pushReplacementNamed(context, 'faqPage');
+                        Navigator.pushReplacementNamed(context, faqRoute);
                       }
                     },
                     child: const Tab(
@@ -126,12 +122,12 @@ class TopNavigationMenuTabletDesktop extends StatelessWidget{
                   FlatButton(
                     textColor: Theme.of(context).textTheme.bodyText1.color,
                     onPressed: () {
-                      if (MySingleton.getCurrentPageName != 'devicesPage') {
-                        Navigator.pushNamed(context, 'devicesPage');
+                      if (MySingleton.getCurrentPageName != devicesRoute) {
+                        Navigator.pushNamed(context, devicesRoute);
                       }
                       else {
                         Navigator.pushReplacementNamed(context,
-                            'devicesPage');
+                            devicesRoute);
                       }
                     },
                     child: const Tab(
@@ -147,11 +143,11 @@ class TopNavigationMenuTabletDesktop extends StatelessWidget{
                     textColor: Theme.of(context).textTheme.bodyText1.color,
                     onPressed: () {
                       if(MySingleton.getCurrentPageName != 'landingPage' &&
-                          MySingleton.getCurrentPageName != 'homePage') {
-                        Navigator.pushNamed(context, 'homePage');
+                          MySingleton.getCurrentPageName != homeRoute) {
+                        Navigator.pushNamed(context, homeRoute);
                       }
                       else {
-                        Navigator.pushReplacementNamed(context, 'homePage');
+                        Navigator.pushReplacementNamed(context, homeRoute);
                       }
                     },
                     child: const Tab(

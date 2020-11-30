@@ -33,48 +33,53 @@ class HomePageContentMobileTablet extends StatelessWidget{
                   .size
                   .width,
               child: Container(
-                margin: const EdgeInsets.only(top: 100, left: 100),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                margin: const EdgeInsets.only(top: 100),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    Container(
-                      decoration: BoxDecoration(
-                          color: Colors.black.withOpacity(0.8),
-                          borderRadius:
-                          const BorderRadius.all(Radius.circular(20))
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text('CyBear Jinni',
-                          style: TextStyle(fontSize: 60, color: Theme
-                              .of(context)
-                              .textTheme
-                              .bodyText1
-                              .color),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Container(
+                          decoration: BoxDecoration(
+                              color: Colors.black.withOpacity(0.8),
+                              borderRadius:
+                              const BorderRadius.all(Radius.circular(20))
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text('CyBear Jinni',
+                              style: TextStyle(fontSize: 60, color: Theme
+                                  .of(context)
+                                  .textTheme
+                                  .bodyText1
+                                  .color),
+                            ),
+                          ),
                         ),
-                      ),
-                    ),
 
-                    Container(
-                      margin: const EdgeInsets.only(left: 204,
-                          top: 0.5),
-                      decoration: BoxDecoration(
-                          color: Colors.black.withOpacity(0.8),
-                          borderRadius:
-                          const BorderRadius.all(Radius.circular(20))
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text('Smart Home',
-                          style: TextStyle(fontSize: 21, color: Theme
-                              .of(context)
-                              .textTheme
-                              .bodyText1
-                              .color,
-                              fontWeight: FontWeight.w700),),
-                      ),
-                    ),
+                        Container(
+                          margin: const EdgeInsets.only(left: 204,
+                              top: 0.5),
+                          decoration: BoxDecoration(
+                              color: Colors.black.withOpacity(0.8),
+                              borderRadius:
+                              const BorderRadius.all(Radius.circular(20))
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text('Smart Home',
+                              style: TextStyle(fontSize: 21, color: Theme
+                                  .of(context)
+                                  .textTheme
+                                  .bodyText1
+                                  .color,
+                                  fontWeight: FontWeight.w700),),
+                          ),
+                        ),
 
+                      ],
+                    ),
                   ],
                 ),
               ),

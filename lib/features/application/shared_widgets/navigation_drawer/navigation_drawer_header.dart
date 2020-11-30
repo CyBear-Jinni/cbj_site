@@ -34,16 +34,16 @@ class NavigationDrawerHeader extends StatelessWidget {
         ),),
       child: Column(
         mainAxisSize: MainAxisSize.min,
-        children: [
+        children: const <Widget>[
           SizedBox(height: 10,),
 
           Text('CyBear Jinni',
             style: TextStyle(
-                fontSize: 18, fontWeight: FontWeight.w800, color: Colors.white),
+                fontSize: 23, fontWeight: FontWeight.w800, color: Colors.white),
           ),
           SizedBox(height: 20,),
           SizedBox(
-              width: 60,
+              width: 55,
               child: Image(
                 image: AssetImage(
                   'assets/fan_art/after_editing/logo_no_background.png',

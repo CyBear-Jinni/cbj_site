@@ -64,6 +64,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.15.0-nullsafety.5"
+  cool_nav:
+    dependency: "direct main"
+    description:
+      name: cool_nav
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.3"
   cupertino_icons:
     dependency: "direct main"
     description:

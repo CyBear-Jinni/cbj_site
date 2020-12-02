@@ -2,6 +2,7 @@ import 'package:cybear_jinni_site/features/application/shared_widgets/bottom_nav
 import 'package:cybear_jinni_site/features/application/shared_widgets/navigation_drawer/navigation_drawer.dart';
 import 'package:cybear_jinni_site/features/application/shared_widgets/top_navigation_menu/top_navigation_menu.dart';
 import 'package:flutter/material.dart';
+import 'package:linkable/linkable.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 
@@ -102,6 +103,72 @@ class AboutPage extends StatelessWidget {
                           ],
                         ),
                       ),
+
+                      Container(
+                        color: Colors.black38,
+                        height: 500,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Row(
+                              children: <Widget>[
+                                Expanded(
+                                  child: Column(
+                                      children: <Widget>[
+                                        Text('Our Vision',
+                                            style: TextStyle(fontSize: 50, color:
+                                            Theme
+                                                .of(context)
+                                                .textTheme
+                                                .
+                                            bodyText1
+                                                .color),
+                                            textAlign: TextAlign.center),
+                                        const SizedBox(height: 10,),
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 100),
+                                          child: Column(
+                                            crossAxisAlignment: CrossAxisAlignment
+                                                .start,
+                                            children: <Widget>[
+                                              FlatButton( // ignore: missing_required_param
+                                                textColor: Theme
+                                                    .of(context)
+                                                    .textTheme
+                                                    .bodyText2
+                                                    .color,
+                                                child: Linkable(
+                                                  textColor: Theme
+                                                      .of(context)
+                                                      .
+                                                  textTheme
+                                                      .bodyText2
+                                                      .color,
+                                                  style: const TextStyle(
+                                                      fontSize: 20),
+                                                  text:
+                                                  '● Our goal is to raise the'
+                                                      ' quality of life for '
+                                                      'everyone.\n   We are doing'
+                                                      ' this by making Smart Home'
+                                                      ' more affordable\n   and '
+                                                      'accessible for the common'
+                                                      ' person.',
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ]
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+
                       BottomNavigationMenu(),
                     ],
                   ),

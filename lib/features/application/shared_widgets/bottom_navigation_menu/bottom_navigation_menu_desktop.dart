@@ -9,16 +9,17 @@ class BottomNavigationMenuDesktop extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        const SizedBox(height: 100,),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 100,
-            vertical: 5,),
+          padding: const EdgeInsets.symmetric(horizontal: 100,),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Divider(
                 color: Theme.of(context).textTheme.bodyText1.color,
                 thickness: 1,
+                height: 3,
               ),
               const SizedBox(height: 50,),
               Row(

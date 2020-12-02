@@ -4,11 +4,12 @@ import 'package:cybear_jinni_site/features/application/shared_widgets/contact_us
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:linkable/linkable.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 
 
 /// Home page content for the desktop
-class HomePageContentDesktop extends StatelessWidget{
+class HomePageContentDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
@@ -92,7 +93,7 @@ class HomePageContentDesktop extends StatelessWidget{
                   .textTheme
                   .bodyText1
                   .color,
-              color: Colors.black38,
+              color: Colors.black12,
               height: 500.0,
               onPressed: () {
                 Navigator.pushNamed(context, devicesRoute,
@@ -137,7 +138,7 @@ class HomePageContentDesktop extends StatelessWidget{
             ),
 
             Container(
-              color: Colors.black12,
+              color: Colors.black38,
               height: 500,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -174,8 +175,7 @@ class HomePageContentDesktop extends StatelessWidget{
                                       onPressed: () {
                                         showDialog(
                                           context: context,
-                                          builder: (
-                                              BuildContext context) {
+                                          builder: (BuildContext context) {
                                             return ContactUsPopup();
                                           },
                                         );
@@ -220,7 +220,14 @@ class HomePageContentDesktop extends StatelessWidget{
                                       ),
                                     ),
                                     FlatButton(
-                                      onPressed: () {},
+                                      onPressed: () async {
+                                        const String url = 'https://github.com/CyBear-Jinni';
+                                        if (await canLaunch(url)) {
+                                          await launch(url);
+                                        } else {
+                                          throw 'Could not launch $url';
+                                        }
+                                      },
                                       child: Linkable(
                                           textColor: Theme
                                               .of(context)
@@ -243,7 +250,6 @@ class HomePageContentDesktop extends StatelessWidget{
                               ),
                             ]
                         ),
-
                       ),
 
                       Expanded(
@@ -303,6 +309,53 @@ class HomePageContentDesktop extends StatelessWidget{
                     ],
                   ),
                 ],
+              ),
+            ),
+
+            SizedBox(
+              height: 500,
+              child: FlatButton(
+                color: Colors.black12,
+                padding: const EdgeInsets.all(0),
+                onPressed: () async {
+                  const String url = 'https://snapcraft.io/cybear-jinni';
+                  if (await canLaunch(url)) {
+                    await launch(url);
+                  } else {
+                    throw 'Could not launch $url';
+                  }
+                },
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    const SizedBox(height: 10,),
+                    Text('CyBear Jinni Smart Devices Distribution',
+                        style: TextStyle(fontSize: 40, color:
+                        Theme
+                            .of(context)
+                            .textTheme
+                            .bodyText1
+                            .color),
+                        textAlign: TextAlign.center),
+                    const SizedBox(height: 10,),
+                    Expanded(
+                      child: Container(
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            colorFilter: ColorFilter.mode(
+                                Colors.black.withOpacity(0.7),
+                                BlendMode.dstATop),
+                            image: const NetworkImage(
+                              'https://user-images.githubusercontent.com/9304740/100759143-f4638180-33f8-11eb-9a68-3e4fb531ffe6.png',
+                            ),
+                            fit: BoxFit.scaleDown,
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 20,),
+                  ],
+                ),
               ),
             ),
 

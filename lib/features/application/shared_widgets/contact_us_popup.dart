@@ -27,7 +27,7 @@ class _ContactUsPopup extends State<ContactUsPopup> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.transparent,
+      backgroundColor: Colors.transparent,
       body: Center(
         child: Container(
           width: MediaQuery
@@ -38,7 +38,13 @@ class _ContactUsPopup extends State<ContactUsPopup> {
               .of(context)
               .size
               .height / 1.5,
-          color: Colors.white.withOpacity(0.9),
+          color: Theme
+              .of(context)
+              .
+          textTheme
+              .bodyText1
+              .color
+              .withOpacity(0.9),
 
           child: Form(
               key: _formKey,

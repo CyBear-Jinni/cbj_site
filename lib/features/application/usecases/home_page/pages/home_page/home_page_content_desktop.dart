@@ -125,9 +125,14 @@ class HomePageContentDesktop extends StatelessWidget {
                                     Column(
                                       crossAxisAlignment: CrossAxisAlignment
                                           .start,
-                                      children: [
-                                        const FaIcon(FontAwesomeIcons.users,
-                                          color: Colors.white, size: 30,),
+                                      children: <Widget>[
+                                        FaIcon(FontAwesomeIcons.users,
+                                          color: Theme
+                                              .of(context)
+                                              .
+                                          textTheme
+                                              .bodyText1
+                                              .color, size: 30,),
                                         const SizedBox(height: 20),
                                         Text('For Customers', style: TextStyle(
                                             fontSize: 30, color: Theme
@@ -136,12 +141,25 @@ class HomePageContentDesktop extends StatelessWidget {
                                             .bodyText1
                                             .color),),
                                         const SizedBox(height: 5,),
-                                        Text('Enjoy', style: TextStyle(
-                                            fontSize: 15,
-                                            color: Theme
-                                                .of(context)
-                                                .primaryColor,
-                                            fontWeight: FontWeight.bold),
+                                        Container(
+                                          padding: const EdgeInsets.all(5),
+                                          decoration: BoxDecoration(
+                                              color: Theme
+                                                  .of(context)
+                                                  .
+                                              textTheme
+                                                  .bodyText1
+                                                  .color,
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(10))
+                                          ),
+                                          child: Text('Enjoy', style: TextStyle(
+                                              fontSize: 15,
+                                              color: Theme
+                                                  .of(context)
+                                                  .primaryColor,
+                                              fontWeight: FontWeight.bold),
+                                          ),
                                         ),
                                       ],
                                     )
@@ -158,7 +176,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                     SizedBox(
                                       width: 280,
                                       child: Text(
-                                        'Professionals electricians will install '
+                                        'Our electricians will install '
                                             'CyBear Jinni Smart Devices in your home.',
                                         style: TextStyle(
                                           fontSize: 20, color: Theme
@@ -180,8 +198,9 @@ class HomePageContentDesktop extends StatelessWidget {
                                     SizedBox(
                                       width: 280,
                                       child: Text(
-                                        'Providing guidance how to set the smart '
-                                            'devices and use the smartphone app to '
+                                        'Providing guidance on how to set the'
+                                            ' smart devices and use the '
+                                            'smartphone app to '
                                             'interact with them.',
                                         style: TextStyle(
                                           fontSize: 20, color: Theme
@@ -247,8 +266,13 @@ class HomePageContentDesktop extends StatelessWidget {
                                         crossAxisAlignment: CrossAxisAlignment
                                             .start,
                                         children: <Widget>[
-                                          const FaIcon(FontAwesomeIcons.globe,
-                                            color: Colors.white, size: 30,),
+                                          FaIcon(FontAwesomeIcons.globe,
+                                            color: Theme
+                                                .of(context)
+                                                .
+                                            textTheme
+                                                .bodyText1
+                                                .color, size: 30,),
                                           const SizedBox(height: 20),
                                           Text('For Users', style: TextStyle(
                                               fontSize: 30, color: Theme
@@ -257,12 +281,26 @@ class HomePageContentDesktop extends StatelessWidget {
                                               .bodyText1
                                               .color),),
                                           const SizedBox(height: 5,),
-                                          Text('Deploy', style: TextStyle(
-                                              fontSize: 15,
-                                              color: Theme
-                                                  .of(context)
-                                                  .primaryColor,
-                                              fontWeight: FontWeight.bold),
+                                          Container(
+                                            padding: const EdgeInsets.all(5),
+                                            decoration: BoxDecoration(
+                                                color: Theme
+                                                    .of(context)
+                                                    .
+                                                textTheme
+                                                    .bodyText1
+                                                    .color,
+                                                borderRadius: BorderRadius.all(
+                                                    Radius.circular(10))
+                                            ),
+                                            child: Text(
+                                              'Deploy', style: TextStyle(
+                                                fontSize: 15,
+                                                color: Theme
+                                                    .of(context)
+                                                    .primaryColor,
+                                                fontWeight: FontWeight.bold),
+                                            ),
                                           ),
                                         ],
                                       ),
@@ -358,9 +396,14 @@ class HomePageContentDesktop extends StatelessWidget {
                                           crossAxisAlignment: CrossAxisAlignment
                                               .start,
                                           children: <Widget>[
-                                            const FaIcon(
+                                            FaIcon(
                                               FontAwesomeIcons.laptopCode,
-                                              color: Colors.white, size: 30,),
+                                              color: Theme
+                                                  .of(context)
+                                                  .
+                                              textTheme
+                                                  .bodyText1
+                                                  .color, size: 30,),
                                             const SizedBox(height: 20),
                                             Text('For Developers',
                                               style: TextStyle(
@@ -370,12 +413,26 @@ class HomePageContentDesktop extends StatelessWidget {
                                                   .bodyText1
                                                   .color),),
                                             const SizedBox(height: 5,),
-                                            Text('Innovate', style: TextStyle(
-                                                fontSize: 15,
-                                                color: Theme
-                                                    .of(context)
-                                                    .primaryColor,
-                                                fontWeight: FontWeight.bold),
+                                            Container(
+                                              padding: const EdgeInsets.all(5),
+                                              decoration: BoxDecoration(
+                                                  color: Theme
+                                                      .of(context)
+                                                      .
+                                                  textTheme
+                                                      .bodyText1
+                                                      .color,
+                                                  borderRadius: BorderRadius
+                                                      .all(Radius.circular(10))
+                                              ),
+                                              child: Text(
+                                                'Innovate', style: TextStyle(
+                                                  fontSize: 15,
+                                                  color: Theme
+                                                      .of(context)
+                                                      .primaryColor,
+                                                  fontWeight: FontWeight.bold),
+                                              ),
                                             ),
 
                                           ])

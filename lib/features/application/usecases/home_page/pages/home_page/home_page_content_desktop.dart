@@ -150,6 +150,7 @@ class HomePageContentDesktop extends StatelessWidget {
 
                                 const SizedBox(height: 30,),
                                 Row(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
                                     const FaIcon(FontAwesomeIcons.check,
                                       color: Colors.green, size: 15,),
@@ -171,6 +172,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                 ),
                                 const SizedBox(height: 10,),
                                 Row(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
                                     const FaIcon(FontAwesomeIcons.check,
                                       color: Colors.green, size: 15,),
@@ -193,6 +195,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                 ),
                                 const SizedBox(height: 10,),
                                 Row(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
                                     const FaIcon(FontAwesomeIcons.check,
                                       color: Colors.green, size: 15,),
@@ -268,6 +271,7 @@ class HomePageContentDesktop extends StatelessWidget {
 
                                 const SizedBox(height: 30,),
                                 Row(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
                                     const FaIcon(FontAwesomeIcons.check,
                                       color: Colors.green, size: 15,),
@@ -289,6 +293,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                 ),
                                 const SizedBox(height: 10,),
                                 Row(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
                                     const FaIcon(FontAwesomeIcons.check,
                                       color: Colors.green, size: 15,),
@@ -378,6 +383,7 @@ class HomePageContentDesktop extends StatelessWidget {
 
                                 const SizedBox(height: 30,),
                                 Row(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
                                     const FaIcon(FontAwesomeIcons.check,
                                       color: Colors.green, size: 15,),
@@ -399,6 +405,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                 ),
                                 const SizedBox(height: 10,),
                                 Row(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
                                     const FaIcon(FontAwesomeIcons.check,
                                       color: Colors.green, size: 15,),

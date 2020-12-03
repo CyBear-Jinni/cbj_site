@@ -7,7 +7,7 @@ import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 /// The specific look for the top navigation menu for tablet desktop
-class TopNavigationMenuTabletDesktop extends StatelessWidget{
+class TopNavigationMenuTabletDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -24,7 +24,11 @@ class TopNavigationMenuTabletDesktop extends StatelessWidget{
                 children: <Widget>[
                   const SizedBox(width: 20,),
                   FlatButton(
-                    textColor: Theme.of(context).textTheme.bodyText1.color,
+                    textColor: Theme
+                        .of(context)
+                        .textTheme
+                        .bodyText1
+                        .color,
                     onPressed: () {
                       if (MySingleton.getCurrentPageName != 'landingPage' &&
                           MySingleton.getCurrentPageName != homeRoute) {
@@ -51,14 +55,23 @@ class TopNavigationMenuTabletDesktop extends StatelessWidget{
                   const SizedBox(width: 20,),
 
                   FlatButton(
-                    textColor: Theme.of(context).textTheme.bodyText1.color,
+                    textColor: Theme
+                        .of(context)
+                        .textTheme
+                        .bodyText1
+                        .color,
                     onPressed: () {
                       ContactUsPlaceHolder(context);
                     },
-                    child: const Tab(
+                    child: Tab(
                       icon: FaIcon(FontAwesomeIcons.phoneAlt,
-                          color: Colors.white),
-                      child: Text(
+                          color: Theme
+                              .of(context)
+                              .
+                          textTheme
+                              .bodyText1
+                              .color),
+                      child: const Text(
                         'Contact Us',
                       ),
                     ),
@@ -81,7 +94,11 @@ class TopNavigationMenuTabletDesktop extends StatelessWidget{
                 children: <Widget>[
                   const SizedBox(width: 40,),
                   FlatButton(
-                    textColor: Theme.of(context).textTheme.bodyText1.color,
+                    textColor: Theme
+                        .of(context)
+                        .textTheme
+                        .bodyText1
+                        .color,
                     onPressed: () {
                       if (MySingleton.getCurrentPageName != aboutRoute) {
                         Navigator.pushNamed(context, aboutRoute);
@@ -90,10 +107,15 @@ class TopNavigationMenuTabletDesktop extends StatelessWidget{
                         Navigator.pushReplacementNamed(context, aboutRoute);
                       }
                     },
-                    child: const Tab(
+                    child: Tab(
                       icon: FaIcon(FontAwesomeIcons.addressCard,
-                          color: Colors.white),
-                      child: Text(
+                          color: Theme
+                              .of(context)
+                              .
+                          textTheme
+                              .bodyText1
+                              .color),
+                      child: const Text(
                         'About',
                       ),
                     ),
@@ -101,7 +123,11 @@ class TopNavigationMenuTabletDesktop extends StatelessWidget{
 
                   const SizedBox(width: 20,),
                   FlatButton(
-                    textColor: Theme.of(context).textTheme.bodyText1.color,
+                    textColor: Theme
+                        .of(context)
+                        .textTheme
+                        .bodyText1
+                        .color,
                     onPressed: () {
                       if (MySingleton.getCurrentPageName != faqRoute) {
                         Navigator.pushNamed(context, faqRoute);
@@ -110,17 +136,26 @@ class TopNavigationMenuTabletDesktop extends StatelessWidget{
                         Navigator.pushReplacementNamed(context, faqRoute);
                       }
                     },
-                    child: const Tab(
+                    child: Tab(
                       icon: FaIcon(FontAwesomeIcons.questionCircle,
-                          color: Colors.white),
-                      child: Text(
+                          color: Theme
+                              .of(context)
+                              .
+                          textTheme
+                              .bodyText1
+                              .color),
+                      child: const Text(
                         'FAQ',
                       ),
                     ),
                   ),
                   const SizedBox(width: 20,),
                   FlatButton(
-                    textColor: Theme.of(context).textTheme.bodyText1.color,
+                    textColor: Theme
+                        .of(context)
+                        .textTheme
+                        .bodyText1
+                        .color,
                     onPressed: () {
                       if (MySingleton.getCurrentPageName != devicesRoute) {
                         Navigator.pushNamed(context, devicesRoute);
@@ -130,19 +165,28 @@ class TopNavigationMenuTabletDesktop extends StatelessWidget{
                             devicesRoute);
                       }
                     },
-                    child: const Tab(
+                    child: Tab(
                       icon: FaIcon(FontAwesomeIcons.lightbulb,
-                          color: Colors.white),
-                      child: Text(
+                          color: Theme
+                              .of(context)
+                              .
+                          textTheme
+                              .bodyText1
+                              .color),
+                      child: const Text(
                         'Devices',
                       ),
                     ),
                   ),
                   const SizedBox(width: 20,),
                   FlatButton(
-                    textColor: Theme.of(context).textTheme.bodyText1.color,
+                    textColor: Theme
+                        .of(context)
+                        .textTheme
+                        .bodyText1
+                        .color,
                     onPressed: () {
-                      if(MySingleton.getCurrentPageName != 'landingPage' &&
+                      if (MySingleton.getCurrentPageName != 'landingPage' &&
                           MySingleton.getCurrentPageName != homeRoute) {
                         Navigator.pushNamed(context, homeRoute);
                       }
@@ -150,10 +194,15 @@ class TopNavigationMenuTabletDesktop extends StatelessWidget{
                         Navigator.pushReplacementNamed(context, homeRoute);
                       }
                     },
-                    child: const Tab(
+                    child: Tab(
                       icon: FaIcon(FontAwesomeIcons.home,
-                          color: Colors.white),
-                      child: Text(
+                          color: Theme
+                              .of(context)
+                              .
+                          textTheme
+                              .bodyText1
+                              .color),
+                      child: const Text(
                         'Home',
                       ),
                     ),
@@ -167,5 +216,4 @@ class TopNavigationMenuTabletDesktop extends StatelessWidget{
       ),
     );
   }
-
 }

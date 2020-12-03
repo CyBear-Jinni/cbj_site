@@ -5,7 +5,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 
 /// Bottom navigation menu for desktop screen size
-class BottomNavigationMenuDesktop extends StatelessWidget{
+class BottomNavigationMenuDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -17,7 +17,11 @@ class BottomNavigationMenuDesktop extends StatelessWidget{
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Divider(
-                color: Theme.of(context).textTheme.bodyText1.color,
+                color: Theme
+                    .of(context)
+                    .textTheme
+                    .bodyText1
+                    .color,
                 thickness: 1,
                 height: 3,
               ),
@@ -33,24 +37,34 @@ class BottomNavigationMenuDesktop extends StatelessWidget{
                       Row(
                           mainAxisAlignment:
                           MainAxisAlignment.spaceBetween,
-                          children: const <Widget>[
-                            SizedBox(width: 40,),
+                          children: <Widget>[
+                            const SizedBox(width: 40,),
                             Tab(
                               icon: FaIcon(FontAwesomeIcons.appStoreIos,
-                                  color: Colors.white),
-                              child: Text(
+                                  color: Theme
+                                      .of(context)
+                                      .
+                                  textTheme
+                                      .bodyText1
+                                      .color),
+                              child: const Text(
                                 'App Store',
                               ),
                             ),
-                            SizedBox(width: 40,),
+                            const SizedBox(width: 40,),
                             Tab(
                               icon: FaIcon(FontAwesomeIcons.googlePlay,
-                                  color: Colors.white),
-                              child: Text(
+                                  color: Theme
+                                      .of(context)
+                                      .
+                                  textTheme
+                                      .bodyText1
+                                      .color),
+                              child: const Text(
                                 'Play Store',
                               ),
                             ),
-                            SizedBox(width: 40,),
+                            const SizedBox(width: 40,),
                           ]),
                     ],
                   ),
@@ -63,19 +77,29 @@ class BottomNavigationMenuDesktop extends StatelessWidget{
                       Row(
                           mainAxisAlignment:
                           MainAxisAlignment.spaceBetween,
-                          children:  <Widget>[
+                          children: <Widget>[
                             const SizedBox(width: 40,),
 
                             FlatButton(
-                              textColor: Theme.of(context).textTheme.bodyText1.color,
+                              textColor: Theme
+                                  .of(context)
+                                  .textTheme
+                                  .bodyText1
+                                  .color,
                               onPressed: () {
-                                launch('https://www.facebook.com/CyBearJinniHome');
+                                launch(
+                                    'https://www.facebook.com/CyBearJinniHome');
                               },
-                              child:  const Tab(
+                              child: Tab(
                                 icon:
                                 FaIcon(FontAwesomeIcons.facebook,
-                                    color: Colors.white),
-                                child: Text(''),
+                                    color: Theme
+                                        .of(context)
+                                        .
+                                    textTheme
+                                        .bodyText1
+                                        .color),
+                                child: const Text(''),
                               ),
                             ),
 
@@ -83,29 +107,49 @@ class BottomNavigationMenuDesktop extends StatelessWidget{
 
 
                             FlatButton(
-                              textColor: Theme.of(context).textTheme.bodyText1.color,
+                              textColor: Theme
+                                  .of(context)
+                                  .textTheme
+                                  .bodyText1
+                                  .color,
                               onPressed: () {
-                                launch('https://instagram.com/cybearjinni?igshid=rfllj6qbv6l8');
+                                launch(
+                                    'https://instagram.com/cybearjinni?igshid=rfllj6qbv6l8');
                               },
-                              child:  const Tab(
+                              child: Tab(
                                 icon:
                                 FaIcon(FontAwesomeIcons.instagram,
-                                    color: Colors.white),
-                                child: Text(''),
+                                    color: Theme
+                                        .of(context)
+                                        .
+                                    textTheme
+                                        .bodyText1
+                                        .color),
+                                child: const Text(''),
                               ),
                             ),
 
                             const SizedBox(width: 20,),
 
                             FlatButton(
-                              textColor: Theme.of(context).textTheme.bodyText1.color,
+                              textColor: Theme
+                                  .of(context)
+                                  .textTheme
+                                  .bodyText1
+                                  .color,
                               onPressed: () {
-                                launch('https://www.linkedin.com/company/cybear-jinni');
+                                launch(
+                                    'https://www.linkedin.com/company/cybear-jinni');
                               },
-                              child:  const Tab(
+                              child: Tab(
                                 icon:
                                 FaIcon(FontAwesomeIcons.linkedin,
-                                    color: Colors.white),
+                                    color: Theme
+                                        .of(context)
+                                        .
+                                    textTheme
+                                        .bodyText1
+                                        .color),
                                 child: Text(''),
                               ),
                             ),
@@ -113,14 +157,23 @@ class BottomNavigationMenuDesktop extends StatelessWidget{
                             const SizedBox(width: 20,),
 
                             FlatButton(
-                              textColor: Theme.of(context).textTheme.bodyText1.color,
+                              textColor: Theme
+                                  .of(context)
+                                  .textTheme
+                                  .bodyText1
+                                  .color,
                               onPressed: () {
                                 launch('https://github.com/CyBear-Jinni');
                               },
-                              child:  const Tab(
+                              child: Tab(
                                 icon:
                                 FaIcon(FontAwesomeIcons.github,
-                                    color: Colors.white),
+                                    color: Theme
+                                        .of(context)
+                                        .
+                                    textTheme
+                                        .bodyText1
+                                        .color),
                                 child: Text(''),
                               ),
                             ),

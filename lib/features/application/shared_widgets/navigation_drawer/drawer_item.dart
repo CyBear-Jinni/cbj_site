@@ -22,7 +22,12 @@ class DrawerItem extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
         child: Row(children: <Widget>[
-          FaIcon(icon, color: Colors.white,),
+          FaIcon(icon, color: Theme
+              .of(context)
+              .
+          textTheme
+              .bodyText1
+              .color),
           const SizedBox(width: 30,),
           Text(title),
         ],),

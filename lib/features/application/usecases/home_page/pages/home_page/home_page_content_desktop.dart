@@ -10,255 +10,121 @@ import 'package:url_launcher/url_launcher.dart';
 
 /// Home page content for the desktop
 class HomePageContentDesktop extends StatelessWidget {
+  final ScrollController _scrollController = ScrollController();
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      children: <Widget>[
-        Stack(
-          children: <Widget>[
-            SizedBox(
-              width: MediaQuery
-                  .of(context)
-                  .size
-                  .width,
-              height: MediaQuery
-                  .of(context)
-                  .size
-                  .height,
-              child: Image.asset(
-                'assets/images/home_moc_image.jpg',
-                fit: BoxFit.cover,
-              ),
-            ),
-            SizedBox(
-              width: MediaQuery
-                  .of(context)
-                  .size
-                  .width,
-              child: Container(
-                margin: const EdgeInsets.only(top: 100, left: 100),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Container(
-                      decoration: BoxDecoration(
-                          color: Colors.black.withOpacity(0.8),
-                          borderRadius:
-                          const BorderRadius.all(Radius.circular(20))
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text('CyBear Jinni',
-                          style: TextStyle(fontSize: 60, color: Theme
-                              .of(context)
-                              .textTheme
-                              .bodyText1
-                              .color),
-                        ),
-                      ),
-                    ),
-
-                    Container(
-                      margin: const EdgeInsets.only(left: 204,
-                          top: 0.5),
-                      decoration: BoxDecoration(
-                          color: Colors.black.withOpacity(0.8),
-                          borderRadius:
-                          const BorderRadius.all(Radius.circular(20))
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text('Smart Home',
-                          style: TextStyle(fontSize: 21, color: Theme
-                              .of(context)
-                              .textTheme
-                              .bodyText1
-                              .color,
-                              fontWeight: FontWeight.w700),),
-                      ),
-                    ),
-                  ],
+    return Scrollbar(
+      isAlwaysShown: true,
+      thickness: 13,
+      controller: _scrollController,
+      child: ListView(
+        controller: _scrollController,
+        children: <Widget>[
+          Stack(
+            children: <Widget>[
+              SizedBox(
+                width: MediaQuery
+                    .of(context)
+                    .size
+                    .width,
+                height: MediaQuery
+                    .of(context)
+                    .size
+                    .height,
+                child: Image.asset(
+                  'assets/images/home_moc_image.jpg',
+                  fit: BoxFit.cover,
                 ),
               ),
-            ),
-          ],
-        ),
-        Column(
-          children: <Widget>[
-            Container(
-              color: Colors.black12,
-              height: 500,
-              child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        FlatButton(
-                          textColor: Theme
-                              .of(context)
-                              .textTheme
-                              .bodyText2
-                              .color,
-                          onPressed: () {
-                            showDialog(
-                              context: context,
-                              builder: (BuildContext context) {
-                                return ContactUsPopup();
-                              },
-                            );
-                          },
-                          padding: const EdgeInsets.all(30),
-                          color: Colors.black45,
-                          hoverColor: Colors.black87,
-                          child: SizedBox(
-                            width: 320,
-                            height: 370,
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                Row(
-                                  children: <Widget>[
-                                    const SizedBox(width: 25,),
-
-                                    Column(
-                                      crossAxisAlignment: CrossAxisAlignment
-                                          .start,
-                                      children: <Widget>[
-                                        FaIcon(FontAwesomeIcons.users,
-                                          color: Theme
-                                              .of(context)
-                                              .
-                                          textTheme
-                                              .bodyText1
-                                              .color, size: 30,),
-                                        const SizedBox(height: 20),
-                                        Text('For Customers', style: TextStyle(
-                                            fontSize: 30, color: Theme
-                                            .of(context)
-                                            .textTheme
-                                            .bodyText1
-                                            .color),),
-                                        const SizedBox(height: 5,),
-                                        Container(
-                                          padding: const EdgeInsets.all(5),
-                                          decoration: BoxDecoration(
-                                              color: Theme
-                                                  .of(context)
-                                                  .
-                                              textTheme
-                                                  .bodyText1
-                                                  .color,
-                                              borderRadius: BorderRadius.all(
-                                                  Radius.circular(10))
-                                          ),
-                                          child: Text('Enjoy', style: TextStyle(
-                                              fontSize: 15,
-                                              color: Theme
-                                                  .of(context)
-                                                  .primaryColor,
-                                              fontWeight: FontWeight.bold),
-                                          ),
-                                        ),
-                                      ],
-                                    )
-                                  ],
-                                ),
-
-                                const SizedBox(height: 30,),
-                                Row(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    const FaIcon(FontAwesomeIcons.check,
-                                      color: Colors.green, size: 15,),
-                                    const SizedBox(width: 10,),
-                                    SizedBox(
-                                      width: 280,
-                                      child: Text(
-                                        'Our electricians will install '
-                                            'CyBear Jinni Smart Devices in your home.',
-                                        style: TextStyle(
-                                          fontSize: 20, color: Theme
-                                            .of(context)
-                                            .
-                                        textTheme
-                                            .bodyText2
-                                            .color,),),
-                                    ),
-                                  ],
-                                ),
-                                const SizedBox(height: 10,),
-                                Row(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    const FaIcon(FontAwesomeIcons.check,
-                                      color: Colors.green, size: 15,),
-                                    const SizedBox(width: 10,),
-                                    SizedBox(
-                                      width: 280,
-                                      child: Text(
-                                        'Providing guidance on how to set the'
-                                            ' smart devices and use the '
-                                            'smartphone app to '
-                                            'interact with them.',
-                                        style: TextStyle(
-                                          fontSize: 20, color: Theme
-                                            .of(context)
-                                            .
-                                        textTheme
-                                            .bodyText2
-                                            .color,),),
-                                    ),
-                                  ],
-                                ),
-                                const SizedBox(height: 10,),
-                                Row(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    const FaIcon(FontAwesomeIcons.check,
-                                      color: Colors.green, size: 15,),
-                                    const SizedBox(width: 10,),
-                                    SizedBox(
-                                      width: 280,
-                                      child: Text(
-                                        'Getting a long warranty and all of the'
-                                            ' above for a fair price.',
-                                        style: TextStyle(
-                                          fontSize: 20, color: Theme
-                                            .of(context)
-                                            .
-                                        textTheme
-                                            .bodyText2
-                                            .color,),),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
+              SizedBox(
+                width: MediaQuery
+                    .of(context)
+                    .size
+                    .width,
+                child: Container(
+                  margin: const EdgeInsets.only(top: 100, left: 100),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Container(
+                        decoration: BoxDecoration(
+                            color: Colors.black.withOpacity(0.8),
+                            borderRadius:
+                            const BorderRadius.all(Radius.circular(20))
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text('CyBear Jinni',
+                            style: TextStyle(fontSize: 60, color: Theme
+                                .of(context)
+                                .textTheme
+                                .bodyText1
+                                .color),
                           ),
                         ),
-                        const SizedBox(width: 30,),
-                        FlatButton(
-                          textColor: Theme
-                              .of(context)
-                              .textTheme
-                              .bodyText2
-                              .color,
-                          onPressed: () {
-                            Navigator.pushNamed(
-                                context, devicesRoute);
-                          },
-                          padding: const EdgeInsets.all(30),
-                          color: Colors.black45,
-                          hoverColor: Colors.black87,
-                          child: SizedBox(
-                            width: 320,
-                            height: 370,
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                Row(
+                      ),
+
+                      Container(
+                        margin: const EdgeInsets.only(left: 204,
+                            top: 0.5),
+                        decoration: BoxDecoration(
+                            color: Colors.black.withOpacity(0.8),
+                            borderRadius:
+                            const BorderRadius.all(Radius.circular(20))
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text('Smart Home',
+                            style: TextStyle(fontSize: 21, color: Theme
+                                .of(context)
+                                .textTheme
+                                .bodyText1
+                                .color,
+                                fontWeight: FontWeight.w700),),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+          Column(
+            children: <Widget>[
+              Container(
+                color: Colors.black12,
+                height: 500,
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          FlatButton(
+                            textColor: Theme
+                                .of(context)
+                                .textTheme
+                                .bodyText2
+                                .color,
+                            onPressed: () {
+                              showDialog(
+                                context: context,
+                                builder: (BuildContext context) {
+                                  return ContactUsPopup();
+                                },
+                              );
+                            },
+                            padding: const EdgeInsets.all(30),
+                            color: Colors.black45,
+                            hoverColor: Colors.black87,
+                            child: SizedBox(
+                              width: 320,
+                              height: 370,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  Row(
                                     children: <Widget>[
                                       const SizedBox(width: 25,),
 
@@ -266,7 +132,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                         crossAxisAlignment: CrossAxisAlignment
                                             .start,
                                         children: <Widget>[
-                                          FaIcon(FontAwesomeIcons.globe,
+                                          FaIcon(FontAwesomeIcons.users,
                                             color: Theme
                                                 .of(context)
                                                 .
@@ -274,7 +140,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                                 .bodyText1
                                                 .color, size: 30,),
                                           const SizedBox(height: 20),
-                                          Text('For Users', style: TextStyle(
+                                          Text('For Customers', style: TextStyle(
                                               fontSize: 30, color: Theme
                                               .of(context)
                                               .textTheme
@@ -293,8 +159,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                                 borderRadius: BorderRadius.all(
                                                     Radius.circular(10))
                                             ),
-                                            child: Text(
-                                              'Deploy', style: TextStyle(
+                                            child: Text('Enjoy', style: TextStyle(
                                                 fontSize: 15,
                                                 color: Theme
                                                     .of(context)
@@ -303,101 +168,111 @@ class HomePageContentDesktop extends StatelessWidget {
                                             ),
                                           ),
                                         ],
-                                      ),
-                                    ]
-                                ),
+                                      )
+                                    ],
+                                  ),
 
-                                const SizedBox(height: 30,),
-                                Row(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    const FaIcon(FontAwesomeIcons.check,
-                                      color: Colors.green, size: 15,),
-                                    const SizedBox(width: 10,),
-                                    SizedBox(
-                                      width: 280,
-                                      child: Text(
-                                        'Devices can be purchased online for '
-                                            'self-installation in your home.',
-                                        style: TextStyle(
-                                          fontSize: 20, color: Theme
-                                            .of(context)
-                                            .
-                                        textTheme
-                                            .bodyText2
-                                            .color,),),
-                                    ),
-                                  ],
-                                ),
-                                const SizedBox(height: 10,),
-                                Row(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    const FaIcon(FontAwesomeIcons.check,
-                                      color: Colors.green, size: 15,),
-                                    const SizedBox(width: 10,),
-                                    SizedBox(
-                                      width: 280,
-                                      child: Text(
-                                        'Instructions and videos of how to'
-                                            ' deploy and set the system'
-                                            ' yourself.',
-                                        style: TextStyle(
-                                          fontSize: 20, color: Theme
-                                            .of(context)
-                                            .
-                                        textTheme
-                                            .bodyText2
-                                            .color,),),
-                                    ),
-                                  ],
-                                ),
-                                const SizedBox(height: 10,),
-                                Text('',
-                                  style: TextStyle(fontSize: 20, color: Theme
-                                      .of(context)
-                                      .
-                                  textTheme
-                                      .bodyText2
-                                      .color,),),
-                              ],
+                                  const SizedBox(height: 30,),
+                                  Row(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: <Widget>[
+                                      const FaIcon(FontAwesomeIcons.check,
+                                        color: Colors.green, size: 15,),
+                                      const SizedBox(width: 10,),
+                                      SizedBox(
+                                        width: 280,
+                                        child: Text(
+                                          'Our electricians will install '
+                                              'CyBear Jinni Smart Devices in your home.',
+                                          style: TextStyle(
+                                            fontSize: 20, color: Theme
+                                              .of(context)
+                                              .
+                                          textTheme
+                                              .bodyText2
+                                              .color,),),
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(height: 10,),
+                                  Row(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: <Widget>[
+                                      const FaIcon(FontAwesomeIcons.check,
+                                        color: Colors.green, size: 15,),
+                                      const SizedBox(width: 10,),
+                                      SizedBox(
+                                        width: 280,
+                                        child: Text(
+                                          'Providing guidance on how to set the'
+                                              ' smart devices and use the '
+                                              'smartphone app to '
+                                              'interact with them.',
+                                          style: TextStyle(
+                                            fontSize: 20, color: Theme
+                                              .of(context)
+                                              .
+                                          textTheme
+                                              .bodyText2
+                                              .color,),),
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(height: 10,),
+                                  Row(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: <Widget>[
+                                      const FaIcon(FontAwesomeIcons.check,
+                                        color: Colors.green, size: 15,),
+                                      const SizedBox(width: 10,),
+                                      SizedBox(
+                                        width: 280,
+                                        child: Text(
+                                          'Getting a long warranty and all of the'
+                                              ' above for a fair price.',
+                                          style: TextStyle(
+                                            fontSize: 20, color: Theme
+                                              .of(context)
+                                              .
+                                          textTheme
+                                              .bodyText2
+                                              .color,),),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
-                        ),
-                        const SizedBox(width: 30,),
-                        FlatButton(
-                          textColor: Theme
-                              .of(context)
-                              .textTheme
-                              .bodyText2
-                              .color,
-                          onPressed: () async {
-                            const String url = 'https://github.com/CyBear-Jinni';
-                            if (await canLaunch(url)) {
-                              await launch(url);
-                            } else {
-                              throw 'Could not launch $url';
-                            }
-                          },
-                          padding: const EdgeInsets.all(30),
-                          color: Colors.black45,
-                          hoverColor: Colors.black87,
-                          child: SizedBox(
-                            width: 320,
-                            height: 370,
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                Row(
-                                    children: <Widget>[
-                                      const SizedBox(width: 25,),
+                          const SizedBox(width: 30,),
+                          FlatButton(
+                            textColor: Theme
+                                .of(context)
+                                .textTheme
+                                .bodyText2
+                                .color,
+                            onPressed: () {
+                              Navigator.pushNamed(
+                                  context, devicesRoute);
+                            },
+                            padding: const EdgeInsets.all(30),
+                            color: Colors.black45,
+                            hoverColor: Colors.black87,
+                            child: SizedBox(
+                              width: 320,
+                              height: 370,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  Row(
+                                      children: <Widget>[
+                                        const SizedBox(width: 25,),
 
-                                      Column(
+                                        Column(
                                           crossAxisAlignment: CrossAxisAlignment
                                               .start,
                                           children: <Widget>[
-                                            FaIcon(
-                                              FontAwesomeIcons.laptopCode,
+                                            FaIcon(FontAwesomeIcons.globe,
                                               color: Theme
                                                   .of(context)
                                                   .
@@ -405,13 +280,12 @@ class HomePageContentDesktop extends StatelessWidget {
                                                   .bodyText1
                                                   .color, size: 30,),
                                             const SizedBox(height: 20),
-                                            Text('For Developers',
-                                              style: TextStyle(
-                                                  fontSize: 30, color: Theme
-                                                  .of(context)
-                                                  .textTheme
-                                                  .bodyText1
-                                                  .color),),
+                                            Text('For Users', style: TextStyle(
+                                                fontSize: 30, color: Theme
+                                                .of(context)
+                                                .textTheme
+                                                .bodyText1
+                                                .color),),
                                             const SizedBox(height: 5,),
                                             Container(
                                               padding: const EdgeInsets.all(5),
@@ -422,11 +296,11 @@ class HomePageContentDesktop extends StatelessWidget {
                                                   textTheme
                                                       .bodyText1
                                                       .color,
-                                                  borderRadius: BorderRadius
-                                                      .all(Radius.circular(10))
+                                                  borderRadius: BorderRadius.all(
+                                                      Radius.circular(10))
                                               ),
                                               child: Text(
-                                                'Contribute', style: TextStyle(
+                                                'Deploy', style: TextStyle(
                                                   fontSize: 15,
                                                   color: Theme
                                                       .of(context)
@@ -434,97 +308,273 @@ class HomePageContentDesktop extends StatelessWidget {
                                                   fontWeight: FontWeight.bold),
                                               ),
                                             ),
+                                          ],
+                                        ),
+                                      ]
+                                  ),
 
-                                          ])
-                                    ]),
-
-                                const SizedBox(height: 30,),
-                                Row(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    const FaIcon(FontAwesomeIcons.check,
-                                      color: Colors.green, size: 15,),
-                                    const SizedBox(width: 10,),
-                                    SizedBox(
-                                      width: 280,
-                                      child: Text('Open source code and '
-                                          'instructions for makers and tinkerers '
-                                          'to build the system from scratch.',
-                                        style: TextStyle(
-                                          fontSize: 20, color: Theme
-                                            .of(context)
-                                            .
-                                        textTheme
-                                            .bodyText2
-                                            .color,),),
-                                    ),
-                                  ],
-                                ),
-                                const SizedBox(height: 10,),
-                                Row(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    const FaIcon(FontAwesomeIcons.check,
-                                      color: Colors.green, size: 15,),
-                                    const SizedBox(width: 10,),
-                                    SizedBox(
-                                      width: 280,
-                                      child: Text(
-                                        'Opportunity to add support for '
-                                            'the system to communicate with other smart'
-                                            ' devices that are not supported yet.',
-                                        style: TextStyle(
-                                          fontSize: 20, color: Theme
-                                            .of(context)
-                                            .
-                                        textTheme
-                                            .bodyText2
-                                            .color,),),
-                                    ),
-                                  ],
-                                ),
-                                const SizedBox(height: 10,),
-                                Text('',
-                                  style: TextStyle(fontSize: 20, color: Theme
-                                      .of(context)
-                                      .
-                                  textTheme
-                                      .bodyText2
-                                      .color,),),
-                              ],
+                                  const SizedBox(height: 30,),
+                                  Row(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: <Widget>[
+                                      const FaIcon(FontAwesomeIcons.check,
+                                        color: Colors.green, size: 15,),
+                                      const SizedBox(width: 10,),
+                                      SizedBox(
+                                        width: 280,
+                                        child: Text(
+                                          'Devices can be purchased online for '
+                                              'self-installation in your home.',
+                                          style: TextStyle(
+                                            fontSize: 20, color: Theme
+                                              .of(context)
+                                              .
+                                          textTheme
+                                              .bodyText2
+                                              .color,),),
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(height: 10,),
+                                  Row(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: <Widget>[
+                                      const FaIcon(FontAwesomeIcons.check,
+                                        color: Colors.green, size: 15,),
+                                      const SizedBox(width: 10,),
+                                      SizedBox(
+                                        width: 280,
+                                        child: Text(
+                                          'Instructions and videos of how to'
+                                              ' deploy and set the system'
+                                              ' yourself.',
+                                          style: TextStyle(
+                                            fontSize: 20, color: Theme
+                                              .of(context)
+                                              .
+                                          textTheme
+                                              .bodyText2
+                                              .color,),),
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(height: 10,),
+                                  Text('',
+                                    style: TextStyle(fontSize: 20, color: Theme
+                                        .of(context)
+                                        .
+                                    textTheme
+                                        .bodyText2
+                                        .color,),),
+                                ],
+                              ),
                             ),
                           ),
-                        ),
+                          const SizedBox(width: 30,),
+                          FlatButton(
+                            textColor: Theme
+                                .of(context)
+                                .textTheme
+                                .bodyText2
+                                .color,
+                            onPressed: () async {
+                              const String url = 'https://github.com/CyBear-Jinni';
+                              if (await canLaunch(url)) {
+                                await launch(url);
+                              } else {
+                                throw 'Could not launch $url';
+                              }
+                            },
+                            padding: const EdgeInsets.all(30),
+                            color: Colors.black45,
+                            hoverColor: Colors.black87,
+                            child: SizedBox(
+                              width: 320,
+                              height: 370,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  Row(
+                                      children: <Widget>[
+                                        const SizedBox(width: 25,),
 
+                                        Column(
+                                            crossAxisAlignment: CrossAxisAlignment
+                                                .start,
+                                            children: <Widget>[
+                                              FaIcon(
+                                                FontAwesomeIcons.laptopCode,
+                                                color: Theme
+                                                    .of(context)
+                                                    .
+                                                textTheme
+                                                    .bodyText1
+                                                    .color, size: 30,),
+                                              const SizedBox(height: 20),
+                                              Text('For Developers',
+                                                style: TextStyle(
+                                                    fontSize: 30, color: Theme
+                                                    .of(context)
+                                                    .textTheme
+                                                    .bodyText1
+                                                    .color),),
+                                              const SizedBox(height: 5,),
+                                              Container(
+                                                padding: const EdgeInsets.all(5),
+                                                decoration: BoxDecoration(
+                                                    color: Theme
+                                                        .of(context)
+                                                        .
+                                                    textTheme
+                                                        .bodyText1
+                                                        .color,
+                                                    borderRadius: BorderRadius
+                                                        .all(Radius.circular(10))
+                                                ),
+                                                child: Text(
+                                                  'Contribute', style: TextStyle(
+                                                    fontSize: 15,
+                                                    color: Theme
+                                                        .of(context)
+                                                        .primaryColor,
+                                                    fontWeight: FontWeight.bold),
+                                                ),
+                                              ),
+
+                                            ])
+                                      ]),
+
+                                  const SizedBox(height: 30,),
+                                  Row(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: <Widget>[
+                                      const FaIcon(FontAwesomeIcons.check,
+                                        color: Colors.green, size: 15,),
+                                      const SizedBox(width: 10,),
+                                      SizedBox(
+                                        width: 280,
+                                        child: Text('Open source code and '
+                                            'instructions for makers and tinkerers '
+                                            'to build the system from scratch.',
+                                          style: TextStyle(
+                                            fontSize: 20, color: Theme
+                                              .of(context)
+                                              .
+                                          textTheme
+                                              .bodyText2
+                                              .color,),),
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(height: 10,),
+                                  Row(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: <Widget>[
+                                      const FaIcon(FontAwesomeIcons.check,
+                                        color: Colors.green, size: 15,),
+                                      const SizedBox(width: 10,),
+                                      SizedBox(
+                                        width: 280,
+                                        child: Text(
+                                          'Opportunity to add support for '
+                                              'the system to communicate with other smart'
+                                              ' devices that are not supported yet.',
+                                          style: TextStyle(
+                                            fontSize: 20, color: Theme
+                                              .of(context)
+                                              .
+                                          textTheme
+                                              .bodyText2
+                                              .color,),),
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(height: 10,),
+                                  Text('',
+                                    style: TextStyle(fontSize: 20, color: Theme
+                                        .of(context)
+                                        .
+                                    textTheme
+                                        .bodyText2
+                                        .color,),),
+                                ],
+                              ),
+                            ),
+                          ),
+
+                        ],
+                      ),
+                    ]
+                ),
+              ),
+
+              FlatButton(
+                textColor: Theme
+                    .of(context)
+                    .textTheme
+                    .bodyText1
+                    .color,
+                color: Colors.black54,
+                height: 500.0,
+                onPressed: () {
+                  Navigator.pushNamed(context, devicesRoute,
+                  );
+                },
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    Container(),
+                    Container(),
+                    Container(),
+                    Container(),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Text('Click here to see our devices',
+                            style: TextStyle(fontSize: 40, color:
+                            Theme
+                                .of(context)
+                                .textTheme
+                                .bodyText1
+                                .color),
+                            textAlign: TextAlign.center),
+                        const SizedBox(height: 50,),
                       ],
                     ),
-                  ]
+                    Container(),
+                    Container(
+                      alignment: Alignment.center,
+                      child: Image.network(
+                        'https://user-images.githubusercontent.com/9304740/97103272-19572d00-16b4-11eb-8e47-394ec18b3809.png',
+                        height: 400.0,
+                      ),
+                    ),
+                    Container(),
+                    Container(),
+                    Container(),
+                    Container(),
+                  ],
+                ),
               ),
-            ),
 
-            FlatButton(
-              textColor: Theme
-                  .of(context)
-                  .textTheme
-                  .bodyText1
-                  .color,
-              color: Colors.black54,
-              height: 500.0,
-              onPressed: () {
-                Navigator.pushNamed(context, devicesRoute,
-                );
-              },
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
-                  Container(),
-                  Container(),
-                  Container(),
-                  Container(),
-                  Column(
+              SizedBox(
+                height: 500,
+                child: FlatButton(
+                  color: Colors.black12,
+                  padding: const EdgeInsets.all(0),
+                  onPressed: () async {
+                    const String url = 'https://snapcraft.io/cybear-jinni';
+                    if (await canLaunch(url)) {
+                      await launch(url);
+                    } else {
+                      throw 'Could not launch $url';
+                    }
+                  },
+                  child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      Text('Click here to see our devices',
+                      const SizedBox(height: 10,),
+                      Text('CyBear Jinni Smart Devices Distribution',
                           style: TextStyle(fontSize: 40, color:
                           Theme
                               .of(context)
@@ -532,111 +582,68 @@ class HomePageContentDesktop extends StatelessWidget {
                               .bodyText1
                               .color),
                           textAlign: TextAlign.center),
-                      const SizedBox(height: 50,),
+                      const SizedBox(height: 10,),
+                      Expanded(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              colorFilter: ColorFilter.mode(
+                                  Colors.black.withOpacity(0.7),
+                                  BlendMode.dstATop),
+                              image: const NetworkImage(
+                                'https://user-images.githubusercontent.com/9304740/100759143-f4638180-33f8-11eb-9a68-3e4fb531ffe6.png',
+                              ),
+                              fit: BoxFit.scaleDown,
+                            ),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 20,),
                     ],
                   ),
-                  Container(),
-                  Container(
-                    alignment: Alignment.center,
-                    child: Image.network(
-                      'https://user-images.githubusercontent.com/9304740/97103272-19572d00-16b4-11eb-8e47-394ec18b3809.png',
-                      height: 400.0,
-                    ),
-                  ),
-                  Container(),
-                  Container(),
-                  Container(),
-                  Container(),
-                ],
+                ),
               ),
-            ),
 
-            SizedBox(
-              height: 500,
-              child: FlatButton(
-                color: Colors.black12,
-                padding: const EdgeInsets.all(0),
-                onPressed: () async {
-                  const String url = 'https://snapcraft.io/cybear-jinni';
-                  if (await canLaunch(url)) {
-                    await launch(url);
-                  } else {
-                    throw 'Could not launch $url';
-                  }
-                },
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
+              Container(
+                color: Colors.black54,
+                height: 500.0,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
-                    const SizedBox(height: 10,),
-                    Text('CyBear Jinni Smart Devices Distribution',
-                        style: TextStyle(fontSize: 40, color:
+                    Container(),
+                    Container(),
+                    Container(),
+                    Container(),
+                    Text('Fan Art',
+                        style: TextStyle(fontSize: 50, color:
                         Theme
                             .of(context)
                             .textTheme
                             .bodyText1
                             .color),
                         textAlign: TextAlign.center),
-                    const SizedBox(height: 10,),
-                    Expanded(
-                      child: Container(
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            colorFilter: ColorFilter.mode(
-                                Colors.black.withOpacity(0.7),
-                                BlendMode.dstATop),
-                            image: const NetworkImage(
-                              'https://user-images.githubusercontent.com/9304740/100759143-f4638180-33f8-11eb-9a68-3e4fb531ffe6.png',
-                            ),
-                            fit: BoxFit.scaleDown,
-                          ),
-                        ),
+                    Container(),
+                    Container(
+                      alignment: Alignment.center,
+                      child: Image.asset(
+                        'assets/fan_art/CyBear_Jinni_art_1.jpg',
+                        height: 400.0,
                       ),
                     ),
-                    const SizedBox(height: 20,),
+                    Container(),
+                    Container(),
+                    Container(),
+                    Container(),
                   ],
                 ),
               ),
-            ),
 
-            Container(
-              color: Colors.black54,
-              height: 500.0,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
-                  Container(),
-                  Container(),
-                  Container(),
-                  Container(),
-                  Text('Fan Art',
-                      style: TextStyle(fontSize: 50, color:
-                      Theme
-                          .of(context)
-                          .textTheme
-                          .bodyText1
-                          .color),
-                      textAlign: TextAlign.center),
-                  Container(),
-                  Container(
-                    alignment: Alignment.center,
-                    child: Image.asset(
-                      'assets/fan_art/CyBear_Jinni_art_1.jpg',
-                      height: 400.0,
-                    ),
-                  ),
-                  Container(),
-                  Container(),
-                  Container(),
-                  Container(),
-                ],
-              ),
-            ),
-
-            BottomNavigationMenu(),
-          ],
-        ),
-        const SizedBox(height: 50,),
-      ],
+              BottomNavigationMenu(),
+            ],
+          ),
+          const SizedBox(height: 50,),
+        ],
+      ),
     );
   }
 }

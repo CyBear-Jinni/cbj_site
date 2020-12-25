@@ -590,7 +590,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                   Colors.black.withOpacity(0.7),
                                   BlendMode.dstATop),
                               image: const NetworkImage(
-                                'https://user-images.githubusercontent.com/9304740/100759143-f4638180-33f8-11eb-9a68-3e4fb531ffe6.png',
+                                'https://user-images.githubusercontent.com/9304740/103142663-a6981b80-470f-11eb-9edb-407ac585038d.png',
                               ),
                               fit: BoxFit.scaleDown,
                             ),

@@ -501,7 +501,6 @@ class HomePageContentDesktop extends StatelessWidget {
                               ),
                             ),
                           ),
-
                         ],
                       ),
                     ]

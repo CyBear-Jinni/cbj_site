@@ -426,7 +426,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                                       .all(Radius.circular(10))
                                               ),
                                               child: Text(
-                                                'Innovate', style: TextStyle(
+                                                'Contribute', style: TextStyle(
                                                   fontSize: 15,
                                                   color: Theme
                                                       .of(context)

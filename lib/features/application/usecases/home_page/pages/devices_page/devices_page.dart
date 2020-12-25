@@ -8,6 +8,8 @@ import 'package:responsive_builder/responsive_builder.dart';
 
 /// Devices the company can install for you and you can by online
 class DevicesPage extends StatelessWidget {
+  final ScrollController _scrollController = ScrollController();
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -42,71 +44,81 @@ class DevicesPage extends StatelessWidget {
               drawer:
               sizingInformation.deviceScreenType == DeviceScreenType.mobile
                   ? NavigationDrawer() : null,
-          backgroundColor: Colors.transparent,
-          body: Stack(
-            children: <Widget>[
-              ListView(
+              backgroundColor: Colors.transparent,
+              body: Stack(
                 children: <Widget>[
-                  Column(
-                    children: <Widget>[
-                      const SizedBox(height: 150,),
-                      Container(
-                        color: Colors.black12,
-                        height: 500,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
+                  Scrollbar(
+                    isAlwaysShown: true,
+                    thickness: 13,
+                    controller: _scrollController,
+                    child: ListView(
+                      controller: _scrollController,
+                      children: <Widget>[
+                        Column(
                           children: <Widget>[
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
+                            const SizedBox(height: 150,),
+                            Container(
+                              color: Colors.black12,
+                              height: 500,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  Row(
+                                    crossAxisAlignment: CrossAxisAlignment
+                                        .start,
+                                    children: <Widget>[
 
-                                Expanded(
-                                  child: Column(
-                                      children: <Widget>[
-                                        Text('Our Devices',
-                                            style: TextStyle(fontSize: 50, color:
-                                            Theme
-                                                .of(context)
-                                                .textTheme
-                                                .
-                                            bodyText1
-                                                .color),
-                                            textAlign: TextAlign.center),
-                                        const SizedBox(height: 10,),
-                                        Padding(
-                                          padding: const EdgeInsets.symmetric(
-                                              horizontal: 100),
-                                          child: Column(
-                                            crossAxisAlignment: CrossAxisAlignment
-                                                .start,
-                                            children: const <Widget>[
-                                              Text(
-                                                'Images of devices',
-                                                style: TextStyle(fontSize: 20,),
+                                      Expanded(
+                                        child: Column(
+                                            children: <Widget>[
+                                              Text('Our Devices',
+                                                  style: TextStyle(
+                                                      fontSize: 50, color:
+                                                  Theme
+                                                      .of(context)
+                                                      .textTheme
+                                                      .
+                                                  bodyText1
+                                                      .color),
+                                                  textAlign: TextAlign.center),
+                                              const SizedBox(height: 10,),
+                                              Padding(
+                                                padding: const EdgeInsets
+                                                    .symmetric(
+                                                    horizontal: 100),
+                                                child: Column(
+                                                  crossAxisAlignment: CrossAxisAlignment
+                                                      .start,
+                                                  children: const <Widget>[
+                                                    Text(
+                                                      'Images of devices',
+                                                      style: TextStyle(
+                                                        fontSize: 20,),
+                                                    ),
+                                                  ],
+                                                ),
+
                                               ),
-                                            ],
-                                          ),
-
+                                            ]
                                         ),
-                                      ]
-                                  ),
 
-                                ),
-                              ],
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
                             ),
+                            BottomNavigationMenu(),
                           ],
                         ),
-                      ),
-                      BottomNavigationMenu(),
-                    ],
+                        const SizedBox(height: 50,),
+                      ],
+                    ),
                   ),
-                  const SizedBox(height: 50,),
+                  TopNavigationMenu(),
                 ],
               ),
-              TopNavigationMenu(),
-            ],
-          ),
-        ),
+            ),
       ),
     );
   }

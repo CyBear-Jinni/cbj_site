@@ -18,3 +18,7 @@ This repository is "the face behind the company" the **Site** of [CyBear Jinni S
 # [For the project itself click here](https://github.com/CyBear-Jinni/CBJ_Smart-Home.git)
 
 The site will be built using [Flutter](https://flutter.dev/)
+
+## Disclaimers
+
+The project is under heavy work and may contain bugs and incorrect instructions.

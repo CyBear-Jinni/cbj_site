@@ -31,8 +31,8 @@ class HomePageContentDesktop extends StatelessWidget {
                     .of(context)
                     .size
                     .height,
-                child: Image.asset(
-                  'assets/images/home_moc_image.jpg',
+                child: Image.network(
+                  'https://i.ibb.co/2SwVLf3/House.jpg',
                   fit: BoxFit.cover,
                 ),
               ),
@@ -278,16 +278,21 @@ class HomePageContentDesktop extends StatelessWidget {
                                               textTheme
                                                   .bodyText1
                                                   .color, size: 30,),
-                                            const SizedBox(height: 20),
-                                            Text('For Users', style: TextStyle(
-                                                fontSize: 30, color: Theme
-                                                .of(context)
-                                                .textTheme
-                                                .bodyText1
-                                                .color),),
-                                            const SizedBox(height: 5,),
-                                            Container(
-                                              padding: const EdgeInsets.all(5),
+                                        const SizedBox(height: 20),
+                                        Text(
+                                          'For Users',
+                                          style: TextStyle(
+                                              fontSize: 30,
+                                              color: Theme.of(context)
+                                                  .textTheme
+                                                  .bodyText1
+                                                  .color),
+                                        ),
+                                        const SizedBox(
+                                          height: 5,
+                                        ),
+                                        Container(
+                                          padding: const EdgeInsets.all(5),
                                           decoration: BoxDecoration(
                                               color: Theme.of(context)
                                                   .textTheme
@@ -305,7 +310,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                                 fontWeight: FontWeight.bold),
                                           ),
                                         ),
-                                          ],
+                                      ],
                                         ),
                                       ]
                                   ),
@@ -408,16 +413,20 @@ class HomePageContentDesktop extends StatelessWidget {
                                                     .bodyText1
                                                     .color, size: 30,),
                                               const SizedBox(height: 20),
-                                              Text('For Developers',
-                                                style: TextStyle(
-                                                    fontSize: 30, color: Theme
-                                                    .of(context)
+                                          Text(
+                                            'For Developers',
+                                            style: TextStyle(
+                                                fontSize: 30,
+                                                color: Theme.of(context)
                                                     .textTheme
                                                     .bodyText1
-                                                    .color),),
-                                              const SizedBox(height: 5,),
-                                              Container(
-                                                padding: const EdgeInsets.all(5),
+                                                    .color),
+                                          ),
+                                          const SizedBox(
+                                            height: 5,
+                                          ),
+                                          Container(
+                                            padding: const EdgeInsets.all(5),
                                             decoration: BoxDecoration(
                                                 color: Theme.of(context)
                                                     .textTheme
@@ -435,8 +444,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                                   fontWeight: FontWeight.bold),
                                             ),
                                           ),
-
-                                            ])
+                                        ])
                                       ]),
 
                                   const SizedBox(height: 30,),

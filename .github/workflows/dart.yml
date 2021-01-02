@@ -8,8 +8,8 @@ on:
   workflow_dispatch:
 
 env:
-  flutter_channel: 'stable' # or: 'dev' or 'beta'
-  flutter_version: '1.20.3'
+  flutter_channel: 'dev' # or: 'dev' or 'beta'
+  flutter_version: '1.26.0-1.0.pre'
 
 jobs:
   build:

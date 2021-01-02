@@ -150,21 +150,20 @@ class HomePageContentDesktop extends StatelessWidget {
                                           Container(
                                             padding: const EdgeInsets.all(5),
                                             decoration: BoxDecoration(
-                                                color: Theme
-                                                    .of(context)
-                                                    .
-                                                textTheme
+                                                color: Theme.of(context)
+                                                    .textTheme
                                                     .bodyText1
                                                     .color,
-                                                borderRadius: BorderRadius.all(
-                                                    Radius.circular(10))
-                                            ),
-                                            child: Text('Enjoy', style: TextStyle(
-                                                fontSize: 15,
-                                                color: Theme
-                                                    .of(context)
-                                                    .primaryColor,
-                                                fontWeight: FontWeight.bold),
+                                                borderRadius:
+                                                    const BorderRadius.all(
+                                                        Radius.circular(10))),
+                                            child: Text(
+                                              'Enjoy',
+                                              style: TextStyle(
+                                                  fontSize: 15,
+                                                  color: Theme.of(context)
+                                                      .primaryColor,
+                                                  fontWeight: FontWeight.bold),
                                             ),
                                           ),
                                         ],
@@ -289,25 +288,23 @@ class HomePageContentDesktop extends StatelessWidget {
                                             const SizedBox(height: 5,),
                                             Container(
                                               padding: const EdgeInsets.all(5),
-                                              decoration: BoxDecoration(
-                                                  color: Theme
-                                                      .of(context)
-                                                      .
-                                                  textTheme
-                                                      .bodyText1
-                                                      .color,
-                                                  borderRadius: BorderRadius.all(
-                                                      Radius.circular(10))
-                                              ),
-                                              child: Text(
-                                                'Deploy', style: TextStyle(
-                                                  fontSize: 15,
-                                                  color: Theme
-                                                      .of(context)
-                                                      .primaryColor,
-                                                  fontWeight: FontWeight.bold),
-                                              ),
-                                            ),
+                                          decoration: BoxDecoration(
+                                              color: Theme.of(context)
+                                                  .textTheme
+                                                  .bodyText1
+                                                  .color,
+                                              borderRadius:
+                                                  const BorderRadius.all(
+                                                      Radius.circular(10))),
+                                          child: Text(
+                                            'Deploy',
+                                            style: TextStyle(
+                                                fontSize: 15,
+                                                color: Theme.of(context)
+                                                    .primaryColor,
+                                                fontWeight: FontWeight.bold),
+                                          ),
+                                        ),
                                           ],
                                         ),
                                       ]
@@ -421,25 +418,23 @@ class HomePageContentDesktop extends StatelessWidget {
                                               const SizedBox(height: 5,),
                                               Container(
                                                 padding: const EdgeInsets.all(5),
-                                                decoration: BoxDecoration(
-                                                    color: Theme
-                                                        .of(context)
-                                                        .
-                                                    textTheme
-                                                        .bodyText1
-                                                        .color,
-                                                    borderRadius: BorderRadius
-                                                        .all(Radius.circular(10))
-                                                ),
-                                                child: Text(
-                                                  'Contribute', style: TextStyle(
-                                                    fontSize: 15,
-                                                    color: Theme
-                                                        .of(context)
-                                                        .primaryColor,
-                                                    fontWeight: FontWeight.bold),
-                                                ),
-                                              ),
+                                            decoration: BoxDecoration(
+                                                color: Theme.of(context)
+                                                    .textTheme
+                                                    .bodyText1
+                                                    .color,
+                                                borderRadius:
+                                                    const BorderRadius.all(
+                                                        Radius.circular(10))),
+                                            child: Text(
+                                              'Contribute',
+                                              style: TextStyle(
+                                                  fontSize: 15,
+                                                  color: Theme.of(context)
+                                                      .primaryColor,
+                                                  fontWeight: FontWeight.bold),
+                                            ),
+                                          ),
 
                                             ])
                                       ]),

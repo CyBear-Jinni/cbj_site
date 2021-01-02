@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 
-Future<dynamic> ContactUsPlaceHolder(BuildContext context) {
+Future<dynamic> contactUsPlaceHolder(BuildContext context) {
   return showDialog(
     context: context,
     builder: (BuildContext context) {
@@ -10,7 +10,6 @@ Future<dynamic> ContactUsPlaceHolder(BuildContext context) {
     },
   );
 }
-
 
 /// Top navigation menu for the site
 class ContactUsPopup extends StatefulWidget {

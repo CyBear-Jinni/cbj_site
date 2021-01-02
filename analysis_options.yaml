@@ -15,6 +15,4 @@ linter:
     # Good packages document everything
     public_member_api_docs: true
 
-    always_specify_types: true
-
     lines_longer_than_80_chars: true

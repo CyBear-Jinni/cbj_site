@@ -142,15 +142,12 @@ class BottomNavigationMenuDesktop extends StatelessWidget {
                                     'https://www.linkedin.com/company/cybear-jinni');
                               },
                               child: Tab(
-                                icon:
-                                FaIcon(FontAwesomeIcons.linkedin,
-                                    color: Theme
-                                        .of(context)
-                                        .
-                                    textTheme
+                                icon: FaIcon(FontAwesomeIcons.linkedin,
+                                    color: Theme.of(context)
+                                        .textTheme
                                         .bodyText1
                                         .color),
-                                child: Text(''),
+                                child: const Text(''),
                               ),
                             ),
 
@@ -166,15 +163,12 @@ class BottomNavigationMenuDesktop extends StatelessWidget {
                                 launch('https://github.com/CyBear-Jinni');
                               },
                               child: Tab(
-                                icon:
-                                FaIcon(FontAwesomeIcons.github,
-                                    color: Theme
-                                        .of(context)
-                                        .
-                                    textTheme
+                                icon: FaIcon(FontAwesomeIcons.github,
+                                    color: Theme.of(context)
+                                        .textTheme
                                         .bodyText1
                                         .color),
-                                child: Text(''),
+                                child: const Text(''),
                               ),
                             ),
                             const SizedBox(width: 40,),

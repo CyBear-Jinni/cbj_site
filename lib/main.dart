@@ -3,6 +3,7 @@ import 'package:cybear_jinni_site/core/route_names.dart';
 import 'package:cybear_jinni_site/features/application/usecases/home_page/landing_page.dart';
 import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/about_page/about_page.dart';
 import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/devices_page/devices_page.dart';
+import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/electrician_page/electricians_page.dart';
 import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/faq_page/faq_page.dart';
 import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/home_page/home_page.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -99,11 +100,13 @@ class MyApp extends StatelessWidget {
           MySingleton.setCurrentPageName(devicesRoute);
           return MaterialPageRoute(
               builder: (BuildContext context) => DevicesPage());
-        }
-        else {
+        } else if (pathElements[0] == electriciansRoute) {
+          MySingleton.setCurrentPageName(electriciansRoute);
+          return MaterialPageRoute(
+              builder: (BuildContext context) => ElectriciansPage());
+        } else {
           MySingleton.setCurrentPageName(homeRoute);
-          MaterialPageRoute(
-              builder: (BuildContext context) => HomePage());
+          MaterialPageRoute(builder: (BuildContext context) => HomePage());
         }
         return null;
       },

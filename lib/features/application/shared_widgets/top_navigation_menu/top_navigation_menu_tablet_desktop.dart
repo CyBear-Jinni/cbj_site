@@ -61,7 +61,7 @@ class TopNavigationMenuTabletDesktop extends StatelessWidget {
                         .bodyText1
                         .color,
                     onPressed: () {
-                      ContactUsPlaceHolder(context);
+                      contactUsPlaceHolder(context);
                     },
                     child: Tab(
                       icon: FaIcon(FontAwesomeIcons.phoneAlt,
@@ -120,7 +120,6 @@ class TopNavigationMenuTabletDesktop extends StatelessWidget {
                       ),
                     ),
                   ),
-
                   const SizedBox(width: 20,),
                   FlatButton(
                     textColor: Theme
@@ -138,31 +137,43 @@ class TopNavigationMenuTabletDesktop extends StatelessWidget {
                     },
                     child: Tab(
                       icon: FaIcon(FontAwesomeIcons.questionCircle,
-                          color: Theme
-                              .of(context)
-                              .
-                          textTheme
-                              .bodyText1
-                              .color),
+                          color: Theme.of(context).textTheme.bodyText1.color),
                       child: const Text(
                         'FAQ',
                       ),
                     ),
                   ),
-                  const SizedBox(width: 20,),
+                  const SizedBox(
+                    width: 20,
+                  ),
                   FlatButton(
-                    textColor: Theme
-                        .of(context)
-                        .textTheme
-                        .bodyText1
-                        .color,
+                    textColor: Theme.of(context).textTheme.bodyText1.color,
+                    onPressed: () {
+                      if (MySingleton.getCurrentPageName != electriciansRoute) {
+                        Navigator.pushNamed(context, electriciansRoute);
+                      } else {
+                        Navigator.pushReplacementNamed(
+                            context, electriciansRoute);
+                      }
+                    },
+                    child: Tab(
+                      icon: FaIcon(FontAwesomeIcons.hardHat,
+                          color: Theme.of(context).textTheme.bodyText1.color),
+                      child: const Text(
+                        'Electricians',
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  FlatButton(
+                    textColor: Theme.of(context).textTheme.bodyText1.color,
                     onPressed: () {
                       if (MySingleton.getCurrentPageName != devicesRoute) {
                         Navigator.pushNamed(context, devicesRoute);
-                      }
-                      else {
-                        Navigator.pushReplacementNamed(context,
-                            devicesRoute);
+                      } else {
+                        Navigator.pushReplacementNamed(context, devicesRoute);
                       }
                     },
                     child: Tab(

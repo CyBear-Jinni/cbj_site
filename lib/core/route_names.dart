@@ -1,6 +1,3 @@
-
-
-
 /// Home rout for the site
 const String homeRoute = 'home';
 
@@ -9,6 +6,9 @@ const String landingRoute = 'landing';
 
 /// Devices rout for the site
 const String devicesRoute = 'devices';
+
+/// Certified electrician rout for the site
+const String electriciansRoute = 'electricians';
 
 /// FAQ rout for the site
 const String faqRoute = 'faq';

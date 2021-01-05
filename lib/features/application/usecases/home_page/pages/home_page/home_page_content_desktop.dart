@@ -1,6 +1,5 @@
 import 'package:cybear_jinni_site/core/route_names.dart';
 import 'package:cybear_jinni_site/features/application/shared_widgets/bottom_navigation_menu/bottom_navigation_menu.dart';
-import 'package:cybear_jinni_site/features/application/shared_widgets/contact_us_popup.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -108,12 +107,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                 .bodyText2
                                 .color,
                             onPressed: () {
-                              showDialog(
-                                context: context,
-                                builder: (BuildContext context) {
-                                  return ContactUsPopup();
-                                },
-                              );
+                              Navigator.pushNamed(context, electriciansRoute);
                             },
                             padding: const EdgeInsets.all(30),
                             color: Colors.black45,
@@ -227,15 +221,16 @@ class HomePageContentDesktop extends StatelessWidget {
                                       SizedBox(
                                         width: 280,
                                         child: Text(
-                                          'Getting a long warranty and all of the'
-                                              ' above for a fair price.',
+                                          'Get a long warranty and all of the'
+                                          ' above for a fair price.',
                                           style: TextStyle(
-                                            fontSize: 20, color: Theme
-                                              .of(context)
-                                              .
-                                          textTheme
-                                              .bodyText2
-                                              .color,),),
+                                            fontSize: 20,
+                                            color: Theme.of(context)
+                                                .textTheme
+                                                .bodyText2
+                                                .color,
+                                          ),
+                                        ),
                                       ),
                                     ],
                                   ),

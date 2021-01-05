@@ -1,6 +1,6 @@
-import 'package:cybear_jinni_site/features/application/shared_widgets/bottom_navigation_menu/bottom_navigation_menu.dart';
 import 'package:cybear_jinni_site/features/application/shared_widgets/navigation_drawer/navigation_drawer.dart';
 import 'package:cybear_jinni_site/features/application/shared_widgets/top_navigation_menu/top_navigation_menu.dart';
+import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/devices_page/devices_page_content.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
@@ -8,7 +8,6 @@ import 'package:responsive_builder/responsive_builder.dart';
 
 /// Devices the company can install for you and you can by online
 class DevicesPage extends StatelessWidget {
-  final ScrollController _scrollController = ScrollController();
 
   @override
   Widget build(BuildContext context) {
@@ -47,77 +46,10 @@ class DevicesPage extends StatelessWidget {
               backgroundColor: Colors.transparent,
               body: Stack(
                 children: <Widget>[
-                  Scrollbar(
-                    isAlwaysShown: true,
-                    thickness: 13,
-                    controller: _scrollController,
-                    child: ListView(
-                      controller: _scrollController,
-                      children: <Widget>[
-                        Column(
-                          children: <Widget>[
-                            const SizedBox(height: 150,),
-                            Container(
-                              color: Colors.black12,
-                              height: 500,
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: <Widget>[
-                                  Row(
-                                    crossAxisAlignment: CrossAxisAlignment
-                                        .start,
-                                    children: <Widget>[
-
-                                      Expanded(
-                                        child: Column(
-                                            children: <Widget>[
-                                              Text('Our Devices',
-                                                  style: TextStyle(
-                                                      fontSize: 50, color:
-                                                  Theme
-                                                      .of(context)
-                                                      .textTheme
-                                                      .
-                                                  bodyText1
-                                                      .color),
-                                                  textAlign: TextAlign.center),
-                                              const SizedBox(height: 10,),
-                                              Padding(
-                                                padding: const EdgeInsets
-                                                    .symmetric(
-                                                    horizontal: 100),
-                                                child: Column(
-                                                  crossAxisAlignment: CrossAxisAlignment
-                                                      .start,
-                                                  children: const <Widget>[
-                                                    Text(
-                                                      'Images of devices',
-                                                      style: TextStyle(
-                                                        fontSize: 20,),
-                                                    ),
-                                                  ],
-                                                ),
-
-                                              ),
-                                            ]
-                                        ),
-
-                                      ),
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            ),
-                            BottomNavigationMenu(),
-                          ],
-                        ),
-                        const SizedBox(height: 50,),
-                      ],
-                    ),
-                  ),
-                  TopNavigationMenu(),
-                ],
-              ),
+              DevicesPageContent(),
+              TopNavigationMenu(),
+            ],
+          ),
             ),
       ),
     );

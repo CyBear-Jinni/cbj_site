@@ -270,15 +270,16 @@ class HomePageContentMobileTablet extends StatelessWidget {
                                   SizedBox(
                                     width: 280,
                                     child: Text(
-                                      'Getting a long warranty and all of the'
-                                          ' above for a fair price.',
+                                      'Get a long warranty and all of the'
+                                      ' above for a fair price.',
                                       style: TextStyle(
-                                        fontSize: 20, color: Theme
-                                          .of(context)
-                                          .
-                                      textTheme
-                                          .bodyText2
-                                          .color,),),
+                                        fontSize: 20,
+                                        color: Theme.of(context)
+                                            .textTheme
+                                            .bodyText2
+                                            .color,
+                                      ),
+                                    ),
                                   ),
                                 ],
                               ),

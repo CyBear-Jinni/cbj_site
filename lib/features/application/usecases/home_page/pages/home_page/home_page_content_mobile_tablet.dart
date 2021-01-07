@@ -97,49 +97,6 @@ class HomePageContentMobileTablet extends StatelessWidget {
           ),
           Column(
             children: <Widget>[
-              FlatButton(
-                textColor: Theme
-                    .of(context)
-                    .textTheme
-                    .bodyText1
-                    .color,
-                color: Colors.black38,
-                height: 500.0,
-                onPressed: () {
-                  Navigator.pushNamed(context, devicesRoute,
-                  );
-                },
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    const SizedBox(height: 50,),
-                    Column(
-                      children: <Widget>[
-                        Text('Click here for more details about our'
-                            ' devices',
-                            style: TextStyle(fontSize: 30, color:
-                            Theme
-                                .of(context)
-                                .textTheme
-                                .bodyText1
-                                .color),
-                            textAlign: TextAlign.center),
-                        const SizedBox(height: 50,),
-                      ],
-                    ),
-                    Container(),
-                    Container(
-                      alignment: Alignment.center,
-                      child: Image.network(
-                        'https://user-images.githubusercontent.com/9304740/97103272-19572d00-16b4-11eb-8e47-394ec18b3809.png',
-                        height: 400.0,
-                      ),
-                    ),
-                    const SizedBox(height: 50,),
-                  ],
-                ),
-              ),
-
               Container(
                 padding: const EdgeInsets.symmetric(vertical: 50),
                 child: Column(
@@ -315,13 +272,14 @@ class HomePageContentMobileTablet extends StatelessWidget {
                                       crossAxisAlignment: CrossAxisAlignment
                                           .start,
                                       children: <Widget>[
-                                        FaIcon(FontAwesomeIcons.globe,
-                                          color: Theme
-                                              .of(context)
-                                              .
-                                          textTheme
-                                              .bodyText1
-                                              .color, size: 30,),
+                                    FaIcon(
+                                      FontAwesomeIcons.globe,
+                                      color: Theme.of(context)
+                                          .textTheme
+                                          .bodyText1
+                                          .color,
+                                      size: 30,
+                                    ),
                                     const SizedBox(height: 20),
                                     Text(
                                       'For Users',
@@ -354,9 +312,8 @@ class HomePageContentMobileTablet extends StatelessWidget {
                                       ),
                                     ),
                                   ],
-                                    ),
-                                  ]
-                              ),
+                                ),
+                              ]),
 
                               const SizedBox(height: 30,),
                               Row(
@@ -447,15 +404,15 @@ class HomePageContentMobileTablet extends StatelessWidget {
                                         crossAxisAlignment: CrossAxisAlignment
                                             .start,
                                         children: <Widget>[
-                                          FaIcon(
-                                            FontAwesomeIcons.laptopCode,
-                                            color: Theme
-                                                .of(context)
-                                                .
-                                            textTheme
-                                                .bodyText1
-                                                .color, size: 30,),
-                                          const SizedBox(height: 20),
+                                      FaIcon(
+                                        FontAwesomeIcons.laptopCode,
+                                        color: Theme.of(context)
+                                            .textTheme
+                                            .bodyText1
+                                            .color,
+                                        size: 30,
+                                      ),
+                                      const SizedBox(height: 20),
                                       Text(
                                         'For Developers',
                                         style: TextStyle(
@@ -488,15 +445,21 @@ class HomePageContentMobileTablet extends StatelessWidget {
                                         ),
                                       ),
                                     ])
-                                  ]),
-
-                              const SizedBox(height: 30,),
+                              ]),
+                              const SizedBox(
+                                height: 30,
+                              ),
                               Row(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: <Widget>[
-                                  const FaIcon(FontAwesomeIcons.check,
-                                    color: Colors.green, size: 15,),
-                                  const SizedBox(width: 10,),
+                                  const FaIcon(
+                                    FontAwesomeIcons.check,
+                                    color: Colors.green,
+                                    size: 15,
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
                                   SizedBox(
                                     width: 280,
                                     child: Text('Open source code and '
@@ -531,51 +494,125 @@ class HomePageContentMobileTablet extends StatelessWidget {
                                           .
                                       textTheme
                                           .bodyText2
-                                          .color,),),
+                                            .color,
+                                      ),
+                                    ),
                                   ),
                                 ],
                               ),
-                              const SizedBox(height: 10,),
-                              Text('',
-                                style: TextStyle(fontSize: 20, color: Theme
-                                    .of(context)
-                                    .
-                                textTheme
-                                    .bodyText2
-                                    .color,),),
+                              const SizedBox(
+                                height: 10,
+                              ),
+                              Text(
+                                '',
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  color: Theme.of(context)
+                                      .textTheme
+                                      .bodyText2
+                                      .color,
+                                ),
+                              ),
                             ],
                           ),
                         ),
                       ),
-                    ]
-                ),
+                    ]),
               ),
-
-              Container(
+              FlatButton(
+                textColor: Theme.of(context).textTheme.bodyText1.color,
                 color: Colors.black38,
                 height: 500.0,
+                onPressed: () {
+                  Navigator.pushNamed(
+                    context,
+                    devicesRoute,
+                  );
+                },
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-
-                    Text('Fan Art',
-                        style: TextStyle(fontSize: 50, color:
-                        Theme
-                            .of(context)
-                            .textTheme
-                            .bodyText1
-                            .color),
-                        textAlign: TextAlign.center),
+                    const SizedBox(
+                      height: 50,
+                    ),
+                    Column(
+                      children: <Widget>[
+                        Text(
+                            'Click here for more details about our'
+                            ' devices',
+                            style: TextStyle(
+                                fontSize: 30,
+                                color: Theme.of(context)
+                                    .textTheme
+                                    .bodyText1
+                                    .color),
+                            textAlign: TextAlign.center),
+                        const SizedBox(
+                          height: 50,
+                        ),
+                      ],
+                    ),
+                    Container(),
                     Container(
                       alignment: Alignment.center,
-                      child: Image.asset(
-                        'assets/fan_art/CyBear_Jinni_art_1.jpg',
+                      child: Image.network(
+                        'https://user-images.githubusercontent.com/9304740/97103272-19572d00-16b4-11eb-8e47-394ec18b3809.png',
                         height: 400.0,
                       ),
+                    ),
+                    const SizedBox(
+                      height: 50,
                     ),
                   ],
                 ),
               ),
-
+              Container(
+                color: Colors.black26,
+                height: 500,
+                child: FlatButton(
+                  padding: const EdgeInsets.all(0),
+                  onPressed: () async {
+                    const String url = 'https://snapcraft.io/cybear-jinni';
+                    if (await canLaunch(url)) {
+                      await launch(url);
+                    } else {
+                      throw 'Could not launch $url';
+                    }
+                  },
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      Text('CyBear Jinni Smart Devices Distribution',
+                          style: TextStyle(
+                              fontSize: 40,
+                              color:
+                                  Theme.of(context).textTheme.bodyText1.color),
+                          textAlign: TextAlign.center),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      Expanded(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              colorFilter: ColorFilter.mode(
+                                  Colors.black.withOpacity(0.7),
+                                  BlendMode.dstATop),
+                              image: const NetworkImage(
+                                'https://user-images.githubusercontent.com/9304740/103142663-a6981b80-470f-11eb-9edb-407ac585038d.png',
+                              ),
+                              fit: BoxFit.scaleDown,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
               BottomNavigationMenu(),
             ],
           ),

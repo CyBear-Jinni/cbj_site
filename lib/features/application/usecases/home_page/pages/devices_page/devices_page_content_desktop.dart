@@ -17,43 +17,48 @@ class DevicesPageContentDesktop extends StatelessWidget {
         children: <Widget>[
           Column(
             children: <Widget>[
-              const SizedBox(
-                height: 150,
-              ),
               Container(
-                color: Colors.black12,
+                color: Colors.black26,
+                height: 250,
+                padding: const EdgeInsets.only(bottom: 30),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.end,
                   children: <Widget>[
                     Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        Expanded(
-                          child: Column(children: <Widget>[
-                            Text('Our Devices',
-                                style: TextStyle(
-                                    fontSize: 50,
-                                    color: Theme.of(context)
-                                        .textTheme
-                                        .bodyText1
-                                        .color),
-                                textAlign: TextAlign.center),
-                            const SizedBox(
-                              height: 10,
-                            ),
-                          ]),
-                        ),
+                        Text('Our Devices',
+                            style: TextStyle(
+                                fontSize: 50,
+                                color: Theme.of(context)
+                                    .textTheme
+                                    .bodyText1
+                                    .color),
+                            textAlign: TextAlign.center),
                       ],
                     ),
                   ],
                 ),
               ),
               const SizedBox(
-                height: 200,
+                height: 100,
               ),
               Container(
-                color: Colors.black38,
-                height: 500,
+                decoration: BoxDecoration(
+                    color: Colors.black38,
+                    border: Border(
+                      top: BorderSide(
+                        color: Theme.of(context).textTheme.bodyText1.color,
+                      ),
+                      left: BorderSide(
+                        color: Theme.of(context).textTheme.bodyText1.color,
+                      ),
+                      right: BorderSide(
+                        color: Theme.of(context).textTheme.bodyText1.color,
+                      ),
+                    )),
+                padding: const EdgeInsets.all(100),
+                width: MediaQuery.of(context).size.width - 200,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
@@ -101,8 +106,8 @@ class DevicesPageContentDesktop extends StatelessWidget {
                             ],
                           ),
                         ),
-                        SizedBox(
-                          width: 50,
+                        const SizedBox(
+                          width: 150,
                         ),
                         Container(
                           padding: const EdgeInsets.all(10.0),
@@ -145,8 +150,8 @@ class DevicesPageContentDesktop extends StatelessWidget {
                             ],
                           ),
                         ),
-                        SizedBox(
-                          width: 50,
+                        const SizedBox(
+                          width: 150,
                         ),
                         Container(
                           padding: const EdgeInsets.all(10.0),
@@ -189,12 +194,9 @@ class DevicesPageContentDesktop extends StatelessWidget {
                           ),
                         ),
                       ],
-                    )
+                    ),
                   ],
                 ),
-              ),
-              const SizedBox(
-                height: 200,
               ),
               BottomNavigationMenu(),
             ],

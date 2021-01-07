@@ -9,22 +9,23 @@ class BottomNavigationMenuMobileTablet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        const SizedBox(height: 100,),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 2,
-            vertical: 5,),
+          padding: const EdgeInsets.symmetric(
+            horizontal: 30,
+          ),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Divider(
-                color: Theme
-                    .of(context)
-                    .textTheme
-                    .bodyText1
-                    .color,
+                color: Theme.of(context).textTheme.bodyText1.color,
                 thickness: 1,
+                height: 3,
               ),
-              const SizedBox(height: 50,),
+              const SizedBox(
+                height: 50,
+              ),
               Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[

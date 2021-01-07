@@ -557,7 +557,7 @@ class HomePageContentDesktop extends StatelessWidget {
               SizedBox(
                 height: 500,
                 child: FlatButton(
-                  color: Colors.black12,
+                  color: Colors.black26,
                   padding: const EdgeInsets.all(0),
                   onPressed: () async {
                     const String url = 'https://snapcraft.io/cybear-jinni';
@@ -601,39 +601,6 @@ class HomePageContentDesktop extends StatelessWidget {
                 ),
               ),
 
-              Container(
-                color: Colors.black54,
-                height: 500.0,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
-                    Container(),
-                    Container(),
-                    Container(),
-                    Container(),
-                    Text('Fan Art',
-                        style: TextStyle(fontSize: 50, color:
-                        Theme
-                            .of(context)
-                            .textTheme
-                            .bodyText1
-                            .color),
-                        textAlign: TextAlign.center),
-                    Container(),
-                    Container(
-                      alignment: Alignment.center,
-                      child: Image.asset(
-                        'assets/fan_art/CyBear_Jinni_art_1.jpg',
-                        height: 400.0,
-                      ),
-                    ),
-                    Container(),
-                    Container(),
-                    Container(),
-                    Container(),
-                  ],
-                ),
-              ),
 
               BottomNavigationMenu(),
             ],

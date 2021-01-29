@@ -85,13 +85,13 @@ class AboutPageContentMobileTablet extends StatelessWidget {
                         height: 30,
                       ),
                       const Text(
-                          '""Our goal is to raise the'
+                          '"Our goal is to raise the'
                           ' quality of life for '
                           'everyone.\n   We are doing '
                           'this by making Smart Home '
                           'more\n   affordable and '
                           'accessible for the common'
-                          ' person.""',
+                          ' person."',
                           style: TextStyle(
                             fontSize: 18,
                           ),

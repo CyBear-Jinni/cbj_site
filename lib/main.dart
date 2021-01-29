@@ -20,7 +20,6 @@ void main() {
       EasyLocalization(
           supportedLocales: const <Locale>[
         Locale('en', 'US'),
-        Locale('he', 'IL')
       ],
           path: 'assets/translations', // <-- change patch to your
           fallbackLocale: const Locale('en', 'US'),

@@ -121,27 +121,32 @@ class HomePageContentMobileTablet extends StatelessWidget {
                         hoverColor: Colors.black87,
                         child: SizedBox(
                           width: 320,
-                          height: 370,
+                          height: 380,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               Row(
                                 children: <Widget>[
-                                  const SizedBox(width: 25,),
+                                  const SizedBox(
+                                    width: 25,
+                                  ),
                                   Column(
-                                    crossAxisAlignment: CrossAxisAlignment
-                                        .start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: <Widget>[
-                                      FaIcon(FontAwesomeIcons.users,
-                                        color: Theme
-                                            .of(context)
-                                            .
-                                        textTheme
+                                      FaIcon(
+                                        FontAwesomeIcons.users,
+                                        color: Theme.of(context)
+                                            .textTheme
                                             .bodyText1
-                                            .color, size: 30,),
+                                            .color,
+                                        size: 30,
+                                      ),
                                       const SizedBox(height: 20),
-                                      Text('For Customers', style: TextStyle(
-                                          fontSize: 30, color: Theme
+                                      Text(
+                                        'For Customers',
+                                        style: TextStyle(
+                                            fontSize: 30, color: Theme
                                           .of(context)
                                           .textTheme
                                           .bodyText1
@@ -260,18 +265,17 @@ class HomePageContentMobileTablet extends StatelessWidget {
                         hoverColor: Colors.black87,
                         child: SizedBox(
                           width: 320,
-                          height: 370,
+                          height: 380,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
-                              Row(
+                              Row(children: <Widget>[
+                                const SizedBox(
+                                  width: 25,
+                                ),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
-                                    const SizedBox(width: 25,),
-
-                                    Column(
-                                      crossAxisAlignment: CrossAxisAlignment
-                                          .start,
-                                      children: <Widget>[
                                     FaIcon(
                                       FontAwesomeIcons.globe,
                                       color: Theme.of(context)
@@ -392,18 +396,18 @@ class HomePageContentMobileTablet extends StatelessWidget {
                         hoverColor: Colors.black87,
                         child: SizedBox(
                           width: 320,
-                          height: 370,
+                          height: 380,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
-                              Row(
-                                  children: <Widget>[
-                                    const SizedBox(width: 25,),
-
-                                    Column(
-                                        crossAxisAlignment: CrossAxisAlignment
-                                            .start,
-                                        children: <Widget>[
+                              Row(children: <Widget>[
+                                const SizedBox(
+                                  width: 25,
+                                ),
+                                Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: <Widget>[
                                       FaIcon(
                                         FontAwesomeIcons.laptopCode,
                                         color: Theme.of(context)

@@ -102,7 +102,7 @@ class DevicesPageContentDesktop extends StatelessWidget {
                                         color: Colors.white60)),
                                 color: Colors.grey,
                                 textColor:
-                                Theme.of(context).textTheme.bodyText1.color,
+                                    Theme.of(context).textTheme.bodyText1.color,
                                 padding: const EdgeInsets.all(2.0),
                                 onPressed: () {},
                                 child: const Text(
@@ -151,7 +151,7 @@ class DevicesPageContentDesktop extends StatelessWidget {
                                         color: Colors.white60)),
                                 color: Colors.grey,
                                 textColor:
-                                Theme.of(context).textTheme.bodyText1.color,
+                                    Theme.of(context).textTheme.bodyText1.color,
                                 padding: const EdgeInsets.all(2.0),
                                 onPressed: () {},
                                 child: const Text(

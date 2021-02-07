@@ -116,7 +116,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                       ),
                                       Column(
                                         crossAxisAlignment:
-                                        CrossAxisAlignment.start,
+                                            CrossAxisAlignment.start,
                                         children: <Widget>[
                                           FaIcon(
                                             FontAwesomeIcons.users,
@@ -285,7 +285,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                     ),
                                     Column(
                                       crossAxisAlignment:
-                                      CrossAxisAlignment.start,
+                                          CrossAxisAlignment.start,
                                       children: <Widget>[
                                         FaIcon(
                                           FontAwesomeIcons.globe,
@@ -316,8 +316,8 @@ class HomePageContentDesktop extends StatelessWidget {
                                                   .bodyText1
                                                   .color,
                                               borderRadius:
-                                              const BorderRadius.all(
-                                                  Radius.circular(10))),
+                                                  const BorderRadius.all(
+                                                      Radius.circular(10))),
                                           child: Text(
                                             'Deploy',
                                             style: TextStyle(
@@ -440,7 +440,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                     ),
                                     Column(
                                         crossAxisAlignment:
-                                        CrossAxisAlignment.start,
+                                            CrossAxisAlignment.start,
                                         children: <Widget>[
                                           FaIcon(
                                             FontAwesomeIcons.laptopCode,
@@ -471,8 +471,8 @@ class HomePageContentDesktop extends StatelessWidget {
                                                     .bodyText1
                                                     .color,
                                                 borderRadius:
-                                                const BorderRadius.all(
-                                                    Radius.circular(10))),
+                                                    const BorderRadius.all(
+                                                        Radius.circular(10))),
                                             child: Text(
                                               'Contribute',
                                               style: TextStyle(

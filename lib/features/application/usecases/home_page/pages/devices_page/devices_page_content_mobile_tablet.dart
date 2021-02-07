@@ -97,7 +97,7 @@ class DevicesPageContentMobileTablet extends StatelessWidget {
                                 side: const BorderSide(color: Colors.white60)),
                             color: Colors.grey,
                             textColor:
-                            Theme.of(context).textTheme.bodyText1.color,
+                                Theme.of(context).textTheme.bodyText1.color,
                             padding: const EdgeInsets.all(2.0),
                             onPressed: () {},
                             child: const Text(
@@ -147,7 +147,7 @@ class DevicesPageContentMobileTablet extends StatelessWidget {
                                 side: const BorderSide(color: Colors.white60)),
                             color: Colors.grey,
                             textColor:
-                            Theme.of(context).textTheme.bodyText1.color,
+                                Theme.of(context).textTheme.bodyText1.color,
                             padding: const EdgeInsets.all(2.0),
                             onPressed: () {},
                             child: const Text(

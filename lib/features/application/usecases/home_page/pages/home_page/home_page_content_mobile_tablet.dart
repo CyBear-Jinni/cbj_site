@@ -123,7 +123,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                                   ),
                                   Column(
                                     crossAxisAlignment:
-                                    CrossAxisAlignment.start,
+                                        CrossAxisAlignment.start,
                                     children: <Widget>[
                                       FaIcon(
                                         FontAwesomeIcons.users,
@@ -437,7 +437,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                                 ),
                                 Column(
                                     crossAxisAlignment:
-                                    CrossAxisAlignment.start,
+                                        CrossAxisAlignment.start,
                                     children: <Widget>[
                                       FaIcon(
                                         FontAwesomeIcons.laptopCode,
@@ -468,8 +468,8 @@ class HomePageContentMobileTablet extends StatelessWidget {
                                                 .bodyText1
                                                 .color,
                                             borderRadius:
-                                            const BorderRadius.all(
-                                                Radius.circular(10))),
+                                                const BorderRadius.all(
+                                                    Radius.circular(10))),
                                         child: Text(
                                           'Contribute',
                                           style: TextStyle(
@@ -582,7 +582,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                       children: <Widget>[
                         Text(
                             'Click here for more details about our'
-                                ' devices',
+                            ' devices',
                             style: TextStyle(
                                 fontSize: 30,
                                 color: Theme.of(context)

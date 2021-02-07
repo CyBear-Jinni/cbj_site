@@ -9,6 +9,7 @@ class DevicesPageContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenTypeLayout(
       mobile: DevicesPageContentMobileTablet(),
+      tablet: DevicesPageContentMobileTablet(),
       desktop: DevicesPageContentDesktop(),
     );
   }

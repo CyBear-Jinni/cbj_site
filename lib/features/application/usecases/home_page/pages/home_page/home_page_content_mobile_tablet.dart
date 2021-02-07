@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cybear_jinni_site/core/route_names.dart';
 import 'package:cybear_jinni_site/features/application/shared_widgets/bottom_navigation_menu/bottom_navigation_menu.dart';
 import 'package:cybear_jinni_site/features/application/shared_widgets/contact_us_popup.dart';
@@ -5,7 +6,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
-
 
 /// Home page content for the mobile and tablet screen size
 class HomePageContentMobileTablet extends StatelessWidget {
@@ -23,24 +23,19 @@ class HomePageContentMobileTablet extends StatelessWidget {
           Stack(
             children: <Widget>[
               SizedBox(
-                width: MediaQuery
-                    .of(context)
-                    .size
-                    .width,
-                height: MediaQuery
-                    .of(context)
-                    .size
-                    .height,
-                child: Image.network(
-                  'https://i.ibb.co/2SwVLf3/House.jpg',
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height,
+                child: CachedNetworkImage(
+                  imageUrl: 'https://i.ibb.co/2SwVLf3/House.jpg',
                   fit: BoxFit.cover,
+                  progressIndicatorBuilder: (context, url, downloadProgress) =>
+                      CircularProgressIndicator(
+                          value: downloadProgress.progress),
+                  errorWidget: (context, url, error) => const Icon(Icons.error),
                 ),
               ),
               SizedBox(
-                width: MediaQuery
-                    .of(context)
-                    .size
-                    .width,
+                width: MediaQuery.of(context).size.width,
                 child: Container(
                   margin: const EdgeInsets.only(top: 100),
                   child: Row(
@@ -52,38 +47,39 @@ class HomePageContentMobileTablet extends StatelessWidget {
                           Container(
                             decoration: BoxDecoration(
                                 color: Colors.black.withOpacity(0.8),
-                                borderRadius:
-                                const BorderRadius.all(Radius.circular(20))
-                            ),
+                                borderRadius: const BorderRadius.all(
+                                    Radius.circular(20))),
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child: Text('CyBear Jinni',
-                                style: TextStyle(fontSize: 59, color: Theme
-                                    .of(context)
-                                    .textTheme
-                                    .bodyText1
-                                    .color),
+                              child: Text(
+                                'CyBear Jinni',
+                                style: TextStyle(
+                                    fontSize: 59,
+                                    color: Theme.of(context)
+                                        .textTheme
+                                        .bodyText1
+                                        .color),
                               ),
                             ),
                           ),
-
                           Container(
-                            margin: const EdgeInsets.only(left: 204,
-                                top: 0.5),
+                            margin: const EdgeInsets.only(left: 204, top: 0.5),
                             decoration: BoxDecoration(
                                 color: Colors.black.withOpacity(0.8),
-                                borderRadius:
-                                const BorderRadius.all(Radius.circular(20))
-                            ),
+                                borderRadius: const BorderRadius.all(
+                                    Radius.circular(20))),
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child: Text('Smart Home',
-                                style: TextStyle(fontSize: 21, color: Theme
-                                    .of(context)
-                                    .textTheme
-                                    .bodyText1
-                                    .color,
-                                    fontWeight: FontWeight.w700),),
+                              child: Text(
+                                'Smart Home',
+                                style: TextStyle(
+                                    fontSize: 21,
+                                    color: Theme.of(context)
+                                        .textTheme
+                                        .bodyText1
+                                        .color,
+                                    fontWeight: FontWeight.w700),
+                              ),
                             ),
                           ),
                         ],
@@ -92,7 +88,6 @@ class HomePageContentMobileTablet extends StatelessWidget {
                   ),
                 ),
               ),
-
             ],
           ),
           Column(
@@ -103,11 +98,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       FlatButton(
-                        textColor: Theme
-                            .of(context)
-                            .textTheme
-                            .bodyText2
-                            .color,
+                        textColor: Theme.of(context).textTheme.bodyText2.color,
                         onPressed: () {
                           showDialog(
                             context: context,
@@ -146,12 +137,15 @@ class HomePageContentMobileTablet extends StatelessWidget {
                                       Text(
                                         'For Customers',
                                         style: TextStyle(
-                                            fontSize: 30, color: Theme
-                                          .of(context)
-                                          .textTheme
-                                          .bodyText1
-                                          .color),),
-                                      const SizedBox(height: 5,),
+                                            fontSize: 30,
+                                            color: Theme.of(context)
+                                                .textTheme
+                                                .bodyText1
+                                                .color),
+                                      ),
+                                      const SizedBox(
+                                        height: 5,
+                                      ),
                                       Container(
                                         padding: const EdgeInsets.all(5),
                                         decoration: BoxDecoration(
@@ -175,60 +169,82 @@ class HomePageContentMobileTablet extends StatelessWidget {
                                   )
                                 ],
                               ),
-
-                              const SizedBox(height: 30,),
+                              const SizedBox(
+                                height: 30,
+                              ),
                               Row(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: <Widget>[
-                                  const FaIcon(FontAwesomeIcons.check,
-                                    color: Colors.green, size: 15,),
-                                  const SizedBox(width: 10,),
+                                  const FaIcon(
+                                    FontAwesomeIcons.check,
+                                    color: Colors.green,
+                                    size: 15,
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
                                   SizedBox(
                                     width: 280,
                                     child: Text(
                                       'Our electricians will install '
-                                          'CyBear Jinni Smart Devices in your home.',
+                                      'CyBear Jinni Smart Devices in your home.',
                                       style: TextStyle(
-                                        fontSize: 20, color: Theme
-                                          .of(context)
-                                          .
-                                      textTheme
-                                          .bodyText2
-                                          .color,),),
+                                        fontSize: 20,
+                                        color: Theme.of(context)
+                                            .textTheme
+                                            .bodyText2
+                                            .color,
+                                      ),
+                                    ),
                                   ),
                                 ],
                               ),
-                              const SizedBox(height: 10,),
+                              const SizedBox(
+                                height: 10,
+                              ),
                               Row(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: <Widget>[
-                                  const FaIcon(FontAwesomeIcons.check,
-                                    color: Colors.green, size: 15,),
-                                  const SizedBox(width: 10,),
+                                  const FaIcon(
+                                    FontAwesomeIcons.check,
+                                    color: Colors.green,
+                                    size: 15,
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
                                   SizedBox(
                                     width: 280,
                                     child: Text(
                                       'Providing guidance on how to set the'
-                                          ' smart devices and use the '
-                                          'smartphone app to '
-                                          'interact with them.',
+                                      ' smart devices and use the '
+                                      'smartphone app to '
+                                      'interact with them.',
                                       style: TextStyle(
-                                        fontSize: 20, color: Theme
-                                          .of(context)
-                                          .
-                                      textTheme
-                                          .bodyText2
-                                          .color,),),
+                                        fontSize: 20,
+                                        color: Theme.of(context)
+                                            .textTheme
+                                            .bodyText2
+                                            .color,
+                                      ),
+                                    ),
                                   ),
                                 ],
                               ),
-                              const SizedBox(height: 10,),
+                              const SizedBox(
+                                height: 10,
+                              ),
                               Row(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: <Widget>[
-                                  const FaIcon(FontAwesomeIcons.check,
-                                    color: Colors.green, size: 15,),
-                                  const SizedBox(width: 10,),
+                                  const FaIcon(
+                                    FontAwesomeIcons.check,
+                                    color: Colors.green,
+                                    size: 15,
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
                                   SizedBox(
                                     width: 280,
                                     child: Text(
@@ -249,16 +265,13 @@ class HomePageContentMobileTablet extends StatelessWidget {
                           ),
                         ),
                       ),
-                      const SizedBox(height: 30,),
+                      const SizedBox(
+                        height: 30,
+                      ),
                       FlatButton(
-                        textColor: Theme
-                            .of(context)
-                            .textTheme
-                            .bodyText2
-                            .color,
+                        textColor: Theme.of(context).textTheme.bodyText2.color,
                         onPressed: () {
-                          Navigator.pushNamed(
-                              context, devicesRoute);
+                          Navigator.pushNamed(context, devicesRoute);
                         },
                         padding: const EdgeInsets.all(30),
                         color: Colors.black45,
@@ -318,71 +331,89 @@ class HomePageContentMobileTablet extends StatelessWidget {
                                   ],
                                 ),
                               ]),
-
-                              const SizedBox(height: 30,),
+                              const SizedBox(
+                                height: 30,
+                              ),
                               Row(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: <Widget>[
-                                  const FaIcon(FontAwesomeIcons.check,
-                                    color: Colors.green, size: 15,),
-                                  const SizedBox(width: 10,),
+                                  const FaIcon(
+                                    FontAwesomeIcons.check,
+                                    color: Colors.green,
+                                    size: 15,
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
                                   SizedBox(
                                     width: 280,
                                     child: Text(
                                       'Devices can be purchased online for '
-                                          'self-installation in your home.',
+                                      'self-installation in your home.',
                                       style: TextStyle(
-                                        fontSize: 20, color: Theme
-                                          .of(context)
-                                          .
-                                      textTheme
-                                          .bodyText2
-                                          .color,),),
+                                        fontSize: 20,
+                                        color: Theme.of(context)
+                                            .textTheme
+                                            .bodyText2
+                                            .color,
+                                      ),
+                                    ),
                                   ),
                                 ],
                               ),
-                              const SizedBox(height: 10,),
+                              const SizedBox(
+                                height: 10,
+                              ),
                               Row(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: <Widget>[
-                                  const FaIcon(FontAwesomeIcons.check,
-                                    color: Colors.green, size: 15,),
-                                  const SizedBox(width: 10,),
+                                  const FaIcon(
+                                    FontAwesomeIcons.check,
+                                    color: Colors.green,
+                                    size: 15,
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
                                   SizedBox(
                                     width: 280,
                                     child: Text(
                                       'Instructions and videos of how to'
-                                          ' deploy and set the system'
-                                          ' yourself.',
+                                      ' deploy and set the system'
+                                      ' yourself.',
                                       style: TextStyle(
-                                        fontSize: 20, color: Theme
-                                          .of(context)
-                                          .
-                                      textTheme
-                                          .bodyText2
-                                          .color,),),
+                                        fontSize: 20,
+                                        color: Theme.of(context)
+                                            .textTheme
+                                            .bodyText2
+                                            .color,
+                                      ),
+                                    ),
                                   ),
                                 ],
                               ),
-                              const SizedBox(height: 10,),
-                              Text('',
-                                style: TextStyle(fontSize: 20, color: Theme
-                                    .of(context)
-                                    .
-                                textTheme
-                                    .bodyText2
-                                    .color,),),
+                              const SizedBox(
+                                height: 10,
+                              ),
+                              Text(
+                                '',
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  color: Theme.of(context)
+                                      .textTheme
+                                      .bodyText2
+                                      .color,
+                                ),
+                              ),
                             ],
                           ),
                         ),
                       ),
-                      const SizedBox(height: 30,),
+                      const SizedBox(
+                        height: 30,
+                      ),
                       FlatButton(
-                        textColor: Theme
-                            .of(context)
-                            .textTheme
-                            .bodyText2
-                            .color,
+                        textColor: Theme.of(context).textTheme.bodyText2.color,
                         onPressed: () async {
                           const String url = 'https://github.com/CyBear-Jinni';
                           if (await canLaunch(url)) {
@@ -466,38 +497,46 @@ class HomePageContentMobileTablet extends StatelessWidget {
                                   ),
                                   SizedBox(
                                     width: 280,
-                                    child: Text('Open source code and '
-                                        'instructions for makers and tinkerers '
-                                        'to build the system from scratch.',
+                                    child: Text(
+                                      'Open source code and '
+                                      'instructions for makers and tinkerers '
+                                      'to build the system from scratch.',
                                       style: TextStyle(
-                                        fontSize: 20, color: Theme
-                                          .of(context)
-                                          .
-                                      textTheme
-                                          .bodyText2
-                                          .color,),),
+                                        fontSize: 20,
+                                        color: Theme.of(context)
+                                            .textTheme
+                                            .bodyText2
+                                            .color,
+                                      ),
+                                    ),
                                   ),
                                 ],
                               ),
-                              const SizedBox(height: 10,),
+                              const SizedBox(
+                                height: 10,
+                              ),
                               Row(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: <Widget>[
-                                  const FaIcon(FontAwesomeIcons.check,
-                                    color: Colors.green, size: 15,),
-                                  const SizedBox(width: 10,),
+                                  const FaIcon(
+                                    FontAwesomeIcons.check,
+                                    color: Colors.green,
+                                    size: 15,
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
                                   SizedBox(
                                     width: 280,
                                     child: Text(
                                       'Opportunity to add support for '
-                                          'the system to communicate with other smart'
-                                          ' devices that are not supported yet.',
+                                      'the system to communicate with other smart'
+                                      ' devices that are not supported yet.',
                                       style: TextStyle(
-                                        fontSize: 20, color: Theme
-                                          .of(context)
-                                          .
-                                      textTheme
-                                          .bodyText2
+                                        fontSize: 20,
+                                        color: Theme.of(context)
+                                            .textTheme
+                                            .bodyText2
                                             .color,
                                       ),
                                     ),
@@ -559,9 +598,16 @@ class HomePageContentMobileTablet extends StatelessWidget {
                     Container(),
                     Container(
                       alignment: Alignment.center,
-                      child: Image.network(
-                        'https://user-images.githubusercontent.com/9304740/97103272-19572d00-16b4-11eb-8e47-394ec18b3809.png',
-                        height: 400.0,
+                      child: CachedNetworkImage(
+                        imageUrl:
+                            'https://i.ibb.co/tHWm1NV/Cy-Bear-Jinni-smart-device-logo.png',
+                        height: 400,
+                        progressIndicatorBuilder:
+                            (context, url, downloadProgress) =>
+                                CircularProgressIndicator(
+                                    value: downloadProgress.progress),
+                        errorWidget: (context, url, error) =>
+                            const Icon(Icons.error),
                       ),
                     ),
                     const SizedBox(
@@ -598,20 +644,16 @@ class HomePageContentMobileTablet extends StatelessWidget {
                       const SizedBox(
                         height: 10,
                       ),
-                      Expanded(
-                        child: Container(
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              colorFilter: ColorFilter.mode(
-                                  Colors.black.withOpacity(0.7),
-                                  BlendMode.dstATop),
-                              image: const NetworkImage(
-                                'https://user-images.githubusercontent.com/9304740/103142663-a6981b80-470f-11eb-9edb-407ac585038d.png',
-                              ),
-                              fit: BoxFit.scaleDown,
-                            ),
-                          ),
-                        ),
+                      CachedNetworkImage(
+                        imageUrl:
+                            'https://i.ibb.co/FDKKWNM/World-devices-usage-map.png',
+                        fit: BoxFit.scaleDown,
+                        progressIndicatorBuilder:
+                            (context, url, downloadProgress) =>
+                                CircularProgressIndicator(
+                                    value: downloadProgress.progress),
+                        errorWidget: (context, url, error) =>
+                            const Icon(Icons.error),
                       ),
                     ],
                   ),
@@ -620,7 +662,9 @@ class HomePageContentMobileTablet extends StatelessWidget {
               BottomNavigationMenu(),
             ],
           ),
-          const SizedBox(height: 50,),
+          const SizedBox(
+            height: 50,
+          ),
         ],
       ),
     );

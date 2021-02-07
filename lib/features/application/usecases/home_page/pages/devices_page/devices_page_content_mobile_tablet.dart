@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cybear_jinni_site/features/application/shared_widgets/bottom_navigation_menu/bottom_navigation_menu.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -73,8 +74,15 @@ class DevicesPageContentMobileTablet extends StatelessWidget {
                         children: [
                           Container(
                             alignment: Alignment.topCenter,
-                            child: Image.network(
-                              'https://i.ibb.co/QP8MzxB/CBJ-Smart-Plug-1.jpg',
+                            child: CachedNetworkImage(
+                              imageUrl:
+                                  'https://i.ibb.co/QP8MzxB/CBJ-Smart-Plug-1.jpg',
+                              progressIndicatorBuilder:
+                                  (context, url, downloadProgress) =>
+                                      CircularProgressIndicator(
+                                          value: downloadProgress.progress),
+                              errorWidget: (context, url, error) =>
+                                  const Icon(Icons.error),
                             ),
                           ),
                           const Text(
@@ -93,7 +101,7 @@ class DevicesPageContentMobileTablet extends StatelessWidget {
                             padding: const EdgeInsets.all(2.0),
                             onPressed: () {},
                             child: const Text(
-                              "More Info",
+                              'More Info',
                               style: TextStyle(
                                 fontSize: 18,
                               ),
@@ -116,8 +124,15 @@ class DevicesPageContentMobileTablet extends StatelessWidget {
                         children: [
                           Container(
                             alignment: Alignment.topCenter,
-                            child: Image.network(
-                              'https://i.ibb.co/QP8MzxB/CBJ-Smart-Plug-1.jpg',
+                            child: CachedNetworkImage(
+                              imageUrl:
+                                  'https://i.ibb.co/QP8MzxB/CBJ-Smart-Plug-1.jpg',
+                              progressIndicatorBuilder:
+                                  (context, url, downloadProgress) =>
+                                      CircularProgressIndicator(
+                                          value: downloadProgress.progress),
+                              errorWidget: (context, url, error) =>
+                                  const Icon(Icons.error),
                             ),
                           ),
                           const Text(
@@ -136,7 +151,7 @@ class DevicesPageContentMobileTablet extends StatelessWidget {
                             padding: const EdgeInsets.all(2.0),
                             onPressed: () {},
                             child: const Text(
-                              "More Info",
+                              'More Info',
                               style: TextStyle(
                                 fontSize: 18,
                               ),
@@ -159,8 +174,15 @@ class DevicesPageContentMobileTablet extends StatelessWidget {
                         children: [
                           Container(
                             alignment: Alignment.topCenter,
-                            child: Image.network(
-                              'https://i.ibb.co/QP8MzxB/CBJ-Smart-Plug-1.jpg',
+                            child: CachedNetworkImage(
+                              imageUrl:
+                                  'https://i.ibb.co/QP8MzxB/CBJ-Smart-Plug-1.jpg',
+                              progressIndicatorBuilder:
+                                  (context, url, downloadProgress) =>
+                                      CircularProgressIndicator(
+                                          value: downloadProgress.progress),
+                              errorWidget: (context, url, error) =>
+                                  const Icon(Icons.error),
                             ),
                           ),
                           const Text(
@@ -172,14 +194,14 @@ class DevicesPageContentMobileTablet extends StatelessWidget {
                           FlatButton(
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(22.0),
-                                side: BorderSide(color: Colors.white60)),
+                                side: const BorderSide(color: Colors.white60)),
                             color: Colors.grey,
                             textColor:
                                 Theme.of(context).textTheme.bodyText1.color,
-                            padding: EdgeInsets.all(2.0),
+                            padding: const EdgeInsets.all(2.0),
                             onPressed: () {},
                             child: const Text(
-                              "More Info",
+                              'More Info',
                               style: TextStyle(
                                 fontSize: 18,
                               ),

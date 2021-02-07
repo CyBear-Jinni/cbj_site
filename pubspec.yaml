@@ -23,6 +23,8 @@ environment:
 dependencies:
   # Automatically resizes text to fit perfectly within its bounds
   auto_size_text: ^2.1.0
+  # Show images from the internet and keep them in the cache directory.
+  cached_network_image: ^2.5.0
   # Spotlight Bottom Navigation Bar
   cool_nav: ^0.0.3
   # The following adds the Cupertino Icons font to your application.
@@ -43,8 +45,8 @@ dependencies:
   # Collection of lint rules for Dart and Flutter projects.
   lint: ^1.5.1
   # Popup that ask for the requested permission
-  permission_handler: ^5.0.1+1
-   # Allows you to create a readable responsive UI
+  permission_handler: ^5.1.0+2
+  # Allows you to create a readable responsive UI
   responsive_builder: ^0.3.0
   # Launching a URL in the mobile platform
   url_launcher: ^5.7.10

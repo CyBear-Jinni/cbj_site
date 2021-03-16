@@ -85,6 +85,16 @@ class HomePageContentDesktop extends StatelessWidget {
           Column(
             children: <Widget>[
               Container(
+                color: Colors.blue.withOpacity(0.1),
+                height: 50.0,
+                child: const Center(
+                  child: Text(
+                    'CyBear Jinni brings the future of smart homes to your hand',
+                    style: TextStyle(color: Colors.white, fontSize: 25),
+                  ),
+                ),
+              ),
+              Container(
                 color: Colors.black12,
                 height: 500,
                 child: Column(

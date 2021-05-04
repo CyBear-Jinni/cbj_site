@@ -9,8 +9,9 @@ import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await EasyLocalization.ensureInitialized();
 
   runApp(
 
@@ -50,7 +51,6 @@ class MyApp extends StatelessWidget {
       // ),
       // home: MyHomePage(title: 'Flutter Demo Home Page'),
 
-
       title: 'CyBear Jinni Web Site',
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
@@ -70,12 +70,11 @@ class MyApp extends StatelessWidget {
         '/': (BuildContext context) {
           MySingleton.setCurrentPageName('landingPage');
           return LandingPage();
-          },
-    '/home': (BuildContext context)
-    {
-      MySingleton.setCurrentPageName(homeRoute);
-      return LandingPage();
-    },
+        },
+        '/home': (BuildContext context) {
+          MySingleton.setCurrentPageName(homeRoute);
+          return LandingPage();
+        },
         //        '/home_settings': (BuildContext context) => SettingsPage(),
       },
       onGenerateRoute: (RouteSettings settings) {
@@ -84,18 +83,15 @@ class MyApp extends StatelessWidget {
           MySingleton.setCurrentPageName(homeRoute);
           return MaterialPageRoute(
               builder: (BuildContext context) => HomePage());
-        }
-        else if (pathElements[0] == aboutRoute) {
+        } else if (pathElements[0] == aboutRoute) {
           MySingleton.setCurrentPageName(aboutRoute);
           return MaterialPageRoute(
               builder: (BuildContext context) => AboutPage());
-        }
-        else if (pathElements[0] == faqRoute) {
+        } else if (pathElements[0] == faqRoute) {
           MySingleton.setCurrentPageName(faqRoute);
           return MaterialPageRoute(
-        builder: (BuildContext context) => FAQPage());
-        }
-        else if (pathElements[0] == devicesRoute) {
+              builder: (BuildContext context) => FAQPage());
+        } else if (pathElements[0] == devicesRoute) {
           MySingleton.setCurrentPageName(devicesRoute);
           return MaterialPageRoute(
               builder: (BuildContext context) => DevicesPage());

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-
 Future<dynamic> contactUsPlaceHolder(BuildContext context) {
   return showDialog(
     context: context,
@@ -20,7 +19,6 @@ class ContactUsPopup extends StatefulWidget {
 }
 
 class _ContactUsPopup extends State<ContactUsPopup> {
-
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
   @override
@@ -29,22 +27,9 @@ class _ContactUsPopup extends State<ContactUsPopup> {
       backgroundColor: Colors.transparent,
       body: Center(
         child: Container(
-          width: MediaQuery
-              .of(context)
-              .size
-              .width / 1.1,
-          height: MediaQuery
-              .of(context)
-              .size
-              .height / 1.5,
-          color: Theme
-              .of(context)
-              .
-          textTheme
-              .bodyText1
-              .color
-              .withOpacity(0.9),
-
+          width: MediaQuery.of(context).size.width / 1.1,
+          height: MediaQuery.of(context).size.height / 1.5,
+          color: Theme.of(context).textTheme.bodyText1.color.withOpacity(0.9),
           child: Form(
               key: _formKey,
               child: Column(
@@ -59,14 +44,12 @@ class _ContactUsPopup extends State<ContactUsPopup> {
                             labelText: 'Full Name',
                           ),
                         ),
-
                         TextFormField(
                           keyboardType: TextInputType.number,
                           decoration: const InputDecoration(
                             labelText: 'Phone Number',
                           ),
                         ),
-
                         TextFormField(
                           keyboardType: TextInputType.number,
                           decoration: const InputDecoration(
@@ -76,22 +59,21 @@ class _ContactUsPopup extends State<ContactUsPopup> {
                       ],
                     ),
                     actions: <Widget>[
-                      FlatButton(
+                      TextButton(
                         // textColor: Theme.of(context).textTheme.bodyText1.color,
                         onPressed: () {
                           Navigator.of(context).pop();
                         },
                         child: const Text('Cancel'),
                       ),
-                      FlatButton(
+                      TextButton(
                         onPressed: () {},
                         child: const Text('Add'),
                       ),
                     ],
                   ),
                 ],
-              )
-          ),
+              )),
         ),
       ),
     );

@@ -53,9 +53,7 @@ class BottomNavigationMenuMobileTablet extends StatelessWidget {
                             const SizedBox(
                               width: 40,
                             ),
-                            FlatButton(
-                              textColor:
-                                  Theme.of(context).textTheme.bodyText1.color,
+                            TextButton(
                               onPressed: () {
                                 launch(
                                     'https://play.google.com/store/apps/details?id=com.cybear_jinni.smart_home');
@@ -66,8 +64,13 @@ class BottomNavigationMenuMobileTablet extends StatelessWidget {
                                         .textTheme
                                         .bodyText1
                                         .color),
-                                child: const Text(
+                                child: Text(
                                   'Play Store',
+                                  style: TextStyle(
+                                      color: Theme.of(context)
+                                          .textTheme
+                                          .bodyText2
+                                          .color),
                                 ),
                               ),
                             ),
@@ -88,9 +91,7 @@ class BottomNavigationMenuMobileTablet extends StatelessWidget {
                       Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: <Widget>[
-                            FlatButton(
-                              textColor:
-                                  Theme.of(context).textTheme.bodyText1.color,
+                            TextButton(
                               onPressed: () {
                                 launch(
                                     'https://www.linkedin.com/company/cybear-jinni');
@@ -104,9 +105,7 @@ class BottomNavigationMenuMobileTablet extends StatelessWidget {
                                 child: const Text(''),
                               ),
                             ),
-                            FlatButton(
-                              textColor:
-                                  Theme.of(context).textTheme.bodyText1.color,
+                            TextButton(
                               onPressed: () {
                                 launch(
                                     'https://instagram.com/cybearjinni?igshid=rfllj6qbv6l8');
@@ -120,9 +119,7 @@ class BottomNavigationMenuMobileTablet extends StatelessWidget {
                                 child: const Text(''),
                               ),
                             ),
-                            FlatButton(
-                              textColor:
-                                  Theme.of(context).textTheme.bodyText1.color,
+                            TextButton(
                               onPressed: () {
                                 launch(
                                     'https://www.facebook.com/CyBearJinniHome');
@@ -136,9 +133,7 @@ class BottomNavigationMenuMobileTablet extends StatelessWidget {
                                 child: const Text(''),
                               ),
                             ),
-                            FlatButton(
-                              textColor:
-                                  Theme.of(context).textTheme.bodyText1.color,
+                            TextButton(
                               onPressed: () {
                                 launch('https://github.com/CyBear-Jinni');
                               },

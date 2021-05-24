@@ -91,20 +91,30 @@ class DevicesPageContentMobileTablet extends StatelessWidget {
                               fontSize: 40,
                             ),
                           ),
-                          FlatButton(
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(22.0),
-                                side: const BorderSide(color: Colors.white60)),
-                            color: Colors.grey,
-                            textColor:
-                                Theme.of(context).textTheme.bodyText1.color,
-                            padding: const EdgeInsets.all(2.0),
+                          TextButton(
+                            style: ButtonStyle(
+                              backgroundColor: MaterialStateProperty.all(
+                                Colors.grey,
+                              ),
+                              padding: MaterialStateProperty.all<EdgeInsets>(
+                                const EdgeInsets.all(2.0),
+                              ),
+                              side: MaterialStateProperty.all(
+                                BorderSide.lerp(
+                                    const BorderSide(color: Colors.white60),
+                                    const BorderSide(color: Colors.white60),
+                                    22),
+                              ),
+                            ),
                             onPressed: () {},
-                            child: const Text(
+                            child: Text(
                               'More Info',
                               style: TextStyle(
-                                fontSize: 18,
-                              ),
+                                  fontSize: 18,
+                                  color: Theme.of(context)
+                                      .textTheme
+                                      .bodyText2
+                                      .color),
                             ),
                           ),
                         ],
@@ -141,20 +151,30 @@ class DevicesPageContentMobileTablet extends StatelessWidget {
                               fontSize: 40,
                             ),
                           ),
-                          FlatButton(
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(22.0),
-                                side: const BorderSide(color: Colors.white60)),
-                            color: Colors.grey,
-                            textColor:
-                                Theme.of(context).textTheme.bodyText1.color,
-                            padding: const EdgeInsets.all(2.0),
+                          TextButton(
+                            style: ButtonStyle(
+                              backgroundColor: MaterialStateProperty.all(
+                                Colors.grey,
+                              ),
+                              padding: MaterialStateProperty.all<EdgeInsets>(
+                                const EdgeInsets.all(2.0),
+                              ),
+                              side: MaterialStateProperty.all(
+                                BorderSide.lerp(
+                                    const BorderSide(color: Colors.white60),
+                                    const BorderSide(color: Colors.white60),
+                                    22),
+                              ),
+                            ),
                             onPressed: () {},
-                            child: const Text(
+                            child: Text(
                               'More Info',
                               style: TextStyle(
-                                fontSize: 18,
-                              ),
+                                  fontSize: 18,
+                                  color: Theme.of(context)
+                                      .textTheme
+                                      .bodyText2
+                                      .color),
                             ),
                           ),
                         ],
@@ -191,20 +211,30 @@ class DevicesPageContentMobileTablet extends StatelessWidget {
                               fontSize: 40,
                             ),
                           ),
-                          FlatButton(
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(22.0),
-                                side: const BorderSide(color: Colors.white60)),
-                            color: Colors.grey,
-                            textColor:
-                                Theme.of(context).textTheme.bodyText1.color,
-                            padding: const EdgeInsets.all(2.0),
+                          TextButton(
+                            style: ButtonStyle(
+                              backgroundColor: MaterialStateProperty.all(
+                                Colors.grey,
+                              ),
+                              padding: MaterialStateProperty.all<EdgeInsets>(
+                                const EdgeInsets.all(2.0),
+                              ),
+                              side: MaterialStateProperty.all(
+                                BorderSide.lerp(
+                                    const BorderSide(color: Colors.white60),
+                                    const BorderSide(color: Colors.white60),
+                                    22),
+                              ),
+                            ),
                             onPressed: () {},
-                            child: const Text(
+                            child: Text(
                               'More Info',
                               style: TextStyle(
-                                fontSize: 18,
-                              ),
+                                  fontSize: 18,
+                                  color: Theme.of(context)
+                                      .textTheme
+                                      .bodyText2
+                                      .color),
                             ),
                           ),
                         ],

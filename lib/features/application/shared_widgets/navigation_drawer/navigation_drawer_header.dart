@@ -1,6 +1,3 @@
-
-
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -18,40 +15,34 @@ class NavigationDrawerHeader extends StatelessWidget {
           // Add one stop for each color. Stops should increase from 0 to 1
           stops: const <double>[0, 0, 0, 1],
           colors: <Color>[
-            Theme
-                .of(context)
-                .primaryColor,
-            Theme
-                .of(context)
-                .accentColor,
-            Theme
-                .of(context)
-                .accentColor,
-            Theme
-                .of(context)
-                .primaryColor
+            Theme.of(context).primaryColor,
+            Theme.of(context).accentColor,
+            Theme.of(context).accentColor,
+            Theme.of(context).primaryColor
           ],
-        ),),
+        ),
+      ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
-          const SizedBox(height: 10,),
-
-          Text('CyBear Jinni',
-            style: TextStyle(
-                fontSize: 23, fontWeight: FontWeight.w800, color: Theme
-                .of(context)
-                .
-            textTheme
-                .bodyText1
-                .color),
-          ),
-          const SizedBox(height: 20,),
           const SizedBox(
-            width: 55,
+            height: 10,
+          ),
+          Text(
+            'CyBear Jinni',
+            style: TextStyle(
+                fontSize: 23,
+                fontWeight: FontWeight.w800,
+                color: Theme.of(context).textTheme.bodyText1.color),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          const SizedBox(
+            width: 100,
             child: Image(
               image: AssetImage(
-                'assets/fan_art/after_editing/logo_no_background.png',
+                'assets/images/cbj_app_icon_no_bg.png',
               ),
               fit: BoxFit.cover,
             ),

@@ -39,10 +39,10 @@ class TopNavigationMenuTabletDesktop extends StatelessWidget {
                     },
                     child: const Tab(
                       icon: SizedBox(
-                        width: 20,
+                        width: 40,
                         child: Image(
                           image: AssetImage(
-                            'assets/fan_art/after_editing/logo_no_background.png',
+                            'assets/images/cbj_app_icon_no_bg.png',
                           ),
                           fit: BoxFit.cover,
                         ),

@@ -22,25 +22,22 @@ class TopNavigationMenuTabletDesktop extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  const SizedBox(width: 20,),
-                  FlatButton(
-                    textColor: Theme
-                        .of(context)
-                        .textTheme
-                        .bodyText1
-                        .color,
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  TextButton(
                     onPressed: () {
                       if (MySingleton.getCurrentPageName != 'landingPage' &&
                           MySingleton.getCurrentPageName != homeRoute) {
-                        Navigator.pushNamed(context, homeRoute,
+                        Navigator.pushNamed(
+                          context,
+                          homeRoute,
                         );
-                      }
-                      else {
+                      } else {
                         Navigator.pushReplacementNamed(context, homeRoute);
                       }
                     },
-                    child: const
-                    Tab(
+                    child: const Tab(
                       icon: SizedBox(
                         width: 20,
                         child: Image(
@@ -52,102 +49,83 @@ class TopNavigationMenuTabletDesktop extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(width: 20,),
-
-                  FlatButton(
-                    textColor: Theme
-                        .of(context)
-                        .textTheme
-                        .bodyText1
-                        .color,
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  TextButton(
                     onPressed: () {
                       contactUsPlaceHolder(context);
                     },
                     child: Tab(
                       icon: FaIcon(FontAwesomeIcons.phoneAlt,
-                          color: Theme
-                              .of(context)
-                              .
-                          textTheme
-                              .bodyText1
-                              .color),
-                      child: const Text(
+                          color: Theme.of(context).textTheme.bodyText1.color),
+                      child: Text(
                         'Contact Us',
+                        style: TextStyle(
+                            color: Theme.of(context).textTheme.bodyText1.color),
                       ),
                     ),
                   ),
-
-                  const SizedBox(width: 40,)
-
+                  const SizedBox(
+                    width: 40,
+                  )
                 ],
               ),
             ),
           ),
-
           ClipPath(
             clipper: CrosLeftSizde(),
             child: Container(
               color: Colors.black87,
-
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  const SizedBox(width: 40,),
-                  FlatButton(
-                    textColor: Theme
-                        .of(context)
-                        .textTheme
-                        .bodyText1
-                        .color,
+                  const SizedBox(
+                    width: 40,
+                  ),
+                  TextButton(
                     onPressed: () {
                       if (MySingleton.getCurrentPageName != aboutRoute) {
                         Navigator.pushNamed(context, aboutRoute);
-                      }
-                      else {
+                      } else {
                         Navigator.pushReplacementNamed(context, aboutRoute);
                       }
                     },
                     child: Tab(
                       icon: FaIcon(FontAwesomeIcons.addressCard,
-                          color: Theme
-                              .of(context)
-                              .
-                          textTheme
-                              .bodyText1
-                              .color),
-                      child: const Text(
-                        'About',
-                      ),
-                    ),
-                  ),
-                  const SizedBox(width: 20,),
-                  FlatButton(
-                    textColor: Theme
-                        .of(context)
-                        .textTheme
-                        .bodyText1
-                        .color,
-                    onPressed: () {
-                      if (MySingleton.getCurrentPageName != faqRoute) {
-                        Navigator.pushNamed(context, faqRoute);
-                      }
-                      else {
-                        Navigator.pushReplacementNamed(context, faqRoute);
-                      }
-                    },
-                    child: Tab(
-                      icon: FaIcon(FontAwesomeIcons.questionCircle,
                           color: Theme.of(context).textTheme.bodyText1.color),
-                      child: const Text(
-                        'FAQ',
+                      child: Text(
+                        'About',
+                        style: TextStyle(
+                            color: Theme.of(context).textTheme.bodyText1.color),
                       ),
                     ),
                   ),
                   const SizedBox(
                     width: 20,
                   ),
-                  FlatButton(
-                    textColor: Theme.of(context).textTheme.bodyText1.color,
+                  TextButton(
+                    onPressed: () {
+                      if (MySingleton.getCurrentPageName != faqRoute) {
+                        Navigator.pushNamed(context, faqRoute);
+                      } else {
+                        Navigator.pushReplacementNamed(context, faqRoute);
+                      }
+                    },
+                    child: Tab(
+                      icon: FaIcon(FontAwesomeIcons.questionCircle,
+                          color: Theme.of(context).textTheme.bodyText1.color),
+                      child: Text(
+                        'FAQ',
+                        style: TextStyle(
+                            color: Theme.of(context).textTheme.bodyText1.color),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  TextButton(
                     onPressed: () {
                       if (MySingleton.getCurrentPageName != electriciansRoute) {
                         Navigator.pushNamed(context, electriciansRoute);
@@ -159,16 +137,17 @@ class TopNavigationMenuTabletDesktop extends StatelessWidget {
                     child: Tab(
                       icon: FaIcon(FontAwesomeIcons.hardHat,
                           color: Theme.of(context).textTheme.bodyText1.color),
-                      child: const Text(
+                      child: Text(
                         'Electricians',
+                        style: TextStyle(
+                            color: Theme.of(context).textTheme.bodyText1.color),
                       ),
                     ),
                   ),
                   const SizedBox(
                     width: 20,
                   ),
-                  FlatButton(
-                    textColor: Theme.of(context).textTheme.bodyText1.color,
+                  TextButton(
                     onPressed: () {
                       if (MySingleton.getCurrentPageName != devicesRoute) {
                         Navigator.pushNamed(context, devicesRoute);
@@ -178,47 +157,39 @@ class TopNavigationMenuTabletDesktop extends StatelessWidget {
                     },
                     child: Tab(
                       icon: FaIcon(FontAwesomeIcons.lightbulb,
-                          color: Theme
-                              .of(context)
-                              .
-                          textTheme
-                              .bodyText1
-                              .color),
-                      child: const Text(
+                          color: Theme.of(context).textTheme.bodyText1.color),
+                      child: Text(
                         'Devices',
+                        style: TextStyle(
+                            color: Theme.of(context).textTheme.bodyText1.color),
                       ),
                     ),
                   ),
-                  const SizedBox(width: 20,),
-                  FlatButton(
-                    textColor: Theme
-                        .of(context)
-                        .textTheme
-                        .bodyText1
-                        .color,
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  TextButton(
                     onPressed: () {
                       if (MySingleton.getCurrentPageName != 'landingPage' &&
                           MySingleton.getCurrentPageName != homeRoute) {
                         Navigator.pushNamed(context, homeRoute);
-                      }
-                      else {
+                      } else {
                         Navigator.pushReplacementNamed(context, homeRoute);
                       }
                     },
                     child: Tab(
                       icon: FaIcon(FontAwesomeIcons.home,
-                          color: Theme
-                              .of(context)
-                              .
-                          textTheme
-                              .bodyText1
-                              .color),
-                      child: const Text(
+                          color: Theme.of(context).textTheme.bodyText1.color),
+                      child: Text(
                         'Home',
+                        style: TextStyle(
+                            color: Theme.of(context).textTheme.bodyText1.color),
                       ),
                     ),
                   ),
-                  const SizedBox(width: 20,),
+                  const SizedBox(
+                    width: 20,
+                  ),
                 ],
               ),
             ),

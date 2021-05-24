@@ -97,27 +97,205 @@ class HomePageContentMobileTablet extends StatelessWidget {
                 child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      FlatButton(
-                        textColor: Theme.of(context).textTheme.bodyText2.color,
-                        onPressed: () {
-                          showDialog(
-                            context: context,
-                            builder: (BuildContext context) {
-                              return ContactUsPopup();
-                            },
-                          );
-                        },
-                        padding: const EdgeInsets.all(30),
-                        color: Colors.black45,
+                      InkWell(
                         hoverColor: Colors.black87,
-                        child: SizedBox(
-                          width: 320,
-                          height: 380,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              Row(
-                                children: <Widget>[
+                        child: TextButton(
+                          style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all(
+                              Colors.black45,
+                            ),
+                            padding: MaterialStateProperty.all<EdgeInsets>(
+                              const EdgeInsets.all(30),
+                            ),
+                          ),
+                          onPressed: () {
+                            showDialog(
+                              context: context,
+                              builder: (BuildContext context) {
+                                return ContactUsPopup();
+                              },
+                            );
+                          },
+                          child: SizedBox(
+                            width: 320,
+                            height: 380,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Row(
+                                  children: <Widget>[
+                                    const SizedBox(
+                                      width: 25,
+                                    ),
+                                    Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        FaIcon(
+                                          FontAwesomeIcons.users,
+                                          color: Theme.of(context)
+                                              .textTheme
+                                              .bodyText1
+                                              .color,
+                                          size: 30,
+                                        ),
+                                        const SizedBox(height: 20),
+                                        Text(
+                                          'For Customers',
+                                          style: TextStyle(
+                                              fontSize: 30,
+                                              color: Theme.of(context)
+                                                  .textTheme
+                                                  .bodyText1
+                                                  .color),
+                                        ),
+                                        const SizedBox(
+                                          height: 5,
+                                        ),
+                                        Container(
+                                          padding: const EdgeInsets.all(5),
+                                          decoration: BoxDecoration(
+                                              color: Theme.of(context)
+                                                  .textTheme
+                                                  .bodyText1
+                                                  .color,
+                                              borderRadius:
+                                                  const BorderRadius.all(
+                                                      Radius.circular(10))),
+                                          child: Text(
+                                            'Enjoy',
+                                            style: TextStyle(
+                                                fontSize: 15,
+                                                color: Theme.of(context)
+                                                    .primaryColor,
+                                                fontWeight: FontWeight.bold),
+                                          ),
+                                        ),
+                                      ],
+                                    )
+                                  ],
+                                ),
+                                const SizedBox(
+                                  height: 30,
+                                ),
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    const FaIcon(
+                                      FontAwesomeIcons.check,
+                                      color: Colors.green,
+                                      size: 15,
+                                    ),
+                                    const SizedBox(
+                                      width: 10,
+                                    ),
+                                    SizedBox(
+                                      width: 280,
+                                      child: Text(
+                                        'Our electricians will install '
+                                        'CyBear Jinni Smart Devices in your home.',
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                          color: Theme.of(context)
+                                              .textTheme
+                                              .bodyText2
+                                              .color,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    const FaIcon(
+                                      FontAwesomeIcons.check,
+                                      color: Colors.green,
+                                      size: 15,
+                                    ),
+                                    const SizedBox(
+                                      width: 10,
+                                    ),
+                                    SizedBox(
+                                      width: 280,
+                                      child: Text(
+                                        'Providing guidance on how to set the'
+                                        ' smart devices and use the '
+                                        'smartphone app to '
+                                        'interact with them.',
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                          color: Theme.of(context)
+                                              .textTheme
+                                              .bodyText2
+                                              .color,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    const FaIcon(
+                                      FontAwesomeIcons.check,
+                                      color: Colors.green,
+                                      size: 15,
+                                    ),
+                                    const SizedBox(
+                                      width: 10,
+                                    ),
+                                    SizedBox(
+                                      width: 280,
+                                      child: Text(
+                                        'Get a long warranty and all of the'
+                                        ' above for a fair price.',
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                          color: Theme.of(context)
+                                              .textTheme
+                                              .bodyText2
+                                              .color,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 30,
+                      ),
+                      InkWell(
+                        hoverColor: Colors.black87,
+                        child: TextButton(
+                          style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all(
+                              Colors.black45,
+                            ),
+                            padding: MaterialStateProperty.all<EdgeInsets>(
+                              const EdgeInsets.all(30),
+                            ),
+                          ),
+                          onPressed: () {
+                            Navigator.pushNamed(context, devicesRoute);
+                          },
+                          child: SizedBox(
+                            width: 320,
+                            height: 380,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Row(children: <Widget>[
                                   const SizedBox(
                                     width: 25,
                                   ),
@@ -126,7 +304,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                                         CrossAxisAlignment.start,
                                     children: <Widget>[
                                       FaIcon(
-                                        FontAwesomeIcons.users,
+                                        FontAwesomeIcons.globe,
                                         color: Theme.of(context)
                                             .textTheme
                                             .bodyText1
@@ -135,7 +313,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                                       ),
                                       const SizedBox(height: 20),
                                       Text(
-                                        'For Customers',
+                                        'For Users',
                                         style: TextStyle(
                                             fontSize: 30,
                                             color: Theme.of(context)
@@ -157,7 +335,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                                                 const BorderRadius.all(
                                                     Radius.circular(10))),
                                         child: Text(
-                                          'Enjoy',
+                                          'Deploy',
                                           style: TextStyle(
                                               fontSize: 15,
                                               color: Theme.of(context)
@@ -166,461 +344,321 @@ class HomePageContentMobileTablet extends StatelessWidget {
                                         ),
                                       ),
                                     ],
-                                  )
-                                ],
-                              ),
-                              const SizedBox(
-                                height: 30,
-                              ),
-                              Row(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  const FaIcon(
-                                    FontAwesomeIcons.check,
-                                    color: Colors.green,
-                                    size: 15,
                                   ),
-                                  const SizedBox(
-                                    width: 10,
-                                  ),
-                                  SizedBox(
-                                    width: 280,
-                                    child: Text(
-                                      'Our electricians will install '
-                                      'CyBear Jinni Smart Devices in your home.',
-                                      style: TextStyle(
-                                        fontSize: 20,
-                                        color: Theme.of(context)
-                                            .textTheme
-                                            .bodyText2
-                                            .color,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              const SizedBox(
-                                height: 10,
-                              ),
-                              Row(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  const FaIcon(
-                                    FontAwesomeIcons.check,
-                                    color: Colors.green,
-                                    size: 15,
-                                  ),
-                                  const SizedBox(
-                                    width: 10,
-                                  ),
-                                  SizedBox(
-                                    width: 280,
-                                    child: Text(
-                                      'Providing guidance on how to set the'
-                                      ' smart devices and use the '
-                                      'smartphone app to '
-                                      'interact with them.',
-                                      style: TextStyle(
-                                        fontSize: 20,
-                                        color: Theme.of(context)
-                                            .textTheme
-                                            .bodyText2
-                                            .color,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              const SizedBox(
-                                height: 10,
-                              ),
-                              Row(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  const FaIcon(
-                                    FontAwesomeIcons.check,
-                                    color: Colors.green,
-                                    size: 15,
-                                  ),
-                                  const SizedBox(
-                                    width: 10,
-                                  ),
-                                  SizedBox(
-                                    width: 280,
-                                    child: Text(
-                                      'Get a long warranty and all of the'
-                                      ' above for a fair price.',
-                                      style: TextStyle(
-                                        fontSize: 20,
-                                        color: Theme.of(context)
-                                            .textTheme
-                                            .bodyText2
-                                            .color,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 30,
-                      ),
-                      FlatButton(
-                        textColor: Theme.of(context).textTheme.bodyText2.color,
-                        onPressed: () {
-                          Navigator.pushNamed(context, devicesRoute);
-                        },
-                        padding: const EdgeInsets.all(30),
-                        color: Colors.black45,
-                        hoverColor: Colors.black87,
-                        child: SizedBox(
-                          width: 320,
-                          height: 380,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              Row(children: <Widget>[
+                                ]),
                                 const SizedBox(
-                                  width: 25,
+                                  height: 30,
                                 ),
-                                Column(
+                                Row(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
-                                    FaIcon(
-                                      FontAwesomeIcons.globe,
-                                      color: Theme.of(context)
-                                          .textTheme
-                                          .bodyText1
-                                          .color,
-                                      size: 30,
-                                    ),
-                                    const SizedBox(height: 20),
-                                    Text(
-                                      'For Users',
-                                      style: TextStyle(
-                                          fontSize: 30,
-                                          color: Theme.of(context)
-                                              .textTheme
-                                              .bodyText1
-                                              .color),
+                                    const FaIcon(
+                                      FontAwesomeIcons.check,
+                                      color: Colors.green,
+                                      size: 15,
                                     ),
                                     const SizedBox(
-                                      height: 5,
+                                      width: 10,
                                     ),
-                                    Container(
-                                      padding: const EdgeInsets.all(5),
-                                      decoration: BoxDecoration(
+                                    SizedBox(
+                                      width: 280,
+                                      child: Text(
+                                        'Devices can be purchased online for '
+                                        'self-installation in your home.',
+                                        style: TextStyle(
+                                          fontSize: 20,
                                           color: Theme.of(context)
                                               .textTheme
-                                              .bodyText1
+                                              .bodyText2
                                               .color,
-                                          borderRadius: const BorderRadius.all(
-                                              Radius.circular(10))),
-                                      child: Text(
-                                        'Deploy',
-                                        style: TextStyle(
-                                            fontSize: 15,
-                                            color:
-                                                Theme.of(context).primaryColor,
-                                            fontWeight: FontWeight.bold),
+                                        ),
                                       ),
                                     ),
                                   ],
                                 ),
-                              ]),
-                              const SizedBox(
-                                height: 30,
-                              ),
-                              Row(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  const FaIcon(
-                                    FontAwesomeIcons.check,
-                                    color: Colors.green,
-                                    size: 15,
-                                  ),
-                                  const SizedBox(
-                                    width: 10,
-                                  ),
-                                  SizedBox(
-                                    width: 280,
-                                    child: Text(
-                                      'Devices can be purchased online for '
-                                      'self-installation in your home.',
-                                      style: TextStyle(
-                                        fontSize: 20,
-                                        color: Theme.of(context)
-                                            .textTheme
-                                            .bodyText2
-                                            .color,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              const SizedBox(
-                                height: 10,
-                              ),
-                              Row(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  const FaIcon(
-                                    FontAwesomeIcons.check,
-                                    color: Colors.green,
-                                    size: 15,
-                                  ),
-                                  const SizedBox(
-                                    width: 10,
-                                  ),
-                                  SizedBox(
-                                    width: 280,
-                                    child: Text(
-                                      'Instructions and videos of how to'
-                                      ' deploy and set the system'
-                                      ' yourself.',
-                                      style: TextStyle(
-                                        fontSize: 20,
-                                        color: Theme.of(context)
-                                            .textTheme
-                                            .bodyText2
-                                            .color,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              const SizedBox(
-                                height: 10,
-                              ),
-                              Text(
-                                '',
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  color: Theme.of(context)
-                                      .textTheme
-                                      .bodyText2
-                                      .color,
+                                const SizedBox(
+                                  height: 10,
                                 ),
-                              ),
-                            ],
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    const FaIcon(
+                                      FontAwesomeIcons.check,
+                                      color: Colors.green,
+                                      size: 15,
+                                    ),
+                                    const SizedBox(
+                                      width: 10,
+                                    ),
+                                    SizedBox(
+                                      width: 280,
+                                      child: Text(
+                                        'Instructions and videos of how to'
+                                        ' deploy and set the system'
+                                        ' yourself.',
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                          color: Theme.of(context)
+                                              .textTheme
+                                              .bodyText2
+                                              .color,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                Text(
+                                  '',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Theme.of(context)
+                                        .textTheme
+                                        .bodyText2
+                                        .color,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),
                       const SizedBox(
                         height: 30,
                       ),
-                      FlatButton(
-                        textColor: Theme.of(context).textTheme.bodyText2.color,
-                        onPressed: () async {
-                          const String url = 'https://github.com/CyBear-Jinni';
-                          if (await canLaunch(url)) {
-                            await launch(url);
-                          } else {
-                            throw 'Could not launch $url';
-                          }
-                        },
-                        padding: const EdgeInsets.all(30),
-                        color: Colors.black45,
+                      InkWell(
                         hoverColor: Colors.black87,
-                        child: SizedBox(
-                          width: 320,
-                          height: 380,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              Row(children: <Widget>[
-                                const SizedBox(
-                                  width: 25,
-                                ),
-                                Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: <Widget>[
-                                      FaIcon(
-                                        FontAwesomeIcons.laptopCode,
-                                        color: Theme.of(context)
-                                            .textTheme
-                                            .bodyText1
-                                            .color,
-                                        size: 30,
-                                      ),
-                                      const SizedBox(height: 20),
-                                      Text(
-                                        'For Developers',
-                                        style: TextStyle(
-                                            fontSize: 30,
-                                            color: Theme.of(context)
-                                                .textTheme
-                                                .bodyText1
-                                                .color),
-                                      ),
-                                      const SizedBox(
-                                        height: 5,
-                                      ),
-                                      Container(
-                                        padding: const EdgeInsets.all(5),
-                                        decoration: BoxDecoration(
-                                            color: Theme.of(context)
-                                                .textTheme
-                                                .bodyText1
-                                                .color,
-                                            borderRadius:
-                                                const BorderRadius.all(
-                                                    Radius.circular(10))),
-                                        child: Text(
-                                          'Contribute',
+                        child: TextButton(
+                          style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all(
+                              Colors.black45,
+                            ),
+                            padding: MaterialStateProperty.all<EdgeInsets>(
+                              const EdgeInsets.all(30),
+                            ),
+                          ),
+                          onPressed: () async {
+                            const String url =
+                                'https://github.com/CyBear-Jinni';
+                            if (await canLaunch(url)) {
+                              await launch(url);
+                            } else {
+                              throw 'Could not launch $url';
+                            }
+                          },
+                          child: SizedBox(
+                            width: 320,
+                            height: 380,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Row(children: <Widget>[
+                                  const SizedBox(
+                                    width: 25,
+                                  ),
+                                  Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        FaIcon(
+                                          FontAwesomeIcons.laptopCode,
+                                          color: Theme.of(context)
+                                              .textTheme
+                                              .bodyText1
+                                              .color,
+                                          size: 30,
+                                        ),
+                                        const SizedBox(height: 20),
+                                        Text(
+                                          'For Developers',
                                           style: TextStyle(
-                                              fontSize: 15,
+                                              fontSize: 30,
                                               color: Theme.of(context)
-                                                  .primaryColor,
-                                              fontWeight: FontWeight.bold),
+                                                  .textTheme
+                                                  .bodyText1
+                                                  .color),
+                                        ),
+                                        const SizedBox(
+                                          height: 5,
+                                        ),
+                                        Container(
+                                          padding: const EdgeInsets.all(5),
+                                          decoration: BoxDecoration(
+                                              color: Theme.of(context)
+                                                  .textTheme
+                                                  .bodyText1
+                                                  .color,
+                                              borderRadius:
+                                                  const BorderRadius.all(
+                                                      Radius.circular(10))),
+                                          child: Text(
+                                            'Contribute',
+                                            style: TextStyle(
+                                                fontSize: 15,
+                                                color: Theme.of(context)
+                                                    .primaryColor,
+                                                fontWeight: FontWeight.bold),
+                                          ),
+                                        ),
+                                      ])
+                                ]),
+                                const SizedBox(
+                                  height: 30,
+                                ),
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    const FaIcon(
+                                      FontAwesomeIcons.check,
+                                      color: Colors.green,
+                                      size: 15,
+                                    ),
+                                    const SizedBox(
+                                      width: 10,
+                                    ),
+                                    SizedBox(
+                                      width: 280,
+                                      child: Text(
+                                        'Open source code and '
+                                        'instructions for makers and tinkerers '
+                                        'to build the system from scratch.',
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                          color: Theme.of(context)
+                                              .textTheme
+                                              .bodyText2
+                                              .color,
                                         ),
                                       ),
-                                    ])
-                              ]),
-                              const SizedBox(
-                                height: 30,
-                              ),
-                              Row(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  const FaIcon(
-                                    FontAwesomeIcons.check,
-                                    color: Colors.green,
-                                    size: 15,
-                                  ),
-                                  const SizedBox(
-                                    width: 10,
-                                  ),
-                                  SizedBox(
-                                    width: 280,
-                                    child: Text(
-                                      'Open source code and '
-                                      'instructions for makers and tinkerers '
-                                      'to build the system from scratch.',
-                                      style: TextStyle(
-                                        fontSize: 20,
-                                        color: Theme.of(context)
-                                            .textTheme
-                                            .bodyText2
-                                            .color,
-                                      ),
                                     ),
-                                  ),
-                                ],
-                              ),
-                              const SizedBox(
-                                height: 10,
-                              ),
-                              Row(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  const FaIcon(
-                                    FontAwesomeIcons.check,
-                                    color: Colors.green,
-                                    size: 15,
-                                  ),
-                                  const SizedBox(
-                                    width: 10,
-                                  ),
-                                  SizedBox(
-                                    width: 280,
-                                    child: Text(
-                                      'Opportunity to add support for '
-                                      'the system to communicate with other smart'
-                                      ' devices that are not supported yet.',
-                                      style: TextStyle(
-                                        fontSize: 20,
-                                        color: Theme.of(context)
-                                            .textTheme
-                                            .bodyText2
-                                            .color,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              const SizedBox(
-                                height: 10,
-                              ),
-                              Text(
-                                '',
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  color: Theme.of(context)
-                                      .textTheme
-                                      .bodyText2
-                                      .color,
+                                  ],
                                 ),
-                              ),
-                            ],
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    const FaIcon(
+                                      FontAwesomeIcons.check,
+                                      color: Colors.green,
+                                      size: 15,
+                                    ),
+                                    const SizedBox(
+                                      width: 10,
+                                    ),
+                                    SizedBox(
+                                      width: 280,
+                                      child: Text(
+                                        'Opportunity to add support for '
+                                        'the system to communicate with other smart'
+                                        ' devices that are not supported yet.',
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                          color: Theme.of(context)
+                                              .textTheme
+                                              .bodyText2
+                                              .color,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                Text(
+                                  '',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Theme.of(context)
+                                        .textTheme
+                                        .bodyText2
+                                        .color,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),
                     ]),
               ),
-              FlatButton(
-                textColor: Theme.of(context).textTheme.bodyText1.color,
-                color: Colors.black38,
-                height: 500.0,
-                onPressed: () {
-                  Navigator.pushNamed(
-                    context,
-                    devicesRoute,
-                  );
-                },
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    const SizedBox(
-                      height: 50,
+              SizedBox(
+                child: SizedBox(
+                  height: 500,
+                  child: TextButton(
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(
+                        Colors.black38,
+                      ),
+                      padding: MaterialStateProperty.all<EdgeInsets>(
+                        const EdgeInsets.all(30),
+                      ),
                     ),
-                    Column(
+                    onPressed: () {
+                      Navigator.pushNamed(
+                        context,
+                        devicesRoute,
+                      );
+                    },
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        Text(
-                            'Click here for more details about our'
-                            ' devices',
-                            style: TextStyle(
-                                fontSize: 30,
-                                color: Theme.of(context)
-                                    .textTheme
-                                    .bodyText1
-                                    .color),
-                            textAlign: TextAlign.center),
+                        const SizedBox(
+                          height: 50,
+                        ),
+                        Column(
+                          children: <Widget>[
+                            Text(
+                                'Click here for more details about our'
+                                ' devices',
+                                style: TextStyle(
+                                    fontSize: 30,
+                                    color: Theme.of(context)
+                                        .textTheme
+                                        .bodyText1
+                                        .color),
+                                textAlign: TextAlign.center),
+                            const SizedBox(
+                              height: 50,
+                            ),
+                          ],
+                        ),
+                        Container(),
+                        Container(
+                          alignment: Alignment.center,
+                          child: CachedNetworkImage(
+                            imageUrl:
+                                'https://i.ibb.co/tHWm1NV/Cy-Bear-Jinni-smart-device-logo.png',
+                            height: 230,
+                            progressIndicatorBuilder:
+                                (context, url, downloadProgress) =>
+                                    CircularProgressIndicator(
+                                        value: downloadProgress.progress),
+                            errorWidget: (context, url, error) =>
+                                const Icon(Icons.error),
+                          ),
+                        ),
                         const SizedBox(
                           height: 50,
                         ),
                       ],
                     ),
-                    Container(),
-                    Container(
-                      alignment: Alignment.center,
-                      child: CachedNetworkImage(
-                        imageUrl:
-                            'https://i.ibb.co/tHWm1NV/Cy-Bear-Jinni-smart-device-logo.png',
-                        height: 400,
-                        progressIndicatorBuilder:
-                            (context, url, downloadProgress) =>
-                                CircularProgressIndicator(
-                                    value: downloadProgress.progress),
-                        errorWidget: (context, url, error) =>
-                            const Icon(Icons.error),
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 50,
-                    ),
-                  ],
+                  ),
                 ),
               ),
               Container(
                 color: Colors.black26,
                 height: 500,
-                child: FlatButton(
-                  padding: const EdgeInsets.all(0),
+                child: TextButton(
+                  style: ButtonStyle(
+                    padding: MaterialStateProperty.all<EdgeInsets>(
+                      EdgeInsets.zero,
+                    ),
+                  ),
                   onPressed: () async {
                     const String url = 'https://snapcraft.io/cybear-jinni';
                     if (await canLaunch(url)) {

@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-
-
 /// The specific look for the top navigation menu for tablet desktop
-class TopNavigationMenuMobile extends StatelessWidget{
+class TopNavigationMenuMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -14,16 +12,16 @@ class TopNavigationMenuMobile extends StatelessWidget{
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           IconButton(
-            onPressed: (){
+            onPressed: () {
               Scaffold.of(context).openDrawer();
             },
-            icon: FaIcon(FontAwesomeIcons.bars,
-            color: Theme.of(context).textTheme.bodyText1.color ,
-          ),
+            icon: FaIcon(
+              FontAwesomeIcons.bars,
+              color: Theme.of(context).textTheme.bodyText1!.color,
+            ),
           )
         ],
       ),
     );
   }
-
 }

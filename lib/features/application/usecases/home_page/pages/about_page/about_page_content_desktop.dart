@@ -50,7 +50,7 @@ class AboutPageContentDesktop extends StatelessWidget {
                       Text('About',
                           style: TextStyle(
                             fontSize: 50,
-                            color: Theme.of(context).textTheme.bodyText1.color,
+                            color: Theme.of(context).textTheme.bodyText1!.color,
                           ),
                           textAlign: TextAlign.center),
                     ],
@@ -132,7 +132,7 @@ class AboutPageContentDesktop extends StatelessWidget {
                                     fontSize: 50,
                                     color: Theme.of(context)
                                         .textTheme
-                                        .bodyText1
+                                        .bodyText1!
                                         .color),
                                 textAlign: TextAlign.center),
                             const SizedBox(

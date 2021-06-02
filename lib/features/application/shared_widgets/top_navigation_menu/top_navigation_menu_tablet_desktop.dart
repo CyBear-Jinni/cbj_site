@@ -58,11 +58,12 @@ class TopNavigationMenuTabletDesktop extends StatelessWidget {
                     },
                     child: Tab(
                       icon: FaIcon(FontAwesomeIcons.phoneAlt,
-                          color: Theme.of(context).textTheme.bodyText1.color),
+                          color: Theme.of(context).textTheme.bodyText1!.color),
                       child: Text(
                         'Contact Us',
                         style: TextStyle(
-                            color: Theme.of(context).textTheme.bodyText1.color),
+                            color:
+                                Theme.of(context).textTheme.bodyText1!.color),
                       ),
                     ),
                   ),
@@ -93,11 +94,12 @@ class TopNavigationMenuTabletDesktop extends StatelessWidget {
                     },
                     child: Tab(
                       icon: FaIcon(FontAwesomeIcons.addressCard,
-                          color: Theme.of(context).textTheme.bodyText1.color),
+                          color: Theme.of(context).textTheme.bodyText1!.color),
                       child: Text(
                         'About',
                         style: TextStyle(
-                            color: Theme.of(context).textTheme.bodyText1.color),
+                            color:
+                                Theme.of(context).textTheme.bodyText1!.color),
                       ),
                     ),
                   ),
@@ -114,11 +116,12 @@ class TopNavigationMenuTabletDesktop extends StatelessWidget {
                     },
                     child: Tab(
                       icon: FaIcon(FontAwesomeIcons.questionCircle,
-                          color: Theme.of(context).textTheme.bodyText1.color),
+                          color: Theme.of(context).textTheme.bodyText1!.color),
                       child: Text(
                         'FAQ',
                         style: TextStyle(
-                            color: Theme.of(context).textTheme.bodyText1.color),
+                            color:
+                                Theme.of(context).textTheme.bodyText1!.color),
                       ),
                     ),
                   ),
@@ -136,11 +139,12 @@ class TopNavigationMenuTabletDesktop extends StatelessWidget {
                     },
                     child: Tab(
                       icon: FaIcon(FontAwesomeIcons.hardHat,
-                          color: Theme.of(context).textTheme.bodyText1.color),
+                          color: Theme.of(context).textTheme.bodyText1!.color),
                       child: Text(
                         'Electricians',
                         style: TextStyle(
-                            color: Theme.of(context).textTheme.bodyText1.color),
+                            color:
+                                Theme.of(context).textTheme.bodyText1!.color),
                       ),
                     ),
                   ),
@@ -157,11 +161,12 @@ class TopNavigationMenuTabletDesktop extends StatelessWidget {
                     },
                     child: Tab(
                       icon: FaIcon(FontAwesomeIcons.lightbulb,
-                          color: Theme.of(context).textTheme.bodyText1.color),
+                          color: Theme.of(context).textTheme.bodyText1!.color),
                       child: Text(
                         'Devices',
                         style: TextStyle(
-                            color: Theme.of(context).textTheme.bodyText1.color),
+                            color:
+                                Theme.of(context).textTheme.bodyText1!.color),
                       ),
                     ),
                   ),
@@ -179,11 +184,12 @@ class TopNavigationMenuTabletDesktop extends StatelessWidget {
                     },
                     child: Tab(
                       icon: FaIcon(FontAwesomeIcons.home,
-                          color: Theme.of(context).textTheme.bodyText1.color),
+                          color: Theme.of(context).textTheme.bodyText1!.color),
                       child: Text(
                         'Home',
                         style: TextStyle(
-                            color: Theme.of(context).textTheme.bodyText1.color),
+                            color:
+                                Theme.of(context).textTheme.bodyText1!.color),
                       ),
                     ),
                   ),

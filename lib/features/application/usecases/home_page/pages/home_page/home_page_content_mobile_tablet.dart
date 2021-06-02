@@ -57,7 +57,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                                     fontSize: 59,
                                     color: Theme.of(context)
                                         .textTheme
-                                        .bodyText1
+                                        .bodyText1!
                                         .color),
                               ),
                             ),
@@ -76,7 +76,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                                     fontSize: 21,
                                     color: Theme.of(context)
                                         .textTheme
-                                        .bodyText1
+                                        .bodyText1!
                                         .color,
                                     fontWeight: FontWeight.w700),
                               ),
@@ -135,7 +135,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                                           FontAwesomeIcons.users,
                                           color: Theme.of(context)
                                               .textTheme
-                                              .bodyText1
+                                              .bodyText1!
                                               .color,
                                           size: 30,
                                         ),
@@ -146,7 +146,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                                               fontSize: 30,
                                               color: Theme.of(context)
                                                   .textTheme
-                                                  .bodyText1
+                                                  .bodyText1!
                                                   .color),
                                         ),
                                         const SizedBox(
@@ -157,7 +157,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                                           decoration: BoxDecoration(
                                               color: Theme.of(context)
                                                   .textTheme
-                                                  .bodyText1
+                                                  .bodyText1!
                                                   .color,
                                               borderRadius:
                                                   const BorderRadius.all(
@@ -198,7 +198,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                                           fontSize: 20,
                                           color: Theme.of(context)
                                               .textTheme
-                                              .bodyText2
+                                              .bodyText2!
                                               .color,
                                         ),
                                       ),
@@ -230,7 +230,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                                           fontSize: 20,
                                           color: Theme.of(context)
                                               .textTheme
-                                              .bodyText2
+                                              .bodyText2!
                                               .color,
                                         ),
                                       ),
@@ -260,7 +260,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                                           fontSize: 20,
                                           color: Theme.of(context)
                                               .textTheme
-                                              .bodyText2
+                                              .bodyText2!
                                               .color,
                                         ),
                                       ),
@@ -307,7 +307,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                                         FontAwesomeIcons.globe,
                                         color: Theme.of(context)
                                             .textTheme
-                                            .bodyText1
+                                            .bodyText1!
                                             .color,
                                         size: 30,
                                       ),
@@ -318,7 +318,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                                             fontSize: 30,
                                             color: Theme.of(context)
                                                 .textTheme
-                                                .bodyText1
+                                                .bodyText1!
                                                 .color),
                                       ),
                                       const SizedBox(
@@ -329,7 +329,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                                         decoration: BoxDecoration(
                                             color: Theme.of(context)
                                                 .textTheme
-                                                .bodyText1
+                                                .bodyText1!
                                                 .color,
                                             borderRadius:
                                                 const BorderRadius.all(
@@ -369,7 +369,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                                           fontSize: 20,
                                           color: Theme.of(context)
                                               .textTheme
-                                              .bodyText2
+                                              .bodyText2!
                                               .color,
                                         ),
                                       ),
@@ -400,7 +400,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                                           fontSize: 20,
                                           color: Theme.of(context)
                                               .textTheme
-                                              .bodyText2
+                                              .bodyText2!
                                               .color,
                                         ),
                                       ),
@@ -416,7 +416,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                                     fontSize: 20,
                                     color: Theme.of(context)
                                         .textTheme
-                                        .bodyText2
+                                        .bodyText2!
                                         .color,
                                   ),
                                 ),
@@ -466,7 +466,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                                           FontAwesomeIcons.laptopCode,
                                           color: Theme.of(context)
                                               .textTheme
-                                              .bodyText1
+                                              .bodyText1!
                                               .color,
                                           size: 30,
                                         ),
@@ -477,7 +477,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                                               fontSize: 30,
                                               color: Theme.of(context)
                                                   .textTheme
-                                                  .bodyText1
+                                                  .bodyText1!
                                                   .color),
                                         ),
                                         const SizedBox(
@@ -488,7 +488,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                                           decoration: BoxDecoration(
                                               color: Theme.of(context)
                                                   .textTheme
-                                                  .bodyText1
+                                                  .bodyText1!
                                                   .color,
                                               borderRadius:
                                                   const BorderRadius.all(
@@ -528,7 +528,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                                           fontSize: 20,
                                           color: Theme.of(context)
                                               .textTheme
-                                              .bodyText2
+                                              .bodyText2!
                                               .color,
                                         ),
                                       ),
@@ -559,7 +559,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                                           fontSize: 20,
                                           color: Theme.of(context)
                                               .textTheme
-                                              .bodyText2
+                                              .bodyText2!
                                               .color,
                                         ),
                                       ),
@@ -575,7 +575,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                                     fontSize: 20,
                                     color: Theme.of(context)
                                         .textTheme
-                                        .bodyText2
+                                        .bodyText2!
                                         .color,
                                   ),
                                 ),
@@ -619,7 +619,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                                     fontSize: 30,
                                     color: Theme.of(context)
                                         .textTheme
-                                        .bodyText1
+                                        .bodyText1!
                                         .color),
                                 textAlign: TextAlign.center),
                             const SizedBox(
@@ -677,7 +677,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                           style: TextStyle(
                               fontSize: 40,
                               color:
-                                  Theme.of(context).textTheme.bodyText1.color),
+                                  Theme.of(context).textTheme.bodyText1!.color),
                           textAlign: TextAlign.center),
                       const SizedBox(
                         height: 10,

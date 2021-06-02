@@ -78,7 +78,7 @@ class MyApp extends StatelessWidget {
         //        '/home_settings': (BuildContext context) => SettingsPage(),
       },
       onGenerateRoute: (RouteSettings settings) {
-        final List<String> pathElements = settings.name.split('/');
+        final List<String> pathElements = settings.name!.split('/');
         if (pathElements[0] == homeRoute) {
           MySingleton.setCurrentPageName(homeRoute);
           return MaterialPageRoute(

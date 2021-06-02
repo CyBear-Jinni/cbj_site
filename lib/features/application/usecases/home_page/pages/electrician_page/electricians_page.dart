@@ -64,7 +64,7 @@ class ElectriciansPage extends StatelessWidget {
                                               fontSize: 50,
                                               color: Theme.of(context)
                                                   .textTheme
-                                                  .bodyText1
+                                                  .bodyText1!
                                                   .color),
                                           textAlign: TextAlign.center),
                                       const SizedBox(

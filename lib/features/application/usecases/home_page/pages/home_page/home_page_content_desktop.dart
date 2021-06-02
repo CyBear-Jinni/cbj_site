@@ -53,7 +53,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                 fontSize: 60,
                                 color: Theme.of(context)
                                     .textTheme
-                                    .bodyText1
+                                    .bodyText1!
                                     .color),
                           ),
                         ),
@@ -70,8 +70,10 @@ class HomePageContentDesktop extends StatelessWidget {
                             'Smart Home',
                             style: TextStyle(
                                 fontSize: 21,
-                                color:
-                                    Theme.of(context).textTheme.bodyText1.color,
+                                color: Theme.of(context)
+                                    .textTheme
+                                    .bodyText1!
+                                    .color,
                                 fontWeight: FontWeight.w700),
                           ),
                         ),
@@ -137,7 +139,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                               FontAwesomeIcons.users,
                                               color: Theme.of(context)
                                                   .textTheme
-                                                  .bodyText1
+                                                  .bodyText1!
                                                   .color,
                                               size: 30,
                                             ),
@@ -148,7 +150,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                                   fontSize: 30,
                                                   color: Theme.of(context)
                                                       .textTheme
-                                                      .bodyText1
+                                                      .bodyText1!
                                                       .color),
                                             ),
                                             const SizedBox(
@@ -159,7 +161,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                               decoration: BoxDecoration(
                                                   color: Theme.of(context)
                                                       .textTheme
-                                                      .bodyText1
+                                                      .bodyText1!
                                                       .color,
                                                   borderRadius:
                                                       const BorderRadius.all(
@@ -202,7 +204,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                               fontSize: 20,
                                               color: Theme.of(context)
                                                   .textTheme
-                                                  .bodyText2
+                                                  .bodyText2!
                                                   .color,
                                             ),
                                           ),
@@ -235,7 +237,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                               fontSize: 20,
                                               color: Theme.of(context)
                                                   .textTheme
-                                                  .bodyText2
+                                                  .bodyText2!
                                                   .color,
                                             ),
                                           ),
@@ -266,7 +268,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                               fontSize: 20,
                                               color: Theme.of(context)
                                                   .textTheme
-                                                  .bodyText2
+                                                  .bodyText2!
                                                   .color,
                                             ),
                                           ),
@@ -313,7 +315,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                             FontAwesomeIcons.globe,
                                             color: Theme.of(context)
                                                 .textTheme
-                                                .bodyText1
+                                                .bodyText1!
                                                 .color,
                                             size: 30,
                                           ),
@@ -324,7 +326,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                                 fontSize: 30,
                                                 color: Theme.of(context)
                                                     .textTheme
-                                                    .bodyText1
+                                                    .bodyText1!
                                                     .color),
                                           ),
                                           const SizedBox(
@@ -335,7 +337,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                             decoration: BoxDecoration(
                                                 color: Theme.of(context)
                                                     .textTheme
-                                                    .bodyText1
+                                                    .bodyText1!
                                                     .color,
                                                 borderRadius:
                                                     const BorderRadius.all(
@@ -376,7 +378,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                               fontSize: 20,
                                               color: Theme.of(context)
                                                   .textTheme
-                                                  .bodyText2
+                                                  .bodyText2!
                                                   .color,
                                             ),
                                           ),
@@ -408,7 +410,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                               fontSize: 20,
                                               color: Theme.of(context)
                                                   .textTheme
-                                                  .bodyText2
+                                                  .bodyText2!
                                                   .color,
                                             ),
                                           ),
@@ -424,7 +426,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                         fontSize: 20,
                                         color: Theme.of(context)
                                             .textTheme
-                                            .bodyText2
+                                            .bodyText2!
                                             .color,
                                       ),
                                     ),
@@ -474,7 +476,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                               FontAwesomeIcons.laptopCode,
                                               color: Theme.of(context)
                                                   .textTheme
-                                                  .bodyText1
+                                                  .bodyText1!
                                                   .color,
                                               size: 30,
                                             ),
@@ -485,7 +487,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                                   fontSize: 30,
                                                   color: Theme.of(context)
                                                       .textTheme
-                                                      .bodyText1
+                                                      .bodyText1!
                                                       .color),
                                             ),
                                             const SizedBox(
@@ -496,7 +498,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                               decoration: BoxDecoration(
                                                   color: Theme.of(context)
                                                       .textTheme
-                                                      .bodyText1
+                                                      .bodyText1!
                                                       .color,
                                                   borderRadius:
                                                       const BorderRadius.all(
@@ -538,7 +540,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                               fontSize: 20,
                                               color: Theme.of(context)
                                                   .textTheme
-                                                  .bodyText2
+                                                  .bodyText2!
                                                   .color,
                                             ),
                                           ),
@@ -570,7 +572,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                               fontSize: 20,
                                               color: Theme.of(context)
                                                   .textTheme
-                                                  .bodyText2
+                                                  .bodyText2!
                                                   .color,
                                             ),
                                           ),
@@ -586,7 +588,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                         fontSize: 20,
                                         color: Theme.of(context)
                                             .textTheme
-                                            .bodyText2
+                                            .bodyText2!
                                             .color,
                                       ),
                                     ),
@@ -631,7 +633,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                   fontSize: 40,
                                   color: Theme.of(context)
                                       .textTheme
-                                      .bodyText1
+                                      .bodyText1!
                                       .color),
                               textAlign: TextAlign.center),
                           const SizedBox(
@@ -696,7 +698,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                   fontSize: 40,
                                   color: Theme.of(context)
                                       .textTheme
-                                      .bodyText1
+                                      .bodyText1!
                                       .color),
                               textAlign: TextAlign.center),
                           const SizedBox(

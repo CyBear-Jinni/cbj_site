@@ -29,7 +29,7 @@ class _ContactUsPopup extends State<ContactUsPopup> {
         child: Container(
           width: MediaQuery.of(context).size.width / 1.1,
           height: MediaQuery.of(context).size.height / 1.5,
-          color: Theme.of(context).textTheme.bodyText1.color.withOpacity(0.9),
+          color: Theme.of(context).textTheme.bodyText1!.color!.withOpacity(0.9),
           child: Form(
               key: _formKey,
               child: Column(

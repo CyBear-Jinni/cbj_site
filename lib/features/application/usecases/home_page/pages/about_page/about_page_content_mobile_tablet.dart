@@ -50,7 +50,7 @@ class AboutPageContentMobileTablet extends StatelessWidget {
                       Text('About',
                           style: TextStyle(
                             fontSize: 50,
-                            color: Theme.of(context).textTheme.bodyText1.color,
+                            color: Theme.of(context).textTheme.bodyText1!.color,
                           ),
                           textAlign: TextAlign.center),
                     ],
@@ -117,7 +117,7 @@ class AboutPageContentMobileTablet extends StatelessWidget {
                           style: TextStyle(
                               fontSize: 50,
                               color:
-                                  Theme.of(context).textTheme.bodyText1.color),
+                                  Theme.of(context).textTheme.bodyText1!.color),
                           textAlign: TextAlign.center),
                       const SizedBox(
                         height: 20,

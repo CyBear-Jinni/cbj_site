@@ -18,7 +18,7 @@ class BottomNavigationMenuMobileTablet extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Divider(
-                color: Theme.of(context).textTheme.bodyText1.color,
+                color: Theme.of(context).textTheme.bodyText1!.color,
                 thickness: 1,
                 height: 3,
               ),
@@ -44,7 +44,7 @@ class BottomNavigationMenuMobileTablet extends StatelessWidget {
                               icon: FaIcon(FontAwesomeIcons.appStoreIos,
                                   color: Theme.of(context)
                                       .textTheme
-                                      .bodyText1
+                                      .bodyText1!
                                       .color),
                               child: const Text(
                                 'App Store',
@@ -62,14 +62,14 @@ class BottomNavigationMenuMobileTablet extends StatelessWidget {
                                 icon: FaIcon(FontAwesomeIcons.googlePlay,
                                     color: Theme.of(context)
                                         .textTheme
-                                        .bodyText1
+                                        .bodyText1!
                                         .color),
                                 child: Text(
                                   'Play Store',
                                   style: TextStyle(
                                       color: Theme.of(context)
                                           .textTheme
-                                          .bodyText2
+                                          .bodyText2!
                                           .color),
                                 ),
                               ),
@@ -100,7 +100,7 @@ class BottomNavigationMenuMobileTablet extends StatelessWidget {
                                 icon: FaIcon(FontAwesomeIcons.linkedin,
                                     color: Theme.of(context)
                                         .textTheme
-                                        .bodyText1
+                                        .bodyText1!
                                         .color),
                                 child: const Text(''),
                               ),
@@ -114,7 +114,7 @@ class BottomNavigationMenuMobileTablet extends StatelessWidget {
                                 icon: FaIcon(FontAwesomeIcons.instagram,
                                     color: Theme.of(context)
                                         .textTheme
-                                        .bodyText1
+                                        .bodyText1!
                                         .color),
                                 child: const Text(''),
                               ),
@@ -128,7 +128,7 @@ class BottomNavigationMenuMobileTablet extends StatelessWidget {
                                 icon: FaIcon(FontAwesomeIcons.facebook,
                                     color: Theme.of(context)
                                         .textTheme
-                                        .bodyText1
+                                        .bodyText1!
                                         .color),
                                 child: const Text(''),
                               ),
@@ -141,7 +141,7 @@ class BottomNavigationMenuMobileTablet extends StatelessWidget {
                                 icon: FaIcon(FontAwesomeIcons.github,
                                     color: Theme.of(context)
                                         .textTheme
-                                        .bodyText1
+                                        .bodyText1!
                                         .color),
                                 child: const Text(''),
                               ),

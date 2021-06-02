@@ -33,7 +33,7 @@ class DevicesPageContentMobileTablet extends StatelessWidget {
                                 fontSize: 50,
                                 color: Theme.of(context)
                                     .textTheme
-                                    .bodyText1
+                                    .bodyText1!
                                     .color),
                             textAlign: TextAlign.center),
                       ],
@@ -49,13 +49,13 @@ class DevicesPageContentMobileTablet extends StatelessWidget {
                     color: Colors.black38,
                     border: Border(
                       top: BorderSide(
-                        color: Theme.of(context).textTheme.bodyText1.color,
+                        color: Theme.of(context).textTheme.bodyText1!.color!,
                       ),
                       left: BorderSide(
-                        color: Theme.of(context).textTheme.bodyText1.color,
+                        color: Theme.of(context).textTheme.bodyText1!.color!,
                       ),
                       right: BorderSide(
-                        color: Theme.of(context).textTheme.bodyText1.color,
+                        color: Theme.of(context).textTheme.bodyText1!.color!,
                       ),
                     )),
                 padding: const EdgeInsets.all(50),
@@ -113,7 +113,7 @@ class DevicesPageContentMobileTablet extends StatelessWidget {
                                   fontSize: 18,
                                   color: Theme.of(context)
                                       .textTheme
-                                      .bodyText2
+                                      .bodyText2!
                                       .color),
                             ),
                           ),
@@ -173,7 +173,7 @@ class DevicesPageContentMobileTablet extends StatelessWidget {
                                   fontSize: 18,
                                   color: Theme.of(context)
                                       .textTheme
-                                      .bodyText2
+                                      .bodyText2!
                                       .color),
                             ),
                           ),
@@ -233,7 +233,7 @@ class DevicesPageContentMobileTablet extends StatelessWidget {
                                   fontSize: 18,
                                   color: Theme.of(context)
                                       .textTheme
-                                      .bodyText2
+                                      .bodyText2!
                                       .color),
                             ),
                           ),

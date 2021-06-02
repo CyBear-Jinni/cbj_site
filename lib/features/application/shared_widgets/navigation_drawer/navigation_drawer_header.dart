@@ -33,7 +33,7 @@ class NavigationDrawerHeader extends StatelessWidget {
             style: TextStyle(
                 fontSize: 23,
                 fontWeight: FontWeight.w800,
-                color: Theme.of(context).textTheme.bodyText1.color),
+                color: Theme.of(context).textTheme.bodyText1!.color),
           ),
           const SizedBox(
             height: 20,

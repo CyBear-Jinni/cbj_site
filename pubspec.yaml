@@ -18,18 +18,18 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+2
 
 environment:
-  sdk: ">=2.10.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
   # Automatically resizes text to fit perfectly within its bounds
   auto_size_text: ^2.1.0
   # Show images from the internet and keep them in the cache directory.
-  cached_network_image: ^2.5.1
+  cached_network_image: ^3.0.0
   # Spotlight Bottom Navigation Bar
-  cool_nav: ^0.0.3
+  cool_nav: ^0.1.0
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.2
+  cupertino_icons: ^1.0.3
   # Internationalization (Easy translations)
   easy_localization: ^3.0.0
 
@@ -37,17 +37,17 @@ dependencies:
     sdk: flutter
 
   # Bloc for state management, replace StatefulWidget
-  flutter_bloc: ^6.1.3
+  flutter_bloc: ^7.0.1
   # The Font Awesome Icon pack available as set of Flutter Icons. https://fontawesome.com/
-  font_awesome_flutter: ^8.12.0
+  font_awesome_flutter: ^9.0.0
   # Links to your text.
-  linkable: ^1.0.8
+  linkable: ^1.0.9
   # Collection of lint rules for Dart and Flutter projects.
   lint: ^1.5.3
   # Popup that ask for the requested permission
-  permission_handler: ^6.1.0
+  permission_handler: ^8.0.0+2
   # Allows you to create a readable responsive UI
-  responsive_builder: ^0.3.0
+  responsive_builder: ^0.4.1
   # Launching a URL in the mobile platform
   url_launcher: ^6.0.2
 

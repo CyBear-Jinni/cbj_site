@@ -51,7 +51,7 @@ class MyApp extends StatelessWidget {
       // ),
       // home: MyHomePage(title: 'Flutter Demo Home Page'),
 
-      title: 'CyBear Jinni Web Site',
+      title: 'CyBear Jinni Smart Home',
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,

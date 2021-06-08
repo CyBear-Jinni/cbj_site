@@ -78,13 +78,13 @@ class AboutPageContentDesktop extends StatelessWidget {
                                           CircularProgressIndicator(
                                               value: downloadProgress.progress),
                                   errorWidget: (context, url, error) =>
-                                      Icon(Icons.error),
+                                      const Icon(Icons.error),
                                 ),
                               ),
                               const SizedBox(
                                 height: 10,
                               ),
-                              Text(
+                              const Text(
                                 'Guy Luz Founder of CyBear Jinni',
                                 style: TextStyle(
                                   fontSize: 20,
@@ -139,8 +139,9 @@ class AboutPageContentDesktop extends StatelessWidget {
                               height: 60,
                             ),
                             const Text(
-                              'We are happy to share with you our community love '
-                              'and support with their creative fan art.',
+                              'We are happy to share with you our community'
+                              ' love and support with their creative fan'
+                              ' art.',
                               style: TextStyle(
                                 fontSize: 25,
                               ),

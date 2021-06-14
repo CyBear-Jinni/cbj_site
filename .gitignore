@@ -30,6 +30,7 @@ cybear_jinni_site/.idea/
 .pub-cache/
 .pub/
 /build/
+Dart_Packages.xml
 
 # Web related
 lib/generated_plugin_registrant.dart

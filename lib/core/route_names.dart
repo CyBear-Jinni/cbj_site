@@ -16,5 +16,3 @@ const String faqRoute = 'faq';
 /// About rout for the site
 const String aboutRoute = 'about';
 
-/// Open the contact us popup
-const String contactUsRoute = 'contactUs';

@@ -1,6 +1,5 @@
 import 'package:cybear_jinni_site/core/my_singleton.dart';
 import 'package:cybear_jinni_site/core/route_names.dart';
-import 'package:cybear_jinni_site/features/application/shared_widgets/contact_us_popup.dart';
 import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/home_page/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -23,6 +22,7 @@ class TopNavigationMenuTabletDesktop extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   const SizedBox(
+                    height: 72,
                     width: 20,
                   ),
                   TextButton(
@@ -37,34 +37,12 @@ class TopNavigationMenuTabletDesktop extends StatelessWidget {
                         Navigator.pushReplacementNamed(context, homeRoute);
                       }
                     },
-                    child: const Tab(
-                      icon: SizedBox(
-                        width: 40,
-                        child: Image(
-                          image: AssetImage(
-                            'assets/images/cbj_app_icon_no_bg.png',
-                          ),
-                          fit: BoxFit.cover,
-                        ),
+                    child: Image(
+                      height: 60,
+                      image: AssetImage(
+                        'assets/images/cbj_app_icon_no_bg.png',
                       ),
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 20,
-                  ),
-                  TextButton(
-                    onPressed: () {
-                      contactUsPlaceHolder(context);
-                    },
-                    child: Tab(
-                      icon: FaIcon(FontAwesomeIcons.phoneAlt,
-                          color: Theme.of(context).textTheme.bodyText1!.color),
-                      child: Text(
-                        'Contact Us',
-                        style: TextStyle(
-                            color:
-                                Theme.of(context).textTheme.bodyText1!.color),
-                      ),
+                      fit: BoxFit.fitHeight,
                     ),
                   ),
                   const SizedBox(

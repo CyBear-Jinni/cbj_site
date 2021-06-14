@@ -1,15 +1,12 @@
 import 'package:cybear_jinni_site/core/route_names.dart';
-import 'package:cybear_jinni_site/features/application/shared_widgets/contact_us_popup.dart';
 import 'package:cybear_jinni_site/features/application/shared_widgets/navigation_drawer/drawer_item_on_click_route_page.dart';
 import 'package:cybear_jinni_site/features/application/shared_widgets/navigation_drawer/navigation_drawer_header.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import 'drawer_item_on_click_start_function.dart';
-
 /// Navigation drawer for small screen sizes, replace the top navigation menu
-class NavigationDrawer extends StatelessWidget{
+class NavigationDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -22,11 +19,8 @@ class NavigationDrawer extends StatelessWidget{
           // Add one stop for each color. Stops should increase from 0 to 1
           stops: const <double>[0, 0, 0, 1],
           colors: <Color>[
-            Theme
-                .of(context)
-                .primaryColor,
-            Theme
-                .of(context).accentColor,
+            Theme.of(context).primaryColor,
+            Theme.of(context).accentColor,
             Theme.of(context).accentColor,
             Theme.of(context).primaryColor
           ],
@@ -61,8 +55,6 @@ class NavigationDrawer extends StatelessWidget{
             const SizedBox(
               height: 13,
             ),
-            const DrawerItemOnClickStartFunction(
-                'Contact Us', FontAwesomeIcons.phoneAlt, contactUsPlaceHolder),
           ],
         ),
       ),

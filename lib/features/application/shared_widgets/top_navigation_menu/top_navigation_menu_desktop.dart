@@ -6,7 +6,7 @@ import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 /// The specific look for the top navigation menu for tablet desktop
-class TopNavigationMenuTabletDesktop extends StatelessWidget {
+class TopNavigationMenuDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -37,7 +37,7 @@ class TopNavigationMenuTabletDesktop extends StatelessWidget {
                         Navigator.pushReplacementNamed(context, homeRoute);
                       }
                     },
-                    child: Image(
+                    child: const Image(
                       height: 60,
                       image: AssetImage(
                         'assets/images/cbj_app_icon_no_bg.png',

@@ -6,16 +6,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-
 /// Home and lending page of the site
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery
-          .of(context)
-          .size
-          .width,
+      width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
         gradient: LinearGradient(
           // Where the linear gradient begins and ends
@@ -24,26 +20,21 @@ class HomePage extends StatelessWidget {
           // Add one stop for each color. Stops should increase from 0 to 1
           stops: const <double>[0, 0, 0, 1],
           colors: <Color>[
-            Theme
-                .of(context)
-                .primaryColor,
-            Theme
-                .of(context)
-                .accentColor,
-            Theme
-                .of(context)
-                .accentColor,
-            Theme
-                .of(context)
-                .primaryColor
+            Theme.of(context).primaryColor,
+            Theme.of(context).accentColor,
+            Theme.of(context).accentColor,
+            Theme.of(context).primaryColor
           ],
         ),
       ),
       child: ResponsiveBuilder(
         builder: (BuildContext context, SizingInformation sizingInformation) =>
-            Scaffold(drawer:
-            sizingInformation.deviceScreenType == DeviceScreenType.mobile
-              ? NavigationDrawer() : null,
+            Scaffold(
+          drawer: sizingInformation.deviceScreenType ==
+                      DeviceScreenType.mobile ||
+                  sizingInformation.deviceScreenType == DeviceScreenType.tablet
+              ? NavigationDrawer()
+              : null,
           backgroundColor: Colors.transparent,
           body: Stack(
             children: <Widget>[
@@ -63,8 +54,8 @@ class CrosRightSizde extends CustomClipper<Path> {
     final path = Path();
     path.lineTo(0, 0);
     path.lineTo(0, size.height);
-    path.lineTo(size.width/ 1.2 , size.height);
-    path.lineTo(size.width , 0);
+    path.lineTo(size.width / 1.2, size.height);
+    path.lineTo(size.width, 0);
     path.close();
     return path;
   }
@@ -72,7 +63,6 @@ class CrosRightSizde extends CustomClipper<Path> {
   @override
   bool shouldReclip(CrosRightSizde oldClipper) => false;
 }
-
 
 class CrosLeftSizde extends CustomClipper<Path> {
   @override

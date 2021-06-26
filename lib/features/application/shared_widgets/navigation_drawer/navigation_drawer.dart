@@ -26,37 +26,36 @@ class NavigationDrawer extends StatelessWidget {
           ],
         ),
       ),
-      child: SingleChildScrollView(
-        child: Column(
-          children: <Widget>[
-            NavigationDrawerHeader(),
-            const DrawerItemOnClickRoutePage(
-                'Home', FontAwesomeIcons.home, homeRoute),
-            const SizedBox(
-              height: 13,
-            ),
-            const DrawerItemOnClickRoutePage(
-                'Devices', FontAwesomeIcons.lightbulb, devicesRoute),
-            const SizedBox(
-              height: 13,
-            ),
-            const DrawerItemOnClickRoutePage(
-                'Electricians', FontAwesomeIcons.hardHat, electriciansRoute),
-            const SizedBox(
-              height: 13,
-            ),
-            const DrawerItemOnClickRoutePage(
-                'FAQ', FontAwesomeIcons.questionCircle, faqRoute),
-            const SizedBox(
-              height: 13,
-            ),
-            const DrawerItemOnClickRoutePage(
-                'About', FontAwesomeIcons.addressCard, aboutRoute),
-            const SizedBox(
-              height: 13,
-            ),
-          ],
-        ),
+      child: ListView(
+        padding: EdgeInsets.zero,
+        children: [
+          NavigationDrawerHeader(),
+          const DrawerItemOnClickRoutePage(
+              'Home', FontAwesomeIcons.home, homeRoute),
+          const SizedBox(
+            height: 13,
+          ),
+          const DrawerItemOnClickRoutePage(
+              'Devices', FontAwesomeIcons.lightbulb, devicesRoute),
+          const SizedBox(
+            height: 13,
+          ),
+          const DrawerItemOnClickRoutePage(
+              'Electricians', FontAwesomeIcons.hardHat, electriciansRoute),
+          const SizedBox(
+            height: 13,
+          ),
+          const DrawerItemOnClickRoutePage(
+              'FAQ', FontAwesomeIcons.questionCircle, faqRoute),
+          const SizedBox(
+            height: 13,
+          ),
+          const DrawerItemOnClickRoutePage(
+              'About', FontAwesomeIcons.addressCard, aboutRoute),
+          const SizedBox(
+            height: 13,
+          ),
+        ],
       ),
     );
   }

@@ -3,7 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 /// The specific look for the top navigation menu for tablet desktop
-class TopNavigationMenuMobile extends StatelessWidget {
+class TopNavigationMenuMobileTablet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(

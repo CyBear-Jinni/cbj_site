@@ -612,9 +612,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                         ),
                         Column(
                           children: <Widget>[
-                            Text(
-                                'Click here for more details about our'
-                                ' devices',
+                            Text('Supported Vendors',
                                 style: TextStyle(
                                     fontSize: 30,
                                     color: Theme.of(context)
@@ -628,18 +626,73 @@ class HomePageContentMobileTablet extends StatelessWidget {
                           ],
                         ),
                         Container(),
-                        Container(
-                          alignment: Alignment.center,
-                          child: CachedNetworkImage(
-                            imageUrl:
-                                'https://i.ibb.co/tHWm1NV/Cy-Bear-Jinni-smart-device-logo.png',
-                            height: 230,
-                            progressIndicatorBuilder:
-                                (context, url, downloadProgress) =>
-                                    CircularProgressIndicator(
-                                        value: downloadProgress.progress),
-                            errorWidget: (context, url, error) =>
-                                const Icon(Icons.error),
+                        SizedBox(
+                          width: 470,
+                          child: GridView.count(
+                            physics: const NeverScrollableScrollPhysics(),
+                            shrinkWrap: true,
+                            primary: true,
+                            padding: const EdgeInsets.only(left: 30, right: 30),
+                            crossAxisSpacing: 15,
+                            mainAxisSpacing: 15,
+                            crossAxisCount: 3,
+                            children: [
+                              CachedNetworkImage(
+                                imageUrl:
+                                    'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.kyAWxT4tVBWL6O2sCJKqaAHaHa%26pid%3DApi&f=1',
+                                fit: BoxFit.cover,
+                                progressIndicatorBuilder:
+                                    (context, url, downloadProgress) =>
+                                        CircularProgressIndicator(
+                                            value: downloadProgress.progress),
+                                errorWidget: (context, url, error) =>
+                                    const Icon(Icons.error),
+                              ),
+                              CachedNetworkImage(
+                                imageUrl:
+                                    'https://play-lh.googleusercontent.com/8L6vVAT2cC78V622nxSznr7Mm_MgMsH25TopH-ZIm5HMwAHRy0qTX29FlHF6_kbBsQ=s180-rw',
+                                fit: BoxFit.cover,
+                                progressIndicatorBuilder:
+                                    (context, url, downloadProgress) =>
+                                        CircularProgressIndicator(
+                                            value: downloadProgress.progress),
+                                errorWidget: (context, url, error) =>
+                                    const Icon(Icons.error),
+                              ),
+                              CachedNetworkImage(
+                                imageUrl:
+                                    'https://www.opc-router.de/wp-content/uploads/2018/07/mqtt_icon_128px.png',
+                                fit: BoxFit.cover,
+                                progressIndicatorBuilder:
+                                    (context, url, downloadProgress) =>
+                                        CircularProgressIndicator(
+                                            value: downloadProgress.progress),
+                                errorWidget: (context, url, error) =>
+                                    const Icon(Icons.error),
+                              ),
+                              CachedNetworkImage(
+                                imageUrl:
+                                    'https://play-lh.googleusercontent.com/bteU9OSFF9z596eUOkGgM3XpWF2-b1VsKvmwWFitaI4qMwVPmx3lS09fHFDx8-CX3Q=s180',
+                                fit: BoxFit.cover,
+                                progressIndicatorBuilder:
+                                    (context, url, downloadProgress) =>
+                                        CircularProgressIndicator(
+                                            value: downloadProgress.progress),
+                                errorWidget: (context, url, error) =>
+                                    const Icon(Icons.error),
+                              ),
+                              CachedNetworkImage(
+                                imageUrl:
+                                    'https://pbs.twimg.com/profile_images/1099243589014573056/JuViMFXW_400x400.png',
+                                fit: BoxFit.cover,
+                                progressIndicatorBuilder:
+                                    (context, url, downloadProgress) =>
+                                        CircularProgressIndicator(
+                                            value: downloadProgress.progress),
+                                errorWidget: (context, url, error) =>
+                                    const Icon(Icons.error),
+                              ),
+                            ],
                           ),
                         ),
                         const SizedBox(

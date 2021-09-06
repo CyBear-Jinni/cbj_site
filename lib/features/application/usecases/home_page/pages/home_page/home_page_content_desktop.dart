@@ -91,7 +91,7 @@ class HomePageContentDesktop extends StatelessWidget {
                 height: 100.0,
                 child: const Center(
                   child: Text(
-                    'CyBear Jinni brings the future of smart homes to your hand',
+                    'CyBear Jinni connects all your devices at home',
                     style: TextStyle(color: Colors.white, fontSize: 24),
                   ),
                 ),
@@ -372,8 +372,9 @@ class HomePageContentDesktop extends StatelessWidget {
                                         SizedBox(
                                           width: 280,
                                           child: Text(
-                                            'Devices can be purchased online for '
-                                            'self-installation in your home.',
+                                            'Devices can be purchased online '
+                                            'for self-installation in '
+                                            'your home.',
                                             style: TextStyle(
                                               fontSize: 20,
                                               color: Theme.of(context)
@@ -605,11 +606,11 @@ class HomePageContentDesktop extends StatelessWidget {
                 height: 500,
                 child: TextButton(
                   style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(
-                      Colors.black45,
-                    ),
                     padding: MaterialStateProperty.all<EdgeInsets>(
                       const EdgeInsets.all(30),
+                    ),
+                    backgroundColor: MaterialStateProperty.all(
+                      Colors.black45,
                     ),
                   ),
                   onPressed: () {
@@ -619,7 +620,7 @@ class HomePageContentDesktop extends StatelessWidget {
                     );
                   },
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: <Widget>[
                       Container(),
                       Container(),
@@ -628,7 +629,7 @@ class HomePageContentDesktop extends StatelessWidget {
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                          Text('Click here to see our devices',
+                          Text('Supported Vendors',
                               style: TextStyle(
                                   fontSize: 40,
                                   color: Theme.of(context)
@@ -642,19 +643,74 @@ class HomePageContentDesktop extends StatelessWidget {
                         ],
                       ),
                       Container(),
-                      Container(
-                        alignment: Alignment.center,
-                        child: CachedNetworkImage(
-                          imageUrl:
-                              'https://i.ibb.co/tHWm1NV/Cy-Bear-Jinni-smart-device-logo.png',
-                          height: 400,
-                          fit: BoxFit.cover,
-                          progressIndicatorBuilder:
-                              (context, url, downloadProgress) =>
-                                  CircularProgressIndicator(
-                                      value: downloadProgress.progress),
-                          errorWidget: (context, url, error) =>
-                              const Icon(Icons.error),
+                      Container(),
+                      SizedBox(
+                        width: 550,
+                        child: GridView.count(
+                          physics: const NeverScrollableScrollPhysics(),
+                          shrinkWrap: true,
+                          primary: true,
+                          padding: const EdgeInsets.only(left: 30, right: 30),
+                          crossAxisSpacing: 15,
+                          mainAxisSpacing: 15,
+                          crossAxisCount: 3,
+                          children: [
+                            CachedNetworkImage(
+                              imageUrl:
+                                  'https://play-lh.googleusercontent.com/bteU9OSFF9z596eUOkGgM3XpWF2-b1VsKvmwWFitaI4qMwVPmx3lS09fHFDx8-CX3Q=s180',
+                              fit: BoxFit.cover,
+                              progressIndicatorBuilder:
+                                  (context, url, downloadProgress) =>
+                                      CircularProgressIndicator(
+                                          value: downloadProgress.progress),
+                              errorWidget: (context, url, error) =>
+                                  const Icon(Icons.error),
+                            ),
+                            CachedNetworkImage(
+                              imageUrl:
+                                  'https://play-lh.googleusercontent.com/8L6vVAT2cC78V622nxSznr7Mm_MgMsH25TopH-ZIm5HMwAHRy0qTX29FlHF6_kbBsQ=s180-rw',
+                              fit: BoxFit.cover,
+                              progressIndicatorBuilder:
+                                  (context, url, downloadProgress) =>
+                                      CircularProgressIndicator(
+                                          value: downloadProgress.progress),
+                              errorWidget: (context, url, error) =>
+                                  const Icon(Icons.error),
+                            ),
+                            CachedNetworkImage(
+                              imageUrl:
+                                  'https://www.opc-router.de/wp-content/uploads/2018/07/mqtt_icon_128px.png',
+                              fit: BoxFit.cover,
+                              progressIndicatorBuilder:
+                                  (context, url, downloadProgress) =>
+                                      CircularProgressIndicator(
+                                          value: downloadProgress.progress),
+                              errorWidget: (context, url, error) =>
+                                  const Icon(Icons.error),
+                            ),
+                            CachedNetworkImage(
+                              imageUrl:
+                                  'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.kyAWxT4tVBWL6O2sCJKqaAHaHa%26pid%3DApi&f=1',
+                              fit: BoxFit.cover,
+                              progressIndicatorBuilder:
+                                  (context, url, downloadProgress) =>
+                                      CircularProgressIndicator(
+                                          value: downloadProgress.progress),
+                              errorWidget: (context, url, error) =>
+                                  const Icon(Icons.error),
+                            ),
+                            CachedNetworkImage(
+                              imageUrl:
+                                  'https://pbs.twimg.com/profile_images/1099243589014573056/JuViMFXW_400x400.png',
+                              fit: BoxFit.cover,
+                              progressIndicatorBuilder:
+                                  (context, url, downloadProgress) =>
+                                      CircularProgressIndicator(
+                                          value: downloadProgress.progress),
+                              errorWidget: (context, url, error) =>
+                                  const Icon(Icons.error),
+                            ),
+                          ],
                         ),
                       ),
                       Container(),
@@ -670,53 +726,132 @@ class HomePageContentDesktop extends StatelessWidget {
                 child: TextButton(
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(
-                      Colors.black26,
+                      Colors.black12,
                     ),
                     padding: MaterialStateProperty.all<EdgeInsets>(
-                      EdgeInsets.zero,
+                      const EdgeInsets.all(30),
                     ),
                   ),
-                  onPressed: () async {
-                    const String url = 'https://snapcraft.io/cybear-jinni';
-                    if (await canLaunch(url)) {
-                      await launch(url);
-                    } else {
-                      throw 'Could not launch $url';
-                    }
+                  onPressed: () {
+                    Navigator.pushNamed(
+                      context,
+                      devicesRoute,
+                    );
                   },
-                  child: Row(
+                  child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Column(
+                    children: <Widget>[
+                      Text('Easily Installed',
+                          style: TextStyle(
+                              fontSize: 40,
+                              color:
+                                  Theme.of(context).textTheme.bodyText1!.color),
+                          textAlign: TextAlign.center),
+                      const SizedBox(
+                        height: 50,
+                      ),
+                      Container(
+                        margin: const EdgeInsets.symmetric(horizontal: 300),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Column(
+                              children: [
+                                const Text(
+                                  'For RaspberryPi',
+                                  style: TextStyle(
+                                    fontSize: 28,
+                                    decoration: TextDecoration.underline,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                const SizedBox(
+                                  height: 30,
+                                ),
+                                RichText(
+                                  text: TextSpan(
+                                    style: TextStyle(
+                                      fontSize: 24,
+                                      color: Theme.of(context)
+                                          .textTheme
+                                          .bodyText2!
+                                          .color,
+                                      fontWeight: FontWeight.normal,
+                                    ),
+                                    children: const [
+                                      TextSpan(text: '1. Download ISO\n'),
+                                      TextSpan(
+                                          text:
+                                              '2. Install ISO to SD card and insert it\n'),
+                                      TextSpan(
+                                          text:
+                                              '3. Open the app on your phone\n'),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(),
+                            Column(
+                              children: [
+                                const Text(
+                                  'For Linux',
+                                  style: TextStyle(
+                                      fontSize: 28,
+                                      decoration: TextDecoration.underline,
+                                      color: Colors.white),
+                                ),
+                                const SizedBox(
+                                  height: 30,
+                                ),
+                                RichText(
+                                  text: TextSpan(
+                                    style: TextStyle(
+                                      fontSize: 24,
+                                      color: Theme.of(context)
+                                          .textTheme
+                                          .bodyText2!
+                                          .color,
+                                      fontWeight: FontWeight.normal,
+                                    ),
+                                    children: const [
+                                      TextSpan(
+                                          text:
+                                              '1. Install CyBear Jinni Hub Snap\n'),
+                                      TextSpan(
+                                          text:
+                                              '2. Install MQTT broker snap\n'),
+                                      TextSpan(
+                                          text:
+                                              '3. Open the app on your phone\n'),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 70,
+                      ),
+                      Row(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          Text('CyBear Jinni Smart Devices Distribution',
-                              style: TextStyle(
-                                  fontSize: 40,
-                                  color: Theme.of(context)
-                                      .textTheme
-                                      .bodyText1!
-                                      .color),
-                              textAlign: TextAlign.center),
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          CachedNetworkImage(
-                            imageUrl:
-                                'https://i.ibb.co/FDKKWNM/World-devices-usage-map.png',
-                            fit: BoxFit.scaleDown,
-                            progressIndicatorBuilder:
-                                (context, url, downloadProgress) =>
-                                    CircularProgressIndicator(
-                                        value: downloadProgress.progress),
-                            errorWidget: (context, url, error) =>
-                                const Icon(Icons.error),
+                        children: [
+                          const FaIcon(
+                            FontAwesomeIcons.check,
+                            color: Colors.green,
+                            size: 15,
                           ),
                           const SizedBox(
-                            height: 20,
+                            width: 10,
+                          ),
+                          Text(
+                            'We will add all the smart home devices for you',
+                            style: TextStyle(
+                              fontSize: 23,
+                              color: Colors.white.withOpacity(0.8),
+                            ),
                           ),
                         ],
                       ),

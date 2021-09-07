@@ -89,10 +89,18 @@ class HomePageContentDesktop extends StatelessWidget {
               Container(
                 color: Colors.blue.withOpacity(0.1),
                 height: 100.0,
-                child: const Center(
-                  child: Text(
-                    'CyBear Jinni connects all your devices at home',
-                    style: TextStyle(color: Colors.white, fontSize: 24),
+                child: Center(
+                  child: RichText(
+                    text: TextSpan(
+                      style: TextStyle(color: Colors.white, fontSize: 24),
+                      children: const [
+                        TextSpan(text: 'CyBear Jinni '),
+                        TextSpan(
+                            text: 'connects',
+                            style: TextStyle(fontWeight: FontWeight.bold)),
+                        TextSpan(text: ' all your devices at home'),
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -136,7 +144,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                               CrossAxisAlignment.start,
                                           children: <Widget>[
                                             FaIcon(
-                                              FontAwesomeIcons.users,
+                                              FontAwesomeIcons.globe,
                                               color: Theme.of(context)
                                                   .textTheme
                                                   .bodyText1!
@@ -145,7 +153,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                             ),
                                             const SizedBox(height: 20),
                                             Text(
-                                              'For Customers',
+                                              'Easy to Install',
                                               style: TextStyle(
                                                   fontSize: 30,
                                                   color: Theme.of(context)
@@ -167,7 +175,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                                       const BorderRadius.all(
                                                           Radius.circular(10))),
                                               child: Text(
-                                                'Enjoy',
+                                                'Available',
                                                 style: TextStyle(
                                                     fontSize: 15,
                                                     color: Theme.of(context)
@@ -198,8 +206,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                         SizedBox(
                                           width: 280,
                                           child: Text(
-                                            'Our electricians will install '
-                                            'CyBear Jinni Smart Devices in your home.',
+                                            'Clear and easy instructions to get the Hub running.',
                                             style: TextStyle(
                                               fontSize: 20,
                                               color: Theme.of(context)
@@ -229,10 +236,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                         SizedBox(
                                           width: 280,
                                           child: Text(
-                                            'Providing guidance on how to set the'
-                                            ' smart devices and use the '
-                                            'smartphone app to '
-                                            'interact with them.',
+                                            'Application can be found in the play store.',
                                             style: TextStyle(
                                               fontSize: 20,
                                               color: Theme.of(context)
@@ -262,8 +266,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                         SizedBox(
                                           width: 280,
                                           child: Text(
-                                            'Get a long warranty and all of the'
-                                            ' above for a fair price.',
+                                            'The application will connect to the Hub automaticly for you.',
                                             style: TextStyle(
                                               fontSize: 20,
                                               color: Theme.of(context)
@@ -312,7 +315,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                             CrossAxisAlignment.start,
                                         children: <Widget>[
                                           FaIcon(
-                                            FontAwesomeIcons.globe,
+                                            FontAwesomeIcons.users,
                                             color: Theme.of(context)
                                                 .textTheme
                                                 .bodyText1!
@@ -321,7 +324,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                           ),
                                           const SizedBox(height: 20),
                                           Text(
-                                            'For Users',
+                                            'Easy to Use',
                                             style: TextStyle(
                                                 fontSize: 30,
                                                 color: Theme.of(context)
@@ -343,7 +346,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                                     const BorderRadius.all(
                                                         Radius.circular(10))),
                                             child: Text(
-                                              'Deploy',
+                                              'Enjoy',
                                               style: TextStyle(
                                                   fontSize: 15,
                                                   color: Theme.of(context)
@@ -372,9 +375,9 @@ class HomePageContentDesktop extends StatelessWidget {
                                         SizedBox(
                                           width: 280,
                                           child: Text(
-                                            'Devices can be purchased online '
-                                            'for self-installation in '
-                                            'your home.',
+                                            'The application will add '
+                                            'discovered devices '
+                                            'automatically for you.',
                                             style: TextStyle(
                                               fontSize: 20,
                                               color: Theme.of(context)
@@ -404,9 +407,11 @@ class HomePageContentDesktop extends StatelessWidget {
                                         SizedBox(
                                           width: 280,
                                           child: Text(
-                                            'Instructions and videos of how to'
-                                            ' deploy and set the system'
-                                            ' yourself.',
+                                            'Easy to use user interface with'
+                                            ' clear separation between '
+                                            'different actions:\nscenes, '
+                                            'control devices, '
+                                            'routines, bindings.',
                                             style: TextStyle(
                                               fontSize: 20,
                                               color: Theme.of(context)
@@ -483,7 +488,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                             ),
                                             const SizedBox(height: 20),
                                             Text(
-                                              'For Developers',
+                                              'Privacy & Open Source',
                                               style: TextStyle(
                                                   fontSize: 30,
                                                   color: Theme.of(context)
@@ -505,7 +510,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                                       const BorderRadius.all(
                                                           Radius.circular(10))),
                                               child: Text(
-                                                'Contribute',
+                                                'Secure',
                                                 style: TextStyle(
                                                     fontSize: 15,
                                                     color: Theme.of(context)
@@ -534,9 +539,9 @@ class HomePageContentDesktop extends StatelessWidget {
                                         SizedBox(
                                           width: 280,
                                           child: Text(
-                                            'Open source code and '
-                                            'instructions for makers and tinkerers '
-                                            'to build the system from scratch.',
+                                            'All your data will be saved '
+                                            'locally on your Hub so your '
+                                            'will have control of your data.',
                                             style: TextStyle(
                                               fontSize: 20,
                                               color: Theme.of(context)
@@ -566,9 +571,10 @@ class HomePageContentDesktop extends StatelessWidget {
                                         SizedBox(
                                           width: 280,
                                           child: Text(
-                                            'Opportunity to add support for '
-                                            'the system to communicate with other smart'
-                                            ' devices that are not supported yet.',
+                                            'Open source code with easy '
+                                            'structure for adding support '
+                                            'for new vendors and new '
+                                            'devices types.',
                                             style: TextStyle(
                                               fontSize: 20,
                                               color: Theme.of(context)
@@ -726,7 +732,7 @@ class HomePageContentDesktop extends StatelessWidget {
                 child: TextButton(
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(
-                      Colors.black12,
+                      Colors.black26,
                     ),
                     padding: MaterialStateProperty.all<EdgeInsets>(
                       const EdgeInsets.all(30),
@@ -847,7 +853,8 @@ class HomePageContentDesktop extends StatelessWidget {
                             width: 10,
                           ),
                           Text(
-                            'We will add all the smart home devices for you',
+                            'We will add all the smart home devices '
+                            'automatically for you',
                             style: TextStyle(
                               fontSize: 23,
                               color: Colors.white.withOpacity(0.8),

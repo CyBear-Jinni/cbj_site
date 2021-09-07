@@ -36,7 +36,7 @@ class NavigationDrawer extends StatelessWidget {
             height: 13,
           ),
           const DrawerItemOnClickRoutePage(
-              'Devices', FontAwesomeIcons.lightbulb, devicesRoute),
+              'Integrations', FontAwesomeIcons.lightbulb, devicesRoute),
           const SizedBox(
             height: 13,
           ),

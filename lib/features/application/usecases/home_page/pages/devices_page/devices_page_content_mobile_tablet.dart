@@ -1,5 +1,5 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cybear_jinni_site/features/application/shared_widgets/bottom_navigation_menu/bottom_navigation_menu.dart';
+import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/devices_page/device_card.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -28,7 +28,7 @@ class DevicesPageContentMobileTablet extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        Text('Our Devices',
+                        Text('Supported Vendors',
                             style: TextStyle(
                                 fontSize: 50,
                                 color: Theme.of(context)
@@ -58,189 +58,48 @@ class DevicesPageContentMobileTablet extends StatelessWidget {
                         color: Theme.of(context).textTheme.bodyText1!.color!,
                       ),
                     )),
-                padding: const EdgeInsets.all(50),
-                width: MediaQuery.of(context).size.width - 60,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Container(
-                      padding: const EdgeInsets.all(10.0),
-                      decoration: BoxDecoration(
-                          color: Colors.black54,
-                          border: Border.all(color: Colors.white30)),
-                      width: 320,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Container(
-                            alignment: Alignment.topCenter,
-                            child: CachedNetworkImage(
-                              imageUrl:
-                                  'https://i.ibb.co/QP8MzxB/CBJ-Smart-Plug-1.jpg',
-                              progressIndicatorBuilder:
-                                  (context, url, downloadProgress) =>
-                                      CircularProgressIndicator(
-                                          value: downloadProgress.progress),
-                              errorWidget: (context, url, error) =>
-                                  const Icon(Icons.error),
-                            ),
-                          ),
-                          const Text(
-                            'Smart Plug',
-                            style: TextStyle(
-                              fontSize: 40,
-                            ),
-                          ),
-                          TextButton(
-                            style: ButtonStyle(
-                              backgroundColor: MaterialStateProperty.all(
-                                Colors.grey,
-                              ),
-                              padding: MaterialStateProperty.all<EdgeInsets>(
-                                const EdgeInsets.all(2.0),
-                              ),
-                              side: MaterialStateProperty.all(
-                                BorderSide.lerp(
-                                    const BorderSide(color: Colors.white60),
-                                    const BorderSide(color: Colors.white60),
-                                    22),
-                              ),
-                            ),
-                            onPressed: () {},
-                            child: Text(
-                              'More Info',
-                              style: TextStyle(
-                                  fontSize: 18,
-                                  color: Theme.of(context)
-                                      .textTheme
-                                      .bodyText2!
-                                      .color),
-                            ),
-                          ),
-                        ],
+                padding: const EdgeInsets.symmetric(vertical: 2),
+                width: MediaQuery.of(context).size.width - 10,
+                child: Container(
+                  margin: const EdgeInsets.only(
+                      left: 10, right: 10, top: 10, bottom: 10),
+                  child: GridView.count(
+                    physics: const NeverScrollableScrollPhysics(),
+                    shrinkWrap: true,
+                    primary: true,
+                    childAspectRatio: (MediaQuery.of(context).size.width) /
+                        (MediaQuery.of(context).size.height / 2.5),
+                    crossAxisSpacing: 30,
+                    mainAxisSpacing: 30,
+                    crossAxisCount: 1,
+                    children: [
+                      DeviceCard(
+                        'Yeelight',
+                        'https://play-lh.googleusercontent.com/bteU9OSFF9z596eUOkGgM3XpWF2-b1VsKvmwWFitaI4qMwVPmx3lS09fHFDx8-CX3Q=s180',
+                        'https://www.yeelight.com',
                       ),
-                    ),
-                    const SizedBox(
-                      height: 30,
-                    ),
-                    Container(
-                      padding: const EdgeInsets.all(10.0),
-                      decoration: BoxDecoration(
-                          color: Colors.black54,
-                          border: Border.all(color: Colors.white30)),
-                      width: 320,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Container(
-                            alignment: Alignment.topCenter,
-                            child: CachedNetworkImage(
-                              imageUrl:
-                                  'https://i.ibb.co/QP8MzxB/CBJ-Smart-Plug-1.jpg',
-                              progressIndicatorBuilder:
-                                  (context, url, downloadProgress) =>
-                                      CircularProgressIndicator(
-                                          value: downloadProgress.progress),
-                              errorWidget: (context, url, error) =>
-                                  const Icon(Icons.error),
-                            ),
-                          ),
-                          const Text(
-                            'Smart Plug',
-                            style: TextStyle(
-                              fontSize: 40,
-                            ),
-                          ),
-                          TextButton(
-                            style: ButtonStyle(
-                              backgroundColor: MaterialStateProperty.all(
-                                Colors.grey,
-                              ),
-                              padding: MaterialStateProperty.all<EdgeInsets>(
-                                const EdgeInsets.all(2.0),
-                              ),
-                              side: MaterialStateProperty.all(
-                                BorderSide.lerp(
-                                    const BorderSide(color: Colors.white60),
-                                    const BorderSide(color: Colors.white60),
-                                    22),
-                              ),
-                            ),
-                            onPressed: () {},
-                            child: Text(
-                              'More Info',
-                              style: TextStyle(
-                                  fontSize: 18,
-                                  color: Theme.of(context)
-                                      .textTheme
-                                      .bodyText2!
-                                      .color),
-                            ),
-                          ),
-                        ],
+                      DeviceCard(
+                        'Switcher',
+                        'https://play-lh.googleusercontent.com/8L6vVAT2cC78V622nxSznr7Mm_MgMsH25TopH-ZIm5HMwAHRy0qTX29FlHF6_kbBsQ=s180-rw',
+                        'https://switcher.co.il',
                       ),
-                    ),
-                    const SizedBox(
-                      height: 30,
-                    ),
-                    Container(
-                      padding: const EdgeInsets.all(10.0),
-                      decoration: BoxDecoration(
-                          color: Colors.black54,
-                          border: Border.all(color: Colors.white30)),
-                      width: 320,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Container(
-                            alignment: Alignment.topCenter,
-                            child: CachedNetworkImage(
-                              imageUrl:
-                                  'https://i.ibb.co/QP8MzxB/CBJ-Smart-Plug-1.jpg',
-                              progressIndicatorBuilder:
-                                  (context, url, downloadProgress) =>
-                                      CircularProgressIndicator(
-                                          value: downloadProgress.progress),
-                              errorWidget: (context, url, error) =>
-                                  const Icon(Icons.error),
-                            ),
-                          ),
-                          const Text(
-                            'Smart Plug',
-                            style: TextStyle(
-                              fontSize: 40,
-                            ),
-                          ),
-                          TextButton(
-                            style: ButtonStyle(
-                              backgroundColor: MaterialStateProperty.all(
-                                Colors.grey,
-                              ),
-                              padding: MaterialStateProperty.all<EdgeInsets>(
-                                const EdgeInsets.all(2.0),
-                              ),
-                              side: MaterialStateProperty.all(
-                                BorderSide.lerp(
-                                    const BorderSide(color: Colors.white60),
-                                    const BorderSide(color: Colors.white60),
-                                    22),
-                              ),
-                            ),
-                            onPressed: () {},
-                            child: Text(
-                              'More Info',
-                              style: TextStyle(
-                                  fontSize: 18,
-                                  color: Theme.of(context)
-                                      .textTheme
-                                      .bodyText2!
-                                      .color),
-                            ),
-                          ),
-                        ],
+                      DeviceCard(
+                        'MQTT',
+                        'https://www.opc-router.de/wp-content/uploads/2018/07/mqtt_icon_128px.png',
+                        'https://mqtt.org',
                       ),
-                    ),
-                  ],
+                      DeviceCard(
+                        'Tasmota',
+                        'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.kyAWxT4tVBWL6O2sCJKqaAHaHa%26pid%3DApi&f=1',
+                        'https://tasmota.github.io',
+                      ),
+                      DeviceCard(
+                        'ESPHome',
+                        'https://pbs.twimg.com/profile_images/1099243589014573056/JuViMFXW_400x400.png',
+                        'https://esphome.io',
+                      ),
+                    ],
+                  ),
                 ),
               ),
               BottomNavigationMenu(),

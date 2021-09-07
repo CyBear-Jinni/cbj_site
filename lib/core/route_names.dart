@@ -5,7 +5,7 @@ const String homeRoute = 'home';
 const String landingRoute = 'landing';
 
 /// Devices rout for the site
-const String devicesRoute = 'devices';
+const String devicesRoute = 'integrations';
 
 /// Certified electrician rout for the site
 const String electriciansRoute = 'electricians';
@@ -15,4 +15,3 @@ const String faqRoute = 'faq';
 
 /// About rout for the site
 const String aboutRoute = 'about';
-

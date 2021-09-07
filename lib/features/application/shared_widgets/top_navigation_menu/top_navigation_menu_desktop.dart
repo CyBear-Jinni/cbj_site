@@ -141,7 +141,7 @@ class TopNavigationMenuDesktop extends StatelessWidget {
                       icon: FaIcon(FontAwesomeIcons.lightbulb,
                           color: Theme.of(context).textTheme.bodyText1!.color),
                       child: Text(
-                        'Devices',
+                        'Integrations',
                         style: TextStyle(
                             color:
                                 Theme.of(context).textTheme.bodyText1!.color),

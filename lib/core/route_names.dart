@@ -4,11 +4,11 @@ const String homeRoute = 'home';
 /// Landing rout for the site
 const String landingRoute = 'landing';
 
-/// Devices rout for the site
-const String devicesRoute = 'integrations';
+/// Integration with other vendors rout for the site
+const String integrationsRoute = 'integrations';
 
-/// Certified electrician rout for the site
-const String electriciansRoute = 'electricians';
+/// Set up CyBear jinni in your home rout for the site
+const String setUpRoute = 'setup';
 
 /// FAQ rout for the site
 const String faqRoute = 'faq';

@@ -1,10 +1,10 @@
 import 'package:cybear_jinni_site/features/application/shared_widgets/bottom_navigation_menu/bottom_navigation_menu.dart';
-import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/devices_page/device_card.dart';
+import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/integrations_page/device_card.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-/// Devices page content for the desktop
-class DevicesPageContentDesktop extends StatelessWidget {
+/// Integrations page content for the mobile and tablet screen size
+class IntegrationsPageContentMobileTablet extends StatelessWidget {
   final ScrollController _scrollController = ScrollController();
 
   @override
@@ -58,22 +58,23 @@ class DevicesPageContentDesktop extends StatelessWidget {
                         color: Theme.of(context).textTheme.bodyText1!.color!,
                       ),
                     )),
-                padding: const EdgeInsets.symmetric(vertical: 100),
-                width: MediaQuery.of(context).size.width - 200,
+                padding: const EdgeInsets.symmetric(vertical: 2),
+                width: MediaQuery.of(context).size.width - 10,
                 child: Container(
-                  margin: const EdgeInsets.only(left: 300, right: 300),
+                  margin: const EdgeInsets.only(
+                      left: 10, right: 10, top: 10, bottom: 10),
                   child: GridView.count(
                     physics: const NeverScrollableScrollPhysics(),
                     shrinkWrap: true,
                     primary: true,
                     childAspectRatio: (MediaQuery.of(context).size.width) /
-                        (MediaQuery.of(context).size.height / 0.5),
+                        (MediaQuery.of(context).size.height / 2.5),
                     crossAxisSpacing: 30,
                     mainAxisSpacing: 30,
-                    crossAxisCount: 3,
+                    crossAxisCount: 1,
                     children: [
                       DeviceCard(
-                        'Yeelight',
+                        'Xiaomi Yeelight',
                         'https://play-lh.googleusercontent.com/bteU9OSFF9z596eUOkGgM3XpWF2-b1VsKvmwWFitaI4qMwVPmx3lS09fHFDx8-CX3Q=s180',
                         'https://www.yeelight.com',
                       ),

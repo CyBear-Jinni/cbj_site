@@ -132,7 +132,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                                           CrossAxisAlignment.start,
                                       children: <Widget>[
                                         FaIcon(
-                                          FontAwesomeIcons.users,
+                                          FontAwesomeIcons.fileDownload,
                                           color: Theme.of(context)
                                               .textTheme
                                               .bodyText1!
@@ -141,7 +141,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                                         ),
                                         const SizedBox(height: 20),
                                         Text(
-                                          'For Customers',
+                                          'Easy to Set Up',
                                           style: TextStyle(
                                               fontSize: 30,
                                               color: Theme.of(context)
@@ -163,7 +163,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                                                   const BorderRadius.all(
                                                       Radius.circular(10))),
                                           child: Text(
-                                            'Enjoy',
+                                            'Available',
                                             style: TextStyle(
                                                 fontSize: 15,
                                                 color: Theme.of(context)
@@ -192,8 +192,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                                     SizedBox(
                                       width: 280,
                                       child: Text(
-                                        'Our electricians will install '
-                                        'CyBear Jinni Smart Devices in your home.',
+                                        'Clear and easy instructions to get the Hub running.',
                                         style: TextStyle(
                                           fontSize: 20,
                                           color: Theme.of(context)
@@ -222,10 +221,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                                     SizedBox(
                                       width: 280,
                                       child: Text(
-                                        'Providing guidance on how to set the'
-                                        ' smart devices and use the '
-                                        'smartphone app to '
-                                        'interact with them.',
+                                        'Application can be found in the play store.',
                                         style: TextStyle(
                                           fontSize: 20,
                                           color: Theme.of(context)
@@ -254,8 +250,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                                     SizedBox(
                                       width: 280,
                                       child: Text(
-                                        'Get a long warranty and all of the'
-                                        ' above for a fair price.',
+                                        'The application will connect to the Hub automaticly for you.',
                                         style: TextStyle(
                                           fontSize: 20,
                                           color: Theme.of(context)
@@ -287,7 +282,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                             ),
                           ),
                           onPressed: () {
-                            Navigator.pushNamed(context, devicesRoute);
+                            Navigator.pushNamed(context, integrationsRoute);
                           },
                           child: SizedBox(
                             width: 320,
@@ -601,7 +596,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                     onPressed: () {
                       Navigator.pushNamed(
                         context,
-                        devicesRoute,
+                        integrationsRoute,
                       );
                     },
                     child: Column(

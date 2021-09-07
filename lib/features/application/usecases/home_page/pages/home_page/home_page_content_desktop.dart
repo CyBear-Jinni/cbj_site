@@ -91,9 +91,9 @@ class HomePageContentDesktop extends StatelessWidget {
                 height: 100.0,
                 child: Center(
                   child: RichText(
-                    text: TextSpan(
+                    text: const TextSpan(
                       style: TextStyle(color: Colors.white, fontSize: 24),
-                      children: const [
+                      children: [
                         TextSpan(text: 'CyBear Jinni '),
                         TextSpan(
                             text: 'connects',
@@ -126,7 +126,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                 ),
                               ),
                               onPressed: () {
-                                Navigator.pushNamed(context, electriciansRoute);
+                                Navigator.pushNamed(context, setUpRoute);
                               },
                               child: SizedBox(
                                 width: 320,
@@ -144,7 +144,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                               CrossAxisAlignment.start,
                                           children: <Widget>[
                                             FaIcon(
-                                              FontAwesomeIcons.globe,
+                                              FontAwesomeIcons.fileDownload,
                                               color: Theme.of(context)
                                                   .textTheme
                                                   .bodyText1!
@@ -153,7 +153,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                             ),
                                             const SizedBox(height: 20),
                                             Text(
-                                              'Easy to Install',
+                                              'Easy to Set Up',
                                               style: TextStyle(
                                                   fontSize: 30,
                                                   color: Theme.of(context)
@@ -298,7 +298,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                 ),
                               ),
                               onPressed: () {
-                                Navigator.pushNamed(context, devicesRoute);
+                                Navigator.pushNamed(context, integrationsRoute);
                               },
                               child: SizedBox(
                                 width: 320,
@@ -540,7 +540,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                           width: 280,
                                           child: Text(
                                             'All your data will be saved '
-                                            'locally on your Hub so your '
+                                            'locally on your Hub so you '
                                             'will have control of your data.',
                                             style: TextStyle(
                                               fontSize: 20,
@@ -622,7 +622,7 @@ class HomePageContentDesktop extends StatelessWidget {
                   onPressed: () {
                     Navigator.pushNamed(
                       context,
-                      devicesRoute,
+                      integrationsRoute,
                     );
                   },
                   child: Row(
@@ -741,13 +741,13 @@ class HomePageContentDesktop extends StatelessWidget {
                   onPressed: () {
                     Navigator.pushNamed(
                       context,
-                      devicesRoute,
+                      integrationsRoute,
                     );
                   },
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      Text('Easily Installed',
+                      Text('Easily Set Up',
                           style: TextStyle(
                               fontSize: 40,
                               color:

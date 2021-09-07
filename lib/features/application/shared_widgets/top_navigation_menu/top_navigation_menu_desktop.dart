@@ -108,18 +108,17 @@ class TopNavigationMenuDesktop extends StatelessWidget {
                   ),
                   TextButton(
                     onPressed: () {
-                      if (MySingleton.getCurrentPageName != electriciansRoute) {
-                        Navigator.pushNamed(context, electriciansRoute);
+                      if (MySingleton.getCurrentPageName != setUpRoute) {
+                        Navigator.pushNamed(context, setUpRoute);
                       } else {
-                        Navigator.pushReplacementNamed(
-                            context, electriciansRoute);
+                        Navigator.pushReplacementNamed(context, setUpRoute);
                       }
                     },
                     child: Tab(
-                      icon: FaIcon(FontAwesomeIcons.hardHat,
+                      icon: FaIcon(FontAwesomeIcons.shapes,
                           color: Theme.of(context).textTheme.bodyText1!.color),
                       child: Text(
-                        'Electricians',
+                        'Set Up',
                         style: TextStyle(
                             color:
                                 Theme.of(context).textTheme.bodyText1!.color),
@@ -131,10 +130,11 @@ class TopNavigationMenuDesktop extends StatelessWidget {
                   ),
                   TextButton(
                     onPressed: () {
-                      if (MySingleton.getCurrentPageName != devicesRoute) {
-                        Navigator.pushNamed(context, devicesRoute);
+                      if (MySingleton.getCurrentPageName != integrationsRoute) {
+                        Navigator.pushNamed(context, integrationsRoute);
                       } else {
-                        Navigator.pushReplacementNamed(context, devicesRoute);
+                        Navigator.pushReplacementNamed(
+                            context, integrationsRoute);
                       }
                     },
                     child: Tab(

@@ -35,49 +35,73 @@ class BottomNavigationMenuDesktop extends StatelessWidget {
                         style: TextStyle(fontSize: 40),
                       ),
                       Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: <Widget>[
-                            const SizedBox(
-                              width: 40,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          const SizedBox(
+                            width: 40,
+                          ),
+                          Tab(
+                            icon: FaIcon(FontAwesomeIcons.appStoreIos,
+                                color: Theme.of(context)
+                                    .textTheme
+                                    .bodyText1!
+                                    .color),
+                            child: const Text(
+                              'App Store',
                             ),
-                            Tab(
-                              icon: FaIcon(FontAwesomeIcons.appStoreIos,
+                          ),
+                          const SizedBox(
+                            width: 40,
+                          ),
+                          TextButton(
+                            onPressed: () {
+                              launch(
+                                  'https://play.google.com/store/apps/details?id=com.cybear_jinni.smart_home');
+                            },
+                            child: Tab(
+                              icon: FaIcon(FontAwesomeIcons.googlePlay,
                                   color: Theme.of(context)
                                       .textTheme
                                       .bodyText1!
                                       .color),
-                              child: const Text(
-                                'App Store',
-                              ),
-                            ),
-                            const SizedBox(
-                              width: 40,
-                            ),
-                            TextButton(
-                              onPressed: () {
-                                launch(
-                                    'https://play.google.com/store/apps/details?id=com.cybear_jinni.smart_home');
-                              },
-                              child: Tab(
-                                icon: FaIcon(FontAwesomeIcons.googlePlay,
+                              child: Text(
+                                'Play Store',
+                                style: TextStyle(
                                     color: Theme.of(context)
                                         .textTheme
-                                        .bodyText1!
+                                        .bodyText2!
                                         .color),
-                                child: Text(
-                                  'Play Store',
-                                  style: TextStyle(
-                                      color: Theme.of(context)
-                                          .textTheme
-                                          .bodyText2!
-                                          .color),
-                                ),
                               ),
                             ),
-                            const SizedBox(
-                              width: 40,
+                          ),
+                          const SizedBox(
+                            width: 40,
+                          ),
+                          TextButton(
+                            onPressed: () {
+                              launch('https://snapcraft.io/cybear-jinni');
+                            },
+                            child: Tab(
+                              icon: FaIcon(FontAwesomeIcons.ubuntu,
+                                  color: Theme.of(context)
+                                      .textTheme
+                                      .bodyText1!
+                                      .color),
+                              child: Text(
+                                'Snap Store',
+                                style: TextStyle(
+                                    color: Theme.of(context)
+                                        .textTheme
+                                        .bodyText2!
+                                        .color),
+                              ),
                             ),
-                          ]),
+                          ),
+                          const SizedBox(
+                            width: 40,
+                          ),
+                        ],
+                      ),
                     ],
                   ),
                   Column(
@@ -89,79 +113,95 @@ class BottomNavigationMenuDesktop extends StatelessWidget {
                         ),
                       ),
                       Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: <Widget>[
-                            const SizedBox(
-                              width: 40,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          const SizedBox(
+                            width: 40,
+                          ),
+                          TextButton(
+                            onPressed: () {
+                              launch('https://twitter.com/CyBearJinni');
+                            },
+                            child: Tab(
+                              icon: FaIcon(FontAwesomeIcons.twitter,
+                                  color: Theme.of(context)
+                                      .textTheme
+                                      .bodyText1!
+                                      .color),
+                              child: const Text(''),
                             ),
-                            TextButton(
-                              onPressed: () {
-                                launch(
-                                    'https://www.facebook.com/CyBearJinniHome');
-                              },
-                              child: Tab(
-                                icon: FaIcon(FontAwesomeIcons.facebook,
-                                    color: Theme.of(context)
-                                        .textTheme
-                                        .bodyText1!
-                                        .color),
-                                child: const Text(''),
-                              ),
+                          ),
+                          const SizedBox(
+                            width: 20,
+                          ),
+                          TextButton(
+                            onPressed: () {
+                              launch(
+                                  'https://instagram.com/cybearjinni?igshid=rfllj6qbv6l8');
+                            },
+                            child: Tab(
+                              icon: FaIcon(FontAwesomeIcons.instagram,
+                                  color: Theme.of(context)
+                                      .textTheme
+                                      .bodyText1!
+                                      .color),
+                              child: const Text(''),
                             ),
-                            const SizedBox(
-                              width: 20,
+                          ),
+                          const SizedBox(
+                            width: 20,
+                          ),
+                          TextButton(
+                            onPressed: () {
+                              launch(
+                                  'https://www.linkedin.com/company/cybear-jinni');
+                            },
+                            child: Tab(
+                              icon: FaIcon(FontAwesomeIcons.linkedin,
+                                  color: Theme.of(context)
+                                      .textTheme
+                                      .bodyText1!
+                                      .color),
+                              child: const Text(''),
                             ),
-                            TextButton(
-                              onPressed: () {
-                                launch(
-                                    'https://instagram.com/cybearjinni?igshid=rfllj6qbv6l8');
-                              },
-                              child: Tab(
-                                icon: FaIcon(FontAwesomeIcons.instagram,
-                                    color: Theme.of(context)
-                                        .textTheme
-                                        .bodyText1!
-                                        .color),
-                                child: const Text(''),
-                              ),
+                          ),
+                          const SizedBox(
+                            width: 20,
+                          ),
+                          TextButton(
+                            onPressed: () {
+                              launch('https://discord.gg/mUXfwUY');
+                            },
+                            child: Tab(
+                              icon: FaIcon(FontAwesomeIcons.discord,
+                                  color: Theme.of(context)
+                                      .textTheme
+                                      .bodyText1!
+                                      .color),
+                              child: const Text(''),
                             ),
-                            const SizedBox(
-                              width: 20,
+                          ),
+                          const SizedBox(
+                            width: 20,
+                          ),
+                          TextButton(
+                            onPressed: () {
+                              launch('https://github.com/CyBear-Jinni');
+                            },
+                            child: Tab(
+                              icon: FaIcon(FontAwesomeIcons.github,
+                                  color: Theme.of(context)
+                                      .textTheme
+                                      .bodyText1!
+                                      .color),
+                              child: const Text(''),
                             ),
-                            TextButton(
-                              onPressed: () {
-                                launch(
-                                    'https://www.linkedin.com/company/cybear-jinni');
-                              },
-                              child: Tab(
-                                icon: FaIcon(FontAwesomeIcons.linkedin,
-                                    color: Theme.of(context)
-                                        .textTheme
-                                        .bodyText1!
-                                        .color),
-                                child: const Text(''),
-                              ),
-                            ),
-                            const SizedBox(
-                              width: 20,
-                            ),
-                            TextButton(
-                              onPressed: () {
-                                launch('https://github.com/CyBear-Jinni');
-                              },
-                              child: Tab(
-                                icon: FaIcon(FontAwesomeIcons.github,
-                                    color: Theme.of(context)
-                                        .textTheme
-                                        .bodyText1!
-                                        .color),
-                                child: const Text(''),
-                              ),
-                            ),
-                            const SizedBox(
-                              width: 40,
-                            ),
-                          ]),
+                          ),
+                          const SizedBox(
+                            width: 40,
+                          ),
+                        ],
+                      ),
                     ],
                   ),
                 ],

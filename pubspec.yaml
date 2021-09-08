@@ -40,6 +40,8 @@ dependencies:
   flutter_bloc: ^7.0.1
   # The Font Awesome Icon pack available as set of Flutter Icons. https://fontawesome.com/
   font_awesome_flutter: ^9.0.0
+  # Add hex color codes to your flutter projects
+  hexcolor: ^2.0.5
   # Links to your text.
   linkable: ^1.0.9
   # Collection of lint rules for Dart and Flutter projects.

@@ -35,49 +35,73 @@ class BottomNavigationMenuMobileTablet extends StatelessWidget {
                         style: TextStyle(fontSize: 40),
                       ),
                       Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: <Widget>[
-                            const SizedBox(
-                              width: 40,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          const SizedBox(
+                            width: 40,
+                          ),
+                          Tab(
+                            icon: FaIcon(FontAwesomeIcons.appStoreIos,
+                                color: Theme.of(context)
+                                    .textTheme
+                                    .bodyText1!
+                                    .color),
+                            child: const Text(
+                              'App Store',
                             ),
-                            Tab(
-                              icon: FaIcon(FontAwesomeIcons.appStoreIos,
+                          ),
+                          const SizedBox(
+                            width: 40,
+                          ),
+                          TextButton(
+                            onPressed: () {
+                              launch(
+                                  'https://play.google.com/store/apps/details?id=com.cybear_jinni.smart_home');
+                            },
+                            child: Tab(
+                              icon: FaIcon(FontAwesomeIcons.googlePlay,
                                   color: Theme.of(context)
                                       .textTheme
                                       .bodyText1!
                                       .color),
-                              child: const Text(
-                                'App Store',
-                              ),
-                            ),
-                            const SizedBox(
-                              width: 40,
-                            ),
-                            TextButton(
-                              onPressed: () {
-                                launch(
-                                    'https://play.google.com/store/apps/details?id=com.cybear_jinni.smart_home');
-                              },
-                              child: Tab(
-                                icon: FaIcon(FontAwesomeIcons.googlePlay,
+                              child: Text(
+                                'Play Store',
+                                style: TextStyle(
                                     color: Theme.of(context)
                                         .textTheme
-                                        .bodyText1!
+                                        .bodyText2!
                                         .color),
-                                child: Text(
-                                  'Play Store',
-                                  style: TextStyle(
-                                      color: Theme.of(context)
-                                          .textTheme
-                                          .bodyText2!
-                                          .color),
-                                ),
                               ),
                             ),
-                            const SizedBox(
-                              width: 40,
+                          ),
+                          const SizedBox(
+                            width: 40,
+                          ),
+                          TextButton(
+                            onPressed: () {
+                              launch('https://snapcraft.io/cybear-jinni');
+                            },
+                            child: Tab(
+                              icon: FaIcon(FontAwesomeIcons.ubuntu,
+                                  color: Theme.of(context)
+                                      .textTheme
+                                      .bodyText1!
+                                      .color),
+                              child: Text(
+                                'Snap Store',
+                                style: TextStyle(
+                                    color: Theme.of(context)
+                                        .textTheme
+                                        .bodyText2!
+                                        .color),
+                              ),
                             ),
-                          ]),
+                          ),
+                          const SizedBox(
+                            width: 40,
+                          ),
+                        ],
+                      ),
                     ],
                   ),
                   Column(
@@ -93,11 +117,10 @@ class BottomNavigationMenuMobileTablet extends StatelessWidget {
                           children: <Widget>[
                             TextButton(
                               onPressed: () {
-                                launch(
-                                    'https://www.linkedin.com/company/cybear-jinni');
+                                launch('https://twitter.com/CyBearJinni');
                               },
                               child: Tab(
-                                icon: FaIcon(FontAwesomeIcons.linkedin,
+                                icon: FaIcon(FontAwesomeIcons.twitter,
                                     color: Theme.of(context)
                                         .textTheme
                                         .bodyText1!
@@ -122,10 +145,23 @@ class BottomNavigationMenuMobileTablet extends StatelessWidget {
                             TextButton(
                               onPressed: () {
                                 launch(
-                                    'https://www.facebook.com/CyBearJinniHome');
+                                    'https://www.linkedin.com/company/cybear-jinni');
                               },
                               child: Tab(
-                                icon: FaIcon(FontAwesomeIcons.facebook,
+                                icon: FaIcon(FontAwesomeIcons.linkedin,
+                                    color: Theme.of(context)
+                                        .textTheme
+                                        .bodyText1!
+                                        .color),
+                                child: const Text(''),
+                              ),
+                            ),
+                            TextButton(
+                              onPressed: () {
+                                launch('https://discord.gg/mUXfwUY');
+                              },
+                              child: Tab(
+                                icon: FaIcon(FontAwesomeIcons.discord,
                                     color: Theme.of(context)
                                         .textTheme
                                         .bodyText1!

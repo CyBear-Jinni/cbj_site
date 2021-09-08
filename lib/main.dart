@@ -2,10 +2,10 @@ import 'package:cybear_jinni_site/core/my_singleton.dart';
 import 'package:cybear_jinni_site/core/route_names.dart';
 import 'package:cybear_jinni_site/features/application/usecases/home_page/landing_page.dart';
 import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/about_page/about_page.dart';
-import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/devices_page/devices_page.dart';
-import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/electrician_page/electricians_page.dart';
 import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/faq_page/faq_page.dart';
 import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/home_page/home_page.dart';
+import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/integrations_page/integrations_page.dart';
+import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/set_up_page/set_up_page.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
@@ -91,14 +91,14 @@ class MyApp extends StatelessWidget {
           MySingleton.setCurrentPageName(faqRoute);
           return MaterialPageRoute(
               builder: (BuildContext context) => FAQPage());
-        } else if (pathElements[0] == devicesRoute) {
-          MySingleton.setCurrentPageName(devicesRoute);
+        } else if (pathElements[0] == integrationsRoute) {
+          MySingleton.setCurrentPageName(integrationsRoute);
           return MaterialPageRoute(
-              builder: (BuildContext context) => DevicesPage());
-        } else if (pathElements[0] == electriciansRoute) {
-          MySingleton.setCurrentPageName(electriciansRoute);
+              builder: (BuildContext context) => IntegrationsPage());
+        } else if (pathElements[0] == setUpRoute) {
+          MySingleton.setCurrentPageName(setUpRoute);
           return MaterialPageRoute(
-              builder: (BuildContext context) => ElectriciansPage());
+              builder: (BuildContext context) => SetUpPage());
         } else {
           MySingleton.setCurrentPageName(homeRoute);
           MaterialPageRoute(builder: (BuildContext context) => HomePage());

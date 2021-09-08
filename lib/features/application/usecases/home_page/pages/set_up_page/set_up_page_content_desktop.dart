@@ -63,7 +63,7 @@ class SetUpPageContentDesktop extends StatelessWidget {
                             TextSpan(
                               text: 'Setting Up a Hub',
                               style:
-                              TextStyle(fontSize: 30, color: Colors.white),
+                                  TextStyle(fontSize: 30, color: Colors.white),
                             ),
                           ],
                         ),
@@ -303,7 +303,7 @@ class SetUpPageContentDesktop extends StatelessWidget {
                             TextSpan(
                               text: 'Setting Up the App',
                               style:
-                              TextStyle(fontSize: 30, color: Colors.white),
+                                  TextStyle(fontSize: 30, color: Colors.white),
                             ),
                           ],
                         ),

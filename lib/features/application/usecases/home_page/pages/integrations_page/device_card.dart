@@ -31,7 +31,8 @@ class DeviceCard extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-          SizedBox(
+          Container(
+            color: Colors.white,
             height: 80,
             child: CachedNetworkImage(
               imageUrl: imageUrl,

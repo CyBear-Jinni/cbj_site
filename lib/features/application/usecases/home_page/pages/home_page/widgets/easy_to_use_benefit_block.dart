@@ -21,8 +21,7 @@ class EasyToUseBenefitBlock extends StatelessWidget {
           Navigator.pushNamed(context, integrationsRoute);
         },
         child: SizedBox(
-          width: 320,
-          height: 380,
+          height: 390,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
@@ -36,13 +35,13 @@ class EasyToUseBenefitBlock extends StatelessWidget {
                     FaIcon(
                       FontAwesomeIcons.users,
                       color: Theme.of(context).textTheme.bodyText1!.color,
-                      size: 30,
+                      size: 26,
                     ),
                     const SizedBox(height: 20),
                     Text(
                       'Easy to Use',
                       style: TextStyle(
-                          fontSize: 30,
+                          fontSize: 26,
                           color: Theme.of(context).textTheme.bodyText1!.color),
                     ),
                     const SizedBox(
@@ -57,7 +56,7 @@ class EasyToUseBenefitBlock extends StatelessWidget {
                       child: Text(
                         'Enjoy',
                         style: TextStyle(
-                            fontSize: 15,
+                            fontSize: 14,
                             color: Theme.of(context).primaryColor,
                             fontWeight: FontWeight.bold),
                       ),
@@ -80,7 +79,7 @@ class EasyToUseBenefitBlock extends StatelessWidget {
                     width: 10,
                   ),
                   SizedBox(
-                    width: 280,
+                    width: 250,
                     child: Text(
                       'The application will add '
                       'discovered devices '
@@ -108,7 +107,7 @@ class EasyToUseBenefitBlock extends StatelessWidget {
                     width: 10,
                   ),
                   SizedBox(
-                    width: 280,
+                    width: 250,
                     child: Text(
                       'Easy to use user interface with'
                       ' clear separation between '
@@ -122,16 +121,6 @@ class EasyToUseBenefitBlock extends StatelessWidget {
                     ),
                   ),
                 ],
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              Text(
-                '',
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Theme.of(context).textTheme.bodyText2!.color,
-                ),
               ),
             ],
           ),

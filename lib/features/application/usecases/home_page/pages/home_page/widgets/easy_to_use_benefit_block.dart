@@ -113,7 +113,7 @@ class EasyToUseBenefitBlock extends StatelessWidget {
                       'Easy to use user interface with'
                       ' clear separation between '
                       'different actions:\nscenes, '
-                      'control devices, '
+                      'control devices,\n'
                       'routines, bindings.',
                       style: TextStyle(
                         fontSize: 20,

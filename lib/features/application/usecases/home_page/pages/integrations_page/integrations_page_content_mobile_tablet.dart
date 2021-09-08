@@ -30,7 +30,7 @@ class IntegrationsPageContentMobileTablet extends StatelessWidget {
                       children: <Widget>[
                         Text('Supported Vendors',
                             style: TextStyle(
-                                fontSize: 50,
+                                fontSize: 30,
                                 color: Theme.of(context)
                                     .textTheme
                                     .bodyText1!

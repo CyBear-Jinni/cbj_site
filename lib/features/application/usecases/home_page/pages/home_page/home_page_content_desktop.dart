@@ -1,10 +1,13 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cybear_jinni_site/core/route_names.dart';
 import 'package:cybear_jinni_site/features/application/shared_widgets/bottom_navigation_menu/bottom_navigation_menu.dart';
+import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/home_page/widgets/easy_to_set_up_benefit_block.dart';
+import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/home_page/widgets/easy_to_use_benefit_block.dart';
+import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/home_page/widgets/privacy_and_open_source_benefit_block.dart';
+import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/home_page/widgets/supported_vendors_tile_grid_view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 /// Home page content for the desktop
 class HomePageContentDesktop extends StatelessWidget {
@@ -114,496 +117,15 @@ class HomePageContentDesktop extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
-                          InkWell(
-                            hoverColor: Colors.black87,
-                            child: TextButton(
-                              style: ButtonStyle(
-                                backgroundColor: MaterialStateProperty.all(
-                                  Colors.black45,
-                                ),
-                                padding: MaterialStateProperty.all<EdgeInsets>(
-                                  const EdgeInsets.all(30),
-                                ),
-                              ),
-                              onPressed: () {
-                                Navigator.pushNamed(context, setUpRoute);
-                              },
-                              child: SizedBox(
-                                width: 320,
-                                height: 380,
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    Row(
-                                      children: <Widget>[
-                                        const SizedBox(
-                                          width: 25,
-                                        ),
-                                        Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: <Widget>[
-                                            FaIcon(
-                                              FontAwesomeIcons.fileDownload,
-                                              color: Theme.of(context)
-                                                  .textTheme
-                                                  .bodyText1!
-                                                  .color,
-                                              size: 30,
-                                            ),
-                                            const SizedBox(height: 20),
-                                            Text(
-                                              'Easy to Set Up',
-                                              style: TextStyle(
-                                                  fontSize: 30,
-                                                  color: Theme.of(context)
-                                                      .textTheme
-                                                      .bodyText1!
-                                                      .color),
-                                            ),
-                                            const SizedBox(
-                                              height: 5,
-                                            ),
-                                            Container(
-                                              padding: const EdgeInsets.all(5),
-                                              decoration: BoxDecoration(
-                                                  color: Theme.of(context)
-                                                      .textTheme
-                                                      .bodyText1!
-                                                      .color,
-                                                  borderRadius:
-                                                      const BorderRadius.all(
-                                                          Radius.circular(10))),
-                                              child: Text(
-                                                'Available',
-                                                style: TextStyle(
-                                                    fontSize: 15,
-                                                    color: Theme.of(context)
-                                                        .primaryColor,
-                                                    fontWeight:
-                                                        FontWeight.bold),
-                                              ),
-                                            ),
-                                          ],
-                                        )
-                                      ],
-                                    ),
-                                    const SizedBox(
-                                      height: 30,
-                                    ),
-                                    Row(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: <Widget>[
-                                        const FaIcon(
-                                          FontAwesomeIcons.check,
-                                          color: Colors.green,
-                                          size: 15,
-                                        ),
-                                        const SizedBox(
-                                          width: 10,
-                                        ),
-                                        SizedBox(
-                                          width: 280,
-                                          child: Text(
-                                            'Clear and easy instructions to get the Hub running.',
-                                            style: TextStyle(
-                                              fontSize: 20,
-                                              color: Theme.of(context)
-                                                  .textTheme
-                                                  .bodyText2!
-                                                  .color,
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    const SizedBox(
-                                      height: 10,
-                                    ),
-                                    Row(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: <Widget>[
-                                        const FaIcon(
-                                          FontAwesomeIcons.check,
-                                          color: Colors.green,
-                                          size: 15,
-                                        ),
-                                        const SizedBox(
-                                          width: 10,
-                                        ),
-                                        SizedBox(
-                                          width: 280,
-                                          child: Text(
-                                            'Application can be found in the play store.',
-                                            style: TextStyle(
-                                              fontSize: 20,
-                                              color: Theme.of(context)
-                                                  .textTheme
-                                                  .bodyText2!
-                                                  .color,
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    const SizedBox(
-                                      height: 10,
-                                    ),
-                                    Row(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: <Widget>[
-                                        const FaIcon(
-                                          FontAwesomeIcons.check,
-                                          color: Colors.green,
-                                          size: 15,
-                                        ),
-                                        const SizedBox(
-                                          width: 10,
-                                        ),
-                                        SizedBox(
-                                          width: 280,
-                                          child: Text(
-                                            'The application will connect to the Hub automaticly for you.',
-                                            style: TextStyle(
-                                              fontSize: 20,
-                                              color: Theme.of(context)
-                                                  .textTheme
-                                                  .bodyText2!
-                                                  .color,
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
+                          EasyToSetUpBenefitBlock(),
                           const SizedBox(
                             width: 30,
                           ),
-                          InkWell(
-                            hoverColor: Colors.black87,
-                            child: TextButton(
-                              style: ButtonStyle(
-                                backgroundColor: MaterialStateProperty.all(
-                                  Colors.black45,
-                                ),
-                                padding: MaterialStateProperty.all<EdgeInsets>(
-                                  const EdgeInsets.all(30),
-                                ),
-                              ),
-                              onPressed: () {
-                                Navigator.pushNamed(context, integrationsRoute);
-                              },
-                              child: SizedBox(
-                                width: 320,
-                                height: 380,
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    Row(children: <Widget>[
-                                      const SizedBox(
-                                        width: 25,
-                                      ),
-                                      Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: <Widget>[
-                                          FaIcon(
-                                            FontAwesomeIcons.users,
-                                            color: Theme.of(context)
-                                                .textTheme
-                                                .bodyText1!
-                                                .color,
-                                            size: 30,
-                                          ),
-                                          const SizedBox(height: 20),
-                                          Text(
-                                            'Easy to Use',
-                                            style: TextStyle(
-                                                fontSize: 30,
-                                                color: Theme.of(context)
-                                                    .textTheme
-                                                    .bodyText1!
-                                                    .color),
-                                          ),
-                                          const SizedBox(
-                                            height: 5,
-                                          ),
-                                          Container(
-                                            padding: const EdgeInsets.all(5),
-                                            decoration: BoxDecoration(
-                                                color: Theme.of(context)
-                                                    .textTheme
-                                                    .bodyText1!
-                                                    .color,
-                                                borderRadius:
-                                                    const BorderRadius.all(
-                                                        Radius.circular(10))),
-                                            child: Text(
-                                              'Enjoy',
-                                              style: TextStyle(
-                                                  fontSize: 15,
-                                                  color: Theme.of(context)
-                                                      .primaryColor,
-                                                  fontWeight: FontWeight.bold),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ]),
-                                    const SizedBox(
-                                      height: 30,
-                                    ),
-                                    Row(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: <Widget>[
-                                        const FaIcon(
-                                          FontAwesomeIcons.check,
-                                          color: Colors.green,
-                                          size: 15,
-                                        ),
-                                        const SizedBox(
-                                          width: 10,
-                                        ),
-                                        SizedBox(
-                                          width: 280,
-                                          child: Text(
-                                            'The application will add '
-                                            'discovered devices '
-                                            'automatically for you.',
-                                            style: TextStyle(
-                                              fontSize: 20,
-                                              color: Theme.of(context)
-                                                  .textTheme
-                                                  .bodyText2!
-                                                  .color,
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    const SizedBox(
-                                      height: 10,
-                                    ),
-                                    Row(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: <Widget>[
-                                        const FaIcon(
-                                          FontAwesomeIcons.check,
-                                          color: Colors.green,
-                                          size: 15,
-                                        ),
-                                        const SizedBox(
-                                          width: 10,
-                                        ),
-                                        SizedBox(
-                                          width: 280,
-                                          child: Text(
-                                            'Easy to use user interface with'
-                                            ' clear separation between '
-                                            'different actions:\nscenes, '
-                                            'control devices, '
-                                            'routines, bindings.',
-                                            style: TextStyle(
-                                              fontSize: 20,
-                                              color: Theme.of(context)
-                                                  .textTheme
-                                                  .bodyText2!
-                                                  .color,
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    const SizedBox(
-                                      height: 10,
-                                    ),
-                                    Text(
-                                      '',
-                                      style: TextStyle(
-                                        fontSize: 20,
-                                        color: Theme.of(context)
-                                            .textTheme
-                                            .bodyText2!
-                                            .color,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
+                          EasyToUseBenefitBlock(),
                           const SizedBox(
                             width: 30,
                           ),
-                          InkWell(
-                            hoverColor: Colors.black87,
-                            child: TextButton(
-                              style: ButtonStyle(
-                                backgroundColor: MaterialStateProperty.all(
-                                  Colors.black45,
-                                ),
-                                padding: MaterialStateProperty.all<EdgeInsets>(
-                                  const EdgeInsets.all(30),
-                                ),
-                              ),
-                              onPressed: () async {
-                                const String url =
-                                    'https://github.com/CyBear-Jinni';
-                                if (await canLaunch(url)) {
-                                  await launch(url);
-                                } else {
-                                  throw 'Could not launch $url';
-                                }
-                              },
-                              child: SizedBox(
-                                width: 320,
-                                height: 380,
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    Row(children: <Widget>[
-                                      const SizedBox(
-                                        width: 25,
-                                      ),
-                                      Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: <Widget>[
-                                            FaIcon(
-                                              FontAwesomeIcons.laptopCode,
-                                              color: Theme.of(context)
-                                                  .textTheme
-                                                  .bodyText1!
-                                                  .color,
-                                              size: 30,
-                                            ),
-                                            const SizedBox(height: 20),
-                                            Text(
-                                              'Privacy & Open Source',
-                                              style: TextStyle(
-                                                  fontSize: 30,
-                                                  color: Theme.of(context)
-                                                      .textTheme
-                                                      .bodyText1!
-                                                      .color),
-                                            ),
-                                            const SizedBox(
-                                              height: 5,
-                                            ),
-                                            Container(
-                                              padding: const EdgeInsets.all(5),
-                                              decoration: BoxDecoration(
-                                                  color: Theme.of(context)
-                                                      .textTheme
-                                                      .bodyText1!
-                                                      .color,
-                                                  borderRadius:
-                                                      const BorderRadius.all(
-                                                          Radius.circular(10))),
-                                              child: Text(
-                                                'Secure',
-                                                style: TextStyle(
-                                                    fontSize: 15,
-                                                    color: Theme.of(context)
-                                                        .primaryColor,
-                                                    fontWeight:
-                                                        FontWeight.bold),
-                                              ),
-                                            ),
-                                          ])
-                                    ]),
-                                    const SizedBox(
-                                      height: 30,
-                                    ),
-                                    Row(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: <Widget>[
-                                        const FaIcon(
-                                          FontAwesomeIcons.check,
-                                          color: Colors.green,
-                                          size: 15,
-                                        ),
-                                        const SizedBox(
-                                          width: 10,
-                                        ),
-                                        SizedBox(
-                                          width: 280,
-                                          child: Text(
-                                            'All your data will be saved '
-                                            'locally on your Hub so you '
-                                            'will have control of your data.',
-                                            style: TextStyle(
-                                              fontSize: 20,
-                                              color: Theme.of(context)
-                                                  .textTheme
-                                                  .bodyText2!
-                                                  .color,
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    const SizedBox(
-                                      height: 10,
-                                    ),
-                                    Row(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: <Widget>[
-                                        const FaIcon(
-                                          FontAwesomeIcons.check,
-                                          color: Colors.green,
-                                          size: 15,
-                                        ),
-                                        const SizedBox(
-                                          width: 10,
-                                        ),
-                                        SizedBox(
-                                          width: 280,
-                                          child: Text(
-                                            'Open source code with easy '
-                                            'structure for adding support '
-                                            'for new vendors and new '
-                                            'devices types.',
-                                            style: TextStyle(
-                                              fontSize: 20,
-                                              color: Theme.of(context)
-                                                  .textTheme
-                                                  .bodyText2!
-                                                  .color,
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    const SizedBox(
-                                      height: 10,
-                                    ),
-                                    Text(
-                                      '',
-                                      style: TextStyle(
-                                        fontSize: 20,
-                                        color: Theme.of(context)
-                                            .textTheme
-                                            .bodyText2!
-                                            .color,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
+                          PrivacyAndOpenSourceBenefitBlock(),
                         ],
                       ),
                     ]),
@@ -652,72 +174,7 @@ class HomePageContentDesktop extends StatelessWidget {
                       Container(),
                       SizedBox(
                         width: 550,
-                        child: GridView.count(
-                          physics: const NeverScrollableScrollPhysics(),
-                          shrinkWrap: true,
-                          primary: true,
-                          padding: const EdgeInsets.only(left: 30, right: 30),
-                          crossAxisSpacing: 15,
-                          mainAxisSpacing: 15,
-                          crossAxisCount: 3,
-                          children: [
-                            CachedNetworkImage(
-                              imageUrl:
-                                  'https://play-lh.googleusercontent.com/bteU9OSFF9z596eUOkGgM3XpWF2-b1VsKvmwWFitaI4qMwVPmx3lS09fHFDx8-CX3Q=s180',
-                              fit: BoxFit.cover,
-                              progressIndicatorBuilder:
-                                  (context, url, downloadProgress) =>
-                                      CircularProgressIndicator(
-                                          value: downloadProgress.progress),
-                              errorWidget: (context, url, error) =>
-                                  const Icon(Icons.error),
-                            ),
-                            CachedNetworkImage(
-                              imageUrl:
-                                  'https://play-lh.googleusercontent.com/8L6vVAT2cC78V622nxSznr7Mm_MgMsH25TopH-ZIm5HMwAHRy0qTX29FlHF6_kbBsQ=s180-rw',
-                              fit: BoxFit.cover,
-                              progressIndicatorBuilder:
-                                  (context, url, downloadProgress) =>
-                                      CircularProgressIndicator(
-                                          value: downloadProgress.progress),
-                              errorWidget: (context, url, error) =>
-                                  const Icon(Icons.error),
-                            ),
-                            CachedNetworkImage(
-                              imageUrl:
-                                  'https://www.opc-router.de/wp-content/uploads/2018/07/mqtt_icon_128px.png',
-                              fit: BoxFit.cover,
-                              progressIndicatorBuilder:
-                                  (context, url, downloadProgress) =>
-                                      CircularProgressIndicator(
-                                          value: downloadProgress.progress),
-                              errorWidget: (context, url, error) =>
-                                  const Icon(Icons.error),
-                            ),
-                            CachedNetworkImage(
-                              imageUrl:
-                                  'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.kyAWxT4tVBWL6O2sCJKqaAHaHa%26pid%3DApi&f=1',
-                              fit: BoxFit.cover,
-                              progressIndicatorBuilder:
-                                  (context, url, downloadProgress) =>
-                                      CircularProgressIndicator(
-                                          value: downloadProgress.progress),
-                              errorWidget: (context, url, error) =>
-                                  const Icon(Icons.error),
-                            ),
-                            CachedNetworkImage(
-                              imageUrl:
-                                  'https://pbs.twimg.com/profile_images/1099243589014573056/JuViMFXW_400x400.png',
-                              fit: BoxFit.cover,
-                              progressIndicatorBuilder:
-                                  (context, url, downloadProgress) =>
-                                      CircularProgressIndicator(
-                                          value: downloadProgress.progress),
-                              errorWidget: (context, url, error) =>
-                                  const Icon(Icons.error),
-                            ),
-                          ],
-                        ),
+                        child: SupportedVendorsTileGridView(),
                       ),
                       Container(),
                       Container(),
@@ -741,7 +198,7 @@ class HomePageContentDesktop extends StatelessWidget {
                   onPressed: () {
                     Navigator.pushNamed(
                       context,
-                      integrationsRoute,
+                      setUpRoute,
                     );
                   },
                   child: Column(
@@ -761,80 +218,243 @@ class HomePageContentDesktop extends StatelessWidget {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
-                            Column(
-                              children: [
-                                const Text(
-                                  'For RaspberryPi',
-                                  style: TextStyle(
-                                    fontSize: 28,
-                                    decoration: TextDecoration.underline,
-                                    color: Colors.white,
-                                  ),
+                            Container(
+                              decoration: BoxDecoration(
+                                image: const DecorationImage(
+                                  image: NetworkImage(
+                                      'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.raspberrypi.org%2Fwp-content%2Fuploads%2F2011%2F11%2Fh1ji3-pi-black.jpg&f=1&nofb=1'),
+                                  fit: BoxFit.cover,
                                 ),
-                                const SizedBox(
-                                  height: 30,
-                                ),
-                                RichText(
-                                  text: TextSpan(
-                                    style: TextStyle(
-                                      fontSize: 24,
-                                      color: Theme.of(context)
-                                          .textTheme
-                                          .bodyText2!
-                                          .color,
-                                      fontWeight: FontWeight.normal,
+                                color: Colors.black.withOpacity(0.2),
+                              ),
+                              child: Container(
+                                width: 500,
+                                padding: const EdgeInsets.only(
+                                    left: 40, right: 40, top: 10, bottom: 30),
+                                color: Colors.black.withOpacity(0.4),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    const Center(
+                                      child: Text(
+                                        'For RaspberryPi',
+                                        style: TextStyle(
+                                          fontSize: 28,
+                                          decoration: TextDecoration.underline,
+                                          color: Colors.white,
+                                        ),
+                                      ),
                                     ),
-                                    children: const [
-                                      TextSpan(text: '1. Download ISO\n'),
-                                      TextSpan(
-                                          text:
-                                              '2. Install ISO to SD card and insert it\n'),
-                                      TextSpan(
-                                          text:
-                                              '3. Open the app on your phone\n'),
-                                    ],
-                                  ),
+                                    const SizedBox(
+                                      height: 60,
+                                    ),
+                                    RichText(
+                                      text: TextSpan(
+                                        style: TextStyle(
+                                          fontSize: 24,
+                                          color: Theme.of(context)
+                                              .textTheme
+                                              .bodyText1!
+                                              .color,
+                                          fontWeight: FontWeight.normal,
+                                        ),
+                                        children: [
+                                          TextSpan(
+                                            text: '1. ',
+                                            style: TextStyle(
+                                              color: Theme.of(context)
+                                                  .textTheme
+                                                  .bodyText2!
+                                                  .color,
+                                            ),
+                                          ),
+                                          const TextSpan(text: 'Download ISO'),
+                                        ],
+                                      ),
+                                    ),
+                                    const SizedBox(
+                                      height: 10,
+                                    ),
+                                    RichText(
+                                      text: TextSpan(
+                                        style: TextStyle(
+                                          fontSize: 24,
+                                          color: Theme.of(context)
+                                              .textTheme
+                                              .bodyText1!
+                                              .color,
+                                          fontWeight: FontWeight.normal,
+                                        ),
+                                        children: [
+                                          TextSpan(
+                                            text: '2. ',
+                                            style: TextStyle(
+                                              color: Theme.of(context)
+                                                  .textTheme
+                                                  .bodyText2!
+                                                  .color,
+                                            ),
+                                          ),
+                                          const TextSpan(
+                                              text:
+                                                  'Install ISO to SD card and '
+                                                  'insert it'),
+                                        ],
+                                      ),
+                                    ),
+                                    const SizedBox(
+                                      height: 10,
+                                    ),
+                                    RichText(
+                                      text: TextSpan(
+                                        style: TextStyle(
+                                          fontSize: 24,
+                                          color: Theme.of(context)
+                                              .textTheme
+                                              .bodyText1!
+                                              .color,
+                                          fontWeight: FontWeight.normal,
+                                        ),
+                                        children: [
+                                          TextSpan(
+                                            text: '3. ',
+                                            style: TextStyle(
+                                              color: Theme.of(context)
+                                                  .textTheme
+                                                  .bodyText2!
+                                                  .color,
+                                            ),
+                                          ),
+                                          const TextSpan(
+                                              text: 'Open the app on your '
+                                                  'phone\n'),
+                                        ],
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                              ],
+                              ),
                             ),
-                            const SizedBox(),
-                            Column(
-                              children: [
-                                const Text(
-                                  'For Linux',
-                                  style: TextStyle(
-                                      fontSize: 28,
-                                      decoration: TextDecoration.underline,
-                                      color: Colors.white),
+                            const SizedBox(
+                              width: 15,
+                            ),
+                            Container(
+                              decoration: BoxDecoration(
+                                image: const DecorationImage(
+                                  image: NetworkImage(
+                                      'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.highreshdwallpapers.com%2Fwp-content%2Fuploads%2F2013%2F02%2FLinux-Black.png&f=1&nofb=1'),
+                                  fit: BoxFit.cover,
                                 ),
-                                const SizedBox(
-                                  height: 30,
-                                ),
-                                RichText(
-                                  text: TextSpan(
-                                    style: TextStyle(
-                                      fontSize: 24,
-                                      color: Theme.of(context)
-                                          .textTheme
-                                          .bodyText2!
-                                          .color,
-                                      fontWeight: FontWeight.normal,
+                                color: Colors.black.withOpacity(0.2),
+                              ),
+                              child: Container(
+                                width: 500,
+                                padding: const EdgeInsets.only(
+                                    left: 40, right: 40, top: 10, bottom: 30),
+                                color: Colors.black.withOpacity(0.4),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    const Center(
+                                      child: Text(
+                                        'For Linux',
+                                        style: TextStyle(
+                                          fontSize: 28,
+                                          decoration: TextDecoration.underline,
+                                          color: Colors.white,
+                                        ),
+                                      ),
                                     ),
-                                    children: const [
-                                      TextSpan(
-                                          text:
-                                              '1. Install CyBear Jinni Hub Snap\n'),
-                                      TextSpan(
-                                          text:
-                                              '2. Install MQTT broker snap\n'),
-                                      TextSpan(
-                                          text:
-                                              '3. Open the app on your phone\n'),
-                                    ],
-                                  ),
+                                    const SizedBox(
+                                      height: 60,
+                                    ),
+                                    RichText(
+                                      text: TextSpan(
+                                        style: TextStyle(
+                                          fontSize: 24,
+                                          color: Theme.of(context)
+                                              .textTheme
+                                              .bodyText1!
+                                              .color,
+                                          fontWeight: FontWeight.normal,
+                                        ),
+                                        children: [
+                                          TextSpan(
+                                            text: '1. ',
+                                            style: TextStyle(
+                                              color: Theme.of(context)
+                                                  .textTheme
+                                                  .bodyText2!
+                                                  .color,
+                                            ),
+                                          ),
+                                          const TextSpan(
+                                              text: 'Install CyBear '
+                                                  'Jinni Hub Snap'),
+                                        ],
+                                      ),
+                                    ),
+                                    const SizedBox(
+                                      height: 10,
+                                    ),
+                                    RichText(
+                                      text: TextSpan(
+                                        style: TextStyle(
+                                          fontSize: 24,
+                                          color: Theme.of(context)
+                                              .textTheme
+                                              .bodyText1!
+                                              .color,
+                                          fontWeight: FontWeight.normal,
+                                        ),
+                                        children: [
+                                          TextSpan(
+                                            text: '2. ',
+                                            style: TextStyle(
+                                              color: Theme.of(context)
+                                                  .textTheme
+                                                  .bodyText2!
+                                                  .color,
+                                            ),
+                                          ),
+                                          const TextSpan(
+                                              text: 'Install MQTT broker snap'),
+                                        ],
+                                      ),
+                                    ),
+                                    const SizedBox(
+                                      height: 10,
+                                    ),
+                                    RichText(
+                                      text: TextSpan(
+                                        style: TextStyle(
+                                          fontSize: 24,
+                                          color: Theme.of(context)
+                                              .textTheme
+                                              .bodyText1!
+                                              .color,
+                                          fontWeight: FontWeight.normal,
+                                        ),
+                                        children: [
+                                          TextSpan(
+                                            text: '3. ',
+                                            style: TextStyle(
+                                              color: Theme.of(context)
+                                                  .textTheme
+                                                  .bodyText2!
+                                                  .color,
+                                            ),
+                                          ),
+                                          const TextSpan(
+                                              text: 'Open the app on your phone'
+                                                  '\n'),
+                                        ],
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                              ],
-                            )
+                              ),
+                            ),
                           ],
                         ),
                       ),

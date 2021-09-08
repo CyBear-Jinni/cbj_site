@@ -89,12 +89,12 @@ class IntegrationsPageContentDesktop extends StatelessWidget {
                       ),
                       DeviceCard(
                         'Tasmota',
-                        'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.kyAWxT4tVBWL6O2sCJKqaAHaHa%26pid%3DApi&f=1',
+                        'https://apps-cdn.athom.com/app/com.paveld.tasmota/17/416f22d3-812c-4d53-81d3-6637f54e5f74/drivers/tasmota_mqtt/assets/images/large.png',
                         'https://tasmota.github.io',
                       ),
                       DeviceCard(
                         'ESPHome',
-                        'https://pbs.twimg.com/profile_images/1099243589014573056/JuViMFXW_400x400.png',
+                        'https://pbs.twimg.com/profile_images/1099243589014573056/JuViMFXW.png',
                         'https://esphome.io',
                       ),
                     ],

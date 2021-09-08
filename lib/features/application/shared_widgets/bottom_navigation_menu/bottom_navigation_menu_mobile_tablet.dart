@@ -35,11 +35,8 @@ class BottomNavigationMenuMobileTablet extends StatelessWidget {
                         style: TextStyle(fontSize: 40),
                       ),
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: <Widget>[
-                          const SizedBox(
-                            width: 40,
-                          ),
                           Tab(
                             icon: FaIcon(FontAwesomeIcons.appStoreIos,
                                 color: Theme.of(context)
@@ -49,9 +46,6 @@ class BottomNavigationMenuMobileTablet extends StatelessWidget {
                             child: const Text(
                               'App Store',
                             ),
-                          ),
-                          const SizedBox(
-                            width: 40,
                           ),
                           TextButton(
                             onPressed: () {
@@ -74,9 +68,6 @@ class BottomNavigationMenuMobileTablet extends StatelessWidget {
                               ),
                             ),
                           ),
-                          const SizedBox(
-                            width: 40,
-                          ),
                           TextButton(
                             onPressed: () {
                               launch('https://snapcraft.io/cybear-jinni');
@@ -96,9 +87,6 @@ class BottomNavigationMenuMobileTablet extends StatelessWidget {
                                         .color),
                               ),
                             ),
-                          ),
-                          const SizedBox(
-                            width: 40,
                           ),
                         ],
                       ),

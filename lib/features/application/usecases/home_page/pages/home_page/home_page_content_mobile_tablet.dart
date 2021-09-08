@@ -56,7 +56,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                               child: Text(
                                 'CyBear Jinni',
                                 style: TextStyle(
-                                    fontSize: 59,
+                                    fontSize: 50,
                                     color: Theme.of(context)
                                         .textTheme
                                         .bodyText1!
@@ -65,7 +65,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                             ),
                           ),
                           Container(
-                            margin: const EdgeInsets.only(left: 204, top: 0.5),
+                            margin: const EdgeInsets.only(left: 170, top: 0.5),
                             decoration: BoxDecoration(
                                 color: Colors.black.withOpacity(0.8),
                                 borderRadius: const BorderRadius.all(
@@ -75,7 +75,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                               child: Text(
                                 'Smart Home',
                                 style: TextStyle(
-                                    fontSize: 21,
+                                    fontSize: 17,
                                     color: Theme.of(context)
                                         .textTheme
                                         .bodyText1!
@@ -95,7 +95,26 @@ class HomePageContentMobileTablet extends StatelessWidget {
           Column(
             children: <Widget>[
               Container(
-                padding: const EdgeInsets.symmetric(vertical: 50),
+                margin: const EdgeInsets.symmetric(horizontal: 10),
+                color: Colors.blue.withOpacity(0.1),
+                height: 100.0,
+                child: Center(
+                  child: RichText(
+                    text: const TextSpan(
+                      style: TextStyle(color: Colors.white, fontSize: 17),
+                      children: [
+                        TextSpan(text: 'CyBear Jinni '),
+                        TextSpan(
+                            text: 'connects',
+                            style: TextStyle(fontWeight: FontWeight.bold)),
+                        TextSpan(text: ' all your devices'),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              Container(
+                padding: const EdgeInsets.only(bottom: 50, right: 10, left: 10),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
@@ -113,7 +132,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
               ),
               SizedBox(
                 child: SizedBox(
-                  height: 500,
+                  height: 370,
                   child: TextButton(
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(
@@ -132,9 +151,6 @@ class HomePageContentMobileTablet extends StatelessWidget {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        const SizedBox(
-                          height: 50,
-                        ),
                         Column(
                           children: <Widget>[
                             Text('Supported Vendors',
@@ -154,9 +170,6 @@ class HomePageContentMobileTablet extends StatelessWidget {
                         SizedBox(
                           width: 470,
                           child: SupportedVendorsTileGridView(),
-                        ),
-                        const SizedBox(
-                          height: 50,
                         ),
                       ],
                     ),

@@ -21,7 +21,7 @@ class SetUpPageContentMobileTablet extends StatelessWidget {
             children: <Widget>[
               Container(
                 color: Colors.black26,
-                height: 250,
+                height: 150,
                 padding: const EdgeInsets.only(bottom: 30),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,

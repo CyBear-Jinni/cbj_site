@@ -157,7 +157,7 @@ class SetUpPageContentDesktop extends StatelessWidget {
                                   },
                                   child: CachedNetworkImage(
                                     imageUrl:
-                                        'https://cdn-learn.adafruit.com/assets/assets/000/089/198/medium800/learn_raspberry_pi_image.png?1584023605',
+                                        'https://i.ibb.co/mGwbmXN/balena-Etcher.png',
                                     fit: BoxFit.cover,
                                     progressIndicatorBuilder: (context, url,
                                             downloadProgress) =>
@@ -277,7 +277,7 @@ class SetUpPageContentDesktop extends StatelessWidget {
                                   width: 200,
                                   child: CachedNetworkImage(
                                     imageUrl:
-                                        'http://www.londatiga.net/wp-content/uploads/2019/05/Untitled-3.jpg',
+                                        'https://i.ibb.co/RDPqFrx/mosquitto.jpg',
                                     fit: BoxFit.cover,
                                     progressIndicatorBuilder: (context, url,
                                             downloadProgress) =>
@@ -324,7 +324,7 @@ class SetUpPageContentDesktop extends StatelessWidget {
                                   },
                                   child: CachedNetworkImage(
                                     imageUrl:
-                                        'https://snapcraft.io/static/images/badges/en/snap-store-black.svg?v=49a12f8',
+                                        'https://i.ibb.co/gJN2Wq1/snap-store-logo-dark.png',
                                     fit: BoxFit.cover,
                                     progressIndicatorBuilder: (context, url,
                                             downloadProgress) =>
@@ -435,7 +435,7 @@ class SetUpPageContentDesktop extends StatelessWidget {
                                       },
                                       child: CachedNetworkImage(
                                         imageUrl:
-                                            'https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png',
+                                            'https://i.ibb.co/st5DHMv/en-badge-web-generic.png',
                                         fit: BoxFit.cover,
                                         progressIndicatorBuilder: (context, url,
                                                 downloadProgress) =>
@@ -459,7 +459,7 @@ class SetUpPageContentDesktop extends StatelessWidget {
                                       },
                                       child: CachedNetworkImage(
                                         imageUrl:
-                                            'https://snapcraft.io/static/images/badges/en/snap-store-black.svg?v=49a12f8',
+                                            'https://i.ibb.co/gJN2Wq1/snap-store-logo-dark.png',
                                         fit: BoxFit.cover,
                                         progressIndicatorBuilder: (context, url,
                                                 downloadProgress) =>

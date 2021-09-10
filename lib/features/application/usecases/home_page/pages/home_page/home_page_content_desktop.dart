@@ -221,7 +221,7 @@ class HomePageContentDesktop extends StatelessWidget {
                             decoration: BoxDecoration(
                               image: const DecorationImage(
                                 image: NetworkImage(
-                                    'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.raspberrypi.org%2Fwp-content%2Fuploads%2F2011%2F11%2Fh1ji3-pi-black.jpg&f=1&nofb=1'),
+                                    'https://i.ibb.co/10VvrzJ/raspberry-Pi-background.jpg'),
                                 fit: BoxFit.cover,
                               ),
                               color: Colors.black.withOpacity(0.2),
@@ -337,7 +337,7 @@ class HomePageContentDesktop extends StatelessWidget {
                             decoration: const BoxDecoration(
                               image: DecorationImage(
                                 image: NetworkImage(
-                                    'https://wallpaperaccess.com/full/1427211.jpg'),
+                                    'https://i.ibb.co/m0FKVyq/linux-background.webp'),
                                 fit: BoxFit.cover,
                               ),
                             ),
@@ -383,8 +383,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                           ),
                                         ),
                                         const TextSpan(
-                                            text: 'Install CyBear '
-                                                'Jinni Hub Snap'),
+                                            text: 'Install MQTT broker snap'),
                                       ],
                                     ),
                                   ),
@@ -412,7 +411,8 @@ class HomePageContentDesktop extends StatelessWidget {
                                           ),
                                         ),
                                         const TextSpan(
-                                            text: 'Install MQTT broker snap'),
+                                            text: 'Install CyBear '
+                                                'Jinni Hub Snap'),
                                       ],
                                     ),
                                   ),

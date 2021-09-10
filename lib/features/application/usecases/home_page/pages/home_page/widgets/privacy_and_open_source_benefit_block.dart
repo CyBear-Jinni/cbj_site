@@ -26,8 +26,7 @@ class PrivacyAndOpenSourceBenefitBlock extends StatelessWidget {
           }
         },
         child: SizedBox(
-          width: 320,
-          height: 380,
+          height: 390,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
@@ -41,13 +40,13 @@ class PrivacyAndOpenSourceBenefitBlock extends StatelessWidget {
                       FaIcon(
                         FontAwesomeIcons.laptopCode,
                         color: Theme.of(context).textTheme.bodyText1!.color,
-                        size: 30,
+                        size: 26,
                       ),
                       const SizedBox(height: 20),
                       Text(
                         'Privacy & Open Source',
                         style: TextStyle(
-                            fontSize: 30,
+                            fontSize: 26,
                             color:
                                 Theme.of(context).textTheme.bodyText1!.color),
                       ),
@@ -63,7 +62,7 @@ class PrivacyAndOpenSourceBenefitBlock extends StatelessWidget {
                         child: Text(
                           'Secure',
                           style: TextStyle(
-                              fontSize: 15,
+                              fontSize: 14,
                               color: Theme.of(context).primaryColor,
                               fontWeight: FontWeight.bold),
                         ),
@@ -85,11 +84,11 @@ class PrivacyAndOpenSourceBenefitBlock extends StatelessWidget {
                     width: 10,
                   ),
                   SizedBox(
-                    width: 280,
+                    width: 250,
                     child: Text(
                       'All your data will be saved '
                       'locally on your Hub so you '
-                      'will have control of your data.',
+                      'will have control of your  data.',
                       style: TextStyle(
                         fontSize: 20,
                         color: Theme.of(context).textTheme.bodyText2!.color,
@@ -113,7 +112,7 @@ class PrivacyAndOpenSourceBenefitBlock extends StatelessWidget {
                     width: 10,
                   ),
                   SizedBox(
-                    width: 280,
+                    width: 250,
                     child: Text(
                       'Open source code with easy '
                       'structure for adding support '
@@ -126,16 +125,6 @@ class PrivacyAndOpenSourceBenefitBlock extends StatelessWidget {
                     ),
                   ),
                 ],
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              Text(
-                '',
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Theme.of(context).textTheme.bodyText2!.color,
-                ),
               ),
             ],
           ),

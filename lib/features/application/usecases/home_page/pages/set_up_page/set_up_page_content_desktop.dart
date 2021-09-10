@@ -1,7 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cybear_jinni_site/features/application/shared_widgets/bottom_navigation_menu/bottom_navigation_menu.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -58,12 +57,12 @@ class SetUpPageContentDesktop extends StatelessWidget {
                           children: const [
                             TextSpan(
                               text: 'First step: ',
-                              style: TextStyle(fontSize: 20),
+                              style: TextStyle(fontSize: 30),
                             ),
                             TextSpan(
                               text: 'Setting Up a Hub',
                               style:
-                                  TextStyle(fontSize: 30, color: Colors.white),
+                                  TextStyle(fontSize: 20, color: Colors.white),
                             ),
                           ],
                         ),
@@ -83,24 +82,32 @@ class SetUpPageContentDesktop extends StatelessWidget {
                       ),
                       child: Column(
                         children: [
-                          const Text('Choose one of the options',
-                              style: TextStyle(fontSize: 20)),
                           const SizedBox(
                             height: 50,
                           ),
                           const Text(
                             'RaspberryPi Hub Setup',
                             textAlign: TextAlign.start,
-                            style: TextStyle(fontSize: 18, color: Colors.white),
+                            style: TextStyle(
+                              fontSize: 22,
+                              color: Colors.white,
+                              decoration: TextDecoration.underline,
+                            ),
                           ),
                           const SizedBox(
-                            height: 10,
+                            height: 40,
                           ),
                           SizedBox(
                             width: double.infinity,
                             child: RichText(
                               text: TextSpan(
-                                style: DefaultTextStyle.of(context).style,
+                                style: TextStyle(
+                                  fontSize: 17,
+                                  color: Theme.of(context)
+                                      .textTheme
+                                      .bodyText2!
+                                      .color,
+                                ),
                                 children: const [
                                   TextSpan(
                                     text: '1. ',
@@ -122,7 +129,13 @@ class SetUpPageContentDesktop extends StatelessWidget {
                             children: [
                               RichText(
                                 text: TextSpan(
-                                  style: DefaultTextStyle.of(context).style,
+                                  style: TextStyle(
+                                    fontSize: 17,
+                                    color: Theme.of(context)
+                                        .textTheme
+                                        .bodyText2!
+                                        .color,
+                                  ),
                                   children: const [
                                     TextSpan(
                                       text: '2. ',
@@ -131,7 +144,7 @@ class SetUpPageContentDesktop extends StatelessWidget {
                                     TextSpan(
                                       text: 'Flash the OS images (.iso file) to'
                                           ' the SD card using iso flashing '
-                                          'program like balenaEtcher',
+                                          'program like balenaEtcher.',
                                     ),
                                   ],
                                 ),
@@ -144,7 +157,7 @@ class SetUpPageContentDesktop extends StatelessWidget {
                                   },
                                   child: CachedNetworkImage(
                                     imageUrl:
-                                        'https://cdn-learn.adafruit.com/assets/assets/000/089/198/medium800/learn_raspberry_pi_image.png?1584023605',
+                                        'https://i.ibb.co/mGwbmXN/balena-Etcher.png',
                                     fit: BoxFit.cover,
                                     progressIndicatorBuilder: (context, url,
                                             downloadProgress) =>
@@ -164,32 +177,70 @@ class SetUpPageContentDesktop extends StatelessWidget {
                             width: double.infinity,
                             child: RichText(
                               text: TextSpan(
-                                style: DefaultTextStyle.of(context).style,
+                                style: TextStyle(
+                                  fontSize: 17,
+                                  color: Theme.of(context)
+                                      .textTheme
+                                      .bodyText2!
+                                      .color,
+                                ),
                                 children: const [
                                   TextSpan(
                                     text: '3. ',
                                     style: TextStyle(color: Colors.white),
                                   ),
                                   TextSpan(
-                                    text:
-                                        'Connect the RaspberryPi to with internat cable and power it on',
+                                    text: 'Connect the RaspberryPi with an '
+                                        'internet cable and power it on.',
                                   ),
                                 ],
                               ),
                             ),
                           ),
-                          const SizedBox(
-                            height: 20,
-                          ),
-                          Divider(
-                            color: Theme.of(context).textTheme.bodyText1!.color,
-                            thickness: 1,
-                            height: 40,
+                          Container(
+                            margin: const EdgeInsets.symmetric(vertical: 50),
+                            child: Row(
+                              children: [
+                                Expanded(
+                                  child: Divider(
+                                    color: Theme.of(context)
+                                        .textTheme
+                                        .bodyText1!
+                                        .color,
+                                    thickness: 1,
+                                  ),
+                                ),
+                                Container(
+                                  margin: const EdgeInsets.symmetric(
+                                      horizontal: 10),
+                                  child: const Text(
+                                    'Choose one of the options',
+                                    style: TextStyle(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white),
+                                  ),
+                                ),
+                                Expanded(
+                                  child: Divider(
+                                    color: Theme.of(context)
+                                        .textTheme
+                                        .bodyText1!
+                                        .color,
+                                    thickness: 1,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                           const Text(
                             'Linux Hub Setup',
                             textAlign: TextAlign.start,
-                            style: TextStyle(fontSize: 18, color: Colors.white),
+                            style: TextStyle(
+                              fontSize: 22,
+                              color: Colors.white,
+                              decoration: TextDecoration.underline,
+                            ),
                           ),
                           const SizedBox(
                             height: 10,
@@ -199,7 +250,13 @@ class SetUpPageContentDesktop extends StatelessWidget {
                             children: [
                               RichText(
                                 text: TextSpan(
-                                  style: DefaultTextStyle.of(context).style,
+                                  style: TextStyle(
+                                    fontSize: 17,
+                                    color: Theme.of(context)
+                                        .textTheme
+                                        .bodyText2!
+                                        .color,
+                                  ),
                                   children: const [
                                     TextSpan(
                                       text: '1. ',
@@ -207,7 +264,7 @@ class SetUpPageContentDesktop extends StatelessWidget {
                                     ),
                                     TextSpan(
                                       text: 'Install an MQTT broker like the'
-                                          ' mosquitto snap',
+                                          ' mosquitto snap.',
                                     ),
                                   ],
                                 ),
@@ -220,7 +277,7 @@ class SetUpPageContentDesktop extends StatelessWidget {
                                   width: 200,
                                   child: CachedNetworkImage(
                                     imageUrl:
-                                        'http://www.londatiga.net/wp-content/uploads/2019/05/Untitled-3.jpg',
+                                        'https://i.ibb.co/RDPqFrx/mosquitto.jpg',
                                     fit: BoxFit.cover,
                                     progressIndicatorBuilder: (context, url,
                                             downloadProgress) =>
@@ -241,14 +298,20 @@ class SetUpPageContentDesktop extends StatelessWidget {
                             children: [
                               RichText(
                                 text: TextSpan(
-                                  style: DefaultTextStyle.of(context).style,
+                                  style: TextStyle(
+                                    fontSize: 17,
+                                    color: Theme.of(context)
+                                        .textTheme
+                                        .bodyText2!
+                                        .color,
+                                  ),
                                   children: const [
                                     TextSpan(
                                       text: '2. ',
                                       style: TextStyle(color: Colors.white),
                                     ),
                                     TextSpan(
-                                      text: 'Install the cbj-hub snap   ',
+                                      text: 'Install the cbj-hub snap.',
                                     ),
                                   ],
                                 ),
@@ -261,7 +324,7 @@ class SetUpPageContentDesktop extends StatelessWidget {
                                   },
                                   child: CachedNetworkImage(
                                     imageUrl:
-                                        'https://snapcraft.io/static/images/badges/en/snap-store-black.svg?v=49a12f8',
+                                        'https://i.ibb.co/gJN2Wq1/snap-store-logo-dark.png',
                                     fit: BoxFit.cover,
                                     progressIndicatorBuilder: (context, url,
                                             downloadProgress) =>
@@ -294,16 +357,19 @@ class SetUpPageContentDesktop extends StatelessWidget {
                       alignment: Alignment.topLeft,
                       child: RichText(
                         text: TextSpan(
-                          style: DefaultTextStyle.of(context).style,
+                          style: TextStyle(
+                            fontSize: 17,
+                            color: Theme.of(context).textTheme.bodyText2!.color,
+                          ),
                           children: const [
                             TextSpan(
                               text: 'Second step: ',
-                              style: TextStyle(fontSize: 20),
+                              style: TextStyle(fontSize: 30),
                             ),
                             TextSpan(
                               text: 'Setting Up the App',
                               style:
-                                  TextStyle(fontSize: 30, color: Colors.white),
+                                  TextStyle(fontSize: 20, color: Colors.white),
                             ),
                           ],
                         ),
@@ -323,110 +389,89 @@ class SetUpPageContentDesktop extends StatelessWidget {
                       ),
                       child: Column(
                         children: [
-                          const Text(
-                            'Android App Setup',
-                            textAlign: TextAlign.start,
-                            style: TextStyle(fontSize: 18, color: Colors.white),
-                          ),
                           const SizedBox(
                             height: 10,
                           ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              RichText(
-                                text: TextSpan(
-                                  style: DefaultTextStyle.of(context).style,
-                                  children: [
-                                    const TextSpan(
-                                      text: 'Install the ',
-                                    ),
-                                    TextSpan(
-                                      text: 'CyBear Jinni Android App',
-                                      style:
-                                          const TextStyle(color: Colors.blue),
-                                      recognizer: TapGestureRecognizer()
-                                        ..onTap = () {
-                                          launch(
-                                              'https://play.google.com/store/apps/details?id=com.cybear_jinni.smart_home');
-                                        },
-                                    ),
-                                    const TextSpan(
-                                      text:
-                                          ' from the play store on your phone.',
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              SizedBox(
-                                width: 200,
-                                child: InkWell(
-                                  onTap: () {
-                                    launch(
-                                        'https://play.google.com/store/apps/details?id=com.cybear_jinni.smart_home');
-                                  },
-                                  child: CachedNetworkImage(
-                                    imageUrl:
-                                        'https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png',
-                                    fit: BoxFit.cover,
-                                    progressIndicatorBuilder: (context, url,
-                                            downloadProgress) =>
-                                        CircularProgressIndicator(
-                                            value: downloadProgress.progress),
-                                    errorWidget: (context, url, error) =>
-                                        const Icon(Icons.error),
-                                  ),
-                                ),
-                              ),
-                            ],
+                          const Text(
+                            'App Setup',
+                            textAlign: TextAlign.start,
+                            style: TextStyle(
+                              fontSize: 22,
+                              color: Colors.white,
+                              decoration: TextDecoration.underline,
+                            ),
                           ),
-                          Divider(
-                            color: Theme.of(context).textTheme.bodyText1!.color,
-                            thickness: 1,
-                            indent: 100,
-                            endIndent: 100,
+                          const SizedBox(
                             height: 40,
                           ),
-                          const Text(
-                            'Linux App Setup',
-                            textAlign: TextAlign.start,
-                            style: TextStyle(fontSize: 18, color: Colors.white),
-                          ),
-                          const SizedBox(
-                            height: 10,
-                          ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               RichText(
                                 text: TextSpan(
-                                  style: DefaultTextStyle.of(context).style,
-                                  children: [
-                                    const TextSpan(
-                                      text:
-                                          'Install the app on your prefread platform',
+                                  style: TextStyle(
+                                    fontSize: 17,
+                                    color: Theme.of(context)
+                                        .textTheme
+                                        .bodyText2!
+                                        .color,
+                                  ),
+                                  children: const [
+                                    TextSpan(
+                                      text: 'Install the app on your preferred '
+                                          'platform.',
                                     ),
                                   ],
                                 ),
                               ),
-                              SizedBox(
-                                width: 200,
-                                child: InkWell(
-                                  onTap: () {
-                                    launch('https://snapcraft.io/cybear-jinni');
-                                  },
-                                  child: CachedNetworkImage(
-                                    imageUrl:
-                                        'https://snapcraft.io/static/images/badges/en/snap-store-black.svg?v=49a12f8',
-                                    fit: BoxFit.cover,
-                                    progressIndicatorBuilder: (context, url,
-                                            downloadProgress) =>
-                                        CircularProgressIndicator(
-                                            value: downloadProgress.progress),
-                                    errorWidget: (context, url, error) =>
-                                        const Icon(Icons.error),
+                              Row(
+                                children: [
+                                  SizedBox(
+                                    width: 200,
+                                    child: InkWell(
+                                      onTap: () {
+                                        launch(
+                                            'https://play.google.com/store/apps/details?id=com.cybear_jinni.smart_home');
+                                      },
+                                      child: CachedNetworkImage(
+                                        imageUrl:
+                                            'https://i.ibb.co/st5DHMv/en-badge-web-generic.png',
+                                        fit: BoxFit.cover,
+                                        progressIndicatorBuilder: (context, url,
+                                                downloadProgress) =>
+                                            CircularProgressIndicator(
+                                                value:
+                                                    downloadProgress.progress),
+                                        errorWidget: (context, url, error) =>
+                                            const Icon(Icons.error),
+                                      ),
+                                    ),
                                   ),
-                                ),
+                                  const SizedBox(
+                                    width: 15,
+                                  ),
+                                  SizedBox(
+                                    width: 200,
+                                    child: InkWell(
+                                      onTap: () {
+                                        launch(
+                                            'https://snapcraft.io/cybear-jinni');
+                                      },
+                                      child: CachedNetworkImage(
+                                        imageUrl:
+                                            'https://i.ibb.co/gJN2Wq1/snap-store-logo-dark.png',
+                                        fit: BoxFit.cover,
+                                        progressIndicatorBuilder: (context, url,
+                                                downloadProgress) =>
+                                            CircularProgressIndicator(
+                                                value:
+                                                    downloadProgress.progress),
+                                        errorWidget: (context, url, error) =>
+                                            const Icon(Icons.error),
+                                      ),
+                                    ),
+                                  ),
+                                ],
                               )
                             ],
                           ),

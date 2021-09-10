@@ -12,7 +12,7 @@ class BottomNavigationMenuMobileTablet extends StatelessWidget {
       children: <Widget>[
         Padding(
           padding: const EdgeInsets.symmetric(
-            horizontal: 30,
+            horizontal: 20,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

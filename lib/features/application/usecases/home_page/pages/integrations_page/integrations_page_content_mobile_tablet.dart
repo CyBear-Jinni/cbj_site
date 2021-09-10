@@ -20,7 +20,7 @@ class IntegrationsPageContentMobileTablet extends StatelessWidget {
             children: <Widget>[
               Container(
                 color: Colors.black26,
-                height: 250,
+                height: 150,
                 padding: const EdgeInsets.only(bottom: 30),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
@@ -30,7 +30,7 @@ class IntegrationsPageContentMobileTablet extends StatelessWidget {
                       children: <Widget>[
                         Text('Supported Vendors',
                             style: TextStyle(
-                                fontSize: 50,
+                                fontSize: 30,
                                 color: Theme.of(context)
                                     .textTheme
                                     .bodyText1!
@@ -80,22 +80,22 @@ class IntegrationsPageContentMobileTablet extends StatelessWidget {
                       ),
                       DeviceCard(
                         'Switcher',
-                        'https://play-lh.googleusercontent.com/8L6vVAT2cC78V622nxSznr7Mm_MgMsH25TopH-ZIm5HMwAHRy0qTX29FlHF6_kbBsQ=s180-rw',
+                        'https://play-lh.googleusercontent.com/8L6vVAT2cC78V622nxSznr7Mm_MgMsH25TopH-ZIm5HMwAHRy0qTX29FlHF6_kbBsQ=s180',
                         'https://switcher.co.il',
                       ),
                       DeviceCard(
                         'MQTT',
-                        'https://www.opc-router.de/wp-content/uploads/2018/07/mqtt_icon_128px.png',
+                        'https://i.ibb.co/hfRhB0Q/mqtt-logo.png',
                         'https://mqtt.org',
                       ),
                       DeviceCard(
                         'Tasmota',
-                        'https://apps-cdn.athom.com/app/com.paveld.tasmota/17/416f22d3-812c-4d53-81d3-6637f54e5f74/drivers/tasmota_mqtt/assets/images/large.png',
+                        'https://i.ibb.co/XZLGCRd/Tasmota-logo.png',
                         'https://tasmota.github.io',
                       ),
                       DeviceCard(
                         'ESPHome',
-                        'https://pbs.twimg.com/profile_images/1099243589014573056/JuViMFXW.png',
+                        'https://i.ibb.co/W2YG23s/ESPHome-logo.png',
                         'https://esphome.io',
                       ),
                     ],

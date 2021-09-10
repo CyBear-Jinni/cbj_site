@@ -21,8 +21,7 @@ class EasyToSetUpBenefitBlock extends StatelessWidget {
           Navigator.pushNamed(context, setUpRoute);
         },
         child: SizedBox(
-          width: 320,
-          height: 380,
+          height: 390,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
@@ -37,13 +36,13 @@ class EasyToSetUpBenefitBlock extends StatelessWidget {
                       FaIcon(
                         FontAwesomeIcons.fileDownload,
                         color: Theme.of(context).textTheme.bodyText1!.color,
-                        size: 30,
+                        size: 26,
                       ),
                       const SizedBox(height: 20),
                       Text(
                         'Easy to Set Up',
                         style: TextStyle(
-                            fontSize: 30,
+                            fontSize: 26,
                             color:
                                 Theme.of(context).textTheme.bodyText1!.color),
                       ),
@@ -59,7 +58,7 @@ class EasyToSetUpBenefitBlock extends StatelessWidget {
                         child: Text(
                           'Available',
                           style: TextStyle(
-                              fontSize: 15,
+                              fontSize: 14,
                               color: Theme.of(context).primaryColor,
                               fontWeight: FontWeight.bold),
                         ),
@@ -83,7 +82,7 @@ class EasyToSetUpBenefitBlock extends StatelessWidget {
                     width: 10,
                   ),
                   SizedBox(
-                    width: 280,
+                    width: 250,
                     child: Text(
                       'Clear and easy instructions to get the Hub running.',
                       style: TextStyle(
@@ -109,7 +108,7 @@ class EasyToSetUpBenefitBlock extends StatelessWidget {
                     width: 10,
                   ),
                   SizedBox(
-                    width: 280,
+                    width: 250,
                     child: Text(
                       'Application can be found in the play store.',
                       style: TextStyle(
@@ -135,9 +134,10 @@ class EasyToSetUpBenefitBlock extends StatelessWidget {
                     width: 10,
                   ),
                   SizedBox(
-                    width: 280,
+                    width: 250,
                     child: Text(
-                      'The application will connect to the Hub automaticly for you.',
+                      'The application will connect to the Hub automatically '
+                      'for you.',
                       style: TextStyle(
                         fontSize: 20,
                         color: Theme.of(context).textTheme.bodyText2!.color,

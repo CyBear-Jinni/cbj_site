@@ -213,253 +213,247 @@ class HomePageContentDesktop extends StatelessWidget {
                       const SizedBox(
                         height: 50,
                       ),
-                      Container(
-                        margin: const EdgeInsets.symmetric(horizontal: 300),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            Container(
-                              decoration: BoxDecoration(
-                                image: const DecorationImage(
-                                  image: NetworkImage(
-                                      'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.raspberrypi.org%2Fwp-content%2Fuploads%2F2011%2F11%2Fh1ji3-pi-black.jpg&f=1&nofb=1'),
-                                  fit: BoxFit.cover,
-                                ),
-                                color: Colors.black.withOpacity(0.2),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          const SizedBox(),
+                          Container(
+                            decoration: BoxDecoration(
+                              image: const DecorationImage(
+                                image: NetworkImage(
+                                    'https://i.ibb.co/10VvrzJ/raspberry-Pi-background.jpg'),
+                                fit: BoxFit.cover,
                               ),
-                              child: Container(
-                                width: 500,
-                                padding: const EdgeInsets.only(
-                                    left: 40, right: 40, top: 10, bottom: 30),
-                                color: Colors.black.withOpacity(0.4),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    const Center(
-                                      child: Text(
-                                        'For RaspberryPi',
-                                        style: TextStyle(
-                                          fontSize: 28,
-                                          decoration: TextDecoration.underline,
-                                          color: Colors.white,
-                                        ),
+                              color: Colors.black.withOpacity(0.2),
+                            ),
+                            child: Container(
+                              width: 500,
+                              padding: const EdgeInsets.only(
+                                  left: 40, right: 40, top: 10, bottom: 30),
+                              color: Colors.black.withOpacity(0.4),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  const Center(
+                                    child: Text(
+                                      'For RaspberryPi',
+                                      style: TextStyle(
+                                        fontSize: 28,
+                                        decoration: TextDecoration.underline,
+                                        color: Colors.white,
                                       ),
                                     ),
-                                    const SizedBox(
-                                      height: 60,
-                                    ),
-                                    RichText(
-                                      text: TextSpan(
-                                        style: TextStyle(
-                                          fontSize: 24,
-                                          color: Theme.of(context)
-                                              .textTheme
-                                              .bodyText1!
-                                              .color,
-                                          fontWeight: FontWeight.normal,
-                                        ),
-                                        children: [
-                                          TextSpan(
-                                            text: '1. ',
-                                            style: TextStyle(
-                                              color: Theme.of(context)
-                                                  .textTheme
-                                                  .bodyText2!
-                                                  .color,
-                                            ),
+                                  ),
+                                  const SizedBox(
+                                    height: 60,
+                                  ),
+                                  RichText(
+                                    text: TextSpan(
+                                      style: TextStyle(
+                                        fontSize: 24,
+                                        color: Theme.of(context)
+                                            .textTheme
+                                            .bodyText1!
+                                            .color,
+                                        fontWeight: FontWeight.normal,
+                                      ),
+                                      children: [
+                                        TextSpan(
+                                          text: '1. ',
+                                          style: TextStyle(
+                                            color: Theme.of(context)
+                                                .textTheme
+                                                .bodyText2!
+                                                .color,
                                           ),
-                                          const TextSpan(text: 'Download ISO'),
-                                        ],
-                                      ),
-                                    ),
-                                    const SizedBox(
-                                      height: 10,
-                                    ),
-                                    RichText(
-                                      text: TextSpan(
-                                        style: TextStyle(
-                                          fontSize: 24,
-                                          color: Theme.of(context)
-                                              .textTheme
-                                              .bodyText1!
-                                              .color,
-                                          fontWeight: FontWeight.normal,
                                         ),
-                                        children: [
-                                          TextSpan(
-                                            text: '2. ',
-                                            style: TextStyle(
-                                              color: Theme.of(context)
-                                                  .textTheme
-                                                  .bodyText2!
-                                                  .color,
-                                            ),
-                                          ),
-                                          const TextSpan(
-                                              text:
-                                                  'Install ISO to SD card and '
-                                                  'insert it'),
-                                        ],
+                                        const TextSpan(text: 'Download ISO'),
+                                      ],
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  RichText(
+                                    text: TextSpan(
+                                      style: TextStyle(
+                                        fontSize: 24,
+                                        color: Theme.of(context)
+                                            .textTheme
+                                            .bodyText1!
+                                            .color,
+                                        fontWeight: FontWeight.normal,
                                       ),
-                                    ),
-                                    const SizedBox(
-                                      height: 10,
-                                    ),
-                                    RichText(
-                                      text: TextSpan(
-                                        style: TextStyle(
-                                          fontSize: 24,
-                                          color: Theme.of(context)
-                                              .textTheme
-                                              .bodyText1!
-                                              .color,
-                                          fontWeight: FontWeight.normal,
+                                      children: [
+                                        TextSpan(
+                                          text: '2. ',
+                                          style: TextStyle(
+                                            color: Theme.of(context)
+                                                .textTheme
+                                                .bodyText2!
+                                                .color,
+                                          ),
                                         ),
-                                        children: [
-                                          TextSpan(
-                                            text: '3. ',
-                                            style: TextStyle(
-                                              color: Theme.of(context)
-                                                  .textTheme
-                                                  .bodyText2!
-                                                  .color,
-                                            ),
-                                          ),
-                                          const TextSpan(
-                                              text: 'Open the app on your '
-                                                  'phone\n'),
-                                        ],
-                                      ),
+                                        const TextSpan(
+                                            text: 'Install ISO to SD card and '
+                                                'insert it'),
+                                      ],
                                     ),
-                                  ],
-                                ),
+                                  ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  RichText(
+                                    text: TextSpan(
+                                      style: TextStyle(
+                                        fontSize: 24,
+                                        color: Theme.of(context)
+                                            .textTheme
+                                            .bodyText1!
+                                            .color,
+                                        fontWeight: FontWeight.normal,
+                                      ),
+                                      children: [
+                                        TextSpan(
+                                          text: '3. ',
+                                          style: TextStyle(
+                                            color: Theme.of(context)
+                                                .textTheme
+                                                .bodyText2!
+                                                .color,
+                                          ),
+                                        ),
+                                        const TextSpan(
+                                            text: 'Open the app on your '
+                                                'phone\n'),
+                                      ],
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
-                            const SizedBox(
-                              width: 15,
-                            ),
-                            Container(
-                              decoration: BoxDecoration(
-                                image: const DecorationImage(
-                                  image: NetworkImage(
-                                      'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.highreshdwallpapers.com%2Fwp-content%2Fuploads%2F2013%2F02%2FLinux-Black.png&f=1&nofb=1'),
-                                  fit: BoxFit.cover,
-                                ),
-                                color: Colors.black.withOpacity(0.2),
-                              ),
-                              child: Container(
-                                width: 500,
-                                padding: const EdgeInsets.only(
-                                    left: 40, right: 40, top: 10, bottom: 30),
-                                color: Colors.black.withOpacity(0.4),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    const Center(
-                                      child: Text(
-                                        'For Linux',
-                                        style: TextStyle(
-                                          fontSize: 28,
-                                          decoration: TextDecoration.underline,
-                                          color: Colors.white,
-                                        ),
-                                      ),
-                                    ),
-                                    const SizedBox(
-                                      height: 60,
-                                    ),
-                                    RichText(
-                                      text: TextSpan(
-                                        style: TextStyle(
-                                          fontSize: 24,
-                                          color: Theme.of(context)
-                                              .textTheme
-                                              .bodyText1!
-                                              .color,
-                                          fontWeight: FontWeight.normal,
-                                        ),
-                                        children: [
-                                          TextSpan(
-                                            text: '1. ',
-                                            style: TextStyle(
-                                              color: Theme.of(context)
-                                                  .textTheme
-                                                  .bodyText2!
-                                                  .color,
-                                            ),
-                                          ),
-                                          const TextSpan(
-                                              text: 'Install CyBear '
-                                                  'Jinni Hub Snap'),
-                                        ],
-                                      ),
-                                    ),
-                                    const SizedBox(
-                                      height: 10,
-                                    ),
-                                    RichText(
-                                      text: TextSpan(
-                                        style: TextStyle(
-                                          fontSize: 24,
-                                          color: Theme.of(context)
-                                              .textTheme
-                                              .bodyText1!
-                                              .color,
-                                          fontWeight: FontWeight.normal,
-                                        ),
-                                        children: [
-                                          TextSpan(
-                                            text: '2. ',
-                                            style: TextStyle(
-                                              color: Theme.of(context)
-                                                  .textTheme
-                                                  .bodyText2!
-                                                  .color,
-                                            ),
-                                          ),
-                                          const TextSpan(
-                                              text: 'Install MQTT broker snap'),
-                                        ],
-                                      ),
-                                    ),
-                                    const SizedBox(
-                                      height: 10,
-                                    ),
-                                    RichText(
-                                      text: TextSpan(
-                                        style: TextStyle(
-                                          fontSize: 24,
-                                          color: Theme.of(context)
-                                              .textTheme
-                                              .bodyText1!
-                                              .color,
-                                          fontWeight: FontWeight.normal,
-                                        ),
-                                        children: [
-                                          TextSpan(
-                                            text: '3. ',
-                                            style: TextStyle(
-                                              color: Theme.of(context)
-                                                  .textTheme
-                                                  .bodyText2!
-                                                  .color,
-                                            ),
-                                          ),
-                                          const TextSpan(
-                                              text: 'Open the app on your phone'
-                                                  '\n'),
-                                        ],
-                                      ),
-                                    ),
-                                  ],
-                                ),
+                          ),
+                          Container(
+                            decoration: const BoxDecoration(
+                              image: DecorationImage(
+                                image: NetworkImage(
+                                    'https://i.ibb.co/m0FKVyq/linux-background.webp'),
+                                fit: BoxFit.cover,
                               ),
                             ),
-                          ],
-                        ),
+                            child: Container(
+                              width: 500,
+                              color: Colors.black.withOpacity(0.7),
+                              padding: const EdgeInsets.only(
+                                  left: 40, right: 40, top: 10, bottom: 30),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  const Center(
+                                    child: Text(
+                                      'For Linux',
+                                      style: TextStyle(
+                                        fontSize: 28,
+                                        decoration: TextDecoration.underline,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    height: 60,
+                                  ),
+                                  RichText(
+                                    text: TextSpan(
+                                      style: TextStyle(
+                                        fontSize: 24,
+                                        color: Theme.of(context)
+                                            .textTheme
+                                            .bodyText1!
+                                            .color,
+                                        fontWeight: FontWeight.normal,
+                                      ),
+                                      children: [
+                                        TextSpan(
+                                          text: '1. ',
+                                          style: TextStyle(
+                                            color: Theme.of(context)
+                                                .textTheme
+                                                .bodyText2!
+                                                .color,
+                                          ),
+                                        ),
+                                        const TextSpan(
+                                            text: 'Install MQTT broker snap'),
+                                      ],
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  RichText(
+                                    text: TextSpan(
+                                      style: TextStyle(
+                                        fontSize: 24,
+                                        color: Theme.of(context)
+                                            .textTheme
+                                            .bodyText1!
+                                            .color,
+                                        fontWeight: FontWeight.normal,
+                                      ),
+                                      children: [
+                                        TextSpan(
+                                          text: '2. ',
+                                          style: TextStyle(
+                                            color: Theme.of(context)
+                                                .textTheme
+                                                .bodyText2!
+                                                .color,
+                                          ),
+                                        ),
+                                        const TextSpan(
+                                            text: 'Install CyBear '
+                                                'Jinni Hub Snap'),
+                                      ],
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  RichText(
+                                    text: TextSpan(
+                                      style: TextStyle(
+                                        fontSize: 24,
+                                        color: Theme.of(context)
+                                            .textTheme
+                                            .bodyText1!
+                                            .color,
+                                        fontWeight: FontWeight.normal,
+                                      ),
+                                      children: [
+                                        TextSpan(
+                                          text: '3. ',
+                                          style: TextStyle(
+                                            color: Theme.of(context)
+                                                .textTheme
+                                                .bodyText2!
+                                                .color,
+                                          ),
+                                        ),
+                                        const TextSpan(
+                                            text: 'Open the app on your phone'
+                                                '\n'),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          const SizedBox(),
+                        ],
                       ),
                       const SizedBox(
-                        height: 70,
+                        height: 55,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,

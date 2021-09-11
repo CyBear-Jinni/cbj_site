@@ -32,6 +32,8 @@ dependencies:
   cupertino_icons: ^1.0.3
   # Internationalization (Easy translations)
   easy_localization: ^3.0.0
+  # Widget that can be expanded or collapsed by the user.
+  expandable: ^5.0.1
   flutter:
     sdk: flutter
   # Bloc for state management, replace StatefulWidget

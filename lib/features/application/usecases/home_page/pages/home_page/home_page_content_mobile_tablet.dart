@@ -48,9 +48,11 @@ class HomePageContentMobileTablet extends StatelessWidget {
                         children: <Widget>[
                           Container(
                             decoration: BoxDecoration(
-                                color: Colors.black.withOpacity(0.8),
-                                borderRadius: const BorderRadius.all(
-                                    Radius.circular(20))),
+                              color: Colors.black.withOpacity(0.8),
+                              borderRadius: const BorderRadius.all(
+                                Radius.circular(20),
+                              ),
+                            ),
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Text(

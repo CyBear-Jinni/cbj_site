@@ -46,12 +46,14 @@ class AboutPageContentMobileTablet extends StatelessWidget {
                   height: 150,
                   child: Align(
                     alignment: FractionalOffset.bottomCenter,
-                    child: Text('About',
-                        style: TextStyle(
-                            fontSize: 30,
-                            color:
-                                Theme.of(context).textTheme.bodyText1!.color),
-                        textAlign: TextAlign.center),
+                    child: Text(
+                      'About',
+                      style: TextStyle(
+                        fontSize: 30,
+                        color: Theme.of(context).textTheme.bodyText1!.color,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
                   ),
                 ),
                 const SizedBox(
@@ -74,7 +76,8 @@ class AboutPageContentMobileTablet extends StatelessWidget {
                               progressIndicatorBuilder:
                                   (context, url, downloadProgress) =>
                                       CircularProgressIndicator(
-                                          value: downloadProgress.progress),
+                                value: downloadProgress.progress,
+                              ),
                               errorWidget: (context, url, error) =>
                                   const Icon(Icons.error),
                             ),
@@ -94,13 +97,14 @@ class AboutPageContentMobileTablet extends StatelessWidget {
                         height: 30,
                       ),
                       const Text(
-                          '"Our goal is to improve life quality in an'
-                          ' affordable manner\n'
-                          '  by making advanced Smart Home devices cheaper."',
-                          style: TextStyle(
-                            fontSize: 18,
-                          ),
-                          textAlign: TextAlign.center),
+                        '"Our goal is to improve life quality in an'
+                        ' affordable manner\n'
+                        '  by making advanced Smart Home devices cheaper."',
+                        style: TextStyle(
+                          fontSize: 18,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
                     ],
                   ),
                 ),
@@ -110,22 +114,25 @@ class AboutPageContentMobileTablet extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      Text('Fan Art',
-                          style: TextStyle(
-                              fontSize: 50,
-                              color:
-                                  Theme.of(context).textTheme.bodyText1!.color),
-                          textAlign: TextAlign.center),
+                      Text(
+                        'Fan Art',
+                        style: TextStyle(
+                          fontSize: 50,
+                          color: Theme.of(context).textTheme.bodyText1!.color,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
                       const SizedBox(
                         height: 20,
                       ),
                       const Text(
-                          'We are happy to share with you our community love '
-                          'and support with their creative fan art.',
-                          style: TextStyle(
-                            fontSize: 20,
-                          ),
-                          textAlign: TextAlign.center),
+                        'We are happy to share with you our community love '
+                        'and support with their creative fan art.',
+                        style: TextStyle(
+                          fontSize: 20,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
                       const SizedBox(
                         height: 20,
                       ),
@@ -138,7 +145,8 @@ class AboutPageContentMobileTablet extends StatelessWidget {
                           progressIndicatorBuilder:
                               (context, url, downloadProgress) =>
                                   CircularProgressIndicator(
-                                      value: downloadProgress.progress),
+                            value: downloadProgress.progress,
+                          ),
                           errorWidget: (context, url, error) =>
                               const Icon(Icons.error),
                         ),

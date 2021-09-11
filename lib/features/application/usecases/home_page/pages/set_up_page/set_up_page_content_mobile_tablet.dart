@@ -333,7 +333,7 @@ class SetUpPageContentMobileTablet extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: 100,
+                height: 50,
               ),
               Container(
                 margin: const EdgeInsets.symmetric(horizontal: 20),

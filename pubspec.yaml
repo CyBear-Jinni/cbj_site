@@ -24,7 +24,7 @@ dependencies:
   # Automatically resizes text to fit perfectly within its bounds
   auto_size_text: ^2.1.0
   # Show images from the internet and keep them in the cache directory.
-  cached_network_image: ^3.0.0
+  cached_network_image: ^3.1.0
   # Spotlight Bottom Navigation Bar
   cool_nav: ^0.1.0
   # The following adds the Cupertino Icons font to your application.
@@ -32,22 +32,22 @@ dependencies:
   cupertino_icons: ^1.0.3
   # Internationalization (Easy translations)
   easy_localization: ^3.0.0
-
   flutter:
     sdk: flutter
-
   # Bloc for state management, replace StatefulWidget
-  flutter_bloc: ^7.0.1
+  flutter_bloc: ^7.2.0
+  # staggered grid view which supports multiple columns with rows of varying sizes.
+  flutter_staggered_grid_view: ^0.4.0
   # The Font Awesome Icon pack available as set of Flutter Icons. https://fontawesome.com/
-  font_awesome_flutter: ^9.0.0
+  font_awesome_flutter: ^9.1.0
   # Add hex color codes to your flutter projects
   hexcolor: ^2.0.5
   # Links to your text.
-  linkable: ^1.0.9
+  linkable: ^3.0.1
   # Collection of lint rules for Dart and Flutter projects.
-  lint: ^1.5.3
+  lint: ^1.7.2
   # Popup that ask for the requested permission
-  permission_handler: ^8.0.0+2
+  permission_handler: ^8.1.6
   # Allows you to create a readable responsive UI
   responsive_builder: ^0.4.1
   # Launching a URL in the mobile platform

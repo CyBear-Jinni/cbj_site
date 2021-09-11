@@ -335,7 +335,7 @@ class SetUpPageContentDesktop extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: 100,
+                height: 50,
               ),
               SizedBox(
                 width: MediaQuery.of(context).size.width - 200,

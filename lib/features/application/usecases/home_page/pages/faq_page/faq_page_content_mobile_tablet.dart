@@ -51,11 +51,11 @@ class FaqPageContentMobileTablet extends StatelessWidget {
                         horizontal: 20,
                       ),
                       child: Column(
-                        children: [
-                          const SizedBox(
+                        children: const [
+                          SizedBox(
                             height: 50,
                           ),
-                          const Text(
+                          Text(
                             'Questions',
                             textAlign: TextAlign.start,
                             style: TextStyle(
@@ -64,7 +64,7 @@ class FaqPageContentMobileTablet extends StatelessWidget {
                               decoration: TextDecoration.underline,
                             ),
                           ),
-                          const SizedBox(
+                          SizedBox(
                             height: 10,
                           ),
                         ],

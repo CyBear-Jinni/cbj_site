@@ -7,11 +7,20 @@ import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/
 import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/home_page/widgets/supported_vendors_tile_grid_view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 /// Home page content for the desktop
 class HomePageContentDesktop extends StatelessWidget {
   final ScrollController _scrollController = ScrollController();
+
+  final List<String> companysLogs = [
+    'https://play-lh.googleusercontent.com/bteU9OSFF9z596eUOkGgM3XpWF2-b1VsKvmwWFitaI4qMwVPmx3lS09fHFDx8-CX3Q=s180',
+    'https://i.ibb.co/XZLGCRd/Tasmota-logo.png',
+    'https://play-lh.googleusercontent.com/8L6vVAT2cC78V622nxSznr7Mm_MgMsH25TopH-ZIm5HMwAHRy0qTX29FlHF6_kbBsQ=s180',
+    'https://i.ibb.co/W2YG23s/ESPHome-logo.png',
+    'https://i.ibb.co/hfRhB0Q/mqtt-logo.png',
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +41,8 @@ class HomePageContentDesktop extends StatelessWidget {
                   fit: BoxFit.cover,
                   progressIndicatorBuilder: (context, url, downloadProgress) =>
                       CircularProgressIndicator(
-                          value: downloadProgress.progress),
+                    value: downloadProgress.progress,
+                  ),
                   errorWidget: (context, url, error) => const Icon(Icons.error),
                 ),
               ),
@@ -45,39 +55,39 @@ class HomePageContentDesktop extends StatelessWidget {
                     children: <Widget>[
                       Container(
                         decoration: BoxDecoration(
-                            color: Colors.black.withOpacity(0.8),
-                            borderRadius:
-                                const BorderRadius.all(Radius.circular(20))),
+                          color: Colors.black.withOpacity(0.8),
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(20)),
+                        ),
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Text(
                             'CyBear Jinni',
                             style: TextStyle(
-                                fontSize: 60,
-                                color: Theme.of(context)
-                                    .textTheme
-                                    .bodyText1!
-                                    .color),
+                              fontSize: 60,
+                              color:
+                                  Theme.of(context).textTheme.bodyText1!.color,
+                            ),
                           ),
                         ),
                       ),
                       Container(
                         margin: const EdgeInsets.only(left: 204, top: 0.5),
                         decoration: BoxDecoration(
-                            color: Colors.black.withOpacity(0.8),
-                            borderRadius:
-                                const BorderRadius.all(Radius.circular(20))),
+                          color: Colors.black.withOpacity(0.8),
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(20)),
+                        ),
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Text(
                             'Smart Home',
                             style: TextStyle(
-                                fontSize: 21,
-                                color: Theme.of(context)
-                                    .textTheme
-                                    .bodyText1!
-                                    .color,
-                                fontWeight: FontWeight.w700),
+                              fontSize: 21,
+                              color:
+                                  Theme.of(context).textTheme.bodyText1!.color,
+                              fontWeight: FontWeight.w700,
+                            ),
                           ),
                         ),
                       ),
@@ -99,8 +109,9 @@ class HomePageContentDesktop extends StatelessWidget {
                       children: [
                         TextSpan(text: 'CyBear Jinni '),
                         TextSpan(
-                            text: 'connects',
-                            style: TextStyle(fontWeight: FontWeight.bold)),
+                          text: 'connects',
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
                         TextSpan(text: ' all your devices at home'),
                       ],
                     ),
@@ -111,24 +122,25 @@ class HomePageContentDesktop extends StatelessWidget {
                 color: Colors.black12,
                 height: 500,
                 child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          EasyToSetUpBenefitBlock(),
-                          const SizedBox(
-                            width: 30,
-                          ),
-                          EasyToUseBenefitBlock(),
-                          const SizedBox(
-                            width: 30,
-                          ),
-                          PrivacyAndOpenSourceBenefitBlock(),
-                        ],
-                      ),
-                    ]),
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        EasyToSetUpBenefitBlock(),
+                        const SizedBox(
+                          width: 30,
+                        ),
+                        EasyToUseBenefitBlock(),
+                        const SizedBox(
+                          width: 30,
+                        ),
+                        PrivacyAndOpenSourceBenefitBlock(),
+                      ],
+                    ),
+                  ],
+                ),
               ),
               SizedBox(
                 height: 500,
@@ -157,14 +169,15 @@ class HomePageContentDesktop extends StatelessWidget {
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                          Text('Supported Vendors',
-                              style: TextStyle(
-                                  fontSize: 40,
-                                  color: Theme.of(context)
-                                      .textTheme
-                                      .bodyText1!
-                                      .color),
-                              textAlign: TextAlign.center),
+                          Text(
+                            'Supported Vendors',
+                            style: TextStyle(
+                              fontSize: 40,
+                              color:
+                                  Theme.of(context).textTheme.bodyText1!.color,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
                           const SizedBox(
                             height: 50,
                           ),
@@ -173,8 +186,29 @@ class HomePageContentDesktop extends StatelessWidget {
                       Container(),
                       Container(),
                       SizedBox(
-                        width: 550,
-                        child: SupportedVendorsTileGridView(),
+                        width: 450,
+                        child: StaggeredGridView.countBuilder(
+                          physics: const NeverScrollableScrollPhysics(),
+                          shrinkWrap: true,
+                          primary: true,
+                          crossAxisCount: 4,
+                          itemCount: 4,
+                          itemBuilder: (BuildContext context, int index) {
+                            if (index == 0 || index == 2) {
+                              return SupportedVendorsTileGridViewNetworkImage(
+                                companysLogs[index],
+                              );
+                            }
+                            return SupportedVendorsTileGridViewNetworkImage(
+                              companysLogs[index],
+                              imageBackgroundColor: Colors.white,
+                            );
+                          },
+                          staggeredTileBuilder: (int index) =>
+                              StaggeredTile.count(2, index.isEven ? 2.1 : 1),
+                          mainAxisSpacing: 30.0,
+                          crossAxisSpacing: 26.0,
+                        ),
                       ),
                       Container(),
                       Container(),
@@ -204,12 +238,14 @@ class HomePageContentDesktop extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      Text('Easily Set Up',
-                          style: TextStyle(
-                              fontSize: 40,
-                              color:
-                                  Theme.of(context).textTheme.bodyText1!.color),
-                          textAlign: TextAlign.center),
+                      Text(
+                        'Easily Set Up',
+                        style: TextStyle(
+                          fontSize: 40,
+                          color: Theme.of(context).textTheme.bodyText1!.color,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
                       const SizedBox(
                         height: 50,
                       ),
@@ -221,7 +257,8 @@ class HomePageContentDesktop extends StatelessWidget {
                             decoration: BoxDecoration(
                               image: const DecorationImage(
                                 image: NetworkImage(
-                                    'https://i.ibb.co/10VvrzJ/raspberry-Pi-background.jpg'),
+                                  'https://i.ibb.co/10VvrzJ/raspberry-Pi-background.jpg',
+                                ),
                                 fit: BoxFit.cover,
                               ),
                               color: Colors.black.withOpacity(0.2),
@@ -229,7 +266,11 @@ class HomePageContentDesktop extends StatelessWidget {
                             child: Container(
                               width: 500,
                               padding: const EdgeInsets.only(
-                                  left: 40, right: 40, top: 10, bottom: 30),
+                                left: 40,
+                                right: 40,
+                                top: 10,
+                                bottom: 30,
+                              ),
                               color: Colors.black.withOpacity(0.4),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -295,8 +336,9 @@ class HomePageContentDesktop extends StatelessWidget {
                                           ),
                                         ),
                                         const TextSpan(
-                                            text: 'Install ISO to SD card and '
-                                                'insert it'),
+                                          text: 'Install ISO to SD card and '
+                                              'insert it',
+                                        ),
                                       ],
                                     ),
                                   ),
@@ -324,8 +366,9 @@ class HomePageContentDesktop extends StatelessWidget {
                                           ),
                                         ),
                                         const TextSpan(
-                                            text: 'Open the app on your '
-                                                'phone\n'),
+                                          text: 'Open the app on your '
+                                              'phone\n',
+                                        ),
                                       ],
                                     ),
                                   ),
@@ -337,7 +380,8 @@ class HomePageContentDesktop extends StatelessWidget {
                             decoration: const BoxDecoration(
                               image: DecorationImage(
                                 image: NetworkImage(
-                                    'https://i.ibb.co/m0FKVyq/linux-background.webp'),
+                                  'https://i.ibb.co/m0FKVyq/linux-background.webp',
+                                ),
                                 fit: BoxFit.cover,
                               ),
                             ),
@@ -345,7 +389,11 @@ class HomePageContentDesktop extends StatelessWidget {
                               width: 500,
                               color: Colors.black.withOpacity(0.7),
                               padding: const EdgeInsets.only(
-                                  left: 40, right: 40, top: 10, bottom: 30),
+                                left: 40,
+                                right: 40,
+                                top: 10,
+                                bottom: 30,
+                              ),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
@@ -383,7 +431,8 @@ class HomePageContentDesktop extends StatelessWidget {
                                           ),
                                         ),
                                         const TextSpan(
-                                            text: 'Install MQTT broker snap'),
+                                          text: 'Install MQTT broker snap',
+                                        ),
                                       ],
                                     ),
                                   ),
@@ -411,8 +460,9 @@ class HomePageContentDesktop extends StatelessWidget {
                                           ),
                                         ),
                                         const TextSpan(
-                                            text: 'Install CyBear '
-                                                'Jinni Hub Snap'),
+                                          text: 'Install CyBear '
+                                              'Jinni Hub Snap',
+                                        ),
                                       ],
                                     ),
                                   ),
@@ -440,8 +490,9 @@ class HomePageContentDesktop extends StatelessWidget {
                                           ),
                                         ),
                                         const TextSpan(
-                                            text: 'Open the app on your phone'
-                                                '\n'),
+                                          text: 'Open the app on your phone'
+                                              '\n',
+                                        ),
                                       ],
                                     ),
                                   ),

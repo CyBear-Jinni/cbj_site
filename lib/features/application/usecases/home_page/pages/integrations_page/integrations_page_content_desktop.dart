@@ -20,29 +20,20 @@ class IntegrationsPageContentDesktop extends StatelessWidget {
             children: <Widget>[
               Container(
                 color: Colors.black26,
-                height: 250,
-                padding: const EdgeInsets.only(bottom: 30),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: <Widget>[
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Text('Supported Vendors',
-                            style: TextStyle(
-                                fontSize: 50,
-                                color: Theme.of(context)
-                                    .textTheme
-                                    .bodyText1!
-                                    .color),
-                            textAlign: TextAlign.center),
-                      ],
-                    ),
-                  ],
+                width: double.infinity,
+                padding: const EdgeInsets.only(bottom: 20),
+                height: 180,
+                child: Align(
+                  alignment: FractionalOffset.bottomCenter,
+                  child: Text('Supported Vendors',
+                      style: TextStyle(
+                          fontSize: 50,
+                          color: Theme.of(context).textTheme.bodyText1!.color),
+                      textAlign: TextAlign.center),
                 ),
               ),
               const SizedBox(
-                height: 100,
+                height: 80,
               ),
               Container(
                 decoration: BoxDecoration(

@@ -21,29 +21,20 @@ class SetUpPageContentMobileTablet extends StatelessWidget {
             children: <Widget>[
               Container(
                 color: Colors.black26,
-                height: 150,
+                width: double.infinity,
                 padding: const EdgeInsets.only(bottom: 30),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: <Widget>[
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Text('Set Up CyBear Jinni',
-                            style: TextStyle(
-                                fontSize: 30,
-                                color: Theme.of(context)
-                                    .textTheme
-                                    .bodyText1!
-                                    .color),
-                            textAlign: TextAlign.center),
-                      ],
-                    ),
-                  ],
+                height: 150,
+                child: Align(
+                  alignment: FractionalOffset.bottomCenter,
+                  child: Text('Set Up CyBear Jinni',
+                      style: TextStyle(
+                          fontSize: 30,
+                          color: Theme.of(context).textTheme.bodyText1!.color),
+                      textAlign: TextAlign.center),
                 ),
               ),
               const SizedBox(
-                height: 100,
+                height: 30,
               ),
               Container(
                 margin: const EdgeInsets.symmetric(horizontal: 20),
@@ -82,9 +73,6 @@ class SetUpPageContentMobileTablet extends StatelessWidget {
                       ),
                       child: Column(
                         children: [
-                          const SizedBox(
-                            height: 50,
-                          ),
                           const Text(
                             'RaspberryPi Hub Setup',
                             textAlign: TextAlign.start,
@@ -345,7 +333,7 @@ class SetUpPageContentMobileTablet extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: 100,
+                height: 50,
               ),
               Container(
                 margin: const EdgeInsets.symmetric(horizontal: 20),

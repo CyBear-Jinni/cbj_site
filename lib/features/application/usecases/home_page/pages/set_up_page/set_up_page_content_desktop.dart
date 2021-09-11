@@ -21,29 +21,20 @@ class SetUpPageContentDesktop extends StatelessWidget {
             children: <Widget>[
               Container(
                 color: Colors.black26,
-                height: 250,
-                padding: const EdgeInsets.only(bottom: 30),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: <Widget>[
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Text('Set Up CyBear Jinni',
-                            style: TextStyle(
-                                fontSize: 50,
-                                color: Theme.of(context)
-                                    .textTheme
-                                    .bodyText1!
-                                    .color),
-                            textAlign: TextAlign.center),
-                      ],
-                    ),
-                  ],
+                width: double.infinity,
+                padding: const EdgeInsets.only(bottom: 20),
+                height: 180,
+                child: Align(
+                  alignment: FractionalOffset.bottomCenter,
+                  child: Text('Set Up CyBear Jinni',
+                      style: TextStyle(
+                          fontSize: 50,
+                          color: Theme.of(context).textTheme.bodyText1!.color),
+                      textAlign: TextAlign.center),
                 ),
               ),
               const SizedBox(
-                height: 100,
+                height: 80,
               ),
               SizedBox(
                 width: MediaQuery.of(context).size.width - 200,
@@ -82,9 +73,6 @@ class SetUpPageContentDesktop extends StatelessWidget {
                       ),
                       child: Column(
                         children: [
-                          const SizedBox(
-                            height: 50,
-                          ),
                           const Text(
                             'RaspberryPi Hub Setup',
                             textAlign: TextAlign.start,
@@ -347,7 +335,7 @@ class SetUpPageContentDesktop extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: 100,
+                height: 50,
               ),
               SizedBox(
                 width: MediaQuery.of(context).size.width - 200,

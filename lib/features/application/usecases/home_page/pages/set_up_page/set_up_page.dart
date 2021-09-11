@@ -18,8 +18,8 @@ class SetUpPage extends StatelessWidget {
           stops: const <double>[0, 0, 0, 1],
           colors: <Color>[
             Theme.of(context).primaryColor,
-            Theme.of(context).accentColor,
-            Theme.of(context).accentColor,
+            Theme.of(context).colorScheme.secondary,
+            Theme.of(context).colorScheme.secondary,
             Theme.of(context).primaryColor
           ],
         ),

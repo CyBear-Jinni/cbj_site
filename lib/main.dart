@@ -90,7 +90,7 @@ class MyApp extends StatelessWidget {
         } else if (pathElements[0] == faqRoute) {
           MySingleton.setCurrentPageName(faqRoute);
           return MaterialPageRoute(
-              builder: (BuildContext context) => FAQPage());
+              builder: (BuildContext context) => FaqPage());
         } else if (pathElements[0] == integrationsRoute) {
           MySingleton.setCurrentPageName(integrationsRoute);
           return MaterialPageRoute(

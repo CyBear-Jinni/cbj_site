@@ -19,8 +19,8 @@ class AboutPageContentMobileTablet extends StatelessWidget {
           stops: const <double>[0, 0, 0, 1],
           colors: <Color>[
             Theme.of(context).primaryColor,
-            Theme.of(context).accentColor,
-            Theme.of(context).accentColor,
+            Theme.of(context).colorScheme.secondary,
+            Theme.of(context).colorScheme.secondary,
             Theme.of(context).primaryColor
           ],
         ),
@@ -41,20 +41,21 @@ class AboutPageContentMobileTablet extends StatelessWidget {
               children: <Widget>[
                 Container(
                   color: Colors.black26,
-                  height: 150,
+                  width: double.infinity,
                   padding: const EdgeInsets.only(bottom: 30),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [
-                      Text('About',
-                          style: TextStyle(
-                            fontSize: 50,
-                            color: Theme.of(context).textTheme.bodyText1!.color,
-                          ),
-                          textAlign: TextAlign.center),
-                    ],
+                  height: 150,
+                  child: Align(
+                    alignment: FractionalOffset.bottomCenter,
+                    child: Text('About',
+                        style: TextStyle(
+                            fontSize: 30,
+                            color:
+                                Theme.of(context).textTheme.bodyText1!.color),
+                        textAlign: TextAlign.center),
                   ),
+                ),
+                const SizedBox(
+                  height: 30,
                 ),
                 Container(
                   color: Colors.black54,

@@ -324,7 +324,7 @@ class FaqPageContentMobileTablet extends StatelessWidget {
                                         ),
                                       ),
                                       TextSpan(
-                                        text: ' In what way this project is '
+                                        text: ' In what way is this project '
                                             'different',
                                       ),
                                     ],
@@ -354,7 +354,7 @@ class FaqPageContentMobileTablet extends StatelessWidget {
                                   TextSpan(
                                     text: ' We found that other projects are '
                                         'missing an easy setup and simple UI '
-                                        'that can reach the masses so we '
+                                        'that can reach the masses, so we '
                                         'decided to create another option.',
                                   ),
                                 ],
@@ -375,19 +375,19 @@ class FaqPageContentMobileTablet extends StatelessWidget {
                                     ),
                                   ),
                                   TextSpan(
-                                    text: '  CyBear Jinni got created from the'
-                                        ' desire to do good in the world.\n'
-                                        'We believe in opens and trust in '
-                                        'our Smart Home and wanted to share it'
-                                        ' with as much people as possible.\n'
-                                        'We found that other projects are '
+                                    text: '  CyBear Jinni was founded from a '
+                                        'desire to do more good in the world.\n'
+                                        'We believe in openness and trust. '
+                                        'Therefore we aime to share our Smart '
+                                        'Home with as much people as possible.'
+                                        '\nWe found that other projects are '
                                         'missing an easy setup and simple UI '
-                                        'that can reach the masses so we '
+                                        'that can reach the masses, so we '
                                         'decided to create another option.\n'
                                         'By combining open source with as '
                                         'much automatic setup as possible we '
                                         'hope people all around the world will '
-                                        'join us in making our world best Smart'
+                                        'join us in making the best Smart'
                                         ' Home System.',
                                   ),
                                 ],

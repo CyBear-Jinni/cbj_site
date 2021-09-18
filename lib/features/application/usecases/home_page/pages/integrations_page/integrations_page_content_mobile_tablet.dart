@@ -89,6 +89,11 @@ class IntegrationsPageContentMobileTablet extends StatelessWidget {
                         'https://i.ibb.co/W2YG23s/ESPHome-logo.png',
                         'https://esphome.io',
                       ),
+                      DeviceCard(
+                        'Node-RED',
+                        'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fnodered.org%2Fabout%2Fresources%2Fmedia%2Fnode-red-icon.png&f=1&nofb=1',
+                        'https://nodered.org/',
+                      ),
                     ],
                   ),
                 ),

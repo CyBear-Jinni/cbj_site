@@ -103,7 +103,7 @@ class SetUpPageContentDesktop extends StatelessWidget {
                                   ),
                                   TextSpan(
                                     text: 'Download the RaspberryPi image '
-                                        '(.iso file). Currently not suppored.',
+                                        '(.iso file). Currently not supported.',
                                   ),
                                 ],
                               ),

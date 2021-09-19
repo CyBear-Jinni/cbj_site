@@ -324,7 +324,7 @@ class FaqPageContentDesktop extends StatelessWidget {
                                         ),
                                       ),
                                       TextSpan(
-                                        text: ' In what way this project is '
+                                        text: ' In what way is this project '
                                             'different',
                                       ),
                                     ],
@@ -375,9 +375,10 @@ class FaqPageContentDesktop extends StatelessWidget {
                                     ),
                                   ),
                                   TextSpan(
-                                    text: '  CyBear Jinni got created from the'
-                                        ' desire to do good in the world.\n'
-                                        '     We believe in opens and trust in '
+                                    text: '  CyBear Jinni was founded from a '
+                                        'desire to do more good in the '
+                                        'world.\n'
+                                        '     We believe in openness and trust in '
                                         'our Smart Home and wanted to share it'
                                         ' with as much people as possible.\n'
                                         '     We found that other projects are '

@@ -109,7 +109,7 @@ class EasyToUseBenefitBlock extends StatelessWidget {
                   SizedBox(
                     width: 250,
                     child: Text(
-                      'Easy to use user interface with'
+                      'Simple user interface with'
                       ' clear separation between '
                       'different actions:\nscenes, '
                       'control devices,\n'

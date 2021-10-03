@@ -48,6 +48,9 @@ class IntegrationsPageContentMobileTablet extends StatelessWidget {
                       right: BorderSide(
                         color: Theme.of(context).textTheme.bodyText1!.color!,
                       ),
+                      bottom: BorderSide(
+                        color: Theme.of(context).textTheme.bodyText1!.color!,
+                      ),
                     )),
                 padding: const EdgeInsets.symmetric(vertical: 2),
                 width: MediaQuery.of(context).size.width - 10,

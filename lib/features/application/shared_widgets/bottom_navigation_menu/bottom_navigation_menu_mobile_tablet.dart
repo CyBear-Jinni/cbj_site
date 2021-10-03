@@ -17,11 +17,7 @@ class BottomNavigationMenuMobileTablet extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Divider(
-                color: Theme.of(context).textTheme.bodyText1!.color,
-                thickness: 1,
-                height: 3,
-              ),
+             
               const SizedBox(
                 height: 50,
               ),

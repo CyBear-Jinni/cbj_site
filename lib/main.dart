@@ -14,17 +14,18 @@ void main() async {
   await EasyLocalization.ensureInitialized();
 
   runApp(
-
-      /// Use https://lingohub.com/developers/supported-locales/language-designators-with-regions
-      /// Or https://www.contentstack.com/docs/developers/multilingual-content/list-of-supported-languages/
-      /// To find your language letters, and add the file letters below
-      EasyLocalization(
-          supportedLocales: const <Locale>[
+    /// Use https://lingohub.com/developers/supported-locales/language-designators-with-regions
+    /// Or https://www.contentstack.com/docs/developers/multilingual-content/list-of-supported-languages/
+    /// To find your language letters, and add the file letters below
+    EasyLocalization(
+      supportedLocales: const <Locale>[
         Locale('en', 'US'),
       ],
-          path: 'assets/translations', // <-- change patch to your
-          fallbackLocale: const Locale('en', 'US'),
-          child: MyApp()));
+      path: 'assets/translations', // <-- change patch to your
+      fallbackLocale: const Locale('en', 'US'),
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {

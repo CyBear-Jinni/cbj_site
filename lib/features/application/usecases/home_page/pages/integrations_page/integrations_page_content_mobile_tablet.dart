@@ -25,11 +25,14 @@ class IntegrationsPageContentMobileTablet extends StatelessWidget {
                 height: 150,
                 child: Align(
                   alignment: FractionalOffset.bottomCenter,
-                  child: Text('Supported Vendors',
-                      style: TextStyle(
-                          fontSize: 30,
-                          color: Theme.of(context).textTheme.bodyText1!.color),
-                      textAlign: TextAlign.center),
+                  child: Text(
+                    'Supported Vendors',
+                    style: TextStyle(
+                      fontSize: 30,
+                      color: Theme.of(context).textTheme.bodyText1!.color,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
                 ),
               ),
               const SizedBox(
@@ -37,23 +40,28 @@ class IntegrationsPageContentMobileTablet extends StatelessWidget {
               ),
               Container(
                 decoration: BoxDecoration(
-                    color: Colors.black38,
-                    border: Border(
-                      top: BorderSide(
-                        color: Theme.of(context).textTheme.bodyText1!.color!,
-                      ),
-                      left: BorderSide(
-                        color: Theme.of(context).textTheme.bodyText1!.color!,
-                      ),
-                      right: BorderSide(
-                        color: Theme.of(context).textTheme.bodyText1!.color!,
-                      ),
-                    )),
+                  color: Colors.black38,
+                  border: Border(
+                    top: BorderSide(
+                      color: Theme.of(context).textTheme.bodyText1!.color!,
+                    ),
+                    left: BorderSide(
+                      color: Theme.of(context).textTheme.bodyText1!.color!,
+                    ),
+                    right: BorderSide(
+                      color: Theme.of(context).textTheme.bodyText1!.color!,
+                    ),
+                  ),
+                ),
                 padding: const EdgeInsets.symmetric(vertical: 2),
                 width: MediaQuery.of(context).size.width - 10,
                 child: Container(
                   margin: const EdgeInsets.only(
-                      left: 10, right: 10, top: 10, bottom: 10),
+                    left: 10,
+                    right: 10,
+                    top: 10,
+                    bottom: 10,
+                  ),
                   child: GridView.count(
                     physics: const NeverScrollableScrollPhysics(),
                     shrinkWrap: true,
@@ -65,9 +73,19 @@ class IntegrationsPageContentMobileTablet extends StatelessWidget {
                     crossAxisCount: 1,
                     children: [
                       DeviceCard(
+                        'Tuya Smart',
+                        'https://play-lh.googleusercontent.com/KGM9NYnyox9TXwoaY3PKl1PfQ2rTPp1rnpNNtmlbgozJZykhZhGKsL3z9myoj4ccayLS=s180',
+                        'https://www.tuya.com',
+                      ),
+                      DeviceCard(
                         'Xiaomi Yeelight',
-                        'https://play-lh.googleusercontent.com/bteU9OSFF9z596eUOkGgM3XpWF2-b1VsKvmwWFitaI4qMwVPmx3lS09fHFDx8-CX3Q=s180',
+                        'https://play-lh.googleusercontent.com/k61DT9oYt_BPdzjAFokLY5e-He-YSl7-eZHeieaVO45XDAwQ6ebegsS_ZsQytca2zWM=s180',
                         'https://www.yeelight.com',
+                      ),
+                      DeviceCard(
+                        'Lifx',
+                        'https://play-lh.googleusercontent.com/bteU9OSFF9z596eUOkGgM3XpWF2-b1VsKvmwWFitaI4qMwVPmx3lS09fHFDx8-CX3Q=s180',
+                        'https://www.lifx.com/',
                       ),
                       DeviceCard(
                         'Switcher',

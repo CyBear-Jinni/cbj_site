@@ -15,10 +15,10 @@ class HomePageContentDesktop extends StatelessWidget {
   final ScrollController _scrollController = ScrollController();
 
   final List<String> companysLogs = [
+    'https://play-lh.googleusercontent.com/k61DT9oYt_BPdzjAFokLY5e-He-YSl7-eZHeieaVO45XDAwQ6ebegsS_ZsQytca2zWM=s180',
+    'https://play-lh.googleusercontent.com/KGM9NYnyox9TXwoaY3PKl1PfQ2rTPp1rnpNNtmlbgozJZykhZhGKsL3z9myoj4ccayLS=s180',
     'https://play-lh.googleusercontent.com/bteU9OSFF9z596eUOkGgM3XpWF2-b1VsKvmwWFitaI4qMwVPmx3lS09fHFDx8-CX3Q=s180',
-    'https://i.ibb.co/XZLGCRd/Tasmota-logo.png',
     'https://play-lh.googleusercontent.com/8L6vVAT2cC78V622nxSznr7Mm_MgMsH25TopH-ZIm5HMwAHRy0qTX29FlHF6_kbBsQ=s180',
-    'https://i.ibb.co/W2YG23s/ESPHome-logo.png',
     'https://i.ibb.co/hfRhB0Q/mqtt-logo.png',
   ];
 
@@ -194,18 +194,12 @@ class HomePageContentDesktop extends StatelessWidget {
                           crossAxisCount: 4,
                           itemCount: 4,
                           itemBuilder: (BuildContext context, int index) {
-                            if (index == 0 || index == 2) {
-                              return SupportedVendorsTileGridViewNetworkImage(
-                                companysLogs[index],
-                              );
-                            }
                             return SupportedVendorsTileGridViewNetworkImage(
                               companysLogs[index],
-                              imageBackgroundColor: Colors.white,
                             );
                           },
                           staggeredTileBuilder: (int index) =>
-                              StaggeredTile.count(2, index.isEven ? 2.1 : 1),
+                              StaggeredTile.count(2, index.isEven ? 1.5 : 1.5),
                           mainAxisSpacing: 30.0,
                           crossAxisSpacing: 26.0,
                         ),

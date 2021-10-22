@@ -155,14 +155,17 @@ class HomePageContentMobileTablet extends StatelessWidget {
                       children: <Widget>[
                         Column(
                           children: <Widget>[
-                            Text('Supported Vendors',
-                                style: TextStyle(
-                                    fontSize: 30,
-                                    color: Theme.of(context)
-                                        .textTheme
-                                        .bodyText1!
-                                        .color),
-                                textAlign: TextAlign.center),
+                            Text(
+                              'Supported Vendors',
+                              style: TextStyle(
+                                fontSize: 30,
+                                color: Theme.of(context)
+                                    .textTheme
+                                    .bodyText1!
+                                    .color,
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
                             const SizedBox(
                               height: 50,
                             ),
@@ -201,12 +204,14 @@ class HomePageContentMobileTablet extends StatelessWidget {
                       const SizedBox(
                         height: 10,
                       ),
-                      Text('CyBear Jinni Smart Devices Distribution',
-                          style: TextStyle(
-                              fontSize: 40,
-                              color:
-                                  Theme.of(context).textTheme.bodyText1!.color),
-                          textAlign: TextAlign.center),
+                      Text(
+                        'CyBear Jinni Smart Devices Distribution',
+                        style: TextStyle(
+                          fontSize: 40,
+                          color: Theme.of(context).textTheme.bodyText1!.color,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
                       const SizedBox(
                         height: 10,
                       ),
@@ -217,7 +222,8 @@ class HomePageContentMobileTablet extends StatelessWidget {
                         progressIndicatorBuilder:
                             (context, url, downloadProgress) =>
                                 CircularProgressIndicator(
-                                    value: downloadProgress.progress),
+                          value: downloadProgress.progress,
+                        ),
                         errorWidget: (context, url, error) =>
                             const Icon(Icons.error),
                       ),

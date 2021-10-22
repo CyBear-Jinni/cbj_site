@@ -14,17 +14,18 @@ void main() async {
   await EasyLocalization.ensureInitialized();
 
   runApp(
-
-      /// Use https://lingohub.com/developers/supported-locales/language-designators-with-regions
-      /// Or https://www.contentstack.com/docs/developers/multilingual-content/list-of-supported-languages/
-      /// To find your language letters, and add the file letters below
-      EasyLocalization(
-          supportedLocales: const <Locale>[
+    /// Use https://lingohub.com/developers/supported-locales/language-designators-with-regions
+    /// Or https://www.contentstack.com/docs/developers/multilingual-content/list-of-supported-languages/
+    /// To find your language letters, and add the file letters below
+    EasyLocalization(
+      supportedLocales: const <Locale>[
         Locale('en', 'US'),
       ],
-          path: 'assets/translations', // <-- change patch to your
-          fallbackLocale: const Locale('en', 'US'),
-          child: MyApp()));
+      path: 'assets/translations', // <-- change patch to your
+      fallbackLocale: const Locale('en', 'US'),
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -82,23 +83,28 @@ class MyApp extends StatelessWidget {
         if (pathElements[0] == homeRoute) {
           MySingleton.setCurrentPageName(homeRoute);
           return MaterialPageRoute(
-              builder: (BuildContext context) => HomePage());
+            builder: (BuildContext context) => HomePage(),
+          );
         } else if (pathElements[0] == aboutRoute) {
           MySingleton.setCurrentPageName(aboutRoute);
           return MaterialPageRoute(
-              builder: (BuildContext context) => AboutPage());
+            builder: (BuildContext context) => AboutPage(),
+          );
         } else if (pathElements[0] == faqRoute) {
           MySingleton.setCurrentPageName(faqRoute);
           return MaterialPageRoute(
-              builder: (BuildContext context) => FaqPage());
+            builder: (BuildContext context) => FaqPage(),
+          );
         } else if (pathElements[0] == integrationsRoute) {
           MySingleton.setCurrentPageName(integrationsRoute);
           return MaterialPageRoute(
-              builder: (BuildContext context) => IntegrationsPage());
+            builder: (BuildContext context) => IntegrationsPage(),
+          );
         } else if (pathElements[0] == setUpRoute) {
           MySingleton.setCurrentPageName(setUpRoute);
           return MaterialPageRoute(
-              builder: (BuildContext context) => SetUpPage());
+            builder: (BuildContext context) => SetUpPage(),
+          );
         } else {
           MySingleton.setCurrentPageName(homeRoute);
           MaterialPageRoute(builder: (BuildContext context) => HomePage());

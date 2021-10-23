@@ -3,9 +3,8 @@ import 'package:cybear_jinni_site/features/application/shared_widgets/bottom_nav
 import 'package:flutter/widgets.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-
 /// Bottom navigation menu for the site
-class BottomNavigationMenu extends StatelessWidget{
+class BottomNavigationMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenTypeLayout(
@@ -13,5 +12,4 @@ class BottomNavigationMenu extends StatelessWidget{
       desktop: BottomNavigationMenuDesktop(),
     );
   }
-
 }

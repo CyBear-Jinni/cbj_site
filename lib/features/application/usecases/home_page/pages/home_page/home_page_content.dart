@@ -3,9 +3,8 @@ import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/
 import 'package:flutter/cupertino.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-
 /// Home page content
-class HomePageContent extends StatelessWidget{
+class HomePageContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenTypeLayout(

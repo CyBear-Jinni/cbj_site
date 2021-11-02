@@ -104,7 +104,7 @@ class IntegrationsPageContentDesktop extends StatelessWidget {
                       ),
                       DeviceCard(
                         'Node-RED',
-                        'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fnodered.org%2Fabout%2Fresources%2Fmedia%2Fnode-red-icon.png&f=1&nofb=1',
+                        'https://i.ibb.co/THRX9kq/node-RED-logo.png',
                         'https://nodered.org/',
                       ),
                     ],

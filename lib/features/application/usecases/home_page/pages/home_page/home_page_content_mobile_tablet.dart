@@ -107,9 +107,14 @@ class HomePageContentMobileTablet extends StatelessWidget {
                       children: [
                         TextSpan(text: 'CyBear Jinni '),
                         TextSpan(
-                            text: 'connects',
-                            style: TextStyle(fontWeight: FontWeight.bold)),
-                        TextSpan(text: ' all your devices'),
+                          text: 'connects',
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        TextSpan(text: ' all your devices with '),
+                        TextSpan(
+                          text: 'Open Source',
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
                       ],
                     ),
                   ),

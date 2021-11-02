@@ -97,9 +97,11 @@ class AboutPageContentDesktop extends StatelessWidget {
                             width: 104,
                           ),
                           const Text(
-                            '"Our goal is to improve life quality in an'
-                            ' affordable manner\n'
-                            '  by making advanced Smart Home devices cheaper."',
+                            '"The power to improve the world is in our hands.'
+                            '\n    Lets create a future where everyone'
+                            ' can have\n'
+                            '    the option to save their privacy without '
+                            'sacrificing user experience."',
                             style: TextStyle(
                               fontSize: 30,
                             ),

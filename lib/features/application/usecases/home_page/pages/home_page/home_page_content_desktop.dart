@@ -112,7 +112,11 @@ class HomePageContentDesktop extends StatelessWidget {
                           text: 'connects',
                           style: TextStyle(fontWeight: FontWeight.bold),
                         ),
-                        TextSpan(text: ' all your devices at home'),
+                        TextSpan(text: ' all your devices with '),
+                        TextSpan(
+                          text: 'Open Source',
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
                       ],
                     ),
                   ),

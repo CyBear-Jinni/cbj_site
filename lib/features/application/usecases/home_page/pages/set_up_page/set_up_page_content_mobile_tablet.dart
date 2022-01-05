@@ -103,9 +103,35 @@ class SetUpPageContentMobileTablet extends StatelessWidget {
                                   ),
                                   TextSpan(
                                     text: 'Download the RaspberryPi image '
-                                        '(.iso file). Currently not supported.',
+                                        '(.iso file).',
                                   ),
                                 ],
+                              ),
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 5,
+                          ),
+                          Container(
+                            width: 200,
+                            color: Colors.white,
+                            child: InkWell(
+                              onTap: () {
+                                launch(
+                                  'https://drive.google.com/u/0/uc?id=1aC6RlNDmD6JtUGO-qc9CnyitL2PFk5cM&export=download',
+                                );
+                              },
+                              child: CachedNetworkImage(
+                                imageUrl:
+                                    'https://blog.idrsolutions.com/wp-content/uploads/2014/12/raspberry_logo.png',
+                                fit: BoxFit.cover,
+                                progressIndicatorBuilder:
+                                    (context, url, downloadProgress) =>
+                                        CircularProgressIndicator(
+                                  value: downloadProgress.progress,
+                                ),
+                                errorWidget: (context, url, error) =>
+                                    const Icon(Icons.error),
                               ),
                             ),
                           ),

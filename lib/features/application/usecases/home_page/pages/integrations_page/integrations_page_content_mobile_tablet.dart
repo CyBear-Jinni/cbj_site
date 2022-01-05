@@ -73,18 +73,23 @@ class IntegrationsPageContentMobileTablet extends StatelessWidget {
                     crossAxisCount: 1,
                     children: [
                       DeviceCard(
+                        'Smart Life',
+                        'https://play-lh.googleusercontent.com/Qrq9zB_-bWuAD0ETPeBRTsRHOSjmW_uzmexY5rF7wo2JeNc-oLuvsQSYdg0Uxsq6mkA=s180',
+                        'https://www.tuya.com',
+                      ),
+                      DeviceCard(
                         'Tuya Smart',
                         'https://play-lh.googleusercontent.com/KGM9NYnyox9TXwoaY3PKl1PfQ2rTPp1rnpNNtmlbgozJZykhZhGKsL3z9myoj4ccayLS=s180',
                         'https://www.tuya.com',
                       ),
                       DeviceCard(
                         'Xiaomi Yeelight',
-                        'https://play-lh.googleusercontent.com/k61DT9oYt_BPdzjAFokLY5e-He-YSl7-eZHeieaVO45XDAwQ6ebegsS_ZsQytca2zWM=s180',
+                        'https://play-lh.googleusercontent.com/bteU9OSFF9z596eUOkGgM3XpWF2-b1VsKvmwWFitaI4qMwVPmx3lS09fHFDx8-CX3Q=s180',
                         'https://www.yeelight.com',
                       ),
                       DeviceCard(
                         'Lifx',
-                        'https://play-lh.googleusercontent.com/bteU9OSFF9z596eUOkGgM3XpWF2-b1VsKvmwWFitaI4qMwVPmx3lS09fHFDx8-CX3Q=s180',
+                        'https://play-lh.googleusercontent.com/k61DT9oYt_BPdzjAFokLY5e-He-YSl7-eZHeieaVO45XDAwQ6ebegsS_ZsQytca2zWM=s180',
                         'https://www.lifx.com/',
                       ),
                       DeviceCard(
@@ -111,6 +116,11 @@ class IntegrationsPageContentMobileTablet extends StatelessWidget {
                         'Node-RED',
                         'https://i.ibb.co/THRX9kq/node-RED-logo.png',
                         'https://nodered.org/',
+                      ),
+                      DeviceCard(
+                        'Jinvoo Smart',
+                        'https://play-lh.googleusercontent.com/ocFF7mcDTJzr1PXr6k4q1Q2-5xNFUVODqluwnD60DiTsHgTalrVTqi7kk0H8JnW7GLEv=s180',
+                        'http://www.xenon.cn/',
                       ),
                     ],
                   ),

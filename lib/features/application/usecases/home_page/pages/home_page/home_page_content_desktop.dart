@@ -5,7 +5,6 @@ import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/
 import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/home_page/widgets/easy_to_use_benefit_block.dart';
 import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/home_page/widgets/privacy_and_open_source_benefit_block.dart';
 import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/home_page/widgets/supported_vendors_tile_grid_view.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -191,19 +190,19 @@ class HomePageContentDesktop extends StatelessWidget {
                       Container(),
                       SizedBox(
                         width: 450,
-                        child: StaggeredGridView.countBuilder(
+                        child: AlignedGridView.count(
                           physics: const NeverScrollableScrollPhysics(),
                           shrinkWrap: true,
                           primary: true,
-                          crossAxisCount: 4,
+                          crossAxisCount: 2,
                           itemCount: 4,
                           itemBuilder: (BuildContext context, int index) {
                             return SupportedVendorsTileGridViewNetworkImage(
                               companysLogs[index],
                             );
                           },
-                          staggeredTileBuilder: (int index) =>
-                              StaggeredTile.count(2, index.isEven ? 1.5 : 1.5),
+                          // staggeredTileBuilder: (int index) =>
+                          //     StaggeredTile.count(2, index.isEven ? 1.5 : 1.5),
                           mainAxisSpacing: 30.0,
                           crossAxisSpacing: 26.0,
                         ),

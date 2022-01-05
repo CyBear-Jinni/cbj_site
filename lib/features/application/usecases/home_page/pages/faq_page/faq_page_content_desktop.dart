@@ -115,9 +115,10 @@ class FaqPageContentDesktop extends StatelessWidget {
                                       color: Colors.white,
                                     ),
                                   ),
-                                  TextSpan(
-                                    text: ' Currently not but we are working'
-                                        ' on free support out of the box.',
+                                  const TextSpan(
+                                    text: ' Yes, but you will need to ask for '
+                                        'it in the Discord server for your '
+                                        'home.',
                                   ),
                                 ],
                               ),
@@ -137,28 +138,15 @@ class FaqPageContentDesktop extends StatelessWidget {
                                     ),
                                   ),
                                   const TextSpan(
-                                    text: ' Currently not but we are working'
-                                        ' on free support out of the box.\n'
-                                        '    The project for that is named ',
-                                  ),
-                                  TextSpan(
-                                    text: 'cbj remote pipes',
-                                    recognizer: TapGestureRecognizer()
-                                      ..onTap = () async {
-                                        const String url =
-                                            'https://github.com/CyBear-Jinni/cbj_remote-pipes';
-                                        if (await canLaunch(url)) {
-                                          await launch(url);
-                                        } else {
-                                          throw 'Could not launch $url';
-                                        }
-                                      },
-                                    style: const TextStyle(
-                                      color: Colors.blue,
-                                    ),
+                                    text: ' Yes, but you will need to ask for '
+                                        'it in the Discord server for your '
+                                        'home.\n'
+                                        'We are working on making it work'
+                                        ' out of the box for everyone.\n',
                                   ),
                                   const TextSpan(
-                                    text: ' and is only transferring '
+                                    text: 'It is importent to note that it is '
+                                        'only transferring '
                                         'your requests to your Hub ',
                                   ),
                                   const TextSpan(

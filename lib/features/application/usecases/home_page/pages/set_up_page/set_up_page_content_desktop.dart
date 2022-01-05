@@ -85,29 +85,54 @@ class SetUpPageContentDesktop extends StatelessWidget {
                           const SizedBox(
                             height: 40,
                           ),
-                          SizedBox(
-                            width: double.infinity,
-                            child: RichText(
-                              text: TextSpan(
-                                style: TextStyle(
-                                  fontSize: 17,
-                                  color: Theme.of(context)
-                                      .textTheme
-                                      .bodyText2!
-                                      .color,
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              RichText(
+                                text: TextSpan(
+                                  style: TextStyle(
+                                    fontSize: 17,
+                                    color: Theme.of(context)
+                                        .textTheme
+                                        .bodyText2!
+                                        .color,
+                                  ),
+                                  children: const [
+                                    TextSpan(
+                                      text: '1. ',
+                                      style: TextStyle(color: Colors.white),
+                                    ),
+                                    TextSpan(
+                                      text: 'Download the RaspberryPi image '
+                                          '(.iso file).',
+                                    ),
+                                  ],
                                 ),
-                                children: const [
-                                  TextSpan(
-                                    text: '1. ',
-                                    style: TextStyle(color: Colors.white),
-                                  ),
-                                  TextSpan(
-                                    text: 'Download the RaspberryPi image '
-                                        '(.iso file). Currently not supported.',
-                                  ),
-                                ],
                               ),
-                            ),
+                              Container(
+                                width: 200,
+                                color: Colors.white,
+                                child: InkWell(
+                                  onTap: () {
+                                    launch(
+                                      'https://drive.google.com/u/0/uc?id=1aC6RlNDmD6JtUGO-qc9CnyitL2PFk5cM&export=download',
+                                    );
+                                  },
+                                  child: CachedNetworkImage(
+                                    imageUrl:
+                                        'https://blog.idrsolutions.com/wp-content/uploads/2014/12/raspberry_logo.png',
+                                    fit: BoxFit.cover,
+                                    progressIndicatorBuilder:
+                                        (context, url, downloadProgress) =>
+                                            CircularProgressIndicator(
+                                      value: downloadProgress.progress,
+                                    ),
+                                    errorWidget: (context, url, error) =>
+                                        const Icon(Icons.error),
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                           const SizedBox(
                             height: 10,

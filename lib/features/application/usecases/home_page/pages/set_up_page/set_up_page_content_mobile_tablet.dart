@@ -102,8 +102,8 @@ class SetUpPageContentMobileTablet extends StatelessWidget {
                                     style: TextStyle(color: Colors.white),
                                   ),
                                   TextSpan(
-                                    text: 'Download the RaspberryPi image '
-                                        '(.iso file).',
+                                    text: 'Download the CyBear Jinni '
+                                        'RaspberryPi image.',
                                   ),
                                 ],
                               ),
@@ -123,7 +123,7 @@ class SetUpPageContentMobileTablet extends StatelessWidget {
                               },
                               child: CachedNetworkImage(
                                 imageUrl:
-                                    'https://blog.idrsolutions.com/wp-content/uploads/2014/12/raspberry_logo.png',
+                                    'https://i.ibb.co/1RFBWkn/raspberry-logo.png',
                                 fit: BoxFit.cover,
                                 progressIndicatorBuilder:
                                     (context, url, downloadProgress) =>

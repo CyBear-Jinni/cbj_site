@@ -5,7 +5,6 @@ import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/
 import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/home_page/widgets/easy_to_use_benefit_block.dart';
 import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/home_page/widgets/privacy_and_open_source_benefit_block.dart';
 import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/home_page/widgets/supported_vendors_tile_grid_view.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -69,20 +68,23 @@ class HomePageContentMobileTablet extends StatelessWidget {
                           Container(
                             margin: const EdgeInsets.only(left: 170, top: 0.5),
                             decoration: BoxDecoration(
-                                color: Colors.black.withOpacity(0.8),
-                                borderRadius: const BorderRadius.all(
-                                    Radius.circular(20))),
+                              color: Colors.black.withOpacity(0.8),
+                              borderRadius: const BorderRadius.all(
+                                Radius.circular(20),
+                              ),
+                            ),
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Text(
                                 'Smart Home',
                                 style: TextStyle(
-                                    fontSize: 17,
-                                    color: Theme.of(context)
-                                        .textTheme
-                                        .bodyText1!
-                                        .color,
-                                    fontWeight: FontWeight.w700),
+                                  fontSize: 17,
+                                  color: Theme.of(context)
+                                      .textTheme
+                                      .bodyText1!
+                                      .color,
+                                  fontWeight: FontWeight.w700,
+                                ),
                               ),
                             ),
                           ),

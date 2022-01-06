@@ -46,9 +46,9 @@ class PrivacyAndOpenSourceBenefitBlock extends StatelessWidget {
                       Text(
                         'Privacy & Open Source',
                         style: TextStyle(
-                            fontSize: 26,
-                            color:
-                                Theme.of(context).textTheme.bodyText1!.color),
+                          fontSize: 26,
+                          color: Theme.of(context).textTheme.bodyText1!.color,
+                        ),
                       ),
                       const SizedBox(
                         height: 5,

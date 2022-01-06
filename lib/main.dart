@@ -65,7 +65,7 @@ class MyApp extends StatelessWidget {
           bodyText1: TextStyle(color: Colors.white),
           bodyText2: TextStyle(color: Colors.white70),
         ),
-        fontFamily: 'gidole_regular',
+        // fontFamily: 'gidole_regular',
       ),
       routes: <String, WidgetBuilder>{
         '/': (BuildContext context) {

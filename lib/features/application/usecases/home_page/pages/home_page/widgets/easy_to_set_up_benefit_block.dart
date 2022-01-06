@@ -42,9 +42,9 @@ class EasyToSetUpBenefitBlock extends StatelessWidget {
                       Text(
                         'Easy to Set Up',
                         style: TextStyle(
-                            fontSize: 26,
-                            color:
-                                Theme.of(context).textTheme.bodyText1!.color),
+                          fontSize: 26,
+                          color: Theme.of(context).textTheme.bodyText1!.color,
+                        ),
                       ),
                       const SizedBox(
                         height: 5,
@@ -52,15 +52,17 @@ class EasyToSetUpBenefitBlock extends StatelessWidget {
                       Container(
                         padding: const EdgeInsets.all(5),
                         decoration: BoxDecoration(
-                            color: Theme.of(context).textTheme.bodyText1!.color,
-                            borderRadius:
-                                const BorderRadius.all(Radius.circular(10))),
+                          color: Theme.of(context).textTheme.bodyText1!.color,
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(10)),
+                        ),
                         child: Text(
                           'Available',
                           style: TextStyle(
-                              fontSize: 14,
-                              color: Theme.of(context).primaryColor,
-                              fontWeight: FontWeight.bold),
+                            fontSize: 14,
+                            color: Theme.of(context).primaryColor,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ),
                     ],

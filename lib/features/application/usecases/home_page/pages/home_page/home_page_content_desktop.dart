@@ -8,6 +8,7 @@ import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
 /// Home page content for the desktop
 class HomePageContentDesktop extends StatelessWidget {
@@ -20,6 +21,13 @@ class HomePageContentDesktop extends StatelessWidget {
     'https://play-lh.googleusercontent.com/Qrq9zB_-bWuAD0ETPeBRTsRHOSjmW_uzmexY5rF7wo2JeNc-oLuvsQSYdg0Uxsq6mkA=s180',
     'https://i.ibb.co/hfRhB0Q/mqtt-logo.png',
   ];
+
+  final YoutubePlayerController _controller = YoutubePlayerController(
+    initialVideoId: 'o5owbiQahnY',
+    params: const YoutubePlayerParams(
+      startAt: Duration(minutes: 2),
+    ),
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -88,6 +96,14 @@ class HomePageContentDesktop extends StatelessWidget {
                               fontWeight: FontWeight.w700,
                             ),
                           ),
+                        ),
+                      ),
+                      Container(
+                        margin: const EdgeInsets.fromLTRB(300, 20, 300, 0),
+                        child: YoutubePlayerControllerProvider(
+                          // Provides controller to all the widget below it.
+                          controller: _controller,
+                          child: const YoutubePlayerIFrame(),
                         ),
                       ),
                     ],

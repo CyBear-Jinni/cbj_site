@@ -292,10 +292,14 @@ class SetUpPageContentDesktop extends StatelessWidget {
                                     imageUrl:
                                         'https://i.ibb.co/RDPqFrx/mosquitto.jpg',
                                     fit: BoxFit.cover,
-                                    progressIndicatorBuilder: (context, url,
-                                            downloadProgress) =>
+                                    progressIndicatorBuilder: (
+                                      context,
+                                      url,
+                                      downloadProgress,
+                                    ) =>
                                         CircularProgressIndicator(
-                                            value: downloadProgress.progress),
+                                      value: downloadProgress.progress,
+                                    ),
                                     errorWidget: (context, url, error) =>
                                         const Icon(Icons.error),
                                   ),
@@ -324,6 +328,57 @@ class SetUpPageContentDesktop extends StatelessWidget {
                                       style: TextStyle(color: Colors.white),
                                     ),
                                     TextSpan(
+                                      text: 'Install Node-RED.',
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              InkWell(
+                                onTap: () {
+                                  launch('https://snapcraft.io/node-red');
+                                },
+                                child: SizedBox(
+                                  width: 200,
+                                  child: CachedNetworkImage(
+                                    imageUrl:
+                                        'https://i.ibb.co/frbk46N/Node-RED-long-icon.jpg',
+                                    fit: BoxFit.cover,
+                                    progressIndicatorBuilder: (
+                                      context,
+                                      url,
+                                      downloadProgress,
+                                    ) =>
+                                        CircularProgressIndicator(
+                                      value: downloadProgress.progress,
+                                    ),
+                                    errorWidget: (context, url, error) =>
+                                        const Icon(Icons.error),
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              RichText(
+                                text: TextSpan(
+                                  style: TextStyle(
+                                    fontSize: 17,
+                                    color: Theme.of(context)
+                                        .textTheme
+                                        .bodyText2!
+                                        .color,
+                                  ),
+                                  children: const [
+                                    TextSpan(
+                                      text: '3. ',
+                                      style: TextStyle(color: Colors.white),
+                                    ),
+                                    TextSpan(
                                       text: 'Install the cbj-hub snap.',
                                     ),
                                   ],
@@ -339,10 +394,14 @@ class SetUpPageContentDesktop extends StatelessWidget {
                                     imageUrl:
                                         'https://i.ibb.co/gJN2Wq1/snap-store-logo-dark.png',
                                     fit: BoxFit.cover,
-                                    progressIndicatorBuilder: (context, url,
-                                            downloadProgress) =>
+                                    progressIndicatorBuilder: (
+                                      context,
+                                      url,
+                                      downloadProgress,
+                                    ) =>
                                         CircularProgressIndicator(
-                                            value: downloadProgress.progress),
+                                      value: downloadProgress.progress,
+                                    ),
                                     errorWidget: (context, url, error) =>
                                         const Icon(Icons.error),
                                   ),

@@ -7,10 +7,18 @@ import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/
 import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/home_page/widgets/supported_vendors_tile_grid_view.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
 /// Home page content for the mobile and tablet screen size
 class HomePageContentMobileTablet extends StatelessWidget {
   final ScrollController _scrollController = ScrollController();
+
+  final YoutubePlayerController _controller = YoutubePlayerController(
+    initialVideoId: 'o5owbiQahnY',
+    params: const YoutubePlayerParams(
+      startAt: Duration(minutes: 2),
+    ),
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -57,11 +65,12 @@ class HomePageContentMobileTablet extends StatelessWidget {
                               child: Text(
                                 'CyBear Jinni',
                                 style: TextStyle(
-                                    fontSize: 50,
-                                    color: Theme.of(context)
-                                        .textTheme
-                                        .bodyText1!
-                                        .color),
+                                  fontSize: 50,
+                                  color: Theme.of(context)
+                                      .textTheme
+                                      .bodyText1!
+                                      .color,
+                                ),
                               ),
                             ),
                           ),
@@ -86,6 +95,14 @@ class HomePageContentMobileTablet extends StatelessWidget {
                                   fontWeight: FontWeight.w700,
                                 ),
                               ),
+                            ),
+                          ),
+                          Container(
+                            width: MediaQuery.of(context).size.width - 100,
+                            margin: const EdgeInsets.only(top: 200),
+                            child: YoutubePlayerControllerProvider(
+                              controller: _controller,
+                              child: const YoutubePlayerIFrame(),
                             ),
                           ),
                         ],

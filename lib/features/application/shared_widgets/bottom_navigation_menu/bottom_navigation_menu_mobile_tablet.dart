@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher_string.dart';
@@ -36,14 +37,38 @@ class BottomNavigationMenuMobileTablet extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: <Widget>[
-                          Tab(
-                            icon: FaIcon(
-                              FontAwesomeIcons.appStoreIos,
-                              color:
-                                  Theme.of(context).textTheme.bodyText1!.color,
-                            ),
-                            child: const Text(
-                              'App Store',
+                          TextButton(
+                            onPressed: () {
+                              showDialog(
+                                context: context,
+                                builder: (_) => const CupertinoAlertDialog(
+                                  title: Text(
+                                    'Currently does not exist',
+                                  ),
+                                  content: Text(
+                                    'The app support IOS but currently does not exist in the App store.\n'
+                                    'It will be added in the future.',
+                                  ),
+                                ),
+                              );
+                            },
+                            child: Tab(
+                              icon: FaIcon(
+                                FontAwesomeIcons.appStoreIos,
+                                color: Theme.of(context)
+                                    .textTheme
+                                    .bodyText1!
+                                    .color,
+                              ),
+                              child: Text(
+                                'App Store',
+                                style: TextStyle(
+                                  color: Theme.of(context)
+                                      .textTheme
+                                      .bodyText2!
+                                      .color,
+                                ),
+                              ),
                             ),
                           ),
                           TextButton(

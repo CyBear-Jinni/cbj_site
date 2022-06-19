@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher_string.dart';
@@ -39,14 +40,38 @@ class BottomNavigationMenuDesktop extends StatelessWidget {
                           const SizedBox(
                             width: 40,
                           ),
-                          Tab(
-                            icon: FaIcon(FontAwesomeIcons.appStoreIos,
+                          TextButton(
+                            onPressed: () {
+                              showDialog(
+                                context: context,
+                                builder: (_) => const CupertinoAlertDialog(
+                                  title: Text(
+                                    'Currently does not exist',
+                                  ),
+                                  content: Text(
+                                    'The app support IOS but currently does not exist in the App store.\n'
+                                    'It will be added in the future.',
+                                  ),
+                                ),
+                              );
+                            },
+                            child: Tab(
+                              icon: FaIcon(
+                                FontAwesomeIcons.appStoreIos,
                                 color: Theme.of(context)
                                     .textTheme
                                     .bodyText1!
-                                    .color),
-                            child: const Text(
-                              'App Store',
+                                    .color,
+                              ),
+                              child: Text(
+                                'App Store',
+                                style: TextStyle(
+                                  color: Theme.of(context)
+                                      .textTheme
+                                      .bodyText2!
+                                      .color,
+                                ),
+                              ),
                             ),
                           ),
                           const SizedBox(
@@ -59,18 +84,21 @@ class BottomNavigationMenuDesktop extends StatelessWidget {
                               );
                             },
                             child: Tab(
-                              icon: FaIcon(FontAwesomeIcons.googlePlay,
-                                  color: Theme.of(context)
-                                      .textTheme
-                                      .bodyText1!
-                                      .color),
+                              icon: FaIcon(
+                                FontAwesomeIcons.googlePlay,
+                                color: Theme.of(context)
+                                    .textTheme
+                                    .bodyText1!
+                                    .color,
+                              ),
                               child: Text(
                                 'Play Store',
                                 style: TextStyle(
-                                    color: Theme.of(context)
-                                        .textTheme
-                                        .bodyText2!
-                                        .color),
+                                  color: Theme.of(context)
+                                      .textTheme
+                                      .bodyText2!
+                                      .color,
+                                ),
                               ),
                             ),
                           ),
@@ -84,18 +112,21 @@ class BottomNavigationMenuDesktop extends StatelessWidget {
                               );
                             },
                             child: Tab(
-                              icon: FaIcon(FontAwesomeIcons.ubuntu,
-                                  color: Theme.of(context)
-                                      .textTheme
-                                      .bodyText1!
-                                      .color),
+                              icon: FaIcon(
+                                FontAwesomeIcons.ubuntu,
+                                color: Theme.of(context)
+                                    .textTheme
+                                    .bodyText1!
+                                    .color,
+                              ),
                               child: Text(
                                 'Snap Store',
                                 style: TextStyle(
-                                    color: Theme.of(context)
-                                        .textTheme
-                                        .bodyText2!
-                                        .color),
+                                  color: Theme.of(context)
+                                      .textTheme
+                                      .bodyText2!
+                                      .color,
+                                ),
                               ),
                             ),
                           ),
@@ -127,11 +158,13 @@ class BottomNavigationMenuDesktop extends StatelessWidget {
                               );
                             },
                             child: Tab(
-                              icon: FaIcon(FontAwesomeIcons.twitter,
-                                  color: Theme.of(context)
-                                      .textTheme
-                                      .bodyText1!
-                                      .color),
+                              icon: FaIcon(
+                                FontAwesomeIcons.twitter,
+                                color: Theme.of(context)
+                                    .textTheme
+                                    .bodyText1!
+                                    .color,
+                              ),
                               child: const Text(''),
                             ),
                           ),
@@ -145,11 +178,13 @@ class BottomNavigationMenuDesktop extends StatelessWidget {
                               );
                             },
                             child: Tab(
-                              icon: FaIcon(FontAwesomeIcons.instagram,
-                                  color: Theme.of(context)
-                                      .textTheme
-                                      .bodyText1!
-                                      .color),
+                              icon: FaIcon(
+                                FontAwesomeIcons.instagram,
+                                color: Theme.of(context)
+                                    .textTheme
+                                    .bodyText1!
+                                    .color,
+                              ),
                               child: const Text(''),
                             ),
                           ),
@@ -163,11 +198,13 @@ class BottomNavigationMenuDesktop extends StatelessWidget {
                               );
                             },
                             child: Tab(
-                              icon: FaIcon(FontAwesomeIcons.linkedin,
-                                  color: Theme.of(context)
-                                      .textTheme
-                                      .bodyText1!
-                                      .color),
+                              icon: FaIcon(
+                                FontAwesomeIcons.linkedin,
+                                color: Theme.of(context)
+                                    .textTheme
+                                    .bodyText1!
+                                    .color,
+                              ),
                               child: const Text(''),
                             ),
                           ),
@@ -179,11 +216,13 @@ class BottomNavigationMenuDesktop extends StatelessWidget {
                               launchUrlString('https://discord.gg/mUXfwUY');
                             },
                             child: Tab(
-                              icon: FaIcon(FontAwesomeIcons.discord,
-                                  color: Theme.of(context)
-                                      .textTheme
-                                      .bodyText1!
-                                      .color),
+                              icon: FaIcon(
+                                FontAwesomeIcons.discord,
+                                color: Theme.of(context)
+                                    .textTheme
+                                    .bodyText1!
+                                    .color,
+                              ),
                               child: const Text(''),
                             ),
                           ),
@@ -197,11 +236,13 @@ class BottomNavigationMenuDesktop extends StatelessWidget {
                               );
                             },
                             child: Tab(
-                              icon: FaIcon(FontAwesomeIcons.github,
-                                  color: Theme.of(context)
-                                      .textTheme
-                                      .bodyText1!
-                                      .color),
+                              icon: FaIcon(
+                                FontAwesomeIcons.github,
+                                color: Theme.of(context)
+                                    .textTheme
+                                    .bodyText1!
+                                    .color,
+                              ),
                               child: const Text(''),
                             ),
                           ),

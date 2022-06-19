@@ -1,7 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 /// Bottom navigation menu for desktop screen size
 class BottomNavigationMenuDesktop extends StatelessWidget {
@@ -55,8 +54,9 @@ class BottomNavigationMenuDesktop extends StatelessWidget {
                           ),
                           TextButton(
                             onPressed: () {
-                              launch(
-                                  'https://play.google.com/store/apps/details?id=com.cybear_jinni.smart_home');
+                              launchUrlString(
+                                'https://play.google.com/store/apps/details?id=com.cybear_jinni.smart_home',
+                              );
                             },
                             child: Tab(
                               icon: FaIcon(FontAwesomeIcons.googlePlay,
@@ -79,7 +79,9 @@ class BottomNavigationMenuDesktop extends StatelessWidget {
                           ),
                           TextButton(
                             onPressed: () {
-                              launch('https://snapcraft.io/cybear-jinni');
+                              launchUrlString(
+                                'https://snapcraft.io/cybear-jinni',
+                              );
                             },
                             child: Tab(
                               icon: FaIcon(FontAwesomeIcons.ubuntu,
@@ -120,7 +122,9 @@ class BottomNavigationMenuDesktop extends StatelessWidget {
                           ),
                           TextButton(
                             onPressed: () {
-                              launch('https://twitter.com/CyBearJinni');
+                              launchUrlString(
+                                'https://twitter.com/CyBearJinni',
+                              );
                             },
                             child: Tab(
                               icon: FaIcon(FontAwesomeIcons.twitter,
@@ -136,8 +140,9 @@ class BottomNavigationMenuDesktop extends StatelessWidget {
                           ),
                           TextButton(
                             onPressed: () {
-                              launch(
-                                  'https://instagram.com/cybearjinni?igshid=rfllj6qbv6l8');
+                              launchUrlString(
+                                'https://instagram.com/cybearjinni?igshid=rfllj6qbv6l8',
+                              );
                             },
                             child: Tab(
                               icon: FaIcon(FontAwesomeIcons.instagram,
@@ -153,8 +158,9 @@ class BottomNavigationMenuDesktop extends StatelessWidget {
                           ),
                           TextButton(
                             onPressed: () {
-                              launch(
-                                  'https://www.linkedin.com/company/cybear-jinni');
+                              launchUrlString(
+                                'https://www.linkedin.com/company/cybear-jinni',
+                              );
                             },
                             child: Tab(
                               icon: FaIcon(FontAwesomeIcons.linkedin,
@@ -170,7 +176,7 @@ class BottomNavigationMenuDesktop extends StatelessWidget {
                           ),
                           TextButton(
                             onPressed: () {
-                              launch('https://discord.gg/mUXfwUY');
+                              launchUrlString('https://discord.gg/mUXfwUY');
                             },
                             child: Tab(
                               icon: FaIcon(FontAwesomeIcons.discord,
@@ -186,7 +192,9 @@ class BottomNavigationMenuDesktop extends StatelessWidget {
                           ),
                           TextButton(
                             onPressed: () {
-                              launch('https://github.com/CyBear-Jinni');
+                              launchUrlString(
+                                'https://github.com/CyBear-Jinni',
+                              );
                             },
                             child: Tab(
                               icon: FaIcon(FontAwesomeIcons.github,

@@ -1,7 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 /// Show individual card for with name and image and link to open when pressed
 class DeviceCard extends StatelessWidget {
@@ -23,7 +22,7 @@ class DeviceCard extends StatelessWidget {
         primary: Colors.white,
       ),
       onPressed: () {
-        launch(urlOpenOnPressed);
+        launchUrlString(urlOpenOnPressed);
       },
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,

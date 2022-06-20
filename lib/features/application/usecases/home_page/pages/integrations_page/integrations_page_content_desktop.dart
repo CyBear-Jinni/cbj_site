@@ -1,6 +1,5 @@
 import 'package:cybear_jinni_site/features/application/shared_widgets/bottom_navigation_menu/bottom_navigation_menu.dart';
 import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/integrations_page/device_card.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 /// Integrations page content for the desktop
@@ -10,7 +9,7 @@ class IntegrationsPageContentDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scrollbar(
-      isAlwaysShown: true,
+      thumbVisibility: true,
       thickness: 13,
       controller: _scrollController,
       child: ListView(

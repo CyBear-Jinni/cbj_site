@@ -1,9 +1,8 @@
 import 'package:cybear_jinni_site/features/application/shared_widgets/bottom_navigation_menu/bottom_navigation_menu.dart';
 import 'package:expandable/expandable.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 /// Frequently asked questions for the desktop
 class FaqPageContentDesktop extends StatelessWidget {
@@ -12,7 +11,7 @@ class FaqPageContentDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scrollbar(
-      isAlwaysShown: true,
+      thumbVisibility: true,
       thickness: 13,
       controller: _scrollController,
       child: ListView(
@@ -115,7 +114,7 @@ class FaqPageContentDesktop extends StatelessWidget {
                                       color: Colors.white,
                                     ),
                                   ),
-                                  const TextSpan(
+                                  TextSpan(
                                     text: ' Yes, but you will need to ask for '
                                         'it in the Discord server for your '
                                         'home.',
@@ -249,8 +248,8 @@ class FaqPageContentDesktop extends StatelessWidget {
                                       ..onTap = () async {
                                         const String url =
                                             'https://discord.gg/mUXfwUY';
-                                        if (await canLaunch(url)) {
-                                          await launch(url);
+                                        if (await canLaunchUrlString(url)) {
+                                          await launchUrlString(url);
                                         } else {
                                           throw 'Could not launch $url';
                                         }
@@ -268,8 +267,8 @@ class FaqPageContentDesktop extends StatelessWidget {
                                       ..onTap = () async {
                                         const String url =
                                             'https://github.com/CyBear-Jinni/cbj_hub/issues';
-                                        if (await canLaunch(url)) {
-                                          await launch(url);
+                                        if (await canLaunchUrlString(url)) {
+                                          await launchUrlString(url);
                                         } else {
                                           throw 'Could not launch $url';
                                         }

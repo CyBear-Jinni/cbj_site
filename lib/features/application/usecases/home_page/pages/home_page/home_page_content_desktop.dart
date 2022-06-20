@@ -32,7 +32,7 @@ class HomePageContentDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scrollbar(
-      isAlwaysShown: true,
+      thumbVisibility: true,
       thickness: 13,
       controller: _scrollController,
       child: ListView(

@@ -33,7 +33,7 @@ class AboutPageContentDesktop extends StatelessWidget {
               : null,
           backgroundColor: Colors.transparent,
           body: Scrollbar(
-            isAlwaysShown: true,
+            thumbVisibility: true,
             thickness: 13,
             controller: _scrollController,
             child: ListView(

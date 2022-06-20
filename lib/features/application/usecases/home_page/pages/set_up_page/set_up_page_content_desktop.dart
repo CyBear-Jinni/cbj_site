@@ -1,8 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cybear_jinni_site/features/application/shared_widgets/bottom_navigation_menu/bottom_navigation_menu.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 /// Set Up page content for the desktop
 class SetUpPageContentDesktop extends StatelessWidget {
@@ -11,7 +10,7 @@ class SetUpPageContentDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scrollbar(
-      isAlwaysShown: true,
+      thumbVisibility: true,
       thickness: 13,
       controller: _scrollController,
       child: ListView(
@@ -114,7 +113,7 @@ class SetUpPageContentDesktop extends StatelessWidget {
                                 color: Colors.white,
                                 child: InkWell(
                                   onTap: () {
-                                    launch(
+                                    launchUrlString(
                                       'https://drive.google.com/u/0/uc?id=1aC6RlNDmD6JtUGO-qc9CnyitL2PFk5cM&export=download',
                                     );
                                   },
@@ -166,7 +165,8 @@ class SetUpPageContentDesktop extends StatelessWidget {
                                 width: 200,
                                 child: InkWell(
                                   onTap: () {
-                                    launch('https://www.balena.io/etcher/');
+                                    launchUrlString(
+                                        'https://www.balena.io/etcher/');
                                   },
                                   child: CachedNetworkImage(
                                     imageUrl:
@@ -284,7 +284,9 @@ class SetUpPageContentDesktop extends StatelessWidget {
                               ),
                               InkWell(
                                 onTap: () {
-                                  launch('https://snapcraft.io/mosquitto');
+                                  launchUrlString(
+                                    'https://snapcraft.io/mosquitto',
+                                  );
                                 },
                                 child: SizedBox(
                                   width: 200,
@@ -335,7 +337,9 @@ class SetUpPageContentDesktop extends StatelessWidget {
                               ),
                               InkWell(
                                 onTap: () {
-                                  launch('https://snapcraft.io/node-red');
+                                  launchUrlString(
+                                    'https://snapcraft.io/node-red',
+                                  );
                                 },
                                 child: SizedBox(
                                   width: 200,
@@ -388,7 +392,9 @@ class SetUpPageContentDesktop extends StatelessWidget {
                                 width: 200,
                                 child: InkWell(
                                   onTap: () {
-                                    launch('https://snapcraft.io/cbj-hub');
+                                    launchUrlString(
+                                      'https://snapcraft.io/cbj-hub',
+                                    );
                                   },
                                   child: CachedNetworkImage(
                                     imageUrl:
@@ -502,7 +508,7 @@ class SetUpPageContentDesktop extends StatelessWidget {
                                     width: 200,
                                     child: InkWell(
                                       onTap: () {
-                                        launch(
+                                        launchUrlString(
                                             'https://play.google.com/store/apps/details?id=com.cybear_jinni.smart_home');
                                       },
                                       child: CachedNetworkImage(
@@ -526,7 +532,7 @@ class SetUpPageContentDesktop extends StatelessWidget {
                                     width: 200,
                                     child: InkWell(
                                       onTap: () {
-                                        launch(
+                                        launchUrlString(
                                             'https://snapcraft.io/cybear-jinni');
                                       },
                                       child: CachedNetworkImage(

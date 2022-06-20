@@ -1,9 +1,8 @@
 import 'package:cybear_jinni_site/features/application/shared_widgets/bottom_navigation_menu/bottom_navigation_menu.dart';
 import 'package:expandable/expandable.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 /// Faq page content for the mobile and tablet screen size
 class FaqPageContentMobileTablet extends StatelessWidget {
@@ -12,7 +11,7 @@ class FaqPageContentMobileTablet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scrollbar(
-      isAlwaysShown: true,
+      thumbVisibility: true,
       thickness: 13,
       controller: _scrollController,
       child: ListView(
@@ -115,7 +114,7 @@ class FaqPageContentMobileTablet extends StatelessWidget {
                                       color: Colors.white,
                                     ),
                                   ),
-                                  const TextSpan(
+                                  TextSpan(
                                     text: ' Yes, but you will need to ask for '
                                         'it in the Discord server for your '
                                         'home.',
@@ -129,32 +128,32 @@ class FaqPageContentMobileTablet extends StatelessWidget {
                                 style: DefaultTextStyle.of(context)
                                     .style
                                     .copyWith(fontSize: 20),
-                                children: <TextSpan>[
-                                  const TextSpan(
+                                children: const <TextSpan>[
+                                  TextSpan(
                                     text: 'A:',
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       color: Colors.white,
                                     ),
                                   ),
-                                  const TextSpan(
+                                  TextSpan(
                                     text: ' Yes, but you will need to ask for '
                                         'it in the Discord server for your '
                                         'home.\nWe are working on making it work'
                                         ' out of the box for everyone.\n',
                                   ),
-                                  const TextSpan(
+                                  TextSpan(
                                     text: 'It is importent to note that it is '
                                         'only transferring '
                                         'your requests to your Hub ',
                                   ),
-                                  const TextSpan(
+                                  TextSpan(
                                     text: 'without',
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
-                                  const TextSpan(
+                                  TextSpan(
                                     text: ' collecting any information '
                                         'about you.',
                                   ),
@@ -248,8 +247,8 @@ class FaqPageContentMobileTablet extends StatelessWidget {
                                       ..onTap = () async {
                                         const String url =
                                             'https://discord.gg/mUXfwUY';
-                                        if (await canLaunch(url)) {
-                                          await launch(url);
+                                        if (await canLaunchUrlString(url)) {
+                                          await launchUrlString(url);
                                         } else {
                                           throw 'Could not launch $url';
                                         }
@@ -267,8 +266,8 @@ class FaqPageContentMobileTablet extends StatelessWidget {
                                       ..onTap = () async {
                                         const String url =
                                             'https://github.com/CyBear-Jinni/cbj_hub/issues';
-                                        if (await canLaunch(url)) {
-                                          await launch(url);
+                                        if (await canLaunchUrlString(url)) {
+                                          await launchUrlString(url);
                                         } else {
                                           throw 'Could not launch $url';
                                         }

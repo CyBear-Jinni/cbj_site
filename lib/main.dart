@@ -29,6 +29,15 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
+  final ThemeData theme = ThemeData(
+    primarySwatch: Colors.deepPurple,
+    textTheme: const TextTheme(
+      bodyText1: TextStyle(color: Colors.white),
+      bodyText2: TextStyle(color: Colors.white70),
+    ),
+    // fontFamily: 'gidole_regular',
+  );
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -58,15 +67,12 @@ class MyApp extends StatelessWidget {
       locale: context.locale,
       //      darkTheme: ThemeData(brightness: Brightness.dark),
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
-        accentColor: Colors.indigo,
-        textTheme: const TextTheme(
-          bodyText1: TextStyle(color: Colors.white),
-          bodyText2: TextStyle(color: Colors.white70),
+      theme: theme.copyWith(
+        colorScheme: theme.colorScheme.copyWith(
+          secondary: Colors.indigo,
         ),
-        // fontFamily: 'gidole_regular',
       ),
+
       routes: <String, WidgetBuilder>{
         '/': (BuildContext context) {
           MySingleton.setCurrentPageName('landingPage');

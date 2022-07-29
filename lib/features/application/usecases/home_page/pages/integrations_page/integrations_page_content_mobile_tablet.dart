@@ -106,11 +106,11 @@ class IntegrationsPageContentMobileTablet extends StatelessWidget {
                         'https://i.ibb.co/XZLGCRd/Tasmota-logo.png',
                         'https://tasmota.github.io',
                       ),
-                      DeviceCard(
-                        'ESPHome',
-                        'https://i.ibb.co/W2YG23s/ESPHome-logo.png',
-                        'https://esphome.io',
-                      ),
+                      // DeviceCard(
+                      //   'ESPHome',
+                      //   'https://i.ibb.co/W2YG23s/ESPHome-logo.png',
+                      //   'https://esphome.io',
+                      // ),
                       DeviceCard(
                         'Node-RED',
                         'https://i.ibb.co/THRX9kq/node-RED-logo.png',

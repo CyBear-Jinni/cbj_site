@@ -106,18 +106,36 @@ class FaqPageContentMobileTablet extends StatelessWidget {
                             collapsed: RichText(
                               text: TextSpan(
                                 style: DefaultTextStyle.of(context).style,
-                                children: const <TextSpan>[
-                                  TextSpan(
+                                children: <TextSpan>[
+                                  const TextSpan(
                                     text: 'A:',
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       color: Colors.white,
                                     ),
                                   ),
-                                  TextSpan(
+                                  const TextSpan(
                                     text: ' Yes, but you will need to ask for '
-                                        'it in the Discord server for your '
-                                        'home.',
+                                        'it in the ',
+                                  ),
+                                  TextSpan(
+                                    text: 'Discord server',
+                                    recognizer: TapGestureRecognizer()
+                                      ..onTap = () async {
+                                        const String url =
+                                            'https://discord.gg/mUXfwUY';
+                                        if (await canLaunchUrlString(url)) {
+                                          await launchUrlString(url);
+                                        } else {
+                                          throw 'Could not launch $url';
+                                        }
+                                      },
+                                    style: const TextStyle(
+                                      color: Colors.blue,
+                                    ),
+                                  ),
+                                  const TextSpan(
+                                    text: ' for your home.',
                                   ),
                                 ],
                               ),
@@ -128,34 +146,100 @@ class FaqPageContentMobileTablet extends StatelessWidget {
                                 style: DefaultTextStyle.of(context)
                                     .style
                                     .copyWith(fontSize: 20),
-                                children: const <TextSpan>[
-                                  TextSpan(
+                                children: <TextSpan>[
+                                  const TextSpan(
                                     text: 'A:',
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       color: Colors.white,
                                     ),
                                   ),
-                                  TextSpan(
+                                  const TextSpan(
                                     text: ' Yes, but you will need to ask for '
-                                        'it in the Discord server for your '
-                                        'home.\nWe are working on making it work'
-                                        ' out of the box for everyone.\n',
+                                        'it in the ',
                                   ),
                                   TextSpan(
-                                    text: 'It is importent to note that it is '
+                                    text: 'Discord server',
+                                    recognizer: TapGestureRecognizer()
+                                      ..onTap = () async {
+                                        const String url =
+                                            'https://discord.gg/mUXfwUY';
+                                        if (await canLaunchUrlString(url)) {
+                                          await launchUrlString(url);
+                                        } else {
+                                          throw 'Could not launch $url';
+                                        }
+                                      },
+                                    style: const TextStyle(
+                                      color: Colors.blue,
+                                    ),
+                                  ),
+                                  const TextSpan(
+                                    text: ' for your '
+                                        'home.\n'
+                                        'We are working on making it work'
+                                        ' out of the box for everyone.\n',
+                                  ),
+                                  const TextSpan(
+                                    text: 'It is important to note that it is '
                                         'only transferring '
                                         'your requests to your Hub ',
                                   ),
-                                  TextSpan(
+                                  const TextSpan(
                                     text: 'without',
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
-                                  TextSpan(
+                                  const TextSpan(
                                     text: ' collecting any information '
-                                        'about you.',
+                                        'about you.\n\n',
+                                  ),
+                                  const TextSpan(
+                                    text: 'There is also a way to set your own '
+                                        'routing system using ',
+                                  ),
+                                  TextSpan(
+                                    text: 'cbj remote-pipes',
+                                    recognizer: TapGestureRecognizer()
+                                      ..onTap = () async {
+                                        const String url =
+                                            'https://github.com/CyBear-Jinni/cbj_remote-pipes';
+                                        if (await canLaunchUrlString(url)) {
+                                          await launchUrlString(url);
+                                        } else {
+                                          throw 'Could not launch $url';
+                                        }
+                                      },
+                                    style: const TextStyle(
+                                      color: Colors.blue,
+                                    ),
+                                  ),
+                                  const TextSpan(
+                                    text: ' but it is currently missing a '
+                                        'documentation.\n'
+                                        'For advance computer users you can'
+                                        ' ask for help setting it up in '
+                                        'the ',
+                                  ),
+                                  TextSpan(
+                                    text: 'Discord server',
+                                    recognizer: TapGestureRecognizer()
+                                      ..onTap = () async {
+                                        const String url =
+                                            'https://discord.gg/mUXfwUY';
+                                        if (await canLaunchUrlString(url)) {
+                                          await launchUrlString(url);
+                                        } else {
+                                          throw 'Could not launch $url';
+                                        }
+                                      },
+                                    style: const TextStyle(
+                                      color: Colors.blue,
+                                    ),
+                                  ),
+                                  const TextSpan(
+                                    text: '.',
                                   ),
                                 ],
                               ),
@@ -207,18 +291,56 @@ class FaqPageContentMobileTablet extends StatelessWidget {
                             collapsed: RichText(
                               text: TextSpan(
                                 style: DefaultTextStyle.of(context).style,
-                                children: const <TextSpan>[
-                                  TextSpan(
+                                children: <TextSpan>[
+                                  const TextSpan(
                                     text: 'A:',
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       color: Colors.white,
                                     ),
                                   ),
-                                  TextSpan(
+                                  const TextSpan(
                                     text: ' You can ask us to add support for '
-                                        'it in the discord server or by'
-                                        ' opening a GitHub issue.',
+                                        'it in the ',
+                                  ),
+                                  TextSpan(
+                                    text: 'Discord server',
+                                    recognizer: TapGestureRecognizer()
+                                      ..onTap = () async {
+                                        const String url =
+                                            'https://discord.gg/mUXfwUY';
+                                        if (await canLaunchUrlString(url)) {
+                                          await launchUrlString(url);
+                                        } else {
+                                          throw 'Could not launch $url';
+                                        }
+                                      },
+                                    style: const TextStyle(
+                                      color: Colors.blue,
+                                    ),
+                                  ),
+                                  const TextSpan(
+                                    text: ' or by'
+                                        ' opening a ',
+                                  ),
+                                  TextSpan(
+                                    text: 'new GitHub issue',
+                                    recognizer: TapGestureRecognizer()
+                                      ..onTap = () async {
+                                        const String url =
+                                            'https://github.com/CyBear-Jinni/cbj_hub/issues/new';
+                                        if (await canLaunchUrlString(url)) {
+                                          await launchUrlString(url);
+                                        } else {
+                                          throw 'Could not launch $url';
+                                        }
+                                      },
+                                    style: const TextStyle(
+                                      color: Colors.blue,
+                                    ),
+                                  ),
+                                  const TextSpan(
+                                    text: '.',
                                   ),
                                 ],
                               ),
@@ -242,7 +364,7 @@ class FaqPageContentMobileTablet extends StatelessWidget {
                                         'it in the ',
                                   ),
                                   TextSpan(
-                                    text: 'discord server',
+                                    text: 'Discord server',
                                     recognizer: TapGestureRecognizer()
                                       ..onTap = () async {
                                         const String url =

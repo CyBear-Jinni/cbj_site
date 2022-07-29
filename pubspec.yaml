@@ -43,7 +43,7 @@ dependencies:
   # Bloc for state management, replace StatefulWidget
   flutter_bloc: ^8.0.1
   # staggered grid view which supports multiple columns with rows of varying sizes.
-  flutter_staggered_grid_view: ^0.6.1
+  flutter_staggered_grid_view: ^0.6.2
   # The Font Awesome Icon pack available as set of Flutter Icons. https://fontawesome.com/
   font_awesome_flutter: ^10.1.0
   # Add hex color codes to your flutter projects
@@ -55,7 +55,7 @@ dependencies:
   # Allows you to create a readable responsive UI
   responsive_builder: ^0.4.2
   # Launching a URL in the mobile platform
-  url_launcher: ^6.1.3
+  url_launcher: ^6.1.5
   # YouTube iFrame player
   youtube_player_iframe: ^2.3.0
 
@@ -66,4 +66,4 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   # Collection of lint rules for Dart and Flutter projects.
-  lint: ^1.8.2
+  lint: ^1.10.0

@@ -107,6 +107,11 @@ class IntegrationsPageContentDesktop extends StatelessWidget {
                       //   'https://esphome.io',
                       // ),
                       DeviceCard(
+                        'Shelly',
+                        'https://play-lh.googleusercontent.com/cwAyt0LIs4cyXSs2jr79xjAxsuq4KoBTZNq__gpeQvupH-8PElGn6kiddx8-WfG8wEPl=s180',
+                        'https://shelly.cloud/',
+                      ),
+                      DeviceCard(
                         'Node-RED',
                         'https://i.ibb.co/THRX9kq/node-RED-logo.png',
                         'https://nodered.org/',

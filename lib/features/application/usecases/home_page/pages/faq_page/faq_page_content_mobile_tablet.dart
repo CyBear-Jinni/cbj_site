@@ -23,7 +23,7 @@ class FaqPageContentMobileTablet extends StatelessWidget {
                 color: Colors.black26,
                 width: double.infinity,
                 padding: const EdgeInsets.only(bottom: 20),
-                height: 180,
+                height: 150,
                 child: Align(
                   alignment: FractionalOffset.bottomCenter,
                   child: Text(

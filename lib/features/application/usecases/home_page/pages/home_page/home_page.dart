@@ -29,18 +29,21 @@ class HomePage extends StatelessWidget {
       ),
       child: ResponsiveBuilder(
         builder: (BuildContext context, SizingInformation sizingInformation) =>
-            Scaffold(
-          drawer: sizingInformation.deviceScreenType ==
-                      DeviceScreenType.mobile ||
-                  sizingInformation.deviceScreenType == DeviceScreenType.tablet
-              ? NavigationDrawer()
-              : null,
-          backgroundColor: Colors.transparent,
-          body: Stack(
-            children: <Widget>[
-              HomePageContent(),
-              TopNavigationMenu(),
-            ],
+            SelectionArea(
+          child: Scaffold(
+            drawer:
+                sizingInformation.deviceScreenType == DeviceScreenType.mobile ||
+                        sizingInformation.deviceScreenType ==
+                            DeviceScreenType.tablet
+                    ? NavigationDrawer()
+                    : null,
+            backgroundColor: Colors.transparent,
+            body: Stack(
+              children: <Widget>[
+                HomePageContent(),
+                TopNavigationMenu(),
+              ],
+            ),
           ),
         ),
       ),

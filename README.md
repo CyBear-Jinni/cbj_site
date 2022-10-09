@@ -19,6 +19,7 @@ This repository is "the face behind the company" the **Site** of [CyBear Jinni S
 
 
 ## [For the smart home project click here](https://github.com/CyBear-Jinni/CBJ_Smart-Home.git)
+## [For UI Prototype click here](https://github.com/CyBear-Jinni/CBJ_Smart-Home.git)
 
 
 ## Disclaimers

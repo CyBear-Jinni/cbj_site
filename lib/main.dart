@@ -90,30 +90,38 @@ class MyApp extends StatelessWidget {
           MySingleton.setCurrentPageName(homeRoute);
           return MaterialPageRoute(
             builder: (BuildContext context) => HomePage(),
+            settings: settings,
           );
         } else if (pathElements[0] == aboutRoute) {
           MySingleton.setCurrentPageName(aboutRoute);
           return MaterialPageRoute(
             builder: (BuildContext context) => AboutPage(),
+            settings: settings,
           );
         } else if (pathElements[0] == faqRoute) {
           MySingleton.setCurrentPageName(faqRoute);
           return MaterialPageRoute(
             builder: (BuildContext context) => FaqPage(),
+            settings: settings,
           );
         } else if (pathElements[0] == integrationsRoute) {
           MySingleton.setCurrentPageName(integrationsRoute);
           return MaterialPageRoute(
             builder: (BuildContext context) => IntegrationsPage(),
+            settings: settings,
           );
         } else if (pathElements[0] == setUpRoute) {
           MySingleton.setCurrentPageName(setUpRoute);
           return MaterialPageRoute(
             builder: (BuildContext context) => SetUpPage(),
+            settings: settings,
           );
         } else {
           MySingleton.setCurrentPageName(homeRoute);
-          MaterialPageRoute(builder: (BuildContext context) => HomePage());
+          MaterialPageRoute(
+            builder: (BuildContext context) => HomePage(),
+            settings: settings,
+          );
         }
         return null;
       },

@@ -23,14 +23,16 @@ class _ContactUsPopup extends State<ContactUsPopup> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.transparent,
-      body: Center(
-        child: Container(
-          width: MediaQuery.of(context).size.width / 1.1,
-          height: MediaQuery.of(context).size.height / 1.5,
-          color: Theme.of(context).textTheme.bodyText1!.color!.withOpacity(0.9),
-          child: Form(
+    return SelectionArea(
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        body: Center(
+          child: Container(
+            width: MediaQuery.of(context).size.width / 1.1,
+            height: MediaQuery.of(context).size.height / 1.5,
+            color:
+                Theme.of(context).textTheme.bodyText1!.color!.withOpacity(0.9),
+            child: Form(
               key: _formKey,
               child: Column(
                 children: <Widget>[
@@ -73,7 +75,9 @@ class _ContactUsPopup extends State<ContactUsPopup> {
                     ],
                   ),
                 ],
-              )),
+              ),
+            ),
+          ),
         ),
       ),
     );

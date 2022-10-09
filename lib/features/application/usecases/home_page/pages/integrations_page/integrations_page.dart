@@ -25,16 +25,19 @@ class IntegrationsPage extends StatelessWidget {
       ),
       child: ResponsiveBuilder(
         builder: (BuildContext context, SizingInformation sizingInformation) =>
-            Scaffold(
-          drawer: sizingInformation.deviceScreenType == DeviceScreenType.mobile
-              ? NavigationDrawer()
-              : null,
-          backgroundColor: Colors.transparent,
-          body: Stack(
-            children: <Widget>[
-              IntegrationsPageContent(),
-              TopNavigationMenu(),
-            ],
+            SelectionArea(
+          child: Scaffold(
+            drawer:
+                sizingInformation.deviceScreenType == DeviceScreenType.mobile
+                    ? NavigationDrawer()
+                    : null,
+            backgroundColor: Colors.transparent,
+            body: Stack(
+              children: <Widget>[
+                IntegrationsPageContent(),
+                TopNavigationMenu(),
+              ],
+            ),
           ),
         ),
       ),

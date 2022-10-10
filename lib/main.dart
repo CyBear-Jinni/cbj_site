@@ -6,10 +6,12 @@ import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/
 import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/home_page/home_page.dart';
 import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/integrations_page/integrations_page.dart';
 import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/set_up_page/set_up_page.dart';
+import 'package:cybear_jinni_site/injection.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 void main() async {
+  configureDependencies(Env.prod);
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
 

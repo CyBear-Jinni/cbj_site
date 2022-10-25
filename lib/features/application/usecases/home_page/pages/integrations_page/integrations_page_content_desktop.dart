@@ -121,6 +121,16 @@ class IntegrationsPageContentDesktop extends StatelessWidget {
                         'https://play-lh.googleusercontent.com/ocFF7mcDTJzr1PXr6k4q1Q2-5xNFUVODqluwnD60DiTsHgTalrVTqi7kk0H8JnW7GLEv=s180',
                         'http://www.xenon.cn/',
                       ),
+                      DeviceCard(
+                        'Google',
+                        'https://play-lh.googleusercontent.com/aFWiT2lTa9CYBpyPjfgfNHd0r5puwKRGj2rHpdPTNrz2N9LXgN_MbLjePd1OTc0E8Rl1=s180',
+                        'https://www.google.com/chromecast/built-in/',
+                      ),
+                      DeviceCard(
+                        'HP',
+                        'https://play-lh.googleusercontent.com/UF16mldRKpQUUWhRZlDnT1FjkAjWSu9NXVBEDoTgScI_eo_6yEL0oKtc2-OvPXcG3PmN=s180',
+                        'https://www.hp.com/us-en/home.html',
+                      ),
                     ],
                   ),
                 ),

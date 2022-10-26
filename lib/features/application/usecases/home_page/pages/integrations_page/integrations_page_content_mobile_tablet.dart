@@ -53,6 +53,7 @@ class IntegrationsPageContentMobileTablet extends StatelessWidget {
                   ),
                 ),
                 padding: const EdgeInsets.symmetric(vertical: 2),
+                margin: const EdgeInsets.symmetric(horizontal: 20),
                 width: MediaQuery.of(context).size.width - 10,
                 child: Container(
                   margin: const EdgeInsets.only(

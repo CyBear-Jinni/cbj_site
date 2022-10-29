@@ -1,12 +1,12 @@
 import 'package:cybear_jinni_site/core/my_singleton.dart';
 import 'package:cybear_jinni_site/core/route_names.dart';
-import 'package:cybear_jinni_site/features/application/usecases/home_page/landing_page.dart';
-import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/about_page/about_page.dart';
-import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/faq_page/faq_page.dart';
-import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/home_page/home_page.dart';
-import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/integrations_page/integrations_page.dart';
-import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/set_up_page/set_up_page.dart';
 import 'package:cybear_jinni_site/injection.dart';
+import 'package:cybear_jinni_site/presentation/about_page/about_page.dart';
+import 'package:cybear_jinni_site/presentation/faq_page/faq_page.dart';
+import 'package:cybear_jinni_site/presentation/home_page/home_page.dart';
+import 'package:cybear_jinni_site/presentation/integrations_page/integrations_page.dart';
+import 'package:cybear_jinni_site/presentation/landing_page/landing_page.dart';
+import 'package:cybear_jinni_site/presentation/set_up_page/set_up_page.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 

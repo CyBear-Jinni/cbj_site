@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:cybear_jinni_site/utils.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -52,14 +53,17 @@ class SupportedVendorsTileGridViewNetworkImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return ColoredBox(
       color: imageBackgroundColor,
       child: CachedNetworkImage(
         imageUrl: imageUrl,
         fit: BoxFit.contain,
         progressIndicatorBuilder: (context, url, downloadProgress) =>
             CircularProgressIndicator(value: downloadProgress.progress),
-        errorWidget: (context, url, error) => const Icon(Icons.error),
+        errorWidget: (context, url, error) {
+          logger.e('Error loading image\n$error');
+          return const Icon(Icons.error);
+        },
       ),
     );
   }

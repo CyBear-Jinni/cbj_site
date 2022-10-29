@@ -19,7 +19,7 @@ class DeviceCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        primary: Colors.white,
+        backgroundColor: Colors.white,
       ),
       onPressed: () {
         launchUrlString(urlOpenOnPressed);

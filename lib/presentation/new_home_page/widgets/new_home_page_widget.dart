@@ -1,4 +1,5 @@
 import 'package:cybear_jinni_site/application/new_home_page/new_home_page_bloc.dart';
+import 'package:cybear_jinni_site/presentation/new_home_page/widgets/home_page_first_part.dart';
 import 'package:cybear_jinni_site/presentation/new_home_page/widgets/tab_indicator.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -64,27 +65,7 @@ class NewHomePageWidget extends StatelessWidget {
                     scrollDirection: Axis.vertical,
                     physics: const NeverScrollableScrollPhysics(),
                     children: [
-                      ColoredBox(
-                        color: Colors.amber,
-                        child: Center(
-                          child: ListView(
-                            children: [
-                              TextButton(
-                                onPressed: () {
-                                  context.read<NewHomePageBloc>().add(
-                                        NewHomePageEvent.scrollPage(
-                                          loadedState.scrollPosition,
-                                          currentPage++,
-                                        ),
-                                      );
-                                },
-                                child: const Text('Next Page'),
-                              ),
-                              const Text('First Page'),
-                            ],
-                          ),
-                        ),
-                      ),
+                      HomePageFirstPart(),
                       const ColoredBox(
                         color: Colors.blue,
                         child: Center(

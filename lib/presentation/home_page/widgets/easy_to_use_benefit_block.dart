@@ -8,14 +8,18 @@ class EasyToUseBenefitBlock extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       hoverColor: Colors.black87,
-      child: TextButton(
+      child: ElevatedButton(
         style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(
-            Colors.black45,
+          shape: MaterialStateProperty.all<OutlinedBorder>(
+            RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15),
+            ),
           ),
           padding: MaterialStateProperty.all<EdgeInsets>(
             const EdgeInsets.all(30),
           ),
+          backgroundColor:
+              MaterialStateProperty.all<Color>(Colors.white.withOpacity(0.5)),
         ),
         onPressed: () {
           Navigator.pushNamed(context, integrationsRoute);
@@ -25,57 +29,43 @@ class EasyToUseBenefitBlock extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Row(children: <Widget>[
-                const SizedBox(
-                  width: 25,
-                ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    FaIcon(
-                      FontAwesomeIcons.users,
-                      color: Theme.of(context).textTheme.bodyText1!.color,
-                      size: 26,
-                    ),
-                    const SizedBox(height: 20),
-                    Text(
-                      'Easy to Use',
-                      style: TextStyle(
-                          fontSize: 26,
-                          color: Theme.of(context).textTheme.bodyText1!.color),
-                    ),
-                    const SizedBox(
-                      height: 5,
-                    ),
-                    Container(
-                      padding: const EdgeInsets.all(5),
-                      decoration: BoxDecoration(
-                          color: Theme.of(context).textTheme.bodyText1!.color,
-                          borderRadius:
-                              const BorderRadius.all(Radius.circular(10))),
-                      child: Text(
-                        'Enjoy',
-                        style: TextStyle(
-                            fontSize: 14,
-                            color: Theme.of(context).primaryColor,
-                            fontWeight: FontWeight.bold),
+              Row(
+                children: <Widget>[
+                  const SizedBox(
+                    width: 25,
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: const <Widget>[
+                      FaIcon(
+                        FontAwesomeIcons.users,
+                        color: Colors.black,
+                        size: 26,
                       ),
-                    ),
-                  ],
-                ),
-              ]),
+                      SizedBox(height: 20),
+                      Text(
+                        'Easy to Use',
+                        style: TextStyle(
+                          fontSize: 26,
+                          color: Colors.deepOrange,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
               const SizedBox(
                 height: 30,
               ),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  const FaIcon(
+                children: const <Widget>[
+                  FaIcon(
                     FontAwesomeIcons.check,
                     color: Colors.green,
                     size: 15,
                   ),
-                  const SizedBox(
+                  SizedBox(
                     width: 10,
                   ),
                   SizedBox(
@@ -86,7 +76,7 @@ class EasyToUseBenefitBlock extends StatelessWidget {
                       'automatically for you.',
                       style: TextStyle(
                         fontSize: 20,
-                        color: Theme.of(context).textTheme.bodyText2!.color,
+                        color: Colors.black,
                       ),
                     ),
                   ),
@@ -97,13 +87,13 @@ class EasyToUseBenefitBlock extends StatelessWidget {
               ),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  const FaIcon(
+                children: const <Widget>[
+                  FaIcon(
                     FontAwesomeIcons.check,
                     color: Colors.green,
                     size: 15,
                   ),
-                  const SizedBox(
+                  SizedBox(
                     width: 10,
                   ),
                   SizedBox(
@@ -116,7 +106,7 @@ class EasyToUseBenefitBlock extends StatelessWidget {
                       'routines, bindings.',
                       style: TextStyle(
                         fontSize: 20,
-                        color: Theme.of(context).textTheme.bodyText2!.color,
+                        color: Colors.black,
                       ),
                     ),
                   ),

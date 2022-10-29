@@ -7,15 +7,19 @@ class EasyToSetUpBenefitBlock extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      hoverColor: Colors.black87,
-      child: TextButton(
+      hoverColor: Colors.white.withOpacity(0.5),
+      child: ElevatedButton(
         style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(
-            Colors.black45,
+          shape: MaterialStateProperty.all<OutlinedBorder>(
+            RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15),
+            ),
           ),
           padding: MaterialStateProperty.all<EdgeInsets>(
             const EdgeInsets.all(30),
           ),
+          backgroundColor:
+              MaterialStateProperty.all<Color>(Colors.white.withOpacity(0.5)),
         ),
         onPressed: () {
           Navigator.pushNamed(context, setUpRoute);
@@ -32,37 +36,18 @@ class EasyToSetUpBenefitBlock extends StatelessWidget {
                   ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
+                    children: const <Widget>[
                       FaIcon(
-                        FontAwesomeIcons.fileDownload,
-                        color: Theme.of(context).textTheme.bodyText1!.color,
+                        FontAwesomeIcons.fileArrowDown,
+                        color: Colors.black,
                         size: 26,
                       ),
-                      const SizedBox(height: 20),
+                      SizedBox(height: 20),
                       Text(
                         'Easy to Set Up',
                         style: TextStyle(
                           fontSize: 26,
-                          color: Theme.of(context).textTheme.bodyText1!.color,
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 5,
-                      ),
-                      Container(
-                        padding: const EdgeInsets.all(5),
-                        decoration: BoxDecoration(
-                          color: Theme.of(context).textTheme.bodyText1!.color,
-                          borderRadius:
-                              const BorderRadius.all(Radius.circular(10)),
-                        ),
-                        child: Text(
-                          'Available',
-                          style: TextStyle(
-                            fontSize: 14,
-                            color: Theme.of(context).primaryColor,
-                            fontWeight: FontWeight.bold,
-                          ),
+                          color: Colors.brown,
                         ),
                       ),
                     ],
@@ -74,13 +59,13 @@ class EasyToSetUpBenefitBlock extends StatelessWidget {
               ),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  const FaIcon(
+                children: const <Widget>[
+                  FaIcon(
                     FontAwesomeIcons.check,
                     color: Colors.green,
                     size: 15,
                   ),
-                  const SizedBox(
+                  SizedBox(
                     width: 10,
                   ),
                   SizedBox(
@@ -89,7 +74,7 @@ class EasyToSetUpBenefitBlock extends StatelessWidget {
                       'Clear and easy instructions to get the Hub running.',
                       style: TextStyle(
                         fontSize: 20,
-                        color: Theme.of(context).textTheme.bodyText2!.color,
+                        color: Colors.black,
                       ),
                     ),
                   ),
@@ -100,13 +85,13 @@ class EasyToSetUpBenefitBlock extends StatelessWidget {
               ),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  const FaIcon(
+                children: const <Widget>[
+                  FaIcon(
                     FontAwesomeIcons.check,
                     color: Colors.green,
                     size: 15,
                   ),
-                  const SizedBox(
+                  SizedBox(
                     width: 10,
                   ),
                   SizedBox(
@@ -115,7 +100,7 @@ class EasyToSetUpBenefitBlock extends StatelessWidget {
                       'Application can be found in the play store.',
                       style: TextStyle(
                         fontSize: 20,
-                        color: Theme.of(context).textTheme.bodyText2!.color,
+                        color: Colors.black,
                       ),
                     ),
                   ),
@@ -126,13 +111,13 @@ class EasyToSetUpBenefitBlock extends StatelessWidget {
               ),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  const FaIcon(
+                children: const <Widget>[
+                  FaIcon(
                     FontAwesomeIcons.check,
                     color: Colors.green,
                     size: 15,
                   ),
-                  const SizedBox(
+                  SizedBox(
                     width: 10,
                   ),
                   SizedBox(
@@ -142,7 +127,7 @@ class EasyToSetUpBenefitBlock extends StatelessWidget {
                       'for you.',
                       style: TextStyle(
                         fontSize: 20,
-                        color: Theme.of(context).textTheme.bodyText2!.color,
+                        color: Colors.black,
                       ),
                     ),
                   ),

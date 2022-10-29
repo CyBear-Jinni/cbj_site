@@ -14,11 +14,18 @@ class HomePageFirstPart extends StatelessWidget {
   );
 
   final List<String> companysLogs = [
+    'https://play-lh.googleusercontent.com/aFWiT2lTa9CYBpyPjfgfNHd0r5puwKRGj2rHpdPTNrz2N9LXgN_MbLjePd1OTc0E8Rl1=s180',
+    'https://play-lh.googleusercontent.com/UF16mldRKpQUUWhRZlDnT1FjkAjWSu9NXVBEDoTgScI_eo_6yEL0oKtc2-OvPXcG3PmN=s180',
+    'https://play-lh.googleusercontent.com/cwAyt0LIs4cyXSs2jr79xjAxsuq4KoBTZNq__gpeQvupH-8PElGn6kiddx8-WfG8wEPl=s180',
+    'https://play-lh.googleusercontent.com/Qrq9zB_-bWuAD0ETPeBRTsRHOSjmW_uzmexY5rF7wo2JeNc-oLuvsQSYdg0Uxsq6mkA=s180',
     'https://play-lh.googleusercontent.com/k61DT9oYt_BPdzjAFokLY5e-He-YSl7-eZHeieaVO45XDAwQ6ebegsS_ZsQytca2zWM=s180',
     'https://play-lh.googleusercontent.com/KGM9NYnyox9TXwoaY3PKl1PfQ2rTPp1rnpNNtmlbgozJZykhZhGKsL3z9myoj4ccayLS=s180',
     'https://play-lh.googleusercontent.com/bteU9OSFF9z596eUOkGgM3XpWF2-b1VsKvmwWFitaI4qMwVPmx3lS09fHFDx8-CX3Q=s180',
-    'https://play-lh.googleusercontent.com/Qrq9zB_-bWuAD0ETPeBRTsRHOSjmW_uzmexY5rF7wo2JeNc-oLuvsQSYdg0Uxsq6mkA=s180',
+    'https://i.ibb.co/THRX9kq/node-RED-logo.png',
     'https://i.ibb.co/hfRhB0Q/mqtt-logo.png',
+    'https://play-lh.googleusercontent.com/8L6vVAT2cC78V622nxSznr7Mm_MgMsH25TopH-ZIm5HMwAHRy0qTX29FlHF6_kbBsQ=s180',
+    'https://play-lh.googleusercontent.com/ocFF7mcDTJzr1PXr6k4q1Q2-5xNFUVODqluwnD60DiTsHgTalrVTqi7kk0H8JnW7GLEv=s180',
+    'https://i.ibb.co/XZLGCRd/Tasmota-logo.png',
   ];
 
   @override
@@ -28,7 +35,7 @@ class HomePageFirstPart extends StatelessWidget {
     return ColoredBox(
       // height: screenSize.height,
       // width: screenSize.width,
-      color: Colors.amber,
+      color: Colors.blueGrey,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
@@ -39,7 +46,6 @@ class HomePageFirstPart extends StatelessWidget {
                 Flexible(
                   flex: 4,
                   child: Container(
-                    color: Colors.blue,
                     alignment: Alignment.bottomRight,
                     margin: const EdgeInsets.only(right: 10, left: 20),
                     child: Align(
@@ -77,18 +83,15 @@ class HomePageFirstPart extends StatelessWidget {
                 ),
                 Flexible(
                   flex: 5,
-                  child: ColoredBox(
-                    color: Colors.blueGrey,
-                    child: Align(
-                      alignment: Alignment.bottomLeft,
-                      child: SizedBox(
-                        width: screenSize.width / 2,
-                        height: screenSize.height / 2.3,
-                        child: YoutubePlayerControllerProvider(
-                          // Provides controller to all the widget below it.
-                          controller: _controller,
-                          child: const YoutubePlayerIFrame(),
-                        ),
+                  child: Align(
+                    alignment: Alignment.bottomLeft,
+                    child: SizedBox(
+                      width: screenSize.width / 2,
+                      height: screenSize.height / 2.3,
+                      child: YoutubePlayerControllerProvider(
+                        // Provides controller to all the widget below it.
+                        controller: _controller,
+                        child: const YoutubePlayerIFrame(),
                       ),
                     ),
                   ),
@@ -152,7 +155,6 @@ class HomePageFirstPart extends StatelessWidget {
                                           right: 200,
                                         ),
                                         height: 60,
-                                        color: Colors.green,
                                         child: Row(
                                           mainAxisAlignment:
                                               MainAxisAlignment.spaceBetween,
@@ -169,9 +171,30 @@ class HomePageFirstPart extends StatelessWidget {
                                             SupportedVendorsTileGridViewNetworkImage(
                                               companysLogs[3],
                                             ),
-                                            SupportedVendorsTileGridViewNetworkImage(
-                                              companysLogs[4],
-                                            ),
+                                            // SupportedVendorsTileGridViewNetworkImage(
+                                            //   companysLogs[4],
+                                            // ),
+                                            // SupportedVendorsTileGridViewNetworkImage(
+                                            //   companysLogs[5],
+                                            // ),
+                                            // SupportedVendorsTileGridViewNetworkImage(
+                                            //   companysLogs[6],
+                                            // ),
+                                            // SupportedVendorsTileGridViewNetworkImage(
+                                            //   companysLogs[7],
+                                            // ),
+                                            // SupportedVendorsTileGridViewNetworkImage(
+                                            //   companysLogs[8],
+                                            // ),
+                                            // SupportedVendorsTileGridViewNetworkImage(
+                                            //   companysLogs[9],
+                                            // ),
+                                            // SupportedVendorsTileGridViewNetworkImage(
+                                            //   companysLogs[10],
+                                            // ),
+                                            // SupportedVendorsTileGridViewNetworkImage(
+                                            //   companysLogs[11],
+                                            // ),
                                           ],
                                         ),
                                       ),

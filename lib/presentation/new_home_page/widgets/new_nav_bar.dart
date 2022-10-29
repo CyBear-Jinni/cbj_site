@@ -1,4 +1,5 @@
-import 'package:flutter/cupertino.dart';
+import 'package:cybear_jinni_site/my_singleton.dart';
+import 'package:cybear_jinni_site/presentation/route_names.dart';
 import 'package:flutter/material.dart';
 
 class NewNavBar extends StatelessWidget {
@@ -42,12 +43,21 @@ class NewNavBar extends StatelessWidget {
                 horizontal: 20,
                 vertical: 40,
               ),
-              child: const Text(
-                'About',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
+              child: TextButton(
+                onPressed: () {
+                  if (MySingleton.getCurrentPageName != aboutRoute) {
+                    Navigator.pushNamed(context, aboutRoute);
+                  } else {
+                    Navigator.pushReplacementNamed(context, aboutRoute);
+                  }
+                },
+                child: Text(
+                  'About',
+                  style: TextStyle(
+                    color: Theme.of(context).textTheme.bodyText1!.color,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
             ),
@@ -56,12 +66,21 @@ class NewNavBar extends StatelessWidget {
                 horizontal: 20,
                 vertical: 40,
               ),
-              child: const Text(
-                'FAQ',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
+              child: TextButton(
+                onPressed: () {
+                  if (MySingleton.getCurrentPageName != faqRoute) {
+                    Navigator.pushNamed(context, faqRoute);
+                  } else {
+                    Navigator.pushReplacementNamed(context, faqRoute);
+                  }
+                },
+                child: Text(
+                  'FAQ',
+                  style: TextStyle(
+                    color: Theme.of(context).textTheme.bodyText1!.color,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
             ),
@@ -70,12 +89,21 @@ class NewNavBar extends StatelessWidget {
                 horizontal: 20,
                 vertical: 40,
               ),
-              child: const Text(
-                'Setup',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
+              child: TextButton(
+                onPressed: () {
+                  if (MySingleton.getCurrentPageName != setUpRoute) {
+                    Navigator.pushNamed(context, setUpRoute);
+                  } else {
+                    Navigator.pushReplacementNamed(context, setUpRoute);
+                  }
+                },
+                child: Text(
+                  'Setup',
+                  style: TextStyle(
+                    color: Theme.of(context).textTheme.bodyText1!.color,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
             ),
@@ -84,12 +112,24 @@ class NewNavBar extends StatelessWidget {
                 horizontal: 20,
                 vertical: 40,
               ),
-              child: const Text(
-                'Integration',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
+              child: TextButton(
+                onPressed: () {
+                  if (MySingleton.getCurrentPageName != integrationsRoute) {
+                    Navigator.pushNamed(context, integrationsRoute);
+                  } else {
+                    Navigator.pushReplacementNamed(
+                      context,
+                      integrationsRoute,
+                    );
+                  }
+                },
+                child: Text(
+                  'Integrations',
+                  style: TextStyle(
+                    color: Theme.of(context).textTheme.bodyText1!.color,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
             ),

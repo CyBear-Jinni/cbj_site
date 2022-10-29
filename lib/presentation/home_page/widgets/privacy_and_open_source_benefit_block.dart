@@ -7,14 +7,18 @@ class PrivacyAndOpenSourceBenefitBlock extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       hoverColor: Colors.black87,
-      child: TextButton(
+      child: ElevatedButton(
         style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(
-            Colors.black45,
+          shape: MaterialStateProperty.all<OutlinedBorder>(
+            RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15),
+            ),
           ),
           padding: MaterialStateProperty.all<EdgeInsets>(
             const EdgeInsets.all(30),
           ),
+          backgroundColor:
+              MaterialStateProperty.all<Color>(Colors.white.withOpacity(0.5)),
         ),
         onPressed: () async {
           const String url = 'https://github.com/CyBear-Jinni';
@@ -29,57 +33,43 @@ class PrivacyAndOpenSourceBenefitBlock extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Row(children: <Widget>[
-                const SizedBox(
-                  width: 25,
-                ),
-                Column(
+              Row(
+                children: <Widget>[
+                  const SizedBox(
+                    width: 25,
+                  ),
+                  Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
+                    children: const <Widget>[
                       FaIcon(
                         FontAwesomeIcons.laptopCode,
-                        color: Theme.of(context).textTheme.bodyText1!.color,
+                        color: Colors.black,
                         size: 26,
                       ),
-                      const SizedBox(height: 20),
+                      SizedBox(height: 20),
                       Text(
                         'Privacy & Open Source',
                         style: TextStyle(
                           fontSize: 26,
-                          color: Theme.of(context).textTheme.bodyText1!.color,
+                          color: Colors.indigoAccent,
                         ),
                       ),
-                      const SizedBox(
-                        height: 5,
-                      ),
-                      Container(
-                        padding: const EdgeInsets.all(5),
-                        decoration: BoxDecoration(
-                            color: Theme.of(context).textTheme.bodyText1!.color,
-                            borderRadius:
-                                const BorderRadius.all(Radius.circular(10))),
-                        child: Text(
-                          'Secure',
-                          style: TextStyle(
-                              fontSize: 14,
-                              color: Theme.of(context).primaryColor,
-                              fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                    ])
-              ]),
+                    ],
+                  )
+                ],
+              ),
               const SizedBox(
                 height: 30,
               ),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  const FaIcon(
+                children: const <Widget>[
+                  FaIcon(
                     FontAwesomeIcons.check,
                     color: Colors.green,
                     size: 15,
                   ),
-                  const SizedBox(
+                  SizedBox(
                     width: 10,
                   ),
                   SizedBox(
@@ -90,7 +80,7 @@ class PrivacyAndOpenSourceBenefitBlock extends StatelessWidget {
                       'will have control of your  data.',
                       style: TextStyle(
                         fontSize: 20,
-                        color: Theme.of(context).textTheme.bodyText2!.color,
+                        color: Colors.black,
                       ),
                     ),
                   ),
@@ -101,13 +91,13 @@ class PrivacyAndOpenSourceBenefitBlock extends StatelessWidget {
               ),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  const FaIcon(
+                children: const <Widget>[
+                  FaIcon(
                     FontAwesomeIcons.check,
                     color: Colors.green,
                     size: 15,
                   ),
-                  const SizedBox(
+                  SizedBox(
                     width: 10,
                   ),
                   SizedBox(
@@ -119,7 +109,7 @@ class PrivacyAndOpenSourceBenefitBlock extends StatelessWidget {
                       'devices types.',
                       style: TextStyle(
                         fontSize: 20,
-                        color: Theme.of(context).textTheme.bodyText2!.color,
+                        color: Colors.black,
                       ),
                     ),
                   ),

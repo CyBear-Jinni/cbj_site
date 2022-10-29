@@ -1,6 +1,6 @@
-import 'package:cybear_jinni_site/core/my_singleton.dart';
-import 'package:cybear_jinni_site/core/route_names.dart';
+import 'package:cybear_jinni_site/my_singleton.dart';
 import 'package:cybear_jinni_site/presentation/home_page/home_page.dart';
+import 'package:cybear_jinni_site/presentation/route_names.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 

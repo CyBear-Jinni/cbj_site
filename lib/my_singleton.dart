@@ -1,4 +1,4 @@
-import 'package:cybear_jinni_site/core/route_names.dart';
+import 'package:cybear_jinni_site/presentation/route_names.dart';
 
 /// Singleton for all the site
 class MySingleton {

@@ -1,4 +1,4 @@
-import 'package:cybear_jinni_site/core/route_names.dart';
+import 'package:cybear_jinni_site/presentation/route_names.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';

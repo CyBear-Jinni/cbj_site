@@ -1,9 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:cybear_jinni_site/core/route_names.dart';
 import 'package:cybear_jinni_site/presentation/home_page/widgets/easy_to_set_up_benefit_block.dart';
 import 'package:cybear_jinni_site/presentation/home_page/widgets/easy_to_use_benefit_block.dart';
 import 'package:cybear_jinni_site/presentation/home_page/widgets/privacy_and_open_source_benefit_block.dart';
 import 'package:cybear_jinni_site/presentation/home_page/widgets/supported_vendors_tile_grid_view.dart';
+import 'package:cybear_jinni_site/presentation/route_names.dart';
 import 'package:cybear_jinni_site/presentation/shared_widgets/bottom_navigation_menu/bottom_navigation_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';

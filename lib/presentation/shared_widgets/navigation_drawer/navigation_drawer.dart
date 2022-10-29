@@ -1,4 +1,4 @@
-import 'package:cybear_jinni_site/core/route_names.dart';
+import 'package:cybear_jinni_site/presentation/route_names.dart';
 import 'package:cybear_jinni_site/presentation/shared_widgets/navigation_drawer/drawer_item_on_click_route_page.dart';
 import 'package:cybear_jinni_site/presentation/shared_widgets/navigation_drawer/navigation_drawer_header.dart';
 import 'package:flutter/material.dart';

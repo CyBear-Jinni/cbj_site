@@ -29,7 +29,7 @@ class NewNavBar extends StatelessWidget {
                 'CyBear Jinni',
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 20,
+                  fontSize: 25,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -39,9 +39,10 @@ class NewNavBar extends StatelessWidget {
         Row(
           children: [
             Container(
-              margin: const EdgeInsets.symmetric(
-                horizontal: 20,
-                vertical: 40,
+              margin: const EdgeInsets.only(
+                bottom: 20,
+                top: 20,
+                right: 40,
               ),
               child: TextButton(
                 onPressed: () {

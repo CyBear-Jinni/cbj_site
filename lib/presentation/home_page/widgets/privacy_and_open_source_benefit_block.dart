@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:hexcolor/hexcolor.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 class PrivacyAndOpenSourceBenefitBlock extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      hoverColor: Colors.black87,
+      hoverColor: Colors.white,
       child: ElevatedButton(
         style: ButtonStyle(
           shape: MaterialStateProperty.all<OutlinedBorder>(
@@ -18,7 +19,7 @@ class PrivacyAndOpenSourceBenefitBlock extends StatelessWidget {
             const EdgeInsets.all(30),
           ),
           backgroundColor:
-              MaterialStateProperty.all<Color>(Colors.white.withOpacity(0.5)),
+              MaterialStateProperty.all<Color>(Colors.white.withOpacity(0.8)),
         ),
         onPressed: () async {
           const String url = 'https://github.com/CyBear-Jinni';
@@ -31,7 +32,6 @@ class PrivacyAndOpenSourceBenefitBlock extends StatelessWidget {
         child: SizedBox(
           height: 390,
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Row(
                 children: <Widget>[
@@ -39,19 +39,18 @@ class PrivacyAndOpenSourceBenefitBlock extends StatelessWidget {
                     width: 25,
                   ),
                   Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const <Widget>[
-                      FaIcon(
+                    children: <Widget>[
+                      const FaIcon(
                         FontAwesomeIcons.laptopCode,
                         color: Colors.black,
-                        size: 26,
+                        size: 60,
                       ),
-                      SizedBox(height: 20),
+                      const SizedBox(height: 20),
                       Text(
                         'Privacy & Open Source',
                         style: TextStyle(
                           fontSize: 26,
-                          color: Colors.indigoAccent,
+                          color: HexColor('#08358C'),
                         ),
                       ),
                     ],

@@ -2,12 +2,13 @@ import 'package:cybear_jinni_site/presentation/route_names.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 class EasyToUseBenefitBlock extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      hoverColor: Colors.black87,
+      hoverColor: Colors.white,
       child: ElevatedButton(
         style: ButtonStyle(
           shape: MaterialStateProperty.all<OutlinedBorder>(
@@ -19,7 +20,7 @@ class EasyToUseBenefitBlock extends StatelessWidget {
             const EdgeInsets.all(30),
           ),
           backgroundColor:
-              MaterialStateProperty.all<Color>(Colors.white.withOpacity(0.5)),
+              MaterialStateProperty.all<Color>(Colors.white.withOpacity(0.8)),
         ),
         onPressed: () {
           Navigator.pushNamed(context, integrationsRoute);
@@ -27,7 +28,6 @@ class EasyToUseBenefitBlock extends StatelessWidget {
         child: SizedBox(
           height: 390,
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Row(
                 children: <Widget>[
@@ -35,19 +35,18 @@ class EasyToUseBenefitBlock extends StatelessWidget {
                     width: 25,
                   ),
                   Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const <Widget>[
-                      FaIcon(
+                    children: <Widget>[
+                      const FaIcon(
                         FontAwesomeIcons.users,
                         color: Colors.black,
-                        size: 26,
+                        size: 60,
                       ),
-                      SizedBox(height: 20),
+                      const SizedBox(height: 20),
                       Text(
                         'Easy to Use',
                         style: TextStyle(
                           fontSize: 26,
-                          color: Colors.deepOrange,
+                          color: HexColor('#651010'),
                         ),
                       ),
                     ],

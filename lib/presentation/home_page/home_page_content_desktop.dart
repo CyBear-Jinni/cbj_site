@@ -266,7 +266,7 @@ class HomePageContentDesktop extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                           const SizedBox(),
-                          Container(
+                          DecoratedBox(
                             decoration: BoxDecoration(
                               image: const DecorationImage(
                                 image: NetworkImage(

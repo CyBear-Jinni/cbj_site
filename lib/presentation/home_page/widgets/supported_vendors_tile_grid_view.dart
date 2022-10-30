@@ -16,14 +16,14 @@ class SupportedVendorsTileGridView extends StatelessWidget {
       crossAxisCount: 3,
       children: [
         SupportedVendorsTileGridViewNetworkImage(
-          'https://play-lh.googleusercontent.com/bteU9OSFF9z596eUOkGgM3XpWF2-b1VsKvmwWFitaI4qMwVPmx3lS09fHFDx8-CX3Q=s180',
+          'https://i.ibb.co/C20VvvB/yeelight-logo.png',
         ),
         SupportedVendorsTileGridViewNetworkImage(
-          'https://play-lh.googleusercontent.com/k61DT9oYt_BPdzjAFokLY5e-He-YSl7-eZHeieaVO45XDAwQ6ebegsS_ZsQytca2zWM=s180',
+          'https://i.ibb.co/2qN6yJW/lifx-logo.png',
         ),
 
         SupportedVendorsTileGridViewNetworkImage(
-          'https://play-lh.googleusercontent.com/KGM9NYnyox9TXwoaY3PKl1PfQ2rTPp1rnpNNtmlbgozJZykhZhGKsL3z9myoj4ccayLS=s180',
+          'https://i.ibb.co/jJ20vch/tuya-smart-logo.png',
         ),
         // SupportedVendorsTileGridViewNetworkImage(
         //   'https://i.ibb.co/hfRhB0Q/mqtt-logo.png',
@@ -34,7 +34,7 @@ class SupportedVendorsTileGridView extends StatelessWidget {
         // ),
         //
         // SupportedVendorsTileGridViewNetworkImage(
-        //   'https://play-lh.googleusercontent.com/8L6vVAT2cC78V622nxSznr7Mm_MgMsH25TopH-ZIm5HMwAHRy0qTX29FlHF6_kbBsQ=s180',
+        //   'https://i.ibb.co/q9psvjY/switcher-logo.png',
         // ),
         // SupportedVendorsTileGridViewNetworkImage(
         //   'https://i.ibb.co/W2YG23s/ESPHome-logo.png',
@@ -61,7 +61,7 @@ class SupportedVendorsTileGridViewNetworkImage extends StatelessWidget {
         progressIndicatorBuilder: (context, url, downloadProgress) =>
             CircularProgressIndicator(value: downloadProgress.progress),
         errorWidget: (context, url, error) {
-          logger.e('Error loading image\n$error');
+          logger.e('Error loading image url $url\n$error');
           return const Icon(Icons.error);
         },
       ),

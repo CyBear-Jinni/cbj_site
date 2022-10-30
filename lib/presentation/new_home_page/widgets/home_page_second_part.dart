@@ -19,7 +19,7 @@ class HomePageSecondPart extends StatelessWidget {
           child: CachedNetworkImage(
             imageUrl:
                 // 'https://images.macrumors.com/t/akS-rfKtypWuIFOGfmWE2nZz-ac=/1600x/http://images.macrumors.com/article-new/2017/11/lifxzlightstrips.jpg'
-                'https://www.self-build.co.uk/wp-content/uploads/2018/01/Loxone-lighting-system.png'
+                'https://i.ibb.co/vVn0v70/home-page-section-2-background.webp'
 
             // 'https://wallpaperaccess.com/full/3644270.jpg'
             // 'https://cdn.vox-cdn.com/thumbor/qCHcHkgH7TAc2SCOTQLj9UkQLQo=/0x0:1200x739/2420x1613/filters:focal(504x274:696x466)/cdn.vox-cdn.com/uploads/chorus_image/image/56981041/slack_imgs.0.jpg'

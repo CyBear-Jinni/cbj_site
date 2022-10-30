@@ -15,7 +15,7 @@ class HomePageThiredPart extends StatelessWidget {
       children: [
         SizedBox.expand(
           child: CachedNetworkImage(
-            imageUrl: 'https://wallpaperaccess.com/full/3644270.jpg',
+            imageUrl: 'https://i.ibb.co/C6tz4fK/3644270.webp',
             fit: BoxFit.fill,
             progressIndicatorBuilder: (context, url, downloadProgress) =>
                 CircularProgressIndicator(value: downloadProgress.progress),
@@ -57,7 +57,7 @@ class HomePageThiredPart extends StatelessWidget {
                           CachedNetworkImage(
                             width: 170,
                             imageUrl:
-                                'https://brandlogos.net/wp-content/uploads/2020/09/raspberry-pi-logo.png',
+                                'https://i.ibb.co/K03Qpf2/raspberry-pi-logo-no-background.png',
                             fit: BoxFit.cover,
                             progressIndicatorBuilder:
                                 (context, url, downloadProgress) =>
@@ -135,7 +135,7 @@ class HomePageThiredPart extends StatelessWidget {
                           CachedNetworkImage(
                             width: 170,
                             imageUrl:
-                                'https://www.stepsoftware.com/images/services/linux.png',
+                                'https://i.ibb.co/d4sCyfh/linus-no-background.png',
                             fit: BoxFit.cover,
                             progressIndicatorBuilder:
                                 (context, url, downloadProgress) =>

@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cybear_jinni_site/my_singleton.dart';
 import 'package:cybear_jinni_site/presentation/home_page/widgets/supported_vendors_tile_grid_view.dart';
+import 'package:cybear_jinni_site/presentation/new_home_page/widgets/border_text_with_shadow.dart';
 import 'package:cybear_jinni_site/presentation/route_names.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -179,13 +180,9 @@ class HomePageFirstPart extends StatelessWidget {
                                   Flexible(
                                     child: Container(
                                       margin: const EdgeInsets.only(top: 20),
-                                      child: const Text(
+                                      child: BorderTextWithShadow(
                                         'Supported Vendor',
-                                        style: TextStyle(
-                                          fontSize: 30,
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.white,
-                                        ),
+                                        fontSize: 30,
                                       ),
                                     ),
                                   ),
@@ -256,47 +253,6 @@ class HomePageFirstPart extends StatelessWidget {
               ),
             ),
           ],
-        ),
-      ],
-    );
-  }
-}
-
-class BorderTextWithShadow extends StatelessWidget {
-  BorderTextWithShadow(this.text);
-
-  String text;
-
-  @override
-  Widget build(BuildContext context) {
-    return Stack(
-      children: <Widget>[
-        Text(
-          text,
-          style: TextStyle(
-            fontSize: 22,
-            foreground: Paint()
-              ..style = PaintingStyle.stroke
-              ..strokeWidth = 1
-              ..color = HexColor('#000000'),
-            shadows: <Shadow>[
-              Shadow(
-                offset: const Offset(0, 2),
-                blurRadius: 2.0,
-                color: HexColor('#6C6C6C'),
-              ),
-            ],
-          ),
-          textAlign: TextAlign.center,
-        ),
-        // Solid text as fill.
-        Text(
-          text,
-          style: const TextStyle(
-            fontSize: 22,
-            color: Colors.white,
-          ),
-          textAlign: TextAlign.center,
         ),
       ],
     );

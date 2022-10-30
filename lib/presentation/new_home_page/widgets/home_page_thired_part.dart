@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:cybear_jinni_site/presentation/new_home_page/widgets/border_text_with_shadow.dart';
 import 'package:cybear_jinni_site/presentation/route_names.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -28,14 +29,11 @@ class HomePageThiredPart extends StatelessWidget {
               flex: 3,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
-                  Text(
+                children: [
+                  BorderTextWithShadow(
                     'How to Setup',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 35,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    fontSize: 35,
+                    fontWeight: FontWeight.bold,
                   ),
                 ],
               ),
@@ -72,22 +70,18 @@ class HomePageThiredPart extends StatelessWidget {
                           const SizedBox(height: 32),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: const [
-                              Text(
+                            children: [
+                              BorderTextWithShadow(
                                 'i. ',
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  color: Colors.white,
-                                ),
+                                fontSize: 20,
+                                textAlign: TextAlign.start,
                               ),
                               Expanded(
-                                child: Text(
-                                  'Download ISO',
-                                  style: TextStyle(
+                                child: Center(
+                                  child: BorderTextWithShadow(
+                                    'Download ISO',
                                     fontSize: 20,
-                                    color: Colors.white,
                                   ),
-                                  textAlign: TextAlign.center,
                                 ),
                               ),
                             ],
@@ -95,22 +89,18 @@ class HomePageThiredPart extends StatelessWidget {
                           const SizedBox(height: 10),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: const [
-                              Text(
+                            children: [
+                              BorderTextWithShadow(
                                 'ii. ',
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  color: Colors.white,
-                                ),
+                                fontSize: 20,
+                                textAlign: TextAlign.start,
                               ),
                               Expanded(
-                                child: Text(
-                                  'Install ISO to SD Card and insert it',
-                                  style: TextStyle(
+                                child: Center(
+                                  child: BorderTextWithShadow(
+                                    'Install ISO to SD Card and insert it',
                                     fontSize: 20,
-                                    color: Colors.white,
                                   ),
-                                  textAlign: TextAlign.center,
                                 ),
                               ),
                             ],
@@ -118,22 +108,18 @@ class HomePageThiredPart extends StatelessWidget {
                           const SizedBox(height: 10),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: const [
-                              Text(
+                            children: [
+                              BorderTextWithShadow(
                                 'iii. ',
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  color: Colors.white,
-                                ),
+                                fontSize: 20,
+                                textAlign: TextAlign.start,
                               ),
                               Expanded(
-                                child: Text(
-                                  'Open the apps on your phone',
-                                  style: TextStyle(
+                                child: Center(
+                                  child: BorderTextWithShadow(
+                                    'Open the apps on your phone',
                                     fontSize: 20,
-                                    color: Colors.white,
                                   ),
-                                  textAlign: TextAlign.center,
                                 ),
                               ),
                             ],
@@ -162,22 +148,18 @@ class HomePageThiredPart extends StatelessWidget {
                           const SizedBox(height: 32),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: const [
-                              Text(
+                            children: [
+                              BorderTextWithShadow(
                                 'i. ',
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  color: Colors.white,
-                                ),
+                                fontSize: 20,
+                                textAlign: TextAlign.start,
                               ),
                               Expanded(
-                                child: Text(
-                                  'Install MQTT broker snap',
-                                  style: TextStyle(
+                                child: Center(
+                                  child: BorderTextWithShadow(
+                                    'Install MQTT broker snap',
                                     fontSize: 20,
-                                    color: Colors.white,
                                   ),
-                                  textAlign: TextAlign.center,
                                 ),
                               ),
                             ],
@@ -185,22 +167,18 @@ class HomePageThiredPart extends StatelessWidget {
                           const SizedBox(height: 10),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: const [
-                              Text(
+                            children: [
+                              BorderTextWithShadow(
                                 'ii. ',
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  color: Colors.white,
-                                ),
+                                fontSize: 20,
+                                textAlign: TextAlign.start,
                               ),
                               Expanded(
-                                child: Text(
-                                  'Install CyBear Jinni Hub snap',
-                                  style: TextStyle(
+                                child: Center(
+                                  child: BorderTextWithShadow(
+                                    'Install CyBear Jinni Hub snap',
                                     fontSize: 20,
-                                    color: Colors.white,
                                   ),
-                                  textAlign: TextAlign.center,
                                 ),
                               ),
                             ],
@@ -208,22 +186,18 @@ class HomePageThiredPart extends StatelessWidget {
                           const SizedBox(height: 10),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: const [
-                              Text(
+                            children: [
+                              BorderTextWithShadow(
                                 'iii. ',
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  color: Colors.white,
-                                ),
+                                fontSize: 20,
+                                textAlign: TextAlign.start,
                               ),
                               Expanded(
-                                child: Text(
-                                  'Open the apps on your phone',
-                                  style: TextStyle(
+                                child: Center(
+                                  child: BorderTextWithShadow(
+                                    'Open the apps on your phone',
                                     fontSize: 20,
-                                    color: Colors.white,
                                   ),
-                                  textAlign: TextAlign.center,
                                 ),
                               ),
                             ],

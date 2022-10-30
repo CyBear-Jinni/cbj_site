@@ -4,6 +4,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cybear_jinni_site/presentation/home_page/widgets/easy_to_set_up_benefit_block.dart';
 import 'package:cybear_jinni_site/presentation/home_page/widgets/easy_to_use_benefit_block.dart';
 import 'package:cybear_jinni_site/presentation/home_page/widgets/privacy_and_open_source_benefit_block.dart';
+import 'package:cybear_jinni_site/presentation/new_home_page/widgets/border_text_with_shadow.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -41,49 +42,34 @@ class HomePageSecondPart extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  const Text(
-                    'About Us',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 35,
-                      fontWeight: FontWeight.bold,
-                    ),
+                  BorderTextWithShadow(
+                    'About us',
+                    fontSize: 35,
+                    fontWeight: FontWeight.bold,
                   ),
                   const SizedBox(height: 70),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Text(
+                    children: [
+                      BorderTextWithShadow(
                         'CyBear Jinni ',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 25,
-                        ),
+                        fontSize: 25,
                       ),
-                      Text(
+                      BorderTextWithShadow(
                         'Connects',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 25,
-                          fontWeight: FontWeight.bold,
-                        ),
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
                       ),
-                      Text(
+                      BorderTextWithShadow(
                         ' all your devices with ',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 25,
-                        ),
+                        fontSize: 25,
                       ),
-                      Text(
+                      BorderTextWithShadow(
                         'Open Source',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 25,
-                          fontWeight: FontWeight.bold,
-                        ),
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
                       ),
-                      SizedBox(height: 50),
+                      const SizedBox(height: 50),
                     ],
                   ),
                 ],

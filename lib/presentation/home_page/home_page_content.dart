@@ -12,12 +12,10 @@ class HomePageContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenTypeLayout(
       mobile: HomePageContentMobileTablet(),
-      desktop: Expanded(
-        child: BlocProvider(
-          create: (context) => getIt<NewHomePageBloc>()
-            ..add(const NewHomePageEvent.initialized()),
-          child: NewHomePageWidget(),
-        ),
+      desktop: BlocProvider(
+        create: (context) =>
+            getIt<NewHomePageBloc>()..add(const NewHomePageEvent.initialized()),
+        child: NewHomePageWidget(),
       ),
     );
   }

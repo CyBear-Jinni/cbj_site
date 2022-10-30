@@ -15,7 +15,7 @@ class NewHomePageWidget extends StatelessWidget {
     return BlocBuilder<NewHomePageBloc, NewHomePageState>(
       builder: (context, state) {
         return state.map(
-          (value) => const Text('sd'),
+          (value) => const Text('Loading the site'),
           loading: (_) => const Center(
             child: CircularProgressIndicator(),
           ),

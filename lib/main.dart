@@ -1,12 +1,12 @@
-import 'package:cybear_jinni_site/core/my_singleton.dart';
-import 'package:cybear_jinni_site/core/route_names.dart';
-import 'package:cybear_jinni_site/features/application/usecases/home_page/landing_page.dart';
-import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/about_page/about_page.dart';
-import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/faq_page/faq_page.dart';
-import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/home_page/home_page.dart';
-import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/integrations_page/integrations_page.dart';
-import 'package:cybear_jinni_site/features/application/usecases/home_page/pages/set_up_page/set_up_page.dart';
 import 'package:cybear_jinni_site/injection.dart';
+import 'package:cybear_jinni_site/my_singleton.dart';
+import 'package:cybear_jinni_site/presentation/about_page/about_page.dart';
+import 'package:cybear_jinni_site/presentation/faq_page/faq_page.dart';
+import 'package:cybear_jinni_site/presentation/integrations_page/integrations_page.dart';
+import 'package:cybear_jinni_site/presentation/landing_page/landing_page.dart';
+import 'package:cybear_jinni_site/presentation/new_home_page/new_home_page_page.dart';
+import 'package:cybear_jinni_site/presentation/route_names.dart';
+import 'package:cybear_jinni_site/presentation/set_up_page/set_up_page.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
@@ -91,7 +91,7 @@ class MyApp extends StatelessWidget {
         if (pathElements[0] == homeRoute) {
           MySingleton.setCurrentPageName(homeRoute);
           return MaterialPageRoute(
-            builder: (BuildContext context) => HomePage(),
+            builder: (BuildContext context) => NewHomePagePage(),
             settings: settings,
           );
         } else if (pathElements[0] == aboutRoute) {
@@ -121,7 +121,7 @@ class MyApp extends StatelessWidget {
         } else {
           MySingleton.setCurrentPageName(homeRoute);
           MaterialPageRoute(
-            builder: (BuildContext context) => HomePage(),
+            builder: (BuildContext context) => NewHomePagePage(),
             settings: settings,
           );
         }

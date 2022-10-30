@@ -102,13 +102,14 @@ class HomePageFirstPart extends StatelessWidget {
                               ),
                               const SizedBox(height: 40),
                               BorderTextWithShadow(
-                                "If you're a person who values his time and believes in privacy and open source we have the product for you.\n",
+                                "If you're a person who values his time or freedom\nWe have the product for you.\n",
                               ),
                               BorderTextWithShadow(
-                                'It automatically lets you control your smart home appliances with a simple UI and create personalized automation for better control.\n',
+                                'It automatically creates personalized automations to improved your performence in the daily activities.\n',
                               ),
                               BorderTextWithShadow(
-                                'Using CBJ you can create a smart home Hub that communicates with your devices and an app to control those devices.',
+                                'By setting a purpose for each area in the home CBJ will create the best automations to sute your needs.',
+                                // 'CBJ provides you with a open-source smart home Hub that communicates with your devices, and a single app to control those devices.',
                               ),
                             ],
                           ),

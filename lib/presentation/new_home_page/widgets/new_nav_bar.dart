@@ -1,4 +1,5 @@
 import 'package:cybear_jinni_site/my_singleton.dart';
+import 'package:cybear_jinni_site/presentation/new_home_page/widgets/border_text_with_shadow.dart';
 import 'package:cybear_jinni_site/presentation/route_names.dart';
 import 'package:flutter/material.dart';
 
@@ -62,13 +63,10 @@ class NewNavBar extends StatelessWidget {
                     Navigator.pushReplacementNamed(context, aboutRoute);
                   }
                 },
-                child: Text(
+                child: BorderTextWithShadow(
                   'About',
-                  style: TextStyle(
-                    color: Theme.of(context).textTheme.bodyText1!.color,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
             ),
@@ -85,13 +83,10 @@ class NewNavBar extends StatelessWidget {
                     Navigator.pushReplacementNamed(context, faqRoute);
                   }
                 },
-                child: Text(
+                child: BorderTextWithShadow(
                   'FAQ',
-                  style: TextStyle(
-                    color: Theme.of(context).textTheme.bodyText1!.color,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
             ),
@@ -108,13 +103,10 @@ class NewNavBar extends StatelessWidget {
                     Navigator.pushReplacementNamed(context, setUpRoute);
                   }
                 },
-                child: Text(
+                child: BorderTextWithShadow(
                   'Setup',
-                  style: TextStyle(
-                    color: Theme.of(context).textTheme.bodyText1!.color,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
             ),
@@ -134,13 +126,10 @@ class NewNavBar extends StatelessWidget {
                     );
                   }
                 },
-                child: Text(
+                child: BorderTextWithShadow(
                   'Integrations',
-                  style: TextStyle(
-                    color: Theme.of(context).textTheme.bodyText1!.color,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
             ),

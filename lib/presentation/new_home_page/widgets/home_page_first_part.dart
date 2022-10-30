@@ -18,18 +18,18 @@ class HomePageFirstPart extends StatelessWidget {
   );
 
   final List<String> companysLogs = [
-    'https://play-lh.googleusercontent.com/aFWiT2lTa9CYBpyPjfgfNHd0r5puwKRGj2rHpdPTNrz2N9LXgN_MbLjePd1OTc0E8Rl1=s180',
-    'https://play-lh.googleusercontent.com/Qrq9zB_-bWuAD0ETPeBRTsRHOSjmW_uzmexY5rF7wo2JeNc-oLuvsQSYdg0Uxsq6mkA=s180',
-    'https://play-lh.googleusercontent.com/cwAyt0LIs4cyXSs2jr79xjAxsuq4KoBTZNq__gpeQvupH-8PElGn6kiddx8-WfG8wEPl=s180',
-    'https://play-lh.googleusercontent.com/bteU9OSFF9z596eUOkGgM3XpWF2-b1VsKvmwWFitaI4qMwVPmx3lS09fHFDx8-CX3Q=s180',
+    'https://i.ibb.co/Wsqst7Y/google-logo.png',
+    'https://i.ibb.co/fpFwsdR/smart-life-logo.png',
+    'https://i.ibb.co/yqBDqkD/shelly-logo.png',
+    'https://i.ibb.co/C20VvvB/yeelight-logo.png',
     'https://i.ibb.co/THRX9kq/node-RED-logo.png',
     'https://i.ibb.co/hfRhB0Q/mqtt-logo.png',
     'https://i.ibb.co/XZLGCRd/Tasmota-logo.png',
-    'https://play-lh.googleusercontent.com/8L6vVAT2cC78V622nxSznr7Mm_MgMsH25TopH-ZIm5HMwAHRy0qTX29FlHF6_kbBsQ=s180',
-    'https://play-lh.googleusercontent.com/ocFF7mcDTJzr1PXr6k4q1Q2-5xNFUVODqluwnD60DiTsHgTalrVTqi7kk0H8JnW7GLEv=s180',
-    'https://play-lh.googleusercontent.com/k61DT9oYt_BPdzjAFokLY5e-He-YSl7-eZHeieaVO45XDAwQ6ebegsS_ZsQytca2zWM=s180',
-    'https://play-lh.googleusercontent.com/KGM9NYnyox9TXwoaY3PKl1PfQ2rTPp1rnpNNtmlbgozJZykhZhGKsL3z9myoj4ccayLS=s180',
-    'https://play-lh.googleusercontent.com/UF16mldRKpQUUWhRZlDnT1FjkAjWSu9NXVBEDoTgScI_eo_6yEL0oKtc2-OvPXcG3PmN=s180',
+    'https://i.ibb.co/q9psvjY/switcher-logo.png',
+    'https://i.ibb.co/FsRyPCm/jinvoo-smart-logo.png',
+    'https://i.ibb.co/2qN6yJW/lifx-logo.png',
+    'https://i.ibb.co/jJ20vch/tuya-smart-logo.png',
+    'https://i.ibb.co/8xxY6Bb/hp-logo.png',
   ];
 
   @override
@@ -47,7 +47,7 @@ class HomePageFirstPart extends StatelessWidget {
 
                 // 'https://images.macrumors.com/t/akS-rfKtypWuIFOGfmWE2nZz-ac=/1600x/http://images.macrumors.com/article-new/2017/11/lifxzlightstrips.jpg'
                 // 'https://www.self-build.co.uk/wp-content/uploads/2018/01/Loxone-lighting-system.png'
-                'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F79%2Fd3%2F90%2F79d390feeb4e5576a557e69cdfd8a36b.jpg&f=1&nofb=1&ipt=7a895450c06b7f850751842f06f5180d4f85f5cc731d680a989f4c381d057077&ipo=images'
+                'https://i.ibb.co/mFqb1DV/home-page-section-1-background.jpg'
             // 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.loxone.com%2Fenus%2Fwp-content%2Fuploads%2Fsites%2F13%2F2016%2F10%2FPH_Loxone-Showhome-Living-Room.jpg&f=1&nofb=1&ipt=08ed13561bee015a97d1a766368a25a8ee5251f30fb3f7377d409c9008e4cf73&ipo=images'
             // 'https://promotion-static.tuyaus.com/static/139914518422863872.jpg'
 // 'https://9to5toys.com/wp-content/uploads/sites/5/2018/09/lifx-tile-starter-kit.jpg'

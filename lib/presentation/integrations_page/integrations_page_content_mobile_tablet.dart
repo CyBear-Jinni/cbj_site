@@ -74,37 +74,37 @@ class IntegrationsPageContentMobileTablet extends StatelessWidget {
                     children: [
                       DeviceCard(
                         'Google',
-                        'https://play-lh.googleusercontent.com/aFWiT2lTa9CYBpyPjfgfNHd0r5puwKRGj2rHpdPTNrz2N9LXgN_MbLjePd1OTc0E8Rl1=s180',
+                        'https://i.ibb.co/Wsqst7Y/google-logo.png',
                         'https://www.google.com/chromecast/built-in/',
                       ),
                       DeviceCard(
                         'HP',
-                        'https://play-lh.googleusercontent.com/UF16mldRKpQUUWhRZlDnT1FjkAjWSu9NXVBEDoTgScI_eo_6yEL0oKtc2-OvPXcG3PmN=s180',
+                        'https://i.ibb.co/8xxY6Bb/hp-logo.png',
                         'https://www.hp.com/us-en/home.html',
                       ),
                       DeviceCard(
                         'Smart Life',
-                        'https://play-lh.googleusercontent.com/Qrq9zB_-bWuAD0ETPeBRTsRHOSjmW_uzmexY5rF7wo2JeNc-oLuvsQSYdg0Uxsq6mkA=s180',
+                        'https://i.ibb.co/fpFwsdR/smart-life-logo.png',
                         'https://www.tuya.com',
                       ),
                       DeviceCard(
                         'Tuya Smart',
-                        'https://play-lh.googleusercontent.com/KGM9NYnyox9TXwoaY3PKl1PfQ2rTPp1rnpNNtmlbgozJZykhZhGKsL3z9myoj4ccayLS=s180',
+                        'https://i.ibb.co/jJ20vch/tuya-smart-logo.png',
                         'https://www.tuya.com',
                       ),
                       DeviceCard(
                         'Xiaomi Yeelight',
-                        'https://play-lh.googleusercontent.com/bteU9OSFF9z596eUOkGgM3XpWF2-b1VsKvmwWFitaI4qMwVPmx3lS09fHFDx8-CX3Q=s180',
+                        'https://i.ibb.co/C20VvvB/yeelight-logo.png',
                         'https://www.yeelight.com',
                       ),
                       DeviceCard(
                         'Lifx',
-                        'https://play-lh.googleusercontent.com/k61DT9oYt_BPdzjAFokLY5e-He-YSl7-eZHeieaVO45XDAwQ6ebegsS_ZsQytca2zWM=s180',
+                        'https://i.ibb.co/2qN6yJW/lifx-logo.png',
                         'https://www.lifx.com/',
                       ),
                       DeviceCard(
                         'Switcher',
-                        'https://play-lh.googleusercontent.com/8L6vVAT2cC78V622nxSznr7Mm_MgMsH25TopH-ZIm5HMwAHRy0qTX29FlHF6_kbBsQ=s180',
+                        'https://i.ibb.co/q9psvjY/switcher-logo.png',
                         'https://switcher.co.il',
                       ),
                       DeviceCard(
@@ -124,7 +124,7 @@ class IntegrationsPageContentMobileTablet extends StatelessWidget {
                       // ),
                       DeviceCard(
                         'Shelly',
-                        'https://play-lh.googleusercontent.com/cwAyt0LIs4cyXSs2jr79xjAxsuq4KoBTZNq__gpeQvupH-8PElGn6kiddx8-WfG8wEPl=s180',
+                        'https://i.ibb.co/yqBDqkD/shelly-logo.png',
                         'https://shelly.cloud/',
                       ),
                       DeviceCard(
@@ -134,7 +134,7 @@ class IntegrationsPageContentMobileTablet extends StatelessWidget {
                       ),
                       DeviceCard(
                         'Jinvoo Smart',
-                        'https://play-lh.googleusercontent.com/ocFF7mcDTJzr1PXr6k4q1Q2-5xNFUVODqluwnD60DiTsHgTalrVTqi7kk0H8JnW7GLEv=s180',
+                        'https://i.ibb.co/FsRyPCm/jinvoo-smart-logo.png',
                         'http://www.xenon.cn/',
                       ),
                     ],

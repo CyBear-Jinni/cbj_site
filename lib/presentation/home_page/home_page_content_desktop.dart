@@ -15,10 +15,10 @@ class HomePageContentDesktop extends StatelessWidget {
   final ScrollController _scrollController = ScrollController();
 
   final List<String> companysLogs = [
-    'https://play-lh.googleusercontent.com/k61DT9oYt_BPdzjAFokLY5e-He-YSl7-eZHeieaVO45XDAwQ6ebegsS_ZsQytca2zWM=s180',
-    'https://play-lh.googleusercontent.com/KGM9NYnyox9TXwoaY3PKl1PfQ2rTPp1rnpNNtmlbgozJZykhZhGKsL3z9myoj4ccayLS=s180',
-    'https://play-lh.googleusercontent.com/bteU9OSFF9z596eUOkGgM3XpWF2-b1VsKvmwWFitaI4qMwVPmx3lS09fHFDx8-CX3Q=s180',
-    'https://play-lh.googleusercontent.com/Qrq9zB_-bWuAD0ETPeBRTsRHOSjmW_uzmexY5rF7wo2JeNc-oLuvsQSYdg0Uxsq6mkA=s180',
+    'https://i.ibb.co/2qN6yJW/lifx-logo.png',
+    'https://i.ibb.co/jJ20vch/tuya-smart-logo.png',
+    'https://i.ibb.co/C20VvvB/yeelight-logo.png',
+    'https://i.ibb.co/fpFwsdR/smart-life-logo.png',
     'https://i.ibb.co/hfRhB0Q/mqtt-logo.png',
   ];
 

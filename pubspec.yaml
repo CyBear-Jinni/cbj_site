@@ -26,11 +26,11 @@ flutter:
 
     - family: judson_regular
       fonts:
-          - asset: assets/Judson_Regular.ttf
+        - asset: assets/Judson_Regular.ttf
 
     - family: poppins_regular
       fonts:
-          - asset: assets/Poppins_Regular.ttf
+        - asset: assets/Poppins_Regular.ttf
 
 
 

@@ -20,9 +20,13 @@ flutter:
     - assets/images/
 
   fonts:
-    - family: poppins_regular
+    - family: poppinsRegular
       fonts:
-        - asset: fonts/Poppins_Regular.ttf
+        - asset: fonts/Poppins-Regular.ttf
+
+    - family: judsonRegular
+      fonts:
+        - asset: fonts/Judson-Regular.ttf
 
 
 

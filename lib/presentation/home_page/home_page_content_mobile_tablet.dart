@@ -65,6 +65,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                               child: Text(
                                 'CyBear Jinni',
                                 style: TextStyle(
+                                  fontFamily: 'judsonRegular',
                                   fontSize: 50,
                                   color: Theme.of(context)
                                       .textTheme
@@ -87,7 +88,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                               child: Text(
                                 'Smart Home',
                                 style: TextStyle(
-                                  fontFamily: 'poppins_regular',
+                                  fontFamily: 'poppinsRegular',
                                   fontSize: 17,
                                   color: Theme.of(context)
                                       .textTheme
@@ -126,7 +127,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 17,
-                          fontFamily: 'poppins_regular',
+                        fontFamily: 'poppinsRegular',
                       ),
                       children: [
                         TextSpan(text: 'CyBear Jinni '),
@@ -134,7 +135,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                           text: 'connects',
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              fontFamily: 'poppins_regular',
+                            fontFamily: 'poppinsRegular',
                           ),
                         ),
                         TextSpan(text: ' all your devices with '),
@@ -142,7 +143,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                           text: 'Open Source',
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              fontFamily: 'poppins_regular',
+                              fontFamily: 'poppinsRegular',
                           ),
                         ),
                       ],
@@ -193,7 +194,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                             Text(
                               'Supported Vendors',
                               style: TextStyle(
-                                fontFamily: 'poppins_regular',
+                                fontFamily: 'poppinsRegular',
                                 fontSize: 30,
                                 color: Theme.of(context)
                                     .textTheme
@@ -243,7 +244,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                       Text(
                         'CyBear Jinni Smart Devices Distribution',
                         style: TextStyle(
-                          fontFamily: 'poppins_regular',
+                          fontFamily: 'poppinsRegular',
                           fontSize: 40,
                           color: Theme.of(context).textTheme.bodyText1!.color,
                         ),

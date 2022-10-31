@@ -65,7 +65,6 @@ class HomePageContentMobileTablet extends StatelessWidget {
                               child: Text(
                                 'CyBear Jinni',
                                 style: TextStyle(
-                                  fontFamily: 'judson_regular',
                                   fontSize: 50,
                                   color: Theme.of(context)
                                       .textTheme

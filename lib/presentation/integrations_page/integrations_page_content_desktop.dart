@@ -65,7 +65,7 @@ class IntegrationsPageContentDesktop extends StatelessWidget {
                     crossAxisSpacing: 30,
                     mainAxisSpacing: 30,
                     crossAxisCount: 3,
-                    children: [
+                    children: const [
                       DeviceCard(
                         'Google',
                         'https://i.ibb.co/Wsqst7Y/google-logo.png',

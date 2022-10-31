@@ -39,7 +39,8 @@ class HomePageContentMobileTablet extends StatelessWidget {
                   fit: BoxFit.cover,
                   progressIndicatorBuilder: (context, url, downloadProgress) =>
                       CircularProgressIndicator(
-                          value: downloadProgress.progress),
+                    value: downloadProgress.progress,
+                  ),
                   errorWidget: (context, url, error) => const Icon(Icons.error),
                 ),
               ),
@@ -53,7 +54,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
-                          Container(
+                          DecoratedBox(
                             decoration: BoxDecoration(
                               color: Colors.black.withOpacity(0.8),
                               borderRadius: const BorderRadius.all(

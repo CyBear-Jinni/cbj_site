@@ -25,11 +25,14 @@ class SetUpPageContentMobileTablet extends StatelessWidget {
                 height: 150,
                 child: Align(
                   alignment: FractionalOffset.bottomCenter,
-                  child: Text('Set Up CyBear Jinni',
-                      style: TextStyle(
-                          fontSize: 30,
-                          color: Theme.of(context).textTheme.bodyText1!.color),
-                      textAlign: TextAlign.center),
+                  child: Text(
+                    'Set Up CyBear Jinni',
+                    style: TextStyle(
+                      fontSize: 30,
+                      color: Theme.of(context).textTheme.bodyText1!.color,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
                 ),
               ),
               const SizedBox(
@@ -167,7 +170,8 @@ class SetUpPageContentMobileTablet extends StatelessWidget {
                             child: InkWell(
                               onTap: () {
                                 launchUrlString(
-                                    'https://www.balena.io/etcher/');
+                                  'https://www.balena.io/etcher/',
+                                );
                               },
                               child: CachedNetworkImage(
                                 imageUrl:
@@ -176,7 +180,8 @@ class SetUpPageContentMobileTablet extends StatelessWidget {
                                 progressIndicatorBuilder:
                                     (context, url, downloadProgress) =>
                                         CircularProgressIndicator(
-                                            value: downloadProgress.progress),
+                                  value: downloadProgress.progress,
+                                ),
                                 errorWidget: (context, url, error) =>
                                     const Icon(Icons.error),
                               ),
@@ -344,7 +349,8 @@ class SetUpPageContentMobileTablet extends StatelessWidget {
                                 progressIndicatorBuilder:
                                     (context, url, downloadProgress) =>
                                         CircularProgressIndicator(
-                                            value: downloadProgress.progress),
+                                  value: downloadProgress.progress,
+                                ),
                                 errorWidget: (context, url, error) =>
                                     const Icon(Icons.error),
                               ),
@@ -442,7 +448,8 @@ class SetUpPageContentMobileTablet extends StatelessWidget {
                             child: InkWell(
                               onTap: () {
                                 launchUrlString(
-                                    'https://play.google.com/store/apps/details?id=com.cybear_jinni.smart_home');
+                                  'https://play.google.com/store/apps/details?id=com.cybear_jinni.smart_home',
+                                );
                               },
                               child: CachedNetworkImage(
                                 imageUrl:
@@ -451,7 +458,8 @@ class SetUpPageContentMobileTablet extends StatelessWidget {
                                 progressIndicatorBuilder:
                                     (context, url, downloadProgress) =>
                                         CircularProgressIndicator(
-                                            value: downloadProgress.progress),
+                                  value: downloadProgress.progress,
+                                ),
                                 errorWidget: (context, url, error) =>
                                     const Icon(Icons.error),
                               ),
@@ -465,7 +473,8 @@ class SetUpPageContentMobileTablet extends StatelessWidget {
                             child: InkWell(
                               onTap: () {
                                 launchUrlString(
-                                    'https://snapcraft.io/cybear-jinni');
+                                  'https://snapcraft.io/cybear-jinni',
+                                );
                               },
                               child: CachedNetworkImage(
                                 imageUrl:
@@ -474,7 +483,8 @@ class SetUpPageContentMobileTablet extends StatelessWidget {
                                 progressIndicatorBuilder:
                                     (context, url, downloadProgress) =>
                                         CircularProgressIndicator(
-                                            value: downloadProgress.progress),
+                                  value: downloadProgress.progress,
+                                ),
                                 errorWidget: (context, url, error) =>
                                     const Icon(Icons.error),
                               ),

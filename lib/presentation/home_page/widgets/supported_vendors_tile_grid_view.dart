@@ -1,6 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cybear_jinni_site/utils.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SupportedVendorsTileGridView extends StatelessWidget {
@@ -14,7 +13,7 @@ class SupportedVendorsTileGridView extends StatelessWidget {
       crossAxisSpacing: 15,
       mainAxisSpacing: 15,
       crossAxisCount: 3,
-      children: [
+      children: const [
         SupportedVendorsTileGridViewNetworkImage(
           'https://i.ibb.co/C20VvvB/yeelight-logo.png',
         ),
@@ -45,11 +44,13 @@ class SupportedVendorsTileGridView extends StatelessWidget {
 }
 
 class SupportedVendorsTileGridViewNetworkImage extends StatelessWidget {
-  SupportedVendorsTileGridViewNetworkImage(this.imageUrl,
-      {this.imageBackgroundColor = Colors.transparent});
+  const SupportedVendorsTileGridViewNetworkImage(
+    this.imageUrl, {
+    this.imageBackgroundColor = Colors.transparent,
+  });
 
-  String imageUrl;
-  Color imageBackgroundColor;
+  final String imageUrl;
+  final Color imageBackgroundColor;
 
   @override
   Widget build(BuildContext context) {

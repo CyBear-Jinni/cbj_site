@@ -101,15 +101,14 @@ class HomePageFirstPart extends StatelessWidget {
                                 ],
                               ),
                               const SizedBox(height: 40),
-                              BorderTextWithShadow(
+                              const BorderTextWithShadow(
                                 "If you're a person who values his time or freedom\nWe have the product for you.\n",
                               ),
-                              BorderTextWithShadow(
-                                'It automatically creates personalized automations to improved your performence in the daily activities.\n',
+                              const BorderTextWithShadow(
+                                'It automatically creates personalized automations to improved your performence in your daily activities.\n',
                               ),
-                              BorderTextWithShadow(
+                              const BorderTextWithShadow(
                                 'By setting a purpose for each area in the home CBJ will create the best automations to sute your needs.',
-                                // 'CBJ provides you with a open-source smart home Hub that communicates with your devices, and a single app to control those devices.',
                               ),
                             ],
                           ),
@@ -125,7 +124,6 @@ class HomePageFirstPart extends StatelessWidget {
                         width: screenSize.width / 2,
                         height: screenSize.height / 2.3,
                         child: YoutubePlayerControllerProvider(
-                          // Provides controller to all the widget below it.
                           controller: _controller,
                           child: const YoutubePlayerIFrame(),
                         ),
@@ -181,7 +179,7 @@ class HomePageFirstPart extends StatelessWidget {
                                   Flexible(
                                     child: Container(
                                       margin: const EdgeInsets.only(top: 20),
-                                      child: BorderTextWithShadow(
+                                      child: const BorderTextWithShadow(
                                         'Supported Vendor',
                                         fontSize: 30,
                                       ),

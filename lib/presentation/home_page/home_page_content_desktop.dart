@@ -60,7 +60,7 @@ class HomePageContentDesktop extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Container(
+                      DecoratedBox(
                         decoration: BoxDecoration(
                           color: Colors.black.withOpacity(0.8),
                           borderRadius:
@@ -389,7 +389,7 @@ class HomePageContentDesktop extends StatelessWidget {
                               ),
                             ),
                           ),
-                          Container(
+                          DecoratedBox(
                             decoration: const BoxDecoration(
                               image: DecorationImage(
                                 image: NetworkImage(

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class TabIndicator extends StatelessWidget {
-  TabIndicator(this.numberOfTabs, this.currentTab);
+  const TabIndicator(this.numberOfTabs, this.currentTab);
 
-  int numberOfTabs;
-  int currentTab;
+  final int numberOfTabs;
+  final int currentTab;
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +32,7 @@ class TabIndicator extends StatelessWidget {
 }
 
 class CirclePainterUnTicked extends StatelessWidget {
-  CirclePainterUnTicked(this.size);
+  const CirclePainterUnTicked(this.size);
 
   final double size;
 

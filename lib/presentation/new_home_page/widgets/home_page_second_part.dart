@@ -1,11 +1,8 @@
-import 'dart:ui';
-
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cybear_jinni_site/presentation/home_page/widgets/easy_to_set_up_benefit_block.dart';
 import 'package:cybear_jinni_site/presentation/home_page/widgets/easy_to_use_benefit_block.dart';
 import 'package:cybear_jinni_site/presentation/home_page/widgets/privacy_and_open_source_benefit_block.dart';
 import 'package:cybear_jinni_site/presentation/new_home_page/widgets/border_text_with_shadow.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class HomePageSecondPart extends StatelessWidget {
@@ -42,7 +39,7 @@ class HomePageSecondPart extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  BorderTextWithShadow(
+                  const BorderTextWithShadow(
                     'About us',
                     fontSize: 35,
                     fontWeight: FontWeight.bold,
@@ -50,7 +47,7 @@ class HomePageSecondPart extends StatelessWidget {
                   const SizedBox(height: 70),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
+                    children: const [
                       BorderTextWithShadow(
                         'CyBear Jinni ',
                         fontSize: 25,
@@ -69,7 +66,7 @@ class HomePageSecondPart extends StatelessWidget {
                         fontSize: 25,
                         fontWeight: FontWeight.bold,
                       ),
-                      const SizedBox(height: 50),
+                      SizedBox(height: 50),
                     ],
                   ),
                 ],

@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -28,7 +27,8 @@ class DrawerItem extends StatelessWidget {
             Text(
               title,
               style: TextStyle(
-                  color: Theme.of(context).textTheme.bodyText2!.color),
+                color: Theme.of(context).textTheme.bodyText2!.color,
+              ),
             ),
           ],
         ),

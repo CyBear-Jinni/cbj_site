@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
       bodyText1: TextStyle(color: Colors.white),
       bodyText2: TextStyle(color: Colors.white70),
     ),
-    // fontFamily: 'gidole_regular',
+     fontFamily: 'poppins_regular',
   );
 
   // This widget is the root of your application.

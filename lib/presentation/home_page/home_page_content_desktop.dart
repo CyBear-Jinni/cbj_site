@@ -72,6 +72,7 @@ class HomePageContentDesktop extends StatelessWidget {
                             'CyBear Jinni',
                             style: TextStyle(
                               fontSize: 60,
+                              fontFamily: 'judson_regular',
                               color:
                                   Theme.of(context).textTheme.bodyText1!.color,
                             ),
@@ -91,6 +92,7 @@ class HomePageContentDesktop extends StatelessWidget {
                             'Smart Home',
                             style: TextStyle(
                               fontSize: 21,
+                              fontFamily: 'poppins_regular',
                               color:
                                   Theme.of(context).textTheme.bodyText1!.color,
                               fontWeight: FontWeight.w700,
@@ -120,7 +122,7 @@ class HomePageContentDesktop extends StatelessWidget {
                 child: Center(
                   child: RichText(
                     text: const TextSpan(
-                      style: TextStyle(color: Colors.white, fontSize: 24),
+                      style: TextStyle(color: Colors.white, fontSize: 24, fontFamily: 'poppins_regular'),
                       children: [
                         TextSpan(text: 'CyBear Jinni '),
                         TextSpan(
@@ -192,6 +194,7 @@ class HomePageContentDesktop extends StatelessWidget {
                             'Supported Vendors',
                             style: TextStyle(
                               fontSize: 40,
+                              fontFamily: 'poppins_regular',
                               color:
                                   Theme.of(context).textTheme.bodyText1!.color,
                             ),
@@ -255,6 +258,7 @@ class HomePageContentDesktop extends StatelessWidget {
                         'Easily Set Up',
                         style: TextStyle(
                           fontSize: 40,
+                          fontFamily: 'poppins_regular',
                           color: Theme.of(context).textTheme.bodyText1!.color,
                         ),
                         textAlign: TextAlign.center,
@@ -293,6 +297,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                       'For RaspberryPi',
                                       style: TextStyle(
                                         fontSize: 28,
+                                        fontFamily: 'poppins_regular',
                                         decoration: TextDecoration.underline,
                                         color: Colors.white,
                                       ),
@@ -305,6 +310,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                     text: TextSpan(
                                       style: TextStyle(
                                         fontSize: 24,
+                                        fontFamily: 'poppins_regular',
                                         color: Theme.of(context)
                                             .textTheme
                                             .bodyText1!
@@ -315,13 +321,19 @@ class HomePageContentDesktop extends StatelessWidget {
                                         TextSpan(
                                           text: '1. ',
                                           style: TextStyle(
+                                            fontFamily: 'poppins_regular',
                                             color: Theme.of(context)
                                                 .textTheme
                                                 .bodyText2!
                                                 .color,
                                           ),
                                         ),
-                                        const TextSpan(text: 'Download ISO'),
+                                        const TextSpan(
+                                          text: 'Download ISO',
+                                          style: TextStyle(
+                                              fontFamily: 'poppins_regular',
+                                          ),
+                                        ),
                                       ],
                                     ),
                                   ),
@@ -332,6 +344,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                     text: TextSpan(
                                       style: TextStyle(
                                         fontSize: 24,
+                                        fontFamily: 'poppins_regular',
                                         color: Theme.of(context)
                                             .textTheme
                                             .bodyText1!
@@ -342,6 +355,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                         TextSpan(
                                           text: '2. ',
                                           style: TextStyle(
+                                            fontFamily: 'poppins_regular',
                                             color: Theme.of(context)
                                                 .textTheme
                                                 .bodyText2!
@@ -351,6 +365,9 @@ class HomePageContentDesktop extends StatelessWidget {
                                         const TextSpan(
                                           text: 'Install ISO to SD card and '
                                               'insert it',
+                                          style: TextStyle(
+                                            fontFamily: 'poppins_regular',
+                                          ),
                                         ),
                                       ],
                                     ),
@@ -362,6 +379,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                     text: TextSpan(
                                       style: TextStyle(
                                         fontSize: 24,
+                                        fontFamily: 'poppins_regular',
                                         color: Theme.of(context)
                                             .textTheme
                                             .bodyText1!
@@ -372,6 +390,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                         TextSpan(
                                           text: '3. ',
                                           style: TextStyle(
+                                            fontFamily: 'poppins_regular',
                                             color: Theme.of(context)
                                                 .textTheme
                                                 .bodyText2!
@@ -381,6 +400,9 @@ class HomePageContentDesktop extends StatelessWidget {
                                         const TextSpan(
                                           text: 'Open the app on your '
                                               'phone\n',
+                                          style: TextStyle(
+                                            fontFamily: 'poppins_regular',
+                                          ),
                                         ),
                                       ],
                                     ),
@@ -414,6 +436,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                     child: Text(
                                       'For Linux',
                                       style: TextStyle(
+                                        fontFamily: 'poppins_regular',
                                         fontSize: 28,
                                         decoration: TextDecoration.underline,
                                         color: Colors.white,
@@ -427,6 +450,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                     text: TextSpan(
                                       style: TextStyle(
                                         fontSize: 24,
+                                        fontFamily: 'poppins_regular',
                                         color: Theme.of(context)
                                             .textTheme
                                             .bodyText1!
@@ -437,6 +461,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                         TextSpan(
                                           text: '1. ',
                                           style: TextStyle(
+                                            fontFamily: 'poppins_regular',
                                             color: Theme.of(context)
                                                 .textTheme
                                                 .bodyText2!
@@ -445,6 +470,9 @@ class HomePageContentDesktop extends StatelessWidget {
                                         ),
                                         const TextSpan(
                                           text: 'Install MQTT broker snap',
+                                          style: TextStyle(
+                                            fontFamily: 'poppins_regular',
+                                          ),
                                         ),
                                       ],
                                     ),
@@ -456,6 +484,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                     text: TextSpan(
                                       style: TextStyle(
                                         fontSize: 24,
+                                        fontFamily: 'poppins_regular',
                                         color: Theme.of(context)
                                             .textTheme
                                             .bodyText1!
@@ -466,6 +495,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                         TextSpan(
                                           text: '2. ',
                                           style: TextStyle(
+                                            fontFamily: 'poppins_regular',
                                             color: Theme.of(context)
                                                 .textTheme
                                                 .bodyText2!
@@ -475,6 +505,9 @@ class HomePageContentDesktop extends StatelessWidget {
                                         const TextSpan(
                                           text: 'Install CyBear '
                                               'Jinni Hub Snap',
+                                          style: TextStyle(
+                                            fontFamily: 'poppins_regular',
+                                          ),
                                         ),
                                       ],
                                     ),
@@ -485,6 +518,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                   RichText(
                                     text: TextSpan(
                                       style: TextStyle(
+                                        fontFamily: 'poppins_regular',
                                         fontSize: 24,
                                         color: Theme.of(context)
                                             .textTheme
@@ -496,6 +530,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                         TextSpan(
                                           text: '3. ',
                                           style: TextStyle(
+                                            fontFamily: 'poppins_regular',
                                             color: Theme.of(context)
                                                 .textTheme
                                                 .bodyText2!
@@ -505,6 +540,9 @@ class HomePageContentDesktop extends StatelessWidget {
                                         const TextSpan(
                                           text: 'Open the app on your phone'
                                               '\n',
+                                          style: TextStyle(
+                                            fontFamily: 'poppins_regular',
+                                          ),
                                         ),
                                       ],
                                     ),
@@ -534,6 +572,7 @@ class HomePageContentDesktop extends StatelessWidget {
                             'We will add all the smart home devices '
                             'automatically for you',
                             style: TextStyle(
+                              fontFamily: 'poppins_regular',
                               fontSize: 23,
                               color: Colors.white.withOpacity(0.8),
                             ),

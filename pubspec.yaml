@@ -22,7 +22,7 @@ flutter:
   fonts:
     - family: poppins_regular
       fonts:
-        - asset: assets/Poppins_Regular.ttf
+        - asset: fonts/Poppins_Regular.ttf
 
 
 

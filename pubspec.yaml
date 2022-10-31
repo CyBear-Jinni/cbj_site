@@ -23,6 +23,14 @@ flutter:
     - family: gidole_regular
       fonts:
         - asset: assets/gidole_regular.ttf
+    - family: judson_regular
+        fonts:
+            - asset: assets/Judson_Regular.ttf
+    - family: poppins_regular
+        fonts:
+            - asset: assets/Poppins_Regular.ttf
+
+
 
 dependencies:
   # Automatically resizes text to fit perfectly within its bounds

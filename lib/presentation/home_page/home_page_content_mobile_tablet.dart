@@ -65,6 +65,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                               child: Text(
                                 'CyBear Jinni',
                                 style: TextStyle(
+                                  fontFamily: 'judson_regular',
                                   fontSize: 50,
                                   color: Theme.of(context)
                                       .textTheme
@@ -87,6 +88,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                               child: Text(
                                 'Smart Home',
                                 style: TextStyle(
+                                  fontFamily: 'poppins_regular',
                                   fontSize: 17,
                                   color: Theme.of(context)
                                       .textTheme
@@ -122,7 +124,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                 child: Center(
                   child: RichText(
                     text: const TextSpan(
-                      style: TextStyle(color: Colors.white, fontSize: 17),
+                      style: TextStyle(color: Colors.white, fontSize: 17,fontFamily: 'poppins_regular',),
                       children: [
                         TextSpan(text: 'CyBear Jinni '),
                         TextSpan(
@@ -182,6 +184,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                             Text(
                               'Supported Vendors',
                               style: TextStyle(
+                                fontFamily: 'poppins_regular',
                                 fontSize: 30,
                                 color: Theme.of(context)
                                     .textTheme
@@ -231,6 +234,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                       Text(
                         'CyBear Jinni Smart Devices Distribution',
                         style: TextStyle(
+                          fontFamily: 'poppins_regular',
                           fontSize: 40,
                           color: Theme.of(context).textTheme.bodyText1!.color,
                         ),

@@ -71,7 +71,6 @@ class HomePageContentDesktop extends StatelessWidget {
                           child: Text(
                             'CyBear Jinni',
                             style: TextStyle(
-                              fontFamily: 'judson_regular',
                               fontSize: 60,
                               color:
                                   Theme.of(context).textTheme.bodyText1!.color,

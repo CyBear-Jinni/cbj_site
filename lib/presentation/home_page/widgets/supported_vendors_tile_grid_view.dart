@@ -46,7 +46,7 @@ class SupportedVendorsTileGridView extends StatelessWidget {
 class SupportedVendorsTileGridViewNetworkImage extends StatelessWidget {
   const SupportedVendorsTileGridViewNetworkImage(
     this.imageUrl, {
-    this.imageBackgroundColor = Colors.transparent,
+    this.imageBackgroundColor = Colors.white,
   });
 
   final String imageUrl;
@@ -54,6 +54,11 @@ class SupportedVendorsTileGridViewNetworkImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Color backgroundColorCorrect = imageBackgroundColor;
+    if (backgroundColorCorrect == Colors.white) {
+      backgroundColorCorrect = backgroundColorCorrect.withOpacity(0.8);
+    }
+
     return ColoredBox(
       color: imageBackgroundColor,
       child: CachedNetworkImage(

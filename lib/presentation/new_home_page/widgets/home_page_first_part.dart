@@ -22,11 +22,12 @@ class HomePageFirstPart extends StatelessWidget {
     'https://i.ibb.co/fpFwsdR/smart-life-logo.png',
     'https://i.ibb.co/yqBDqkD/shelly-logo.png',
     'https://i.ibb.co/C20VvvB/yeelight-logo.png',
-    'https://i.ibb.co/THRX9kq/node-RED-logo.png',
     'https://i.ibb.co/hfRhB0Q/mqtt-logo.png',
-    'https://i.ibb.co/XZLGCRd/Tasmota-logo.png',
+    'https://i.ibb.co/THRX9kq/node-RED-logo.png',
+    'https://i.ibb.co/W2YG23s/ESPHome-logo.png',
     'https://i.ibb.co/q9psvjY/switcher-logo.png',
     'https://i.ibb.co/FsRyPCm/jinvoo-smart-logo.png',
+    'https://i.ibb.co/XZLGCRd/Tasmota-logo.png',
     'https://i.ibb.co/2qN6yJW/lifx-logo.png',
     'https://i.ibb.co/jJ20vch/tuya-smart-logo.png',
     'https://i.ibb.co/8xxY6Bb/hp-logo.png',
@@ -105,10 +106,10 @@ class HomePageFirstPart extends StatelessWidget {
                                 "If you're a person who values his time or freedom\nWe have the product for you.\n",
                               ),
                               const BorderTextWithShadow(
-                                'It automatically creates personalized automations to improved your performence in your daily activities.\n',
+                                'It automatically creates personalized automations to improved your performance in your daily activities.\n',
                               ),
                               const BorderTextWithShadow(
-                                'By setting a purpose for each area in the home CBJ will create the best automations to sute your needs.',
+                                'By setting a purpose for each area in the home CBJ will create the best automations to suite your needs.',
                               ),
                             ],
                           ),
@@ -180,7 +181,7 @@ class HomePageFirstPart extends StatelessWidget {
                                     child: Container(
                                       margin: const EdgeInsets.only(top: 20),
                                       child: const BorderTextWithShadow(
-                                        'Supported Vendor',
+                                        'Supported Vendors',
                                         fontSize: 30,
                                       ),
                                     ),
@@ -210,12 +211,15 @@ class HomePageFirstPart extends StatelessWidget {
                                             ),
                                             SupportedVendorsTileGridViewNetworkImage(
                                               companysLogs[3],
+                                              imageBackgroundColor: Colors.red,
                                             ),
                                             SupportedVendorsTileGridViewNetworkImage(
                                               companysLogs[4],
                                             ),
                                             SupportedVendorsTileGridViewNetworkImage(
                                               companysLogs[5],
+                                              imageBackgroundColor:
+                                                  HexColor('#8F0000'),
                                             ),
                                             SupportedVendorsTileGridViewNetworkImage(
                                               companysLogs[6],
@@ -234,6 +238,9 @@ class HomePageFirstPart extends StatelessWidget {
                                             ),
                                             SupportedVendorsTileGridViewNetworkImage(
                                               companysLogs[11],
+                                            ),
+                                            SupportedVendorsTileGridViewNetworkImage(
+                                              companysLogs[12],
                                             ),
                                           ],
                                         ),

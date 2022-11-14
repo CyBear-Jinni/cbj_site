@@ -180,10 +180,10 @@ class HomePageFirstPart extends StatelessWidget {
                                 children: [
                                   Flexible(
                                     child: Container(
-                                      margin: const EdgeInsets.only(top: 20),
+                                      margin: const EdgeInsets.only(top: 10),
                                       child: BorderTextWithShadow(
-                                        'Supported Vendor',
-                                        fontSize: 30,
+                                        'Supported Vendors',
+                                        fontSize: MediaQuery.of(context).size.height/27,
                                       ),
                                     ),
                                   ),

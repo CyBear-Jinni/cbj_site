@@ -33,7 +33,7 @@ class HomePage extends StatelessWidget {
                 sizingInformation.deviceScreenType == DeviceScreenType.mobile ||
                         sizingInformation.deviceScreenType ==
                             DeviceScreenType.tablet
-                    ? NavigationDrawer()
+                    ? NavigationDrawerWidget()
                     : null,
             backgroundColor: Colors.transparent,
             body: Stack(

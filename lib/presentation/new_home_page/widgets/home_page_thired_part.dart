@@ -1,9 +1,6 @@
-import 'dart:ui';
-
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cybear_jinni_site/presentation/new_home_page/widgets/border_text_with_shadow.dart';
 import 'package:cybear_jinni_site/presentation/route_names.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class HomePageThiredPart extends StatelessWidget {
@@ -29,7 +26,7 @@ class HomePageThiredPart extends StatelessWidget {
               flex: 3,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [
+                children: const [
                   BorderTextWithShadow(
                     'How to Setup',
                     fontSize: 35,
@@ -70,7 +67,7 @@ class HomePageThiredPart extends StatelessWidget {
                           const SizedBox(height: 32),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
+                            children: const [
                               BorderTextWithShadow(
                                 'i. ',
                                 fontSize: 20,
@@ -89,7 +86,7 @@ class HomePageThiredPart extends StatelessWidget {
                           const SizedBox(height: 10),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
+                            children: const [
                               BorderTextWithShadow(
                                 'ii. ',
                                 fontSize: 20,
@@ -108,7 +105,7 @@ class HomePageThiredPart extends StatelessWidget {
                           const SizedBox(height: 10),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
+                            children: const [
                               BorderTextWithShadow(
                                 'iii. ',
                                 fontSize: 20,
@@ -117,7 +114,7 @@ class HomePageThiredPart extends StatelessWidget {
                               Expanded(
                                 child: Center(
                                   child: BorderTextWithShadow(
-                                    'Open the apps on your phone',
+                                    'Open the app on your phone',
                                     fontSize: 20,
                                   ),
                                 ),
@@ -148,7 +145,7 @@ class HomePageThiredPart extends StatelessWidget {
                           const SizedBox(height: 32),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
+                            children: const [
                               BorderTextWithShadow(
                                 'i. ',
                                 fontSize: 20,
@@ -167,7 +164,7 @@ class HomePageThiredPart extends StatelessWidget {
                           const SizedBox(height: 10),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
+                            children: const [
                               BorderTextWithShadow(
                                 'ii. ',
                                 fontSize: 20,
@@ -186,7 +183,7 @@ class HomePageThiredPart extends StatelessWidget {
                           const SizedBox(height: 10),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
+                            children: const [
                               BorderTextWithShadow(
                                 'iii. ',
                                 fontSize: 20,
@@ -195,7 +192,7 @@ class HomePageThiredPart extends StatelessWidget {
                               Expanded(
                                 child: Center(
                                   child: BorderTextWithShadow(
-                                    'Open the apps on your phone',
+                                    'Open the app on your phone',
                                     fontSize: 20,
                                   ),
                                 ),

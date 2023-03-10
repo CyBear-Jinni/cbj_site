@@ -10,13 +10,15 @@ import 'package:responsive_builder/responsive_builder.dart';
 class HomePageContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ScreenTypeLayout(
-      mobile: HomePageContentMobileTablet(),
-      desktop: BlocProvider(
-        create: (context) =>
-            getIt<NewHomePageBloc>()..add(const NewHomePageEvent.initialized()),
-        child: NewHomePageWidget(),
-      ),
+    return ScreenTypeLayout.builder(
+      mobile: (context) => HomePageContentMobileTablet(),
+      desktop: (context) {
+        return BlocProvider(
+          create: (context) => getIt<NewHomePageBloc>()
+            ..add(const NewHomePageEvent.initialized()),
+          child: NewHomePageWidget(),
+        );
+      },
     );
   }
 }

@@ -1,12 +1,14 @@
 import 'package:cybear_jinni_site/presentation/shared_widgets/navigation_drawer/drawer_item.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 /// Adding on click start function to DrawerItem
 class DrawerItemOnClickStartFunction extends StatelessWidget {
   /// Setting the text, icon, function to start on click
   const DrawerItemOnClickStartFunction(
-      this.title, this.icon, this.onClickFunction);
+    this.title,
+    this.icon,
+    this.onClickFunction,
+  );
 
   /// The text in the card
   final String title;

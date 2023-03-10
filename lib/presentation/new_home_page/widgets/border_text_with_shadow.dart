@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 class BorderTextWithShadow extends StatelessWidget {
-  BorderTextWithShadow(
+  const BorderTextWithShadow(
     this._text, {
     this.fontSize = 22,
     this.fontWeight = FontWeight.normal,
     this.textAlign = TextAlign.center,
   });
 
-  String _text;
-  double fontSize;
-  FontWeight fontWeight;
-  TextAlign textAlign;
+  final String _text;
+  final double fontSize;
+  final FontWeight fontWeight;
+  final TextAlign textAlign;
 
   @override
   Widget build(BuildContext context) {

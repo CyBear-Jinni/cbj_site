@@ -31,7 +31,7 @@ class AboutPageContentMobileTablet extends StatelessWidget {
           child: Scaffold(
             drawer:
                 sizingInformation.deviceScreenType == DeviceScreenType.mobile
-                    ? NavigationDrawer()
+                    ? NavigationDrawerWidget()
                     : null,
             backgroundColor: Colors.transparent,
             body: Scrollbar(
@@ -52,7 +52,7 @@ class AboutPageContentMobileTablet extends StatelessWidget {
                         'About',
                         style: TextStyle(
                           fontSize: 30,
-                          color: Theme.of(context).textTheme.bodyText1!.color,
+                          color: Theme.of(context).textTheme.bodyLarge!.color,
                         ),
                         textAlign: TextAlign.center,
                       ),
@@ -122,7 +122,7 @@ class AboutPageContentMobileTablet extends StatelessWidget {
                           'Fan Art',
                           style: TextStyle(
                             fontSize: 50,
-                            color: Theme.of(context).textTheme.bodyText1!.color,
+                            color: Theme.of(context).textTheme.bodyLarge!.color,
                           ),
                           textAlign: TextAlign.center,
                         ),

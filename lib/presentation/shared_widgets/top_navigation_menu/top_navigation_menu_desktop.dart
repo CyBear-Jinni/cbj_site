@@ -72,12 +72,12 @@ class TopNavigationMenuDesktop extends StatelessWidget {
                     child: Tab(
                       icon: FaIcon(
                         FontAwesomeIcons.addressCard,
-                        color: Theme.of(context).textTheme.bodyText1!.color,
+                        color: Theme.of(context).textTheme.bodyLarge!.color,
                       ),
                       child: Text(
                         'About',
                         style: TextStyle(
-                          color: Theme.of(context).textTheme.bodyText1!.color,
+                          color: Theme.of(context).textTheme.bodyLarge!.color,
                         ),
                       ),
                     ),
@@ -96,12 +96,12 @@ class TopNavigationMenuDesktop extends StatelessWidget {
                     child: Tab(
                       icon: FaIcon(
                         FontAwesomeIcons.circleQuestion,
-                        color: Theme.of(context).textTheme.bodyText1!.color,
+                        color: Theme.of(context).textTheme.bodyLarge!.color,
                       ),
                       child: Text(
                         'FAQ',
                         style: TextStyle(
-                          color: Theme.of(context).textTheme.bodyText1!.color,
+                          color: Theme.of(context).textTheme.bodyLarge!.color,
                         ),
                       ),
                     ),
@@ -120,12 +120,12 @@ class TopNavigationMenuDesktop extends StatelessWidget {
                     child: Tab(
                       icon: FaIcon(
                         FontAwesomeIcons.shapes,
-                        color: Theme.of(context).textTheme.bodyText1!.color,
+                        color: Theme.of(context).textTheme.bodyLarge!.color,
                       ),
                       child: Text(
                         'Set Up',
                         style: TextStyle(
-                          color: Theme.of(context).textTheme.bodyText1!.color,
+                          color: Theme.of(context).textTheme.bodyLarge!.color,
                         ),
                       ),
                     ),
@@ -147,12 +147,12 @@ class TopNavigationMenuDesktop extends StatelessWidget {
                     child: Tab(
                       icon: FaIcon(
                         FontAwesomeIcons.lightbulb,
-                        color: Theme.of(context).textTheme.bodyText1!.color,
+                        color: Theme.of(context).textTheme.bodyLarge!.color,
                       ),
                       child: Text(
                         'Integrations',
                         style: TextStyle(
-                          color: Theme.of(context).textTheme.bodyText1!.color,
+                          color: Theme.of(context).textTheme.bodyLarge!.color,
                         ),
                       ),
                     ),
@@ -172,12 +172,12 @@ class TopNavigationMenuDesktop extends StatelessWidget {
                     child: Tab(
                       icon: FaIcon(
                         FontAwesomeIcons.house,
-                        color: Theme.of(context).textTheme.bodyText1!.color,
+                        color: Theme.of(context).textTheme.bodyLarge!.color,
                       ),
                       child: Text(
                         'Home',
                         style: TextStyle(
-                          color: Theme.of(context).textTheme.bodyText1!.color,
+                          color: Theme.of(context).textTheme.bodyLarge!.color,
                         ),
                       ),
                     ),

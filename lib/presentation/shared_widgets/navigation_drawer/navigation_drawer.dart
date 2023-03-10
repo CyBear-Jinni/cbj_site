@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 /// Navigation drawer for small screen sizes, replace the top navigation menu
-class NavigationDrawer extends StatelessWidget {
+class NavigationDrawerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(

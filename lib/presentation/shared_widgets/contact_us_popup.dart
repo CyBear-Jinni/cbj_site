@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 Future<dynamic> contactUsPlaceHolder(BuildContext context) {
   return showDialog(
@@ -31,7 +30,7 @@ class _ContactUsPopup extends State<ContactUsPopup> {
             width: MediaQuery.of(context).size.width / 1.1,
             height: MediaQuery.of(context).size.height / 1.5,
             color:
-                Theme.of(context).textTheme.bodyText1!.color!.withOpacity(0.9),
+                Theme.of(context).textTheme.bodyLarge!.color!.withOpacity(0.9),
             child: Form(
               key: _formKey,
               child: Column(
@@ -62,7 +61,7 @@ class _ContactUsPopup extends State<ContactUsPopup> {
                     ),
                     actions: <Widget>[
                       TextButton(
-                        // textColor: Theme.of(context).textTheme.bodyText1.color,
+                        // textColor: Theme.of(context).textTheme.bodyLarge.color,
                         onPressed: () {
                           Navigator.of(context).pop();
                         },

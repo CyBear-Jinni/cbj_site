@@ -29,7 +29,7 @@ class IntegrationsPage extends StatelessWidget {
           child: Scaffold(
             drawer:
                 sizingInformation.deviceScreenType == DeviceScreenType.mobile
-                    ? NavigationDrawer()
+                    ? NavigationDrawerWidget()
                     : null,
             backgroundColor: Colors.transparent,
             body: Stack(

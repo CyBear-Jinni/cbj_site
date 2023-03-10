@@ -63,7 +63,7 @@ class NewNavBar extends StatelessWidget {
                     Navigator.pushReplacementNamed(context, aboutRoute);
                   }
                 },
-                child: BorderTextWithShadow(
+                child: const BorderTextWithShadow(
                   'About',
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
@@ -83,7 +83,7 @@ class NewNavBar extends StatelessWidget {
                     Navigator.pushReplacementNamed(context, faqRoute);
                   }
                 },
-                child: BorderTextWithShadow(
+                child: const BorderTextWithShadow(
                   'FAQ',
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
@@ -103,7 +103,7 @@ class NewNavBar extends StatelessWidget {
                     Navigator.pushReplacementNamed(context, setUpRoute);
                   }
                 },
-                child: BorderTextWithShadow(
+                child: const BorderTextWithShadow(
                   'Setup',
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
@@ -126,7 +126,7 @@ class NewNavBar extends StatelessWidget {
                     );
                   }
                 },
-                child: BorderTextWithShadow(
+                child: const BorderTextWithShadow(
                   'Integrations',
                   fontSize: 20,
                   fontWeight: FontWeight.bold,

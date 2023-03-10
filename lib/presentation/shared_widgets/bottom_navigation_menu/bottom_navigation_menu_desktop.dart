@@ -18,7 +18,7 @@ class BottomNavigationMenuDesktop extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Divider(
-                color: Theme.of(context).textTheme.bodyText1!.color,
+                color: Theme.of(context).textTheme.bodyLarge!.color,
                 thickness: 1,
                 height: 3,
               ),
@@ -60,7 +60,7 @@ class BottomNavigationMenuDesktop extends StatelessWidget {
                                 FontAwesomeIcons.appStoreIos,
                                 color: Theme.of(context)
                                     .textTheme
-                                    .bodyText1!
+                                    .bodyLarge!
                                     .color,
                               ),
                               child: Text(
@@ -68,7 +68,7 @@ class BottomNavigationMenuDesktop extends StatelessWidget {
                                 style: TextStyle(
                                   color: Theme.of(context)
                                       .textTheme
-                                      .bodyText2!
+                                      .bodyLarge!
                                       .color,
                                 ),
                               ),
@@ -88,7 +88,7 @@ class BottomNavigationMenuDesktop extends StatelessWidget {
                                 FontAwesomeIcons.googlePlay,
                                 color: Theme.of(context)
                                     .textTheme
-                                    .bodyText1!
+                                    .bodyLarge!
                                     .color,
                               ),
                               child: Text(
@@ -96,7 +96,7 @@ class BottomNavigationMenuDesktop extends StatelessWidget {
                                 style: TextStyle(
                                   color: Theme.of(context)
                                       .textTheme
-                                      .bodyText2!
+                                      .bodyLarge!
                                       .color,
                                 ),
                               ),
@@ -116,7 +116,7 @@ class BottomNavigationMenuDesktop extends StatelessWidget {
                                 FontAwesomeIcons.ubuntu,
                                 color: Theme.of(context)
                                     .textTheme
-                                    .bodyText1!
+                                    .bodyLarge!
                                     .color,
                               ),
                               child: Text(
@@ -124,7 +124,7 @@ class BottomNavigationMenuDesktop extends StatelessWidget {
                                 style: TextStyle(
                                   color: Theme.of(context)
                                       .textTheme
-                                      .bodyText2!
+                                      .bodyLarge!
                                       .color,
                                 ),
                               ),
@@ -162,7 +162,7 @@ class BottomNavigationMenuDesktop extends StatelessWidget {
                                 FontAwesomeIcons.twitter,
                                 color: Theme.of(context)
                                     .textTheme
-                                    .bodyText1!
+                                    .bodyLarge!
                                     .color,
                               ),
                               child: const Text(''),
@@ -182,7 +182,7 @@ class BottomNavigationMenuDesktop extends StatelessWidget {
                                 FontAwesomeIcons.instagram,
                                 color: Theme.of(context)
                                     .textTheme
-                                    .bodyText1!
+                                    .bodyLarge!
                                     .color,
                               ),
                               child: const Text(''),
@@ -202,7 +202,7 @@ class BottomNavigationMenuDesktop extends StatelessWidget {
                                 FontAwesomeIcons.linkedin,
                                 color: Theme.of(context)
                                     .textTheme
-                                    .bodyText1!
+                                    .bodyLarge!
                                     .color,
                               ),
                               child: const Text(''),
@@ -220,7 +220,7 @@ class BottomNavigationMenuDesktop extends StatelessWidget {
                                 FontAwesomeIcons.discord,
                                 color: Theme.of(context)
                                     .textTheme
-                                    .bodyText1!
+                                    .bodyLarge!
                                     .color,
                               ),
                               child: const Text(''),
@@ -240,7 +240,7 @@ class BottomNavigationMenuDesktop extends StatelessWidget {
                                 FontAwesomeIcons.github,
                                 color: Theme.of(context)
                                     .textTheme
-                                    .bodyText1!
+                                    .bodyLarge!
                                     .color,
                               ),
                               child: const Text(''),

@@ -7,10 +7,10 @@ import 'package:responsive_builder/responsive_builder.dart';
 class FaqPageContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ScreenTypeLayout(
-      mobile: FaqPageContentMobileTablet(),
-      tablet: FaqPageContentMobileTablet(),
-      desktop: FaqPageContentDesktop(),
+    return ScreenTypeLayout.builder(
+      mobile: (context) => FaqPageContentMobileTablet(),
+      tablet: (context) => FaqPageContentMobileTablet(),
+      desktop: (context) => FaqPageContentDesktop(),
     );
   }
 }

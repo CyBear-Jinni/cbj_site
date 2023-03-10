@@ -7,9 +7,9 @@ import 'package:responsive_builder/responsive_builder.dart';
 class AboutPageContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ScreenTypeLayout(
-      mobile: AboutPageContentMobileTablet(),
-      desktop: AboutPageContentDesktop(),
+    return ScreenTypeLayout.builder(
+      mobile: (context) => AboutPageContentMobileTablet(),
+      desktop: (context) => AboutPageContentDesktop(),
     );
   }
 }

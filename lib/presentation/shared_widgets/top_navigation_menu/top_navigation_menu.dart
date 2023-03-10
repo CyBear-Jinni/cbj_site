@@ -7,9 +7,9 @@ import 'package:responsive_builder/responsive_builder.dart';
 class TopNavigationMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ScreenTypeLayout(
-      mobile: TopNavigationMenuMobileTablet(),
-      desktop: NewNavBar(),
+    return ScreenTypeLayout.builder(
+      mobile: (context) => TopNavigationMenuMobileTablet(),
+      desktop: (context) => NewNavBar(),
     );
   }
 }

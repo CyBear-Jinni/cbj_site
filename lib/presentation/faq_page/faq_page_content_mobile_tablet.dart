@@ -30,7 +30,7 @@ class FaqPageContentMobileTablet extends StatelessWidget {
                     'Frequently Asked Questions',
                     style: TextStyle(
                       fontSize: 30,
-                      color: Theme.of(context).textTheme.bodyText1!.color,
+                      color: Theme.of(context).textTheme.bodyLarge!.color,
                     ),
                     textAlign: TextAlign.center,
                   ),
@@ -96,7 +96,7 @@ class FaqPageContentMobileTablet extends StatelessWidget {
                                 Divider(
                                   color: Theme.of(context)
                                       .textTheme
-                                      .bodyText1!
+                                      .bodyLarge!
                                       .color,
                                   thickness: 0.08,
                                   height: 3,
@@ -281,7 +281,7 @@ class FaqPageContentMobileTablet extends StatelessWidget {
                                 Divider(
                                   color: Theme.of(context)
                                       .textTheme
-                                      .bodyText1!
+                                      .bodyLarge!
                                       .color,
                                   thickness: 0.08,
                                   height: 3,
@@ -441,7 +441,7 @@ class FaqPageContentMobileTablet extends StatelessWidget {
                                 Divider(
                                   color: Theme.of(context)
                                       .textTheme
-                                      .bodyText1!
+                                      .bodyLarge!
                                       .color,
                                   thickness: 0.08,
                                   height: 3,

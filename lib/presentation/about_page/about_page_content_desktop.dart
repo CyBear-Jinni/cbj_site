@@ -1,6 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cybear_jinni_site/presentation/shared_widgets/bottom_navigation_menu/bottom_navigation_menu.dart';
-import 'package:cybear_jinni_site/presentation/shared_widgets/navigation_drawer/navigation_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
@@ -31,7 +30,9 @@ class AboutPageContentDesktop extends StatelessWidget {
           child: Scaffold(
             drawer:
                 sizingInformation.deviceScreenType == DeviceScreenType.mobile
-                    ? NavigationDrawer()
+                    ? NavigationDrawer(
+                        children: [],
+                      )
                     : null,
             backgroundColor: Colors.transparent,
             body: Scrollbar(
@@ -52,7 +53,7 @@ class AboutPageContentDesktop extends StatelessWidget {
                         'About',
                         style: TextStyle(
                           fontSize: 50,
-                          color: Theme.of(context).textTheme.bodyText1!.color,
+                          color: Theme.of(context).textTheme.bodyLarge!.color,
                         ),
                         textAlign: TextAlign.center,
                       ),
@@ -112,6 +113,7 @@ class AboutPageContentDesktop extends StatelessWidget {
                               'sacrificing user experience."',
                               style: TextStyle(
                                 fontSize: 30,
+                                color: Colors.white,
                               ),
                             ),
                           ],
@@ -140,7 +142,7 @@ class AboutPageContentDesktop extends StatelessWidget {
                                   fontSize: 50,
                                   color: Theme.of(context)
                                       .textTheme
-                                      .bodyText1!
+                                      .bodyLarge!
                                       .color,
                                 ),
                                 textAlign: TextAlign.center,

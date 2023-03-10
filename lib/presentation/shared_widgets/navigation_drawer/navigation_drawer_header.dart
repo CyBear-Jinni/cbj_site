@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class NavigationDrawerHeader extends StatelessWidget {
@@ -31,9 +30,10 @@ class NavigationDrawerHeader extends StatelessWidget {
           Text(
             'CyBear Jinni',
             style: TextStyle(
-                fontSize: 23,
-                fontWeight: FontWeight.w800,
-                color: Theme.of(context).textTheme.bodyText1!.color),
+              fontSize: 23,
+              fontWeight: FontWeight.w800,
+              color: Theme.of(context).textTheme.bodyLarge!.color,
+            ),
           ),
           const SizedBox(
             height: 20,

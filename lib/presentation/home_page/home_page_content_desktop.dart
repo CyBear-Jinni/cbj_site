@@ -16,21 +16,19 @@ class HomePageContentDesktop extends StatelessWidget {
 
   final List<String> companysLogs = [
     'https://i.ibb.co/2qN6yJW/lifx-logo.png',
-    'https://i.ibb.co/jJ20vch/tuya-smart-logo.png',
     'https://i.ibb.co/C20VvvB/yeelight-logo.png',
-    'https://i.ibb.co/fpFwsdR/smart-life-logo.png',
     'https://i.ibb.co/hfRhB0Q/mqtt-logo.png',
   ];
 
-  final YoutubePlayerController _controller = YoutubePlayerController(
-    initialVideoId: 'o5owbiQahnY',
-    params: const YoutubePlayerParams(
-      startAt: Duration(minutes: 2),
-    ),
-  );
+  final YoutubePlayerController _controller = YoutubePlayerController();
 
   @override
   Widget build(BuildContext context) {
+    _controller.loadVideoById(
+      startSeconds: 120,
+      videoId: 'o5owbiQahnY',
+    );
+
     return Scrollbar(
       thumbVisibility: true,
       thickness: 13,
@@ -60,7 +58,7 @@ class HomePageContentDesktop extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Container(
+                      DecoratedBox(
                         decoration: BoxDecoration(
                           color: Colors.black.withOpacity(0.8),
                           borderRadius:
@@ -73,7 +71,7 @@ class HomePageContentDesktop extends StatelessWidget {
                             style: TextStyle(
                               fontSize: 60,
                               color:
-                                  Theme.of(context).textTheme.bodyText1!.color,
+                                  Theme.of(context).textTheme.bodyLarge!.color,
                             ),
                           ),
                         ),
@@ -92,7 +90,7 @@ class HomePageContentDesktop extends StatelessWidget {
                             style: TextStyle(
                               fontSize: 21,
                               color:
-                                  Theme.of(context).textTheme.bodyText1!.color,
+                                  Theme.of(context).textTheme.bodyLarge!.color,
                               fontWeight: FontWeight.w700,
                             ),
                           ),
@@ -103,7 +101,9 @@ class HomePageContentDesktop extends StatelessWidget {
                         child: YoutubePlayerControllerProvider(
                           // Provides controller to all the widget below it.
                           controller: _controller,
-                          child: const YoutubePlayerIFrame(),
+                          child: YoutubePlayer(
+                            controller: _controller,
+                          ),
                         ),
                       ),
                     ],
@@ -193,7 +193,7 @@ class HomePageContentDesktop extends StatelessWidget {
                             style: TextStyle(
                               fontSize: 40,
                               color:
-                                  Theme.of(context).textTheme.bodyText1!.color,
+                                  Theme.of(context).textTheme.bodyLarge!.color,
                             ),
                             textAlign: TextAlign.center,
                           ),
@@ -255,7 +255,7 @@ class HomePageContentDesktop extends StatelessWidget {
                         'Easily Set Up',
                         style: TextStyle(
                           fontSize: 40,
-                          color: Theme.of(context).textTheme.bodyText1!.color,
+                          color: Theme.of(context).textTheme.bodyLarge!.color,
                         ),
                         textAlign: TextAlign.center,
                       ),
@@ -307,7 +307,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                         fontSize: 24,
                                         color: Theme.of(context)
                                             .textTheme
-                                            .bodyText1!
+                                            .bodyLarge!
                                             .color,
                                         fontWeight: FontWeight.normal,
                                       ),
@@ -317,7 +317,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                           style: TextStyle(
                                             color: Theme.of(context)
                                                 .textTheme
-                                                .bodyText2!
+                                                .bodyMedium!
                                                 .color,
                                           ),
                                         ),
@@ -334,7 +334,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                         fontSize: 24,
                                         color: Theme.of(context)
                                             .textTheme
-                                            .bodyText1!
+                                            .bodyLarge!
                                             .color,
                                         fontWeight: FontWeight.normal,
                                       ),
@@ -344,7 +344,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                           style: TextStyle(
                                             color: Theme.of(context)
                                                 .textTheme
-                                                .bodyText2!
+                                                .bodyLarge!
                                                 .color,
                                           ),
                                         ),
@@ -364,7 +364,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                         fontSize: 24,
                                         color: Theme.of(context)
                                             .textTheme
-                                            .bodyText1!
+                                            .bodyLarge!
                                             .color,
                                         fontWeight: FontWeight.normal,
                                       ),
@@ -374,7 +374,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                           style: TextStyle(
                                             color: Theme.of(context)
                                                 .textTheme
-                                                .bodyText2!
+                                                .bodyLarge!
                                                 .color,
                                           ),
                                         ),
@@ -389,7 +389,7 @@ class HomePageContentDesktop extends StatelessWidget {
                               ),
                             ),
                           ),
-                          Container(
+                          DecoratedBox(
                             decoration: const BoxDecoration(
                               image: DecorationImage(
                                 image: NetworkImage(
@@ -429,7 +429,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                         fontSize: 24,
                                         color: Theme.of(context)
                                             .textTheme
-                                            .bodyText1!
+                                            .bodyLarge!
                                             .color,
                                         fontWeight: FontWeight.normal,
                                       ),
@@ -439,7 +439,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                           style: TextStyle(
                                             color: Theme.of(context)
                                                 .textTheme
-                                                .bodyText2!
+                                                .bodyLarge!
                                                 .color,
                                           ),
                                         ),
@@ -458,7 +458,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                         fontSize: 24,
                                         color: Theme.of(context)
                                             .textTheme
-                                            .bodyText1!
+                                            .bodyLarge!
                                             .color,
                                         fontWeight: FontWeight.normal,
                                       ),
@@ -468,7 +468,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                           style: TextStyle(
                                             color: Theme.of(context)
                                                 .textTheme
-                                                .bodyText2!
+                                                .bodyLarge!
                                                 .color,
                                           ),
                                         ),
@@ -488,7 +488,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                         fontSize: 24,
                                         color: Theme.of(context)
                                             .textTheme
-                                            .bodyText1!
+                                            .bodyLarge!
                                             .color,
                                         fontWeight: FontWeight.normal,
                                       ),
@@ -498,7 +498,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                           style: TextStyle(
                                             color: Theme.of(context)
                                                 .textTheme
-                                                .bodyText2!
+                                                .bodyLarge!
                                                 .color,
                                           ),
                                         ),

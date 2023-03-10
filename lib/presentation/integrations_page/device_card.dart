@@ -4,7 +4,7 @@ import 'package:url_launcher/url_launcher_string.dart';
 
 /// Show individual card for with name and image and link to open when pressed
 class DeviceCard extends StatelessWidget {
-  DeviceCard(this.deviceName, this.imageUrl, this.urlOpenOnPressed);
+  const DeviceCard(this.deviceName, this.imageUrl, this.urlOpenOnPressed);
 
   /// Url image link for the card to show
   final String imageUrl;

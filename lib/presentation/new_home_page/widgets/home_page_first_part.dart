@@ -10,31 +10,29 @@ import 'package:hexcolor/hexcolor.dart';
 import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
 class HomePageFirstPart extends StatelessWidget {
-  final YoutubePlayerController _controller = YoutubePlayerController(
-    initialVideoId: 'o5owbiQahnY',
-    params: const YoutubePlayerParams(
-      startAt: Duration(minutes: 2),
-    ),
-  );
+  final YoutubePlayerController _controller = YoutubePlayerController();
 
   final List<String> companysLogs = [
     'https://i.ibb.co/Wsqst7Y/google-logo.png',
-    'https://i.ibb.co/fpFwsdR/smart-life-logo.png',
     'https://i.ibb.co/yqBDqkD/shelly-logo.png',
     'https://i.ibb.co/C20VvvB/yeelight-logo.png',
-    'https://i.ibb.co/THRX9kq/node-RED-logo.png',
     'https://i.ibb.co/hfRhB0Q/mqtt-logo.png',
-    'https://i.ibb.co/XZLGCRd/Tasmota-logo.png',
+    'https://i.ibb.co/THRX9kq/node-RED-logo.png',
+    'https://i.ibb.co/W2YG23s/ESPHome-logo.png',
     'https://i.ibb.co/q9psvjY/switcher-logo.png',
-    'https://i.ibb.co/FsRyPCm/jinvoo-smart-logo.png',
+    'https://i.ibb.co/XZLGCRd/Tasmota-logo.png',
     'https://i.ibb.co/2qN6yJW/lifx-logo.png',
-    'https://i.ibb.co/jJ20vch/tuya-smart-logo.png',
     'https://i.ibb.co/8xxY6Bb/hp-logo.png',
   ];
 
   @override
   Widget build(BuildContext context) {
     final Size screenSize = MediaQuery.of(context).size;
+
+    _controller.loadVideoById(
+      startSeconds: 120,
+      videoId: 'o5owbiQahnY',
+    );
 
     return Stack(
       children: [
@@ -101,15 +99,14 @@ class HomePageFirstPart extends StatelessWidget {
                                 ],
                               ),
                               const SizedBox(height: 40),
-                              BorderTextWithShadow(
+                              const BorderTextWithShadow(
                                 "If you're a person who values his time or freedom\nWe have the product for you.\n",
                               ),
-                              BorderTextWithShadow(
-                                'It automatically creates personalized automations to improved your performence in the daily activities.\n',
+                              const BorderTextWithShadow(
+                                'It automatically creates personalized automations to improved your performance in your daily activities.\n',
                               ),
-                              BorderTextWithShadow(
-                                'By setting a purpose for each area in the home CBJ will create the best automations to sute your needs.',
-                                // 'CBJ provides you with a open-source smart home Hub that communicates with your devices, and a single app to control those devices.',
+                              const BorderTextWithShadow(
+                                'By setting a purpose for each area in the home CBJ will create the best automations to suite your needs.',
                               ),
                             ],
                           ),
@@ -125,9 +122,8 @@ class HomePageFirstPart extends StatelessWidget {
                         width: screenSize.width / 2,
                         height: screenSize.height / 2.3,
                         child: YoutubePlayerControllerProvider(
-                          // Provides controller to all the widget below it.
                           controller: _controller,
-                          child: const YoutubePlayerIFrame(),
+                          child: YoutubePlayer(controller: _controller),
                         ),
                       ),
                     ),
@@ -181,8 +177,8 @@ class HomePageFirstPart extends StatelessWidget {
                                   Flexible(
                                     child: Container(
                                       margin: const EdgeInsets.only(top: 20),
-                                      child: BorderTextWithShadow(
-                                        'Supported Vendor',
+                                      child: const BorderTextWithShadow(
+                                        'Supported Vendors',
                                         fontSize: 30,
                                       ),
                                     ),
@@ -209,12 +205,15 @@ class HomePageFirstPart extends StatelessWidget {
                                             ),
                                             SupportedVendorsTileGridViewNetworkImage(
                                               companysLogs[2],
+                                              imageBackgroundColor: Colors.red,
                                             ),
                                             SupportedVendorsTileGridViewNetworkImage(
                                               companysLogs[3],
                                             ),
                                             SupportedVendorsTileGridViewNetworkImage(
                                               companysLogs[4],
+                                              imageBackgroundColor:
+                                                  HexColor('#8F0000'),
                                             ),
                                             SupportedVendorsTileGridViewNetworkImage(
                                               companysLogs[5],
@@ -230,12 +229,6 @@ class HomePageFirstPart extends StatelessWidget {
                                             ),
                                             SupportedVendorsTileGridViewNetworkImage(
                                               companysLogs[9],
-                                            ),
-                                            SupportedVendorsTileGridViewNetworkImage(
-                                              companysLogs[10],
-                                            ),
-                                            SupportedVendorsTileGridViewNetworkImage(
-                                              companysLogs[11],
                                             ),
                                           ],
                                         ),

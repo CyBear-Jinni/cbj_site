@@ -1,6 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cybear_jinni_site/utils.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SupportedVendorsTileGridView extends StatelessWidget {
@@ -14,7 +13,7 @@ class SupportedVendorsTileGridView extends StatelessWidget {
       crossAxisSpacing: 15,
       mainAxisSpacing: 15,
       crossAxisCount: 3,
-      children: [
+      children: const [
         SupportedVendorsTileGridViewNetworkImage(
           'https://i.ibb.co/C20VvvB/yeelight-logo.png',
         ),
@@ -22,9 +21,6 @@ class SupportedVendorsTileGridView extends StatelessWidget {
           'https://i.ibb.co/2qN6yJW/lifx-logo.png',
         ),
 
-        SupportedVendorsTileGridViewNetworkImage(
-          'https://i.ibb.co/jJ20vch/tuya-smart-logo.png',
-        ),
         // SupportedVendorsTileGridViewNetworkImage(
         //   'https://i.ibb.co/hfRhB0Q/mqtt-logo.png',
         // ),
@@ -45,14 +41,21 @@ class SupportedVendorsTileGridView extends StatelessWidget {
 }
 
 class SupportedVendorsTileGridViewNetworkImage extends StatelessWidget {
-  SupportedVendorsTileGridViewNetworkImage(this.imageUrl,
-      {this.imageBackgroundColor = Colors.transparent});
+  const SupportedVendorsTileGridViewNetworkImage(
+    this.imageUrl, {
+    this.imageBackgroundColor = Colors.white,
+  });
 
-  String imageUrl;
-  Color imageBackgroundColor;
+  final String imageUrl;
+  final Color imageBackgroundColor;
 
   @override
   Widget build(BuildContext context) {
+    Color backgroundColorCorrect = imageBackgroundColor;
+    if (backgroundColorCorrect == Colors.white) {
+      backgroundColorCorrect = backgroundColorCorrect.withOpacity(0.8);
+    }
+
     return ColoredBox(
       color: imageBackgroundColor,
       child: CachedNetworkImage(

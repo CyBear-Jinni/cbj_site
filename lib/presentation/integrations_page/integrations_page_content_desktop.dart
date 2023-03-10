@@ -28,7 +28,7 @@ class IntegrationsPageContentDesktop extends StatelessWidget {
                     'Supported Vendors',
                     style: TextStyle(
                       fontSize: 50,
-                      color: Theme.of(context).textTheme.bodyText1!.color,
+                      color: Theme.of(context).textTheme.bodyLarge!.color,
                     ),
                     textAlign: TextAlign.center,
                   ),
@@ -42,13 +42,13 @@ class IntegrationsPageContentDesktop extends StatelessWidget {
                   color: Colors.black38,
                   border: Border(
                     top: BorderSide(
-                      color: Theme.of(context).textTheme.bodyText1!.color!,
+                      color: Theme.of(context).textTheme.bodyLarge!.color!,
                     ),
                     left: BorderSide(
-                      color: Theme.of(context).textTheme.bodyText1!.color!,
+                      color: Theme.of(context).textTheme.bodyLarge!.color!,
                     ),
                     right: BorderSide(
-                      color: Theme.of(context).textTheme.bodyText1!.color!,
+                      color: Theme.of(context).textTheme.bodyLarge!.color!,
                     ),
                   ),
                 ),
@@ -65,7 +65,7 @@ class IntegrationsPageContentDesktop extends StatelessWidget {
                     crossAxisSpacing: 30,
                     mainAxisSpacing: 30,
                     crossAxisCount: 3,
-                    children: [
+                    children: const [
                       DeviceCard(
                         'Google',
                         'https://i.ibb.co/Wsqst7Y/google-logo.png',
@@ -75,16 +75,6 @@ class IntegrationsPageContentDesktop extends StatelessWidget {
                         'HP',
                         'https://i.ibb.co/8xxY6Bb/hp-logo.png',
                         'https://www.hp.com/us-en/home.html',
-                      ),
-                      DeviceCard(
-                        'Smart Life',
-                        'https://i.ibb.co/fpFwsdR/smart-life-logo.png',
-                        'https://www.tuya.com',
-                      ),
-                      DeviceCard(
-                        'Tuya Smart',
-                        'https://i.ibb.co/jJ20vch/tuya-smart-logo.png',
-                        'https://www.tuya.com',
                       ),
                       DeviceCard(
                         'Xiaomi Yeelight',
@@ -111,11 +101,11 @@ class IntegrationsPageContentDesktop extends StatelessWidget {
                         'https://i.ibb.co/XZLGCRd/Tasmota-logo.png',
                         'https://tasmota.github.io',
                       ),
-                      // DeviceCard(
-                      //   'ESPHome',
-                      //   'https://i.ibb.co/W2YG23s/ESPHome-logo.png',
-                      //   'https://esphome.io',
-                      // ),
+                      DeviceCard(
+                        'ESPHome',
+                        'https://i.ibb.co/W2YG23s/ESPHome-logo.png',
+                        'https://esphome.io',
+                      ),
                       DeviceCard(
                         'Shelly',
                         'https://i.ibb.co/yqBDqkD/shelly-logo.png',
@@ -125,11 +115,6 @@ class IntegrationsPageContentDesktop extends StatelessWidget {
                         'Node-RED',
                         'https://i.ibb.co/THRX9kq/node-RED-logo.png',
                         'https://nodered.org/',
-                      ),
-                      DeviceCard(
-                        'Jinvoo Smart',
-                        'https://i.ibb.co/FsRyPCm/jinvoo-smart-logo.png',
-                        'http://www.xenon.cn/',
                       ),
                     ],
                   ),

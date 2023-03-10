@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 /// The specific look for the top navigation menu for tablet desktop
@@ -17,7 +16,7 @@ class TopNavigationMenuMobileTablet extends StatelessWidget {
             },
             icon: FaIcon(
               FontAwesomeIcons.bars,
-              color: Theme.of(context).textTheme.bodyText1!.color,
+              color: Theme.of(context).textTheme.bodyLarge!.color,
             ),
           )
         ],

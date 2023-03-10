@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -21,14 +20,15 @@ class DrawerItem extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
         child: Row(
           children: <Widget>[
-            FaIcon(icon, color: Theme.of(context).textTheme.bodyText1!.color),
+            FaIcon(icon, color: Theme.of(context).textTheme.bodyLarge!.color),
             const SizedBox(
               width: 30,
             ),
             Text(
               title,
               style: TextStyle(
-                  color: Theme.of(context).textTheme.bodyText2!.color),
+                color: Theme.of(context).textTheme.bodyLarge!.color,
+              ),
             ),
           ],
         ),

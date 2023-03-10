@@ -25,11 +25,14 @@ class SetUpPageContentDesktop extends StatelessWidget {
                 height: 180,
                 child: Align(
                   alignment: FractionalOffset.bottomCenter,
-                  child: Text('Set Up CyBear Jinni',
-                      style: TextStyle(
-                          fontSize: 50,
-                          color: Theme.of(context).textTheme.bodyText1!.color),
-                      textAlign: TextAlign.center),
+                  child: Text(
+                    'Set Up CyBear Jinni',
+                    style: TextStyle(
+                      fontSize: 50,
+                      color: Theme.of(context).textTheme.bodyLarge!.color,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
                 ),
               ),
               const SizedBox(
@@ -93,7 +96,7 @@ class SetUpPageContentDesktop extends StatelessWidget {
                                     fontSize: 17,
                                     color: Theme.of(context)
                                         .textTheme
-                                        .bodyText2!
+                                        .bodyLarge!
                                         .color,
                                   ),
                                   children: const [
@@ -145,7 +148,7 @@ class SetUpPageContentDesktop extends StatelessWidget {
                                     fontSize: 17,
                                     color: Theme.of(context)
                                         .textTheme
-                                        .bodyText2!
+                                        .bodyLarge!
                                         .color,
                                   ),
                                   children: const [
@@ -166,16 +169,21 @@ class SetUpPageContentDesktop extends StatelessWidget {
                                 child: InkWell(
                                   onTap: () {
                                     launchUrlString(
-                                        'https://www.balena.io/etcher/');
+                                      'https://www.balena.io/etcher/',
+                                    );
                                   },
                                   child: CachedNetworkImage(
                                     imageUrl:
                                         'https://i.ibb.co/mGwbmXN/balena-Etcher.png',
                                     fit: BoxFit.cover,
-                                    progressIndicatorBuilder: (context, url,
-                                            downloadProgress) =>
+                                    progressIndicatorBuilder: (
+                                      context,
+                                      url,
+                                      downloadProgress,
+                                    ) =>
                                         CircularProgressIndicator(
-                                            value: downloadProgress.progress),
+                                      value: downloadProgress.progress,
+                                    ),
                                     errorWidget: (context, url, error) =>
                                         const Icon(Icons.error),
                                   ),
@@ -194,7 +202,7 @@ class SetUpPageContentDesktop extends StatelessWidget {
                                   fontSize: 17,
                                   color: Theme.of(context)
                                       .textTheme
-                                      .bodyText2!
+                                      .bodyLarge!
                                       .color,
                                 ),
                                 children: const [
@@ -218,27 +226,29 @@ class SetUpPageContentDesktop extends StatelessWidget {
                                   child: Divider(
                                     color: Theme.of(context)
                                         .textTheme
-                                        .bodyText1!
+                                        .bodyLarge!
                                         .color,
                                     thickness: 1,
                                   ),
                                 ),
                                 Container(
                                   margin: const EdgeInsets.symmetric(
-                                      horizontal: 10),
+                                    horizontal: 10,
+                                  ),
                                   child: const Text(
                                     'Choose one of the options',
                                     style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.white),
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white,
+                                    ),
                                   ),
                                 ),
                                 Expanded(
                                   child: Divider(
                                     color: Theme.of(context)
                                         .textTheme
-                                        .bodyText1!
+                                        .bodyLarge!
                                         .color,
                                     thickness: 1,
                                   ),
@@ -267,7 +277,7 @@ class SetUpPageContentDesktop extends StatelessWidget {
                                     fontSize: 17,
                                     color: Theme.of(context)
                                         .textTheme
-                                        .bodyText2!
+                                        .bodyLarge!
                                         .color,
                                   ),
                                   children: const [
@@ -321,7 +331,7 @@ class SetUpPageContentDesktop extends StatelessWidget {
                                     fontSize: 17,
                                     color: Theme.of(context)
                                         .textTheme
-                                        .bodyText2!
+                                        .bodyLarge!
                                         .color,
                                   ),
                                   children: const [
@@ -374,7 +384,7 @@ class SetUpPageContentDesktop extends StatelessWidget {
                                     fontSize: 17,
                                     color: Theme.of(context)
                                         .textTheme
-                                        .bodyText2!
+                                        .bodyLarge!
                                         .color,
                                   ),
                                   children: const [
@@ -437,7 +447,7 @@ class SetUpPageContentDesktop extends StatelessWidget {
                         text: TextSpan(
                           style: TextStyle(
                             fontSize: 17,
-                            color: Theme.of(context).textTheme.bodyText2!.color,
+                            color: Theme.of(context).textTheme.bodyLarge!.color,
                           ),
                           children: const [
                             TextSpan(
@@ -491,7 +501,7 @@ class SetUpPageContentDesktop extends StatelessWidget {
                                     fontSize: 17,
                                     color: Theme.of(context)
                                         .textTheme
-                                        .bodyText2!
+                                        .bodyLarge!
                                         .color,
                                   ),
                                   children: const [
@@ -509,17 +519,21 @@ class SetUpPageContentDesktop extends StatelessWidget {
                                     child: InkWell(
                                       onTap: () {
                                         launchUrlString(
-                                            'https://play.google.com/store/apps/details?id=com.cybear_jinni.smart_home');
+                                          'https://play.google.com/store/apps/details?id=com.cybear_jinni.smart_home',
+                                        );
                                       },
                                       child: CachedNetworkImage(
                                         imageUrl:
                                             'https://i.ibb.co/st5DHMv/en-badge-web-generic.png',
                                         fit: BoxFit.cover,
-                                        progressIndicatorBuilder: (context, url,
-                                                downloadProgress) =>
+                                        progressIndicatorBuilder: (
+                                          context,
+                                          url,
+                                          downloadProgress,
+                                        ) =>
                                             CircularProgressIndicator(
-                                                value:
-                                                    downloadProgress.progress),
+                                          value: downloadProgress.progress,
+                                        ),
                                         errorWidget: (context, url, error) =>
                                             const Icon(Icons.error),
                                       ),
@@ -533,17 +547,21 @@ class SetUpPageContentDesktop extends StatelessWidget {
                                     child: InkWell(
                                       onTap: () {
                                         launchUrlString(
-                                            'https://snapcraft.io/cybear-jinni');
+                                          'https://snapcraft.io/cybear-jinni',
+                                        );
                                       },
                                       child: CachedNetworkImage(
                                         imageUrl:
                                             'https://i.ibb.co/gJN2Wq1/snap-store-logo-dark.png',
                                         fit: BoxFit.cover,
-                                        progressIndicatorBuilder: (context, url,
-                                                downloadProgress) =>
+                                        progressIndicatorBuilder: (
+                                          context,
+                                          url,
+                                          downloadProgress,
+                                        ) =>
                                             CircularProgressIndicator(
-                                                value:
-                                                    downloadProgress.progress),
+                                          value: downloadProgress.progress,
+                                        ),
                                         errorWidget: (context, url, error) =>
                                             const Icon(Icons.error),
                                       ),

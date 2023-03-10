@@ -7,9 +7,9 @@ import 'package:responsive_builder/responsive_builder.dart';
 class BottomNavigationMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ScreenTypeLayout(
-      mobile: BottomNavigationMenuMobileTablet(),
-      desktop: BottomNavigationMenuDesktop(),
+    return ScreenTypeLayout.builder(
+      mobile: (context) => BottomNavigationMenuMobileTablet(),
+      desktop: (context) => BottomNavigationMenuDesktop(),
     );
   }
 }

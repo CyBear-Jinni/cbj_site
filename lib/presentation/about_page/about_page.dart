@@ -1,4 +1,5 @@
 import 'package:cybear_jinni_site/presentation/about_page/about_page_content.dart';
+import 'package:cybear_jinni_site/presentation/shared_widgets/navigation_drawer/navigation_drawer.dart';
 import 'package:cybear_jinni_site/presentation/shared_widgets/top_navigation_menu/top_navigation_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -28,9 +29,7 @@ class AboutPage extends StatelessWidget {
           child: Scaffold(
             drawer:
                 sizingInformation.deviceScreenType == DeviceScreenType.mobile
-                    ? const NavigationDrawer(
-                        children: [],
-                      )
+                    ? NavigationDrawerWidget()
                     : null,
             backgroundColor: Colors.transparent,
             body: Stack(

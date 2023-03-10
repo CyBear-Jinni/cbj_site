@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cybear_jinni_site/presentation/shared_widgets/bottom_navigation_menu/bottom_navigation_menu.dart';
+import 'package:cybear_jinni_site/presentation/shared_widgets/navigation_drawer/navigation_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
@@ -30,9 +31,7 @@ class AboutPageContentMobileTablet extends StatelessWidget {
           child: Scaffold(
             drawer:
                 sizingInformation.deviceScreenType == DeviceScreenType.mobile
-                    ? const NavigationDrawer(
-                        children: [],
-                      )
+                    ? NavigationDrawerWidget()
                     : null,
             backgroundColor: Colors.transparent,
             body: Scrollbar(

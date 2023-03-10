@@ -113,6 +113,7 @@ class AboutPageContentDesktop extends StatelessWidget {
                               'sacrificing user experience."',
                               style: TextStyle(
                                 fontSize: 30,
+                                color: Colors.white,
                               ),
                             ),
                           ],

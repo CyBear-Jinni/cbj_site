@@ -34,7 +34,15 @@ class MyApp extends StatelessWidget {
   final ThemeData theme = ThemeData(
     primarySwatch: Colors.deepPurple,
     textTheme: const TextTheme(
-      bodyLarge: TextStyle(color: Colors.white),
+      bodySmall: TextStyle(
+        color: Colors.white,
+      ),
+      bodyMedium:TextStyle(
+        color: Colors.white,
+      ),
+      bodyLarge: TextStyle(
+        color: Colors.white,
+      ),
     ),
     // fontFamily: 'gidole_regular',
   );

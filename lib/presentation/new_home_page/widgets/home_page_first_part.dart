@@ -14,17 +14,14 @@ class HomePageFirstPart extends StatelessWidget {
 
   final List<String> companysLogs = [
     'https://i.ibb.co/Wsqst7Y/google-logo.png',
-    'https://i.ibb.co/fpFwsdR/smart-life-logo.png',
     'https://i.ibb.co/yqBDqkD/shelly-logo.png',
     'https://i.ibb.co/C20VvvB/yeelight-logo.png',
     'https://i.ibb.co/hfRhB0Q/mqtt-logo.png',
     'https://i.ibb.co/THRX9kq/node-RED-logo.png',
     'https://i.ibb.co/W2YG23s/ESPHome-logo.png',
     'https://i.ibb.co/q9psvjY/switcher-logo.png',
-    'https://i.ibb.co/FsRyPCm/jinvoo-smart-logo.png',
     'https://i.ibb.co/XZLGCRd/Tasmota-logo.png',
     'https://i.ibb.co/2qN6yJW/lifx-logo.png',
-    'https://i.ibb.co/jJ20vch/tuya-smart-logo.png',
     'https://i.ibb.co/8xxY6Bb/hp-logo.png',
   ];
 
@@ -208,18 +205,18 @@ class HomePageFirstPart extends StatelessWidget {
                                             ),
                                             SupportedVendorsTileGridViewNetworkImage(
                                               companysLogs[2],
-                                            ),
-                                            SupportedVendorsTileGridViewNetworkImage(
-                                              companysLogs[3],
                                               imageBackgroundColor: Colors.red,
                                             ),
                                             SupportedVendorsTileGridViewNetworkImage(
+                                              companysLogs[3],
+                                            ),
+                                            SupportedVendorsTileGridViewNetworkImage(
                                               companysLogs[4],
+                                              imageBackgroundColor:
+                                                  HexColor('#8F0000'),
                                             ),
                                             SupportedVendorsTileGridViewNetworkImage(
                                               companysLogs[5],
-                                              imageBackgroundColor:
-                                                  HexColor('#8F0000'),
                                             ),
                                             SupportedVendorsTileGridViewNetworkImage(
                                               companysLogs[6],
@@ -232,15 +229,6 @@ class HomePageFirstPart extends StatelessWidget {
                                             ),
                                             SupportedVendorsTileGridViewNetworkImage(
                                               companysLogs[9],
-                                            ),
-                                            SupportedVendorsTileGridViewNetworkImage(
-                                              companysLogs[10],
-                                            ),
-                                            SupportedVendorsTileGridViewNetworkImage(
-                                              companysLogs[11],
-                                            ),
-                                            SupportedVendorsTileGridViewNetworkImage(
-                                              companysLogs[12],
                                             ),
                                           ],
                                         ),

@@ -21,9 +21,6 @@ class SupportedVendorsTileGridView extends StatelessWidget {
           'https://i.ibb.co/2qN6yJW/lifx-logo.png',
         ),
 
-        SupportedVendorsTileGridViewNetworkImage(
-          'https://i.ibb.co/jJ20vch/tuya-smart-logo.png',
-        ),
         // SupportedVendorsTileGridViewNetworkImage(
         //   'https://i.ibb.co/hfRhB0Q/mqtt-logo.png',
         // ),

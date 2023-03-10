@@ -16,9 +16,7 @@ class HomePageContentDesktop extends StatelessWidget {
 
   final List<String> companysLogs = [
     'https://i.ibb.co/2qN6yJW/lifx-logo.png',
-    'https://i.ibb.co/jJ20vch/tuya-smart-logo.png',
     'https://i.ibb.co/C20VvvB/yeelight-logo.png',
-    'https://i.ibb.co/fpFwsdR/smart-life-logo.png',
     'https://i.ibb.co/hfRhB0Q/mqtt-logo.png',
   ];
 

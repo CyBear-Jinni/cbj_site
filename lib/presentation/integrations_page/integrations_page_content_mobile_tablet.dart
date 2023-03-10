@@ -83,16 +83,6 @@ class IntegrationsPageContentMobileTablet extends StatelessWidget {
                         'https://www.hp.com/us-en/home.html',
                       ),
                       DeviceCard(
-                        'Smart Life',
-                        'https://i.ibb.co/fpFwsdR/smart-life-logo.png',
-                        'https://www.tuya.com',
-                      ),
-                      DeviceCard(
-                        'Tuya Smart',
-                        'https://i.ibb.co/jJ20vch/tuya-smart-logo.png',
-                        'https://www.tuya.com',
-                      ),
-                      DeviceCard(
                         'Xiaomi Yeelight',
                         'https://i.ibb.co/C20VvvB/yeelight-logo.png',
                         'https://www.yeelight.com',
@@ -131,11 +121,6 @@ class IntegrationsPageContentMobileTablet extends StatelessWidget {
                         'Node-RED',
                         'https://i.ibb.co/THRX9kq/node-RED-logo.png',
                         'https://nodered.org/',
-                      ),
-                      DeviceCard(
-                        'Jinvoo Smart',
-                        'https://i.ibb.co/FsRyPCm/jinvoo-smart-logo.png',
-                        'http://www.xenon.cn/',
                       ),
                     ],
                   ),

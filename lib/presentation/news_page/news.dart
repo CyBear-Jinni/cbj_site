@@ -13,7 +13,7 @@ class NewsTab extends StatelessWidget {
           'News',
           style: TextStyle(
             fontSize: 23.0,
-            color: Theme.of(context).textTheme.bodyText1!.color,
+            color: Theme.of(context).textTheme.bodyLarge!.color,
             decoration: TextDecoration.underline,
           ),
         ).tr(),

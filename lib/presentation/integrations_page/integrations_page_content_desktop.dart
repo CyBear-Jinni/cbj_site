@@ -28,7 +28,7 @@ class IntegrationsPageContentDesktop extends StatelessWidget {
                     'Supported Vendors',
                     style: TextStyle(
                       fontSize: 50,
-                      color: Theme.of(context).textTheme.bodyText1!.color,
+                      color: Theme.of(context).textTheme.bodyLarge!.color,
                     ),
                     textAlign: TextAlign.center,
                   ),
@@ -42,13 +42,13 @@ class IntegrationsPageContentDesktop extends StatelessWidget {
                   color: Colors.black38,
                   border: Border(
                     top: BorderSide(
-                      color: Theme.of(context).textTheme.bodyText1!.color!,
+                      color: Theme.of(context).textTheme.bodyLarge!.color!,
                     ),
                     left: BorderSide(
-                      color: Theme.of(context).textTheme.bodyText1!.color!,
+                      color: Theme.of(context).textTheme.bodyLarge!.color!,
                     ),
                     right: BorderSide(
-                      color: Theme.of(context).textTheme.bodyText1!.color!,
+                      color: Theme.of(context).textTheme.bodyLarge!.color!,
                     ),
                   ),
                 ),

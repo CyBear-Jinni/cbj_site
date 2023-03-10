@@ -29,7 +29,7 @@ class SetUpPageContentDesktop extends StatelessWidget {
                     'Set Up CyBear Jinni',
                     style: TextStyle(
                       fontSize: 50,
-                      color: Theme.of(context).textTheme.bodyText1!.color,
+                      color: Theme.of(context).textTheme.bodyLarge!.color,
                     ),
                     textAlign: TextAlign.center,
                   ),
@@ -96,7 +96,7 @@ class SetUpPageContentDesktop extends StatelessWidget {
                                     fontSize: 17,
                                     color: Theme.of(context)
                                         .textTheme
-                                        .bodyText2!
+                                        .bodyLarge!
                                         .color,
                                   ),
                                   children: const [
@@ -148,7 +148,7 @@ class SetUpPageContentDesktop extends StatelessWidget {
                                     fontSize: 17,
                                     color: Theme.of(context)
                                         .textTheme
-                                        .bodyText2!
+                                        .bodyLarge!
                                         .color,
                                   ),
                                   children: const [
@@ -202,7 +202,7 @@ class SetUpPageContentDesktop extends StatelessWidget {
                                   fontSize: 17,
                                   color: Theme.of(context)
                                       .textTheme
-                                      .bodyText2!
+                                      .bodyLarge!
                                       .color,
                                 ),
                                 children: const [
@@ -226,7 +226,7 @@ class SetUpPageContentDesktop extends StatelessWidget {
                                   child: Divider(
                                     color: Theme.of(context)
                                         .textTheme
-                                        .bodyText1!
+                                        .bodyLarge!
                                         .color,
                                     thickness: 1,
                                   ),
@@ -248,7 +248,7 @@ class SetUpPageContentDesktop extends StatelessWidget {
                                   child: Divider(
                                     color: Theme.of(context)
                                         .textTheme
-                                        .bodyText1!
+                                        .bodyLarge!
                                         .color,
                                     thickness: 1,
                                   ),
@@ -277,7 +277,7 @@ class SetUpPageContentDesktop extends StatelessWidget {
                                     fontSize: 17,
                                     color: Theme.of(context)
                                         .textTheme
-                                        .bodyText2!
+                                        .bodyLarge!
                                         .color,
                                   ),
                                   children: const [
@@ -331,7 +331,7 @@ class SetUpPageContentDesktop extends StatelessWidget {
                                     fontSize: 17,
                                     color: Theme.of(context)
                                         .textTheme
-                                        .bodyText2!
+                                        .bodyLarge!
                                         .color,
                                   ),
                                   children: const [
@@ -384,7 +384,7 @@ class SetUpPageContentDesktop extends StatelessWidget {
                                     fontSize: 17,
                                     color: Theme.of(context)
                                         .textTheme
-                                        .bodyText2!
+                                        .bodyLarge!
                                         .color,
                                   ),
                                   children: const [
@@ -447,7 +447,7 @@ class SetUpPageContentDesktop extends StatelessWidget {
                         text: TextSpan(
                           style: TextStyle(
                             fontSize: 17,
-                            color: Theme.of(context).textTheme.bodyText2!.color,
+                            color: Theme.of(context).textTheme.bodyLarge!.color,
                           ),
                           children: const [
                             TextSpan(
@@ -501,7 +501,7 @@ class SetUpPageContentDesktop extends StatelessWidget {
                                     fontSize: 17,
                                     color: Theme.of(context)
                                         .textTheme
-                                        .bodyText2!
+                                        .bodyLarge!
                                         .color,
                                   ),
                                   children: const [

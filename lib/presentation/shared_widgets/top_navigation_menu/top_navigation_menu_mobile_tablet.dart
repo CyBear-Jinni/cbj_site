@@ -16,7 +16,7 @@ class TopNavigationMenuMobileTablet extends StatelessWidget {
             },
             icon: FaIcon(
               FontAwesomeIcons.bars,
-              color: Theme.of(context).textTheme.bodyText1!.color,
+              color: Theme.of(context).textTheme.bodyLarge!.color,
             ),
           )
         ],

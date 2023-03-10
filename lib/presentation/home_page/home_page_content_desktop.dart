@@ -22,15 +22,15 @@ class HomePageContentDesktop extends StatelessWidget {
     'https://i.ibb.co/hfRhB0Q/mqtt-logo.png',
   ];
 
-  final YoutubePlayerController _controller = YoutubePlayerController(
-    initialVideoId: 'o5owbiQahnY',
-    params: const YoutubePlayerParams(
-      startAt: Duration(minutes: 2),
-    ),
-  );
+  final YoutubePlayerController _controller = YoutubePlayerController();
 
   @override
   Widget build(BuildContext context) {
+    _controller.loadVideoById(
+      startSeconds: 120,
+      videoId: 'o5owbiQahnY',
+    );
+
     return Scrollbar(
       thumbVisibility: true,
       thickness: 13,
@@ -73,7 +73,7 @@ class HomePageContentDesktop extends StatelessWidget {
                             style: TextStyle(
                               fontSize: 60,
                               color:
-                                  Theme.of(context).textTheme.bodyText1!.color,
+                                  Theme.of(context).textTheme.bodyLarge!.color,
                             ),
                           ),
                         ),
@@ -92,7 +92,7 @@ class HomePageContentDesktop extends StatelessWidget {
                             style: TextStyle(
                               fontSize: 21,
                               color:
-                                  Theme.of(context).textTheme.bodyText1!.color,
+                                  Theme.of(context).textTheme.bodyLarge!.color,
                               fontWeight: FontWeight.w700,
                             ),
                           ),
@@ -103,7 +103,9 @@ class HomePageContentDesktop extends StatelessWidget {
                         child: YoutubePlayerControllerProvider(
                           // Provides controller to all the widget below it.
                           controller: _controller,
-                          child: const YoutubePlayerIFrame(),
+                          child: YoutubePlayer(
+                            controller: _controller,
+                          ),
                         ),
                       ),
                     ],
@@ -193,7 +195,7 @@ class HomePageContentDesktop extends StatelessWidget {
                             style: TextStyle(
                               fontSize: 40,
                               color:
-                                  Theme.of(context).textTheme.bodyText1!.color,
+                                  Theme.of(context).textTheme.bodyLarge!.color,
                             ),
                             textAlign: TextAlign.center,
                           ),
@@ -255,7 +257,7 @@ class HomePageContentDesktop extends StatelessWidget {
                         'Easily Set Up',
                         style: TextStyle(
                           fontSize: 40,
-                          color: Theme.of(context).textTheme.bodyText1!.color,
+                          color: Theme.of(context).textTheme.bodyLarge!.color,
                         ),
                         textAlign: TextAlign.center,
                       ),
@@ -307,7 +309,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                         fontSize: 24,
                                         color: Theme.of(context)
                                             .textTheme
-                                            .bodyText1!
+                                            .bodyLarge!
                                             .color,
                                         fontWeight: FontWeight.normal,
                                       ),
@@ -317,7 +319,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                           style: TextStyle(
                                             color: Theme.of(context)
                                                 .textTheme
-                                                .bodyText2!
+                                                .bodyMedium!
                                                 .color,
                                           ),
                                         ),
@@ -334,7 +336,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                         fontSize: 24,
                                         color: Theme.of(context)
                                             .textTheme
-                                            .bodyText1!
+                                            .bodyLarge!
                                             .color,
                                         fontWeight: FontWeight.normal,
                                       ),
@@ -344,7 +346,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                           style: TextStyle(
                                             color: Theme.of(context)
                                                 .textTheme
-                                                .bodyText2!
+                                                .bodyLarge!
                                                 .color,
                                           ),
                                         ),
@@ -364,7 +366,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                         fontSize: 24,
                                         color: Theme.of(context)
                                             .textTheme
-                                            .bodyText1!
+                                            .bodyLarge!
                                             .color,
                                         fontWeight: FontWeight.normal,
                                       ),
@@ -374,7 +376,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                           style: TextStyle(
                                             color: Theme.of(context)
                                                 .textTheme
-                                                .bodyText2!
+                                                .bodyLarge!
                                                 .color,
                                           ),
                                         ),
@@ -429,7 +431,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                         fontSize: 24,
                                         color: Theme.of(context)
                                             .textTheme
-                                            .bodyText1!
+                                            .bodyLarge!
                                             .color,
                                         fontWeight: FontWeight.normal,
                                       ),
@@ -439,7 +441,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                           style: TextStyle(
                                             color: Theme.of(context)
                                                 .textTheme
-                                                .bodyText2!
+                                                .bodyLarge!
                                                 .color,
                                           ),
                                         ),
@@ -458,7 +460,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                         fontSize: 24,
                                         color: Theme.of(context)
                                             .textTheme
-                                            .bodyText1!
+                                            .bodyLarge!
                                             .color,
                                         fontWeight: FontWeight.normal,
                                       ),
@@ -468,7 +470,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                           style: TextStyle(
                                             color: Theme.of(context)
                                                 .textTheme
-                                                .bodyText2!
+                                                .bodyLarge!
                                                 .color,
                                           ),
                                         ),
@@ -488,7 +490,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                         fontSize: 24,
                                         color: Theme.of(context)
                                             .textTheme
-                                            .bodyText1!
+                                            .bodyLarge!
                                             .color,
                                         fontWeight: FontWeight.normal,
                                       ),
@@ -498,7 +500,7 @@ class HomePageContentDesktop extends StatelessWidget {
                                           style: TextStyle(
                                             color: Theme.of(context)
                                                 .textTheme
-                                                .bodyText2!
+                                                .bodyLarge!
                                                 .color,
                                           ),
                                         ),

@@ -10,12 +10,7 @@ import 'package:hexcolor/hexcolor.dart';
 import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
 class HomePageFirstPart extends StatelessWidget {
-  final YoutubePlayerController _controller = YoutubePlayerController(
-    initialVideoId: 'o5owbiQahnY',
-    params: const YoutubePlayerParams(
-      startAt: Duration(minutes: 2),
-    ),
-  );
+  final YoutubePlayerController _controller = YoutubePlayerController();
 
   final List<String> companysLogs = [
     'https://i.ibb.co/Wsqst7Y/google-logo.png',
@@ -36,6 +31,11 @@ class HomePageFirstPart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Size screenSize = MediaQuery.of(context).size;
+
+    _controller.loadVideoById(
+      startSeconds: 120,
+      videoId: 'o5owbiQahnY',
+    );
 
     return Stack(
       children: [
@@ -126,7 +126,7 @@ class HomePageFirstPart extends StatelessWidget {
                         height: screenSize.height / 2.3,
                         child: YoutubePlayerControllerProvider(
                           controller: _controller,
-                          child: const YoutubePlayerIFrame(),
+                          child: YoutubePlayer(controller: _controller),
                         ),
                       ),
                     ),

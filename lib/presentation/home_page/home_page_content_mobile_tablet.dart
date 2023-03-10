@@ -13,15 +13,14 @@ import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 class HomePageContentMobileTablet extends StatelessWidget {
   final ScrollController _scrollController = ScrollController();
 
-  final YoutubePlayerController _controller = YoutubePlayerController(
-    initialVideoId: 'o5owbiQahnY',
-    params: const YoutubePlayerParams(
-      startAt: Duration(minutes: 2),
-    ),
-  );
+  final YoutubePlayerController _controller = YoutubePlayerController();
 
   @override
   Widget build(BuildContext context) {
+    _controller.loadVideoById(
+      startSeconds: 120,
+      videoId: 'o5owbiQahnY',
+    );
     return Scrollbar(
       thumbVisibility: true,
       thickness: 13,
@@ -69,7 +68,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                                   fontSize: 50,
                                   color: Theme.of(context)
                                       .textTheme
-                                      .bodyText1!
+                                      .bodyLarge!
                                       .color,
                                 ),
                               ),
@@ -91,7 +90,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                                   fontSize: 17,
                                   color: Theme.of(context)
                                       .textTheme
-                                      .bodyText1!
+                                      .bodyLarge!
                                       .color,
                                   fontWeight: FontWeight.w700,
                                 ),
@@ -103,7 +102,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                             margin: const EdgeInsets.only(top: 200),
                             child: YoutubePlayerControllerProvider(
                               controller: _controller,
-                              child: const YoutubePlayerIFrame(),
+                              child: YoutubePlayer(controller: _controller),
                             ),
                           ),
                         ],
@@ -186,7 +185,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                                 fontSize: 30,
                                 color: Theme.of(context)
                                     .textTheme
-                                    .bodyText1!
+                                    .bodyLarge!
                                     .color,
                               ),
                               textAlign: TextAlign.center,
@@ -233,7 +232,7 @@ class HomePageContentMobileTablet extends StatelessWidget {
                         'CyBear Jinni Smart Devices Distribution',
                         style: TextStyle(
                           fontSize: 40,
-                          color: Theme.of(context).textTheme.bodyText1!.color,
+                          color: Theme.of(context).textTheme.bodyLarge!.color,
                         ),
                         textAlign: TextAlign.center,
                       ),

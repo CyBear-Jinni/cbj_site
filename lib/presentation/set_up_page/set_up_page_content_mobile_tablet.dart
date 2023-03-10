@@ -29,7 +29,7 @@ class SetUpPageContentMobileTablet extends StatelessWidget {
                     'Set Up CyBear Jinni',
                     style: TextStyle(
                       fontSize: 30,
-                      color: Theme.of(context).textTheme.bodyText1!.color,
+                      color: Theme.of(context).textTheme.bodyLarge!.color,
                     ),
                     textAlign: TextAlign.center,
                   ),
@@ -95,7 +95,7 @@ class SetUpPageContentMobileTablet extends StatelessWidget {
                                   fontSize: 17,
                                   color: Theme.of(context)
                                       .textTheme
-                                      .bodyText2!
+                                      .bodyLarge!
                                       .color,
                                 ),
                                 children: const [
@@ -146,7 +146,7 @@ class SetUpPageContentMobileTablet extends StatelessWidget {
                                 fontSize: 17,
                                 color: Theme.of(context)
                                     .textTheme
-                                    .bodyText2!
+                                    .bodyLarge!
                                     .color,
                               ),
                               children: const [
@@ -198,7 +198,7 @@ class SetUpPageContentMobileTablet extends StatelessWidget {
                                   fontSize: 17,
                                   color: Theme.of(context)
                                       .textTheme
-                                      .bodyText2!
+                                      .bodyLarge!
                                       .color,
                                 ),
                                 children: const [
@@ -222,7 +222,7 @@ class SetUpPageContentMobileTablet extends StatelessWidget {
                                   child: Divider(
                                     color: Theme.of(context)
                                         .textTheme
-                                        .bodyText1!
+                                        .bodyLarge!
                                         .color,
                                     thickness: 1,
                                   ),
@@ -243,7 +243,7 @@ class SetUpPageContentMobileTablet extends StatelessWidget {
                                   child: Divider(
                                     color: Theme.of(context)
                                         .textTheme
-                                        .bodyText1!
+                                        .bodyLarge!
                                         .color,
                                     thickness: 1,
                                   ),
@@ -269,7 +269,7 @@ class SetUpPageContentMobileTablet extends StatelessWidget {
                                 fontSize: 17,
                                 color: Theme.of(context)
                                     .textTheme
-                                    .bodyText2!
+                                    .bodyLarge!
                                     .color,
                               ),
                               children: const [
@@ -318,7 +318,7 @@ class SetUpPageContentMobileTablet extends StatelessWidget {
                                   fontSize: 17,
                                   color: Theme.of(context)
                                       .textTheme
-                                      .bodyText2!
+                                      .bodyLarge!
                                       .color,
                                 ),
                                 children: const [
@@ -378,7 +378,7 @@ class SetUpPageContentMobileTablet extends StatelessWidget {
                         text: TextSpan(
                           style: TextStyle(
                             fontSize: 17,
-                            color: Theme.of(context).textTheme.bodyText2!.color,
+                            color: Theme.of(context).textTheme.bodyLarge!.color,
                           ),
                           children: const [
                             TextSpan(
@@ -431,7 +431,7 @@ class SetUpPageContentMobileTablet extends StatelessWidget {
                                   fontSize: 17,
                                   color: Theme.of(context)
                                       .textTheme
-                                      .bodyText2!
+                                      .bodyLarge!
                                       .color,
                                 ),
                                 children: const [

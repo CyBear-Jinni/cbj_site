@@ -737,10 +737,10 @@ packages:
     dependency: "direct main"
     description:
       name: responsive_builder
-      sha256: "22a9f79e1a70a163cb8c69440cefc2d976c10c689a0fd5682a5e855cd408cc93"
+      sha256: e23ef8ce1191f878dd50d28f1496d659fc923718dbfd407b121bb167f95ba090
       url: "https://pub.dev"
     source: hosted
-    version: "0.6.3"
+    version: "0.6.4"
   rxdart:
     dependency: transitive
     description:

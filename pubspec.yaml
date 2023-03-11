@@ -63,7 +63,7 @@ dependencies:
   # Popup that ask for the requested permission
   permission_handler: ^10.2.0
   # Allows you to create a readable responsive UI
-  responsive_builder: ^0.6.3
+  responsive_builder: ^0.6.4
   # Launching a URL in the mobile platform
   url_launcher: ^6.1.10
   # YouTube iFrame player

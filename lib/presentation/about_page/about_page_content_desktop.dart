@@ -30,7 +30,7 @@ class AboutPageContentDesktop extends StatelessWidget {
           child: Scaffold(
             drawer:
                 sizingInformation.deviceScreenType == DeviceScreenType.mobile
-                    ? NavigationDrawer(
+                    ? const NavigationDrawer(
                         children: [],
                       )
                     : null,

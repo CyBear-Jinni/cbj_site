@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
 class YoutubeVideoPlayer extends StatefulWidget {
-  YoutubeVideoPlayer({
+  const YoutubeVideoPlayer({
     required this.youtubeVideoId,
   });
 

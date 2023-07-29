@@ -55,9 +55,9 @@ class EasyToSetUpBenefitBlock extends StatelessWidget {
               const SizedBox(
                 height: 30,
               ),
-              Row(
+              const Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const <Widget>[
+                children: <Widget>[
                   FaIcon(
                     FontAwesomeIcons.check,
                     color: Colors.green,
@@ -81,9 +81,9 @@ class EasyToSetUpBenefitBlock extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-              Row(
+              const Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const <Widget>[
+                children: <Widget>[
                   FaIcon(
                     FontAwesomeIcons.check,
                     color: Colors.green,
@@ -107,9 +107,9 @@ class EasyToSetUpBenefitBlock extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-              Row(
+              const Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const <Widget>[
+                children: <Widget>[
                   FaIcon(
                     FontAwesomeIcons.check,
                     color: Colors.green,

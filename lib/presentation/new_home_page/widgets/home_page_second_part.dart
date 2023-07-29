@@ -8,8 +8,6 @@ import 'package:flutter/material.dart';
 class HomePageSecondPart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Size screenSize = MediaQuery.of(context).size;
-
     return Stack(
       children: [
         SizedBox.expand(
@@ -34,20 +32,20 @@ class HomePageSecondPart extends StatelessWidget {
         Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            Flexible(
+            const Flexible(
               flex: 2,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  const BorderTextWithShadow(
+                  BorderTextWithShadow(
                     'About us',
                     fontSize: 35,
                     fontWeight: FontWeight.bold,
                   ),
-                  const SizedBox(height: 70),
+                  SizedBox(height: 70),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
+                    children: [
                       BorderTextWithShadow(
                         'CyBear Jinni ',
                         fontSize: 25,

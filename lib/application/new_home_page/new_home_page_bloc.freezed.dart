@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'new_home_page_bloc.dart';
 
@@ -25,8 +25,8 @@ mixin _$NewHomePageEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initialized,
-    TResult Function(double scrollPosition, int currentPage)? scrollPage,
+    TResult? Function()? initialized,
+    TResult? Function(double scrollPosition, int currentPage)? scrollPage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -44,8 +44,8 @@ mixin _$NewHomePageEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(Initialized value)? initialized,
-    TResult Function(ScrollPage value)? scrollPage,
+    TResult? Function(Initialized value)? initialized,
+    TResult? Function(ScrollPage value)? scrollPage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -61,17 +61,18 @@ mixin _$NewHomePageEvent {
 abstract class $NewHomePageEventCopyWith<$Res> {
   factory $NewHomePageEventCopyWith(
           NewHomePageEvent value, $Res Function(NewHomePageEvent) then) =
-      _$NewHomePageEventCopyWithImpl<$Res>;
+      _$NewHomePageEventCopyWithImpl<$Res, NewHomePageEvent>;
 }
 
 /// @nodoc
-class _$NewHomePageEventCopyWithImpl<$Res>
+class _$NewHomePageEventCopyWithImpl<$Res, $Val extends NewHomePageEvent>
     implements $NewHomePageEventCopyWith<$Res> {
   _$NewHomePageEventCopyWithImpl(this._value, this._then);
 
-  final NewHomePageEvent _value;
   // ignore: unused_field
-  final $Res Function(NewHomePageEvent) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
@@ -83,14 +84,11 @@ abstract class _$$InitializedCopyWith<$Res> {
 
 /// @nodoc
 class __$$InitializedCopyWithImpl<$Res>
-    extends _$NewHomePageEventCopyWithImpl<$Res>
+    extends _$NewHomePageEventCopyWithImpl<$Res, _$Initialized>
     implements _$$InitializedCopyWith<$Res> {
   __$$InitializedCopyWithImpl(
       _$Initialized _value, $Res Function(_$Initialized) _then)
-      : super(_value, (v) => _then(v as _$Initialized));
-
-  @override
-  _$Initialized get _value => super._value as _$Initialized;
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -125,8 +123,8 @@ class _$Initialized implements Initialized {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initialized,
-    TResult Function(double scrollPosition, int currentPage)? scrollPage,
+    TResult? Function()? initialized,
+    TResult? Function(double scrollPosition, int currentPage)? scrollPage,
   }) {
     return initialized?.call();
   }
@@ -156,8 +154,8 @@ class _$Initialized implements Initialized {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(Initialized value)? initialized,
-    TResult Function(ScrollPage value)? scrollPage,
+    TResult? Function(Initialized value)? initialized,
+    TResult? Function(ScrollPage value)? scrollPage,
   }) {
     return initialized?.call(this);
   }
@@ -185,31 +183,30 @@ abstract class _$$ScrollPageCopyWith<$Res> {
   factory _$$ScrollPageCopyWith(
           _$ScrollPage value, $Res Function(_$ScrollPage) then) =
       __$$ScrollPageCopyWithImpl<$Res>;
+  @useResult
   $Res call({double scrollPosition, int currentPage});
 }
 
 /// @nodoc
 class __$$ScrollPageCopyWithImpl<$Res>
-    extends _$NewHomePageEventCopyWithImpl<$Res>
+    extends _$NewHomePageEventCopyWithImpl<$Res, _$ScrollPage>
     implements _$$ScrollPageCopyWith<$Res> {
   __$$ScrollPageCopyWithImpl(
       _$ScrollPage _value, $Res Function(_$ScrollPage) _then)
-      : super(_value, (v) => _then(v as _$ScrollPage));
+      : super(_value, _then);
 
-  @override
-  _$ScrollPage get _value => super._value as _$ScrollPage;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? scrollPosition = freezed,
-    Object? currentPage = freezed,
+    Object? scrollPosition = null,
+    Object? currentPage = null,
   }) {
     return _then(_$ScrollPage(
-      scrollPosition == freezed
+      null == scrollPosition
           ? _value.scrollPosition
           : scrollPosition // ignore: cast_nullable_to_non_nullable
               as double,
-      currentPage == freezed
+      null == currentPage
           ? _value.currentPage
           : currentPage // ignore: cast_nullable_to_non_nullable
               as int,
@@ -237,20 +234,18 @@ class _$ScrollPage implements ScrollPage {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ScrollPage &&
-            const DeepCollectionEquality()
-                .equals(other.scrollPosition, scrollPosition) &&
-            const DeepCollectionEquality()
-                .equals(other.currentPage, currentPage));
+            (identical(other.scrollPosition, scrollPosition) ||
+                other.scrollPosition == scrollPosition) &&
+            (identical(other.currentPage, currentPage) ||
+                other.currentPage == currentPage));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(scrollPosition),
-      const DeepCollectionEquality().hash(currentPage));
+  int get hashCode => Object.hash(runtimeType, scrollPosition, currentPage);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$ScrollPageCopyWith<_$ScrollPage> get copyWith =>
       __$$ScrollPageCopyWithImpl<_$ScrollPage>(this, _$identity);
 
@@ -267,8 +262,8 @@ class _$ScrollPage implements ScrollPage {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initialized,
-    TResult Function(double scrollPosition, int currentPage)? scrollPage,
+    TResult? Function()? initialized,
+    TResult? Function(double scrollPosition, int currentPage)? scrollPage,
   }) {
     return scrollPage?.call(scrollPosition, currentPage);
   }
@@ -298,8 +293,8 @@ class _$ScrollPage implements ScrollPage {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(Initialized value)? initialized,
-    TResult Function(ScrollPage value)? scrollPage,
+    TResult? Function(Initialized value)? initialized,
+    TResult? Function(ScrollPage value)? scrollPage,
   }) {
     return scrollPage?.call(this);
   }
@@ -341,10 +336,10 @@ mixin _$NewHomePageState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function()? $default, {
-    TResult Function(double scrollPosition, int currentPage)? loading,
-    TResult Function(double scrollPosition, int currentPage)? loaded,
-    TResult Function()? error,
+    TResult? Function()? $default, {
+    TResult? Function(double scrollPosition, int currentPage)? loading,
+    TResult? Function(double scrollPosition, int currentPage)? loaded,
+    TResult? Function()? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -366,10 +361,10 @@ mixin _$NewHomePageState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(_NewHomePageState value)? $default, {
-    TResult Function(Loading value)? loading,
-    TResult Function(Loaded value)? loaded,
-    TResult Function(Error value)? error,
+    TResult? Function(_NewHomePageState value)? $default, {
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Loaded value)? loaded,
+    TResult? Function(Error value)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -387,17 +382,18 @@ mixin _$NewHomePageState {
 abstract class $NewHomePageStateCopyWith<$Res> {
   factory $NewHomePageStateCopyWith(
           NewHomePageState value, $Res Function(NewHomePageState) then) =
-      _$NewHomePageStateCopyWithImpl<$Res>;
+      _$NewHomePageStateCopyWithImpl<$Res, NewHomePageState>;
 }
 
 /// @nodoc
-class _$NewHomePageStateCopyWithImpl<$Res>
+class _$NewHomePageStateCopyWithImpl<$Res, $Val extends NewHomePageState>
     implements $NewHomePageStateCopyWith<$Res> {
   _$NewHomePageStateCopyWithImpl(this._value, this._then);
 
-  final NewHomePageState _value;
   // ignore: unused_field
-  final $Res Function(NewHomePageState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
@@ -409,14 +405,11 @@ abstract class _$$_NewHomePageStateCopyWith<$Res> {
 
 /// @nodoc
 class __$$_NewHomePageStateCopyWithImpl<$Res>
-    extends _$NewHomePageStateCopyWithImpl<$Res>
+    extends _$NewHomePageStateCopyWithImpl<$Res, _$_NewHomePageState>
     implements _$$_NewHomePageStateCopyWith<$Res> {
   __$$_NewHomePageStateCopyWithImpl(
       _$_NewHomePageState _value, $Res Function(_$_NewHomePageState) _then)
-      : super(_value, (v) => _then(v as _$_NewHomePageState));
-
-  @override
-  _$_NewHomePageState get _value => super._value as _$_NewHomePageState;
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -452,10 +445,10 @@ class _$_NewHomePageState implements _NewHomePageState {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function()? $default, {
-    TResult Function(double scrollPosition, int currentPage)? loading,
-    TResult Function(double scrollPosition, int currentPage)? loaded,
-    TResult Function()? error,
+    TResult? Function()? $default, {
+    TResult? Function(double scrollPosition, int currentPage)? loading,
+    TResult? Function(double scrollPosition, int currentPage)? loaded,
+    TResult? Function()? error,
   }) {
     return $default?.call();
   }
@@ -489,10 +482,10 @@ class _$_NewHomePageState implements _NewHomePageState {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(_NewHomePageState value)? $default, {
-    TResult Function(Loading value)? loading,
-    TResult Function(Loaded value)? loaded,
-    TResult Function(Error value)? error,
+    TResult? Function(_NewHomePageState value)? $default, {
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Loaded value)? loaded,
+    TResult? Function(Error value)? error,
   }) {
     return $default?.call(this);
   }
@@ -521,29 +514,29 @@ abstract class _NewHomePageState implements NewHomePageState {
 abstract class _$$LoadingCopyWith<$Res> {
   factory _$$LoadingCopyWith(_$Loading value, $Res Function(_$Loading) then) =
       __$$LoadingCopyWithImpl<$Res>;
+  @useResult
   $Res call({double scrollPosition, int currentPage});
 }
 
 /// @nodoc
-class __$$LoadingCopyWithImpl<$Res> extends _$NewHomePageStateCopyWithImpl<$Res>
+class __$$LoadingCopyWithImpl<$Res>
+    extends _$NewHomePageStateCopyWithImpl<$Res, _$Loading>
     implements _$$LoadingCopyWith<$Res> {
   __$$LoadingCopyWithImpl(_$Loading _value, $Res Function(_$Loading) _then)
-      : super(_value, (v) => _then(v as _$Loading));
+      : super(_value, _then);
 
-  @override
-  _$Loading get _value => super._value as _$Loading;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? scrollPosition = freezed,
-    Object? currentPage = freezed,
+    Object? scrollPosition = null,
+    Object? currentPage = null,
   }) {
     return _then(_$Loading(
-      scrollPosition == freezed
+      null == scrollPosition
           ? _value.scrollPosition
           : scrollPosition // ignore: cast_nullable_to_non_nullable
               as double,
-      currentPage == freezed
+      null == currentPage
           ? _value.currentPage
           : currentPage // ignore: cast_nullable_to_non_nullable
               as int,
@@ -571,20 +564,18 @@ class _$Loading implements Loading {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$Loading &&
-            const DeepCollectionEquality()
-                .equals(other.scrollPosition, scrollPosition) &&
-            const DeepCollectionEquality()
-                .equals(other.currentPage, currentPage));
+            (identical(other.scrollPosition, scrollPosition) ||
+                other.scrollPosition == scrollPosition) &&
+            (identical(other.currentPage, currentPage) ||
+                other.currentPage == currentPage));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(scrollPosition),
-      const DeepCollectionEquality().hash(currentPage));
+  int get hashCode => Object.hash(runtimeType, scrollPosition, currentPage);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$LoadingCopyWith<_$Loading> get copyWith =>
       __$$LoadingCopyWithImpl<_$Loading>(this, _$identity);
 
@@ -602,10 +593,10 @@ class _$Loading implements Loading {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function()? $default, {
-    TResult Function(double scrollPosition, int currentPage)? loading,
-    TResult Function(double scrollPosition, int currentPage)? loaded,
-    TResult Function()? error,
+    TResult? Function()? $default, {
+    TResult? Function(double scrollPosition, int currentPage)? loading,
+    TResult? Function(double scrollPosition, int currentPage)? loaded,
+    TResult? Function()? error,
   }) {
     return loading?.call(scrollPosition, currentPage);
   }
@@ -639,10 +630,10 @@ class _$Loading implements Loading {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(_NewHomePageState value)? $default, {
-    TResult Function(Loading value)? loading,
-    TResult Function(Loaded value)? loaded,
-    TResult Function(Error value)? error,
+    TResult? Function(_NewHomePageState value)? $default, {
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Loaded value)? loaded,
+    TResult? Function(Error value)? error,
   }) {
     return loading?.call(this);
   }
@@ -678,29 +669,29 @@ abstract class Loading implements NewHomePageState {
 abstract class _$$LoadedCopyWith<$Res> {
   factory _$$LoadedCopyWith(_$Loaded value, $Res Function(_$Loaded) then) =
       __$$LoadedCopyWithImpl<$Res>;
+  @useResult
   $Res call({double scrollPosition, int currentPage});
 }
 
 /// @nodoc
-class __$$LoadedCopyWithImpl<$Res> extends _$NewHomePageStateCopyWithImpl<$Res>
+class __$$LoadedCopyWithImpl<$Res>
+    extends _$NewHomePageStateCopyWithImpl<$Res, _$Loaded>
     implements _$$LoadedCopyWith<$Res> {
   __$$LoadedCopyWithImpl(_$Loaded _value, $Res Function(_$Loaded) _then)
-      : super(_value, (v) => _then(v as _$Loaded));
+      : super(_value, _then);
 
-  @override
-  _$Loaded get _value => super._value as _$Loaded;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? scrollPosition = freezed,
-    Object? currentPage = freezed,
+    Object? scrollPosition = null,
+    Object? currentPage = null,
   }) {
     return _then(_$Loaded(
-      scrollPosition == freezed
+      null == scrollPosition
           ? _value.scrollPosition
           : scrollPosition // ignore: cast_nullable_to_non_nullable
               as double,
-      currentPage == freezed
+      null == currentPage
           ? _value.currentPage
           : currentPage // ignore: cast_nullable_to_non_nullable
               as int,
@@ -728,20 +719,18 @@ class _$Loaded implements Loaded {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$Loaded &&
-            const DeepCollectionEquality()
-                .equals(other.scrollPosition, scrollPosition) &&
-            const DeepCollectionEquality()
-                .equals(other.currentPage, currentPage));
+            (identical(other.scrollPosition, scrollPosition) ||
+                other.scrollPosition == scrollPosition) &&
+            (identical(other.currentPage, currentPage) ||
+                other.currentPage == currentPage));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(scrollPosition),
-      const DeepCollectionEquality().hash(currentPage));
+  int get hashCode => Object.hash(runtimeType, scrollPosition, currentPage);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$LoadedCopyWith<_$Loaded> get copyWith =>
       __$$LoadedCopyWithImpl<_$Loaded>(this, _$identity);
 
@@ -759,10 +748,10 @@ class _$Loaded implements Loaded {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function()? $default, {
-    TResult Function(double scrollPosition, int currentPage)? loading,
-    TResult Function(double scrollPosition, int currentPage)? loaded,
-    TResult Function()? error,
+    TResult? Function()? $default, {
+    TResult? Function(double scrollPosition, int currentPage)? loading,
+    TResult? Function(double scrollPosition, int currentPage)? loaded,
+    TResult? Function()? error,
   }) {
     return loaded?.call(scrollPosition, currentPage);
   }
@@ -796,10 +785,10 @@ class _$Loaded implements Loaded {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(_NewHomePageState value)? $default, {
-    TResult Function(Loading value)? loading,
-    TResult Function(Loaded value)? loaded,
-    TResult Function(Error value)? error,
+    TResult? Function(_NewHomePageState value)? $default, {
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Loaded value)? loaded,
+    TResult? Function(Error value)? error,
   }) {
     return loaded?.call(this);
   }
@@ -838,13 +827,11 @@ abstract class _$$ErrorCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$ErrorCopyWithImpl<$Res> extends _$NewHomePageStateCopyWithImpl<$Res>
+class __$$ErrorCopyWithImpl<$Res>
+    extends _$NewHomePageStateCopyWithImpl<$Res, _$Error>
     implements _$$ErrorCopyWith<$Res> {
   __$$ErrorCopyWithImpl(_$Error _value, $Res Function(_$Error) _then)
-      : super(_value, (v) => _then(v as _$Error));
-
-  @override
-  _$Error get _value => super._value as _$Error;
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -880,10 +867,10 @@ class _$Error implements Error {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function()? $default, {
-    TResult Function(double scrollPosition, int currentPage)? loading,
-    TResult Function(double scrollPosition, int currentPage)? loaded,
-    TResult Function()? error,
+    TResult? Function()? $default, {
+    TResult? Function(double scrollPosition, int currentPage)? loading,
+    TResult? Function(double scrollPosition, int currentPage)? loaded,
+    TResult? Function()? error,
   }) {
     return error?.call();
   }
@@ -917,10 +904,10 @@ class _$Error implements Error {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(_NewHomePageState value)? $default, {
-    TResult Function(Loading value)? loading,
-    TResult Function(Loaded value)? loaded,
-    TResult Function(Error value)? error,
+    TResult? Function(_NewHomePageState value)? $default, {
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Loaded value)? loaded,
+    TResult? Function(Error value)? error,
   }) {
     return error?.call(this);
   }

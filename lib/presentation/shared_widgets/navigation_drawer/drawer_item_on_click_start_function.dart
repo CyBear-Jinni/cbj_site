@@ -17,7 +17,7 @@ class DrawerItemOnClickStartFunction extends StatelessWidget {
   final IconData icon;
 
   /// What function to run if clicked
-  final Function onClickFunction;
+  final Function(BuildContext context) onClickFunction;
 
   @override
   Widget build(BuildContext context) {

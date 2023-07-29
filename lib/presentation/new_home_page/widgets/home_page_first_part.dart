@@ -114,8 +114,8 @@ class HomePageFirstPart extends StatelessWidget {
                       child: SizedBox(
                         width: screenSize.width / 2,
                         height: screenSize.height / 2.3,
-                        child:
-                            YoutubeVideoPlayer(youtubeVideoId: 'o5owbiQahnY'),
+                        child: const YoutubeVideoPlayer(
+                            youtubeVideoId: 'o5owbiQahnY'),
                       ),
                     ),
                   ),

@@ -4,14 +4,12 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cybear_jinni_site/my_singleton.dart';
 import 'package:cybear_jinni_site/presentation/home_page/widgets/supported_vendors_tile_grid_view.dart';
 import 'package:cybear_jinni_site/presentation/new_home_page/widgets/border_text_with_shadow.dart';
+import 'package:cybear_jinni_site/presentation/new_home_page/widgets/youtube_video_player.dart';
 import 'package:cybear_jinni_site/presentation/route_names.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
 class HomePageFirstPart extends StatelessWidget {
-  final YoutubePlayerController _controller = YoutubePlayerController();
-
   final List<String> companysLogs = [
     'https://i.ibb.co/Wsqst7Y/google-logo.png',
     'https://i.ibb.co/yqBDqkD/shelly-logo.png',
@@ -28,11 +26,6 @@ class HomePageFirstPart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Size screenSize = MediaQuery.of(context).size;
-
-    _controller.loadVideoById(
-      startSeconds: 120,
-      videoId: 'o5owbiQahnY',
-    );
 
     return Stack(
       children: [
@@ -121,9 +114,8 @@ class HomePageFirstPart extends StatelessWidget {
                       child: SizedBox(
                         width: screenSize.width / 2,
                         height: screenSize.height / 2.3,
-                        child: YoutubePlayerControllerProvider(
-                          controller: _controller,
-                          child: YoutubePlayer(controller: _controller),
+                        child: const YoutubeVideoPlayer(
+                          youtubeVideoId: 'o5owbiQahnY',
                         ),
                       ),
                     ),

@@ -10,8 +10,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class NewHomePageWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Size screenSize = MediaQuery.of(context).size;
-
     return BlocBuilder<NewHomePageBloc, NewHomePageState>(
       builder: (context, state) {
         return state.map(

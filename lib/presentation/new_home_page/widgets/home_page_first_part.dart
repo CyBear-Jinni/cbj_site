@@ -65,7 +65,7 @@ class HomePageFirstPart extends StatelessWidget {
                         alignment: Alignment.bottomCenter,
                         child: Container(
                           constraints: const BoxConstraints(maxWidth: 500),
-                          height: screenSize.height / 2.3,
+                          // height: screenSize.height / 2.3,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [

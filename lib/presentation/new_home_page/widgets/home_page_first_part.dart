@@ -98,13 +98,10 @@ class HomePageFirstPart extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Align(
-                    child: SizedBox(
-                      width: screenSize.width / 2,
-                      height: screenSize.height / 2.3,
-                      child: const YoutubeVideoPlayer(
-                        youtubeVideoId: 'o5owbiQahnY',
-                      ),
+                  SizedBox(
+                    height: screenSize.height / 2.3,
+                    child: const YoutubeVideoPlayer(
+                      youtubeVideoId: 'o5owbiQahnY',
                     ),
                   ),
                 ],

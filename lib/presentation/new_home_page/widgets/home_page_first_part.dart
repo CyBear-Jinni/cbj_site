@@ -52,16 +52,16 @@ class HomePageFirstPart extends StatelessWidget {
         Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Flexible(
-              flex: 5,
+            Expanded(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                    margin: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+                    alignment: Alignment.center,
+                    margin: const EdgeInsets.symmetric(horizontal: 20,vertical: 20),
                     constraints: const BoxConstraints(maxWidth: 500),
                     child: Column(
-                      mainAxisAlignment: MainAxisAlignment.end,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Stack(
                           children: <Widget>[
@@ -110,59 +110,56 @@ class HomePageFirstPart extends StatelessWidget {
                 ],
               ),
             ),
-            Flexible(
-              flex: 2,
-              child: SizedBox(
-                height: MediaQuery.of(context).size.height*0.2,
-                child: TextButton(
-                  style: ButtonStyle(
-                    padding: MaterialStateProperty.all<EdgeInsets>(
-                      EdgeInsets.zero,
-                    ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height*0.2,
+              child: TextButton(
+                style: ButtonStyle(
+                  padding: MaterialStateProperty.all<EdgeInsets>(
+                    EdgeInsets.zero,
                   ),
-                  onPressed: () {
-                    if (MySingleton.getCurrentPageName !=integrationsRoute) {
-                      Navigator.pushNamed(context, integrationsRoute);
-                    } else {
-                      Navigator.pushReplacementNamed(
-                        context,
-                        integrationsRoute,
-                      );
-                    }
-                  },
-                  child: ClipRect(
-                    child: BackdropFilter(
-                      filter: ImageFilter.blur(
-                        sigmaX: 5.0,
-                        sigmaY: 2.0,
+                ),
+                onPressed: () {
+                  if (MySingleton.getCurrentPageName !=integrationsRoute) {
+                    Navigator.pushNamed(context, integrationsRoute);
+                  } else {
+                    Navigator.pushReplacementNamed(
+                      context,
+                      integrationsRoute,
+                    );
+                  }
+                },
+                child: ClipRect(
+                  child: BackdropFilter(
+                    filter: ImageFilter.blur(
+                      sigmaX: 5.0,
+                      sigmaY: 2.0,
+                    ),
+                    child: DecoratedBox(
+                      decoration: BoxDecoration(
+                        color: Colors.grey.shade200.withOpacity(0.5),
                       ),
-                      child: DecoratedBox(
-                        decoration: BoxDecoration(
-                          color: Colors.grey.shade200.withOpacity(0.5),
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            const BorderTextWithShadow(
-                              'Supported Vendors',
-                              fontSize: 30,
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(10.0),
-                              child: SizedBox(
-                                width: MediaQuery.of(context).size.width,
-                                child: Row(
-                                  // alignment: WrapAlignment.spaceEvenly,
-                                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                  children: List.generate(
-                                    companysLogs.length,
-                                    (index) => SupportedVendorsTileGridViewNetworkImage(companysLogs[index],),
-                                  ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const BorderTextWithShadow(
+                            'Supported Vendors',
+                            fontSize: 30,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: SizedBox(
+                              width: MediaQuery.of(context).size.width,
+                              child: Row(
+                                // alignment: WrapAlignment.spaceEvenly,
+                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                children: List.generate(
+                                  companysLogs.length,
+                                  (index) => SupportedVendorsTileGridViewNetworkImage(companysLogs[index],),
                                 ),
                               ),
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
                     ),
                   ),

@@ -55,18 +55,21 @@ class NewNavBar extends StatelessWidget {
                 top: 20,
                 right: 40,
               ),
-              child: TextButton(
-                onPressed: () {
-                  if (MySingleton.getCurrentPageName != aboutRoute) {
-                    Navigator.pushNamed(context, aboutRoute);
-                  } else {
-                    Navigator.pushReplacementNamed(context, aboutRoute);
-                  }
-                },
-                child: const BorderTextWithShadow(
-                  'About',
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
+              child: MouseRegion(
+                cursor: SystemMouseCursors.click,
+                child: TextButton(
+                  onPressed: () {
+                    if (MySingleton.getCurrentPageName != aboutRoute) {
+                      Navigator.pushNamed(context, aboutRoute);
+                    } else {
+                      Navigator.pushReplacementNamed(context, aboutRoute);
+                    }
+                  },
+                  child: const BorderTextWithShadow(
+                    'About',
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
             ),
@@ -75,18 +78,21 @@ class NewNavBar extends StatelessWidget {
                 horizontal: 20,
                 vertical: 40,
               ),
-              child: TextButton(
-                onPressed: () {
-                  if (MySingleton.getCurrentPageName != faqRoute) {
-                    Navigator.pushNamed(context, faqRoute);
-                  } else {
-                    Navigator.pushReplacementNamed(context, faqRoute);
-                  }
-                },
-                child: const BorderTextWithShadow(
-                  'FAQ',
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
+              child: MouseRegion(
+                cursor: SystemMouseCursors.click,
+                child: TextButton(
+                  onPressed: () {
+                    if (MySingleton.getCurrentPageName != faqRoute) {
+                      Navigator.pushNamed(context, faqRoute);
+                    } else {
+                      Navigator.pushReplacementNamed(context, faqRoute);
+                    }
+                  },
+                  child: const BorderTextWithShadow(
+                    'FAQ',
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
             ),
@@ -95,18 +101,21 @@ class NewNavBar extends StatelessWidget {
                 horizontal: 20,
                 vertical: 40,
               ),
-              child: TextButton(
-                onPressed: () {
-                  if (MySingleton.getCurrentPageName != setUpRoute) {
-                    Navigator.pushNamed(context, setUpRoute);
-                  } else {
-                    Navigator.pushReplacementNamed(context, setUpRoute);
-                  }
-                },
-                child: const BorderTextWithShadow(
-                  'Setup',
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
+              child: MouseRegion(
+                cursor: SystemMouseCursors.click,
+                child: TextButton(
+                  onPressed: () {
+                    if (MySingleton.getCurrentPageName != setUpRoute) {
+                      Navigator.pushNamed(context, setUpRoute);
+                    } else {
+                      Navigator.pushReplacementNamed(context, setUpRoute);
+                    }
+                  },
+                  child: const BorderTextWithShadow(
+                    'Setup',
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
             ),
@@ -115,21 +124,24 @@ class NewNavBar extends StatelessWidget {
                 horizontal: 20,
                 vertical: 40,
               ),
-              child: TextButton(
-                onPressed: () {
-                  if (MySingleton.getCurrentPageName != integrationsRoute) {
-                    Navigator.pushNamed(context, integrationsRoute);
-                  } else {
-                    Navigator.pushReplacementNamed(
-                      context,
-                      integrationsRoute,
-                    );
-                  }
-                },
-                child: const BorderTextWithShadow(
-                  'Integrations',
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
+              child: MouseRegion(
+                cursor: SystemMouseCursors.click,
+                child: TextButton(
+                  onPressed: () {
+                    if (MySingleton.getCurrentPageName != integrationsRoute) {
+                      Navigator.pushNamed(context, integrationsRoute);
+                    } else {
+                      Navigator.pushReplacementNamed(
+                        context,
+                        integrationsRoute,
+                      );
+                    }
+                  },
+                  child: const BorderTextWithShadow(
+                    'Integrations',
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
             ),

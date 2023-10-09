@@ -59,6 +59,7 @@ class SupportedVendorsTileGridViewNetworkImage extends StatelessWidget {
     return ColoredBox(
       color: imageBackgroundColor,
       child: CachedNetworkImage(
+        height: 70,
         imageUrl: imageUrl,
         fit: BoxFit.contain,
         progressIndicatorBuilder: (context, url, downloadProgress) =>

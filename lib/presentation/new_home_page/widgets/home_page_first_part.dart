@@ -50,73 +50,60 @@ class HomePageFirstPart extends StatelessWidget {
           ),
         ),
         Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Flexible(
-              flex: 3,
+              flex: 5,
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Flexible(
-                    flex: 4,
-                    child: Container(
-                      alignment: Alignment.bottomRight,
-                      margin: const EdgeInsets.only(right: 10, left: 20),
-                      child: Align(
-                        alignment: Alignment.bottomCenter,
-                        child: Container(
-                          constraints: const BoxConstraints(maxWidth: 500),
-                          // height: screenSize.height / 2.3,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Stack(
-                                children: <Widget>[
-                                  Text(
-                                    'smart home',
-                                    style: TextStyle(
-                                      fontSize: 65,
-                                      foreground: Paint()
-                                        ..style = PaintingStyle.stroke
-                                        ..strokeWidth = 2.5
-                                        ..color = HexColor('#000000'),
-                                    ),
-                                  ),
-                                  // Solid text as fill.
-                                  const Text(
-                                    'smart home',
-                                    style: TextStyle(
-                                      fontSize: 65,
-                                      color: Colors.white,
-                                    ),
-                                  ),
-                                ],
+                  Container(
+                    margin: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+                    constraints: const BoxConstraints(maxWidth: 500),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Stack(
+                          children: <Widget>[
+                            Text(
+                              'smart home',
+                              style: TextStyle(
+                                fontSize: 65,
+                                foreground: Paint()
+                                  ..style = PaintingStyle.stroke
+                                  ..strokeWidth = 2.5
+                                  ..color = HexColor('#000000'),
                               ),
-                              const SizedBox(height: 40),
-                              const BorderTextWithShadow(
-                                "If you're a person who values his time or freedom\nWe have the product for you.\n",
+                            ),
+                            // Solid text as fill.
+                            const Text(
+                              'smart home',
+                              style: TextStyle(
+                                fontSize: 65,
+                                color: Colors.white,
                               ),
-                              const BorderTextWithShadow(
-                                'It automatically creates personalized automations to improved your performance in your daily activities.\n',
-                              ),
-                              const BorderTextWithShadow(
-                                'By setting a purpose for each area in the home CBJ will create the best automations to suite your needs.',
-                              ),
-                            ],
-                          ),
+                            ),
+                          ],
                         ),
-                      ),
+                        const SizedBox(height: 20),
+                        const BorderTextWithShadow(
+                          "If you're a person who values his time or freedom\nWe have the product for you.\n",
+                        ),
+                        const BorderTextWithShadow(
+                          'It automatically creates personalized automations to improved your performance in your daily activities.\n',
+                        ),
+                        const BorderTextWithShadow(
+                          'By setting a purpose for each area in the home CBJ will create the best automations to suite your needs.',
+                        ),
+                      ],
                     ),
                   ),
-                  Flexible(
-                    flex: 5,
-                    child: Align(
-                      alignment: Alignment.bottomLeft,
-                      child: SizedBox(
-                        width: screenSize.width / 2,
-                        height: screenSize.height / 2.3,
-                        child: const YoutubeVideoPlayer(
-                          youtubeVideoId: 'o5owbiQahnY',
-                        ),
+                  Align(
+                    child: SizedBox(
+                      width: screenSize.width / 2,
+                      height: screenSize.height / 2.3,
+                      child: const YoutubeVideoPlayer(
+                        youtubeVideoId: 'o5owbiQahnY',
                       ),
                     ),
                   ),
@@ -125,117 +112,61 @@ class HomePageFirstPart extends StatelessWidget {
             ),
             Flexible(
               flex: 2,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const Flexible(
-                    flex: 18,
-                    child: SizedBox(),
+              child: SizedBox(
+                height: MediaQuery.of(context).size.height*0.2,
+                child: TextButton(
+                  style: ButtonStyle(
+                    padding: MaterialStateProperty.all<EdgeInsets>(
+                      EdgeInsets.zero,
+                    ),
                   ),
-                  Flexible(
-                    flex: 16,
-                    child: TextButton(
-                      style: ButtonStyle(
-                        padding: MaterialStateProperty.all<EdgeInsets>(
-                          EdgeInsets.zero,
-                        ),
+                  onPressed: () {
+                    if (MySingleton.getCurrentPageName !=integrationsRoute) {
+                      Navigator.pushNamed(context, integrationsRoute);
+                    } else {
+                      Navigator.pushReplacementNamed(
+                        context,
+                        integrationsRoute,
+                      );
+                    }
+                  },
+                  child: ClipRect(
+                    child: BackdropFilter(
+                      filter: ImageFilter.blur(
+                        sigmaX: 5.0,
+                        sigmaY: 2.0,
                       ),
-                      onPressed: () {
-                        if (MySingleton.getCurrentPageName !=
-                            integrationsRoute) {
-                          Navigator.pushNamed(context, integrationsRoute);
-                        } else {
-                          Navigator.pushReplacementNamed(
-                            context,
-                            integrationsRoute,
-                          );
-                        }
-                      },
-                      child: ClipRect(
-                        child: BackdropFilter(
-                          filter: ImageFilter.blur(
-                            sigmaX: 5.0,
-                            sigmaY: 2.0,
-                          ),
-                          child: DecoratedBox(
-                            decoration: BoxDecoration(
-                              color: Colors.grey.shade200.withOpacity(0.5),
+                      child: DecoratedBox(
+                        decoration: BoxDecoration(
+                          color: Colors.grey.shade200.withOpacity(0.5),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const BorderTextWithShadow(
+                              'Supported Vendors',
+                              fontSize: 30,
                             ),
-                            child: Center(
-                              child: Column(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Flexible(
-                                    child: Container(
-                                      margin: const EdgeInsets.only(top: 20),
-                                      child: const BorderTextWithShadow(
-                                        'Supported Vendors',
-                                        fontSize: 30,
-                                      ),
-                                    ),
+                            Padding(
+                              padding: const EdgeInsets.all(10.0),
+                              child: SizedBox(
+                                width: MediaQuery.of(context).size.width,
+                                child: Row(
+                                  // alignment: WrapAlignment.spaceEvenly,
+                                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                  children: List.generate(
+                                    companysLogs.length,
+                                    (index) => SupportedVendorsTileGridViewNetworkImage(companysLogs[index],),
                                   ),
-                                  Flexible(
-                                    flex: 2,
-                                    child: Align(
-                                      alignment: Alignment.topCenter,
-                                      child: Container(
-                                        margin: const EdgeInsets.only(
-                                          top: 20,
-                                        ),
-                                        height: 60,
-                                        width: screenSize.width / 1.1,
-                                        child: Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceEvenly,
-                                          children: [
-                                            SupportedVendorsTileGridViewNetworkImage(
-                                              companysLogs[0],
-                                            ),
-                                            SupportedVendorsTileGridViewNetworkImage(
-                                              companysLogs[1],
-                                            ),
-                                            SupportedVendorsTileGridViewNetworkImage(
-                                              companysLogs[2],
-                                              imageBackgroundColor: Colors.red,
-                                            ),
-                                            SupportedVendorsTileGridViewNetworkImage(
-                                              companysLogs[3],
-                                            ),
-                                            SupportedVendorsTileGridViewNetworkImage(
-                                              companysLogs[4],
-                                              imageBackgroundColor:
-                                                  HexColor('#8F0000'),
-                                            ),
-                                            SupportedVendorsTileGridViewNetworkImage(
-                                              companysLogs[5],
-                                            ),
-                                            SupportedVendorsTileGridViewNetworkImage(
-                                              companysLogs[6],
-                                            ),
-                                            SupportedVendorsTileGridViewNetworkImage(
-                                              companysLogs[7],
-                                            ),
-                                            SupportedVendorsTileGridViewNetworkImage(
-                                              companysLogs[8],
-                                            ),
-                                            SupportedVendorsTileGridViewNetworkImage(
-                                              companysLogs[9],
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ],
+                                ),
                               ),
                             ),
-                          ),
+                          ],
                         ),
                       ),
                     ),
                   ),
-                ],
+                ),
               ),
             ),
           ],

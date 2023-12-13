@@ -49,7 +49,7 @@ class EasyToSetUpBenefitBlock extends StatelessWidget {
                         ),
                       ),
                     ],
-                  )
+                  ),
                 ],
               ),
               const SizedBox(

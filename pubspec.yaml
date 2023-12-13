@@ -2,11 +2,10 @@ name: cybear_jinni_site
 description: Site for CyBear Jinni Smart Home
 version: 1.0.0+3
 
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
 environment:
   sdk: ^3.0.0
-
 
 flutter:
   # Ensures that the Material Icons font is included with your application.
@@ -31,8 +30,6 @@ dependencies:
   bloc: ^8.1.2
   # Show images from the internet and keep them in the cache directory.
   cached_network_image: ^3.2.3
-  # Spotlight Bottom Navigation Bar
-  cool_nav: ^0.1.0
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.5
@@ -81,4 +78,3 @@ dev_dependencies:
   injectable_generator: ^2.1.6
   # Collection of lint rules for Dart and Flutter projects.
   lint: ^2.1.2
-

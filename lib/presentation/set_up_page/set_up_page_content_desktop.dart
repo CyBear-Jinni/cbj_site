@@ -316,7 +316,7 @@ class SetUpPageContentDesktop extends StatelessWidget {
                                         const Icon(Icons.error),
                                   ),
                                 ),
-                              )
+                              ),
                             ],
                           ),
                           const SizedBox(
@@ -369,7 +369,7 @@ class SetUpPageContentDesktop extends StatelessWidget {
                                         const Icon(Icons.error),
                                   ),
                                 ),
-                              )
+                              ),
                             ],
                           ),
                           const SizedBox(
@@ -422,7 +422,7 @@ class SetUpPageContentDesktop extends StatelessWidget {
                                         const Icon(Icons.error),
                                   ),
                                 ),
-                              )
+                              ),
                             ],
                           ),
                           const SizedBox(
@@ -568,7 +568,7 @@ class SetUpPageContentDesktop extends StatelessWidget {
                                     ),
                                   ),
                                 ],
-                              )
+                              ),
                             ],
                           ),
                         ],

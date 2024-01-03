@@ -76,25 +76,25 @@ class _$NewHomePageEventCopyWithImpl<$Res, $Val extends NewHomePageEvent>
 }
 
 /// @nodoc
-abstract class _$$InitializedCopyWith<$Res> {
-  factory _$$InitializedCopyWith(
-          _$Initialized value, $Res Function(_$Initialized) then) =
-      __$$InitializedCopyWithImpl<$Res>;
+abstract class _$$InitializedImplCopyWith<$Res> {
+  factory _$$InitializedImplCopyWith(
+          _$InitializedImpl value, $Res Function(_$InitializedImpl) then) =
+      __$$InitializedImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$InitializedCopyWithImpl<$Res>
-    extends _$NewHomePageEventCopyWithImpl<$Res, _$Initialized>
-    implements _$$InitializedCopyWith<$Res> {
-  __$$InitializedCopyWithImpl(
-      _$Initialized _value, $Res Function(_$Initialized) _then)
+class __$$InitializedImplCopyWithImpl<$Res>
+    extends _$NewHomePageEventCopyWithImpl<$Res, _$InitializedImpl>
+    implements _$$InitializedImplCopyWith<$Res> {
+  __$$InitializedImplCopyWithImpl(
+      _$InitializedImpl _value, $Res Function(_$InitializedImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$Initialized implements Initialized {
-  const _$Initialized();
+class _$InitializedImpl implements Initialized {
+  const _$InitializedImpl();
 
   @override
   String toString() {
@@ -102,9 +102,9 @@ class _$Initialized implements Initialized {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$Initialized);
+        (other.runtimeType == runtimeType && other is _$InitializedImpl);
   }
 
   @override
@@ -175,24 +175,24 @@ class _$Initialized implements Initialized {
 }
 
 abstract class Initialized implements NewHomePageEvent {
-  const factory Initialized() = _$Initialized;
+  const factory Initialized() = _$InitializedImpl;
 }
 
 /// @nodoc
-abstract class _$$ScrollPageCopyWith<$Res> {
-  factory _$$ScrollPageCopyWith(
-          _$ScrollPage value, $Res Function(_$ScrollPage) then) =
-      __$$ScrollPageCopyWithImpl<$Res>;
+abstract class _$$ScrollPageImplCopyWith<$Res> {
+  factory _$$ScrollPageImplCopyWith(
+          _$ScrollPageImpl value, $Res Function(_$ScrollPageImpl) then) =
+      __$$ScrollPageImplCopyWithImpl<$Res>;
   @useResult
   $Res call({double scrollPosition, int currentPage});
 }
 
 /// @nodoc
-class __$$ScrollPageCopyWithImpl<$Res>
-    extends _$NewHomePageEventCopyWithImpl<$Res, _$ScrollPage>
-    implements _$$ScrollPageCopyWith<$Res> {
-  __$$ScrollPageCopyWithImpl(
-      _$ScrollPage _value, $Res Function(_$ScrollPage) _then)
+class __$$ScrollPageImplCopyWithImpl<$Res>
+    extends _$NewHomePageEventCopyWithImpl<$Res, _$ScrollPageImpl>
+    implements _$$ScrollPageImplCopyWith<$Res> {
+  __$$ScrollPageImplCopyWithImpl(
+      _$ScrollPageImpl _value, $Res Function(_$ScrollPageImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -201,7 +201,7 @@ class __$$ScrollPageCopyWithImpl<$Res>
     Object? scrollPosition = null,
     Object? currentPage = null,
   }) {
-    return _then(_$ScrollPage(
+    return _then(_$ScrollPageImpl(
       null == scrollPosition
           ? _value.scrollPosition
           : scrollPosition // ignore: cast_nullable_to_non_nullable
@@ -216,8 +216,8 @@ class __$$ScrollPageCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ScrollPage implements ScrollPage {
-  const _$ScrollPage(this.scrollPosition, this.currentPage);
+class _$ScrollPageImpl implements ScrollPage {
+  const _$ScrollPageImpl(this.scrollPosition, this.currentPage);
 
   @override
   final double scrollPosition;
@@ -230,10 +230,10 @@ class _$ScrollPage implements ScrollPage {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ScrollPage &&
+            other is _$ScrollPageImpl &&
             (identical(other.scrollPosition, scrollPosition) ||
                 other.scrollPosition == scrollPosition) &&
             (identical(other.currentPage, currentPage) ||
@@ -246,8 +246,8 @@ class _$ScrollPage implements ScrollPage {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ScrollPageCopyWith<_$ScrollPage> get copyWith =>
-      __$$ScrollPageCopyWithImpl<_$ScrollPage>(this, _$identity);
+  _$$ScrollPageImplCopyWith<_$ScrollPageImpl> get copyWith =>
+      __$$ScrollPageImplCopyWithImpl<_$ScrollPageImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -315,12 +315,12 @@ class _$ScrollPage implements ScrollPage {
 
 abstract class ScrollPage implements NewHomePageEvent {
   const factory ScrollPage(final double scrollPosition, final int currentPage) =
-      _$ScrollPage;
+      _$ScrollPageImpl;
 
   double get scrollPosition;
   int get currentPage;
   @JsonKey(ignore: true)
-  _$$ScrollPageCopyWith<_$ScrollPage> get copyWith =>
+  _$$ScrollPageImplCopyWith<_$ScrollPageImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -397,25 +397,25 @@ class _$NewHomePageStateCopyWithImpl<$Res, $Val extends NewHomePageState>
 }
 
 /// @nodoc
-abstract class _$$_NewHomePageStateCopyWith<$Res> {
-  factory _$$_NewHomePageStateCopyWith(
-          _$_NewHomePageState value, $Res Function(_$_NewHomePageState) then) =
-      __$$_NewHomePageStateCopyWithImpl<$Res>;
+abstract class _$$NewHomePageStateImplCopyWith<$Res> {
+  factory _$$NewHomePageStateImplCopyWith(_$NewHomePageStateImpl value,
+          $Res Function(_$NewHomePageStateImpl) then) =
+      __$$NewHomePageStateImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_NewHomePageStateCopyWithImpl<$Res>
-    extends _$NewHomePageStateCopyWithImpl<$Res, _$_NewHomePageState>
-    implements _$$_NewHomePageStateCopyWith<$Res> {
-  __$$_NewHomePageStateCopyWithImpl(
-      _$_NewHomePageState _value, $Res Function(_$_NewHomePageState) _then)
+class __$$NewHomePageStateImplCopyWithImpl<$Res>
+    extends _$NewHomePageStateCopyWithImpl<$Res, _$NewHomePageStateImpl>
+    implements _$$NewHomePageStateImplCopyWith<$Res> {
+  __$$NewHomePageStateImplCopyWithImpl(_$NewHomePageStateImpl _value,
+      $Res Function(_$NewHomePageStateImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_NewHomePageState implements _NewHomePageState {
-  const _$_NewHomePageState();
+class _$NewHomePageStateImpl implements _NewHomePageState {
+  const _$NewHomePageStateImpl();
 
   @override
   String toString() {
@@ -423,9 +423,9 @@ class _$_NewHomePageState implements _NewHomePageState {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_NewHomePageState);
+        (other.runtimeType == runtimeType && other is _$NewHomePageStateImpl);
   }
 
   @override
@@ -507,22 +507,24 @@ class _$_NewHomePageState implements _NewHomePageState {
 }
 
 abstract class _NewHomePageState implements NewHomePageState {
-  const factory _NewHomePageState() = _$_NewHomePageState;
+  const factory _NewHomePageState() = _$NewHomePageStateImpl;
 }
 
 /// @nodoc
-abstract class _$$LoadingCopyWith<$Res> {
-  factory _$$LoadingCopyWith(_$Loading value, $Res Function(_$Loading) then) =
-      __$$LoadingCopyWithImpl<$Res>;
+abstract class _$$LoadingImplCopyWith<$Res> {
+  factory _$$LoadingImplCopyWith(
+          _$LoadingImpl value, $Res Function(_$LoadingImpl) then) =
+      __$$LoadingImplCopyWithImpl<$Res>;
   @useResult
   $Res call({double scrollPosition, int currentPage});
 }
 
 /// @nodoc
-class __$$LoadingCopyWithImpl<$Res>
-    extends _$NewHomePageStateCopyWithImpl<$Res, _$Loading>
-    implements _$$LoadingCopyWith<$Res> {
-  __$$LoadingCopyWithImpl(_$Loading _value, $Res Function(_$Loading) _then)
+class __$$LoadingImplCopyWithImpl<$Res>
+    extends _$NewHomePageStateCopyWithImpl<$Res, _$LoadingImpl>
+    implements _$$LoadingImplCopyWith<$Res> {
+  __$$LoadingImplCopyWithImpl(
+      _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -531,7 +533,7 @@ class __$$LoadingCopyWithImpl<$Res>
     Object? scrollPosition = null,
     Object? currentPage = null,
   }) {
-    return _then(_$Loading(
+    return _then(_$LoadingImpl(
       null == scrollPosition
           ? _value.scrollPosition
           : scrollPosition // ignore: cast_nullable_to_non_nullable
@@ -546,8 +548,8 @@ class __$$LoadingCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$Loading implements Loading {
-  const _$Loading(this.scrollPosition, this.currentPage);
+class _$LoadingImpl implements Loading {
+  const _$LoadingImpl(this.scrollPosition, this.currentPage);
 
   @override
   final double scrollPosition;
@@ -560,10 +562,10 @@ class _$Loading implements Loading {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$Loading &&
+            other is _$LoadingImpl &&
             (identical(other.scrollPosition, scrollPosition) ||
                 other.scrollPosition == scrollPosition) &&
             (identical(other.currentPage, currentPage) ||
@@ -576,8 +578,8 @@ class _$Loading implements Loading {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$LoadingCopyWith<_$Loading> get copyWith =>
-      __$$LoadingCopyWithImpl<_$Loading>(this, _$identity);
+  _$$LoadingImplCopyWith<_$LoadingImpl> get copyWith =>
+      __$$LoadingImplCopyWithImpl<_$LoadingImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -656,28 +658,30 @@ class _$Loading implements Loading {
 
 abstract class Loading implements NewHomePageState {
   const factory Loading(final double scrollPosition, final int currentPage) =
-      _$Loading;
+      _$LoadingImpl;
 
   double get scrollPosition;
   int get currentPage;
   @JsonKey(ignore: true)
-  _$$LoadingCopyWith<_$Loading> get copyWith =>
+  _$$LoadingImplCopyWith<_$LoadingImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$LoadedCopyWith<$Res> {
-  factory _$$LoadedCopyWith(_$Loaded value, $Res Function(_$Loaded) then) =
-      __$$LoadedCopyWithImpl<$Res>;
+abstract class _$$LoadedImplCopyWith<$Res> {
+  factory _$$LoadedImplCopyWith(
+          _$LoadedImpl value, $Res Function(_$LoadedImpl) then) =
+      __$$LoadedImplCopyWithImpl<$Res>;
   @useResult
   $Res call({double scrollPosition, int currentPage});
 }
 
 /// @nodoc
-class __$$LoadedCopyWithImpl<$Res>
-    extends _$NewHomePageStateCopyWithImpl<$Res, _$Loaded>
-    implements _$$LoadedCopyWith<$Res> {
-  __$$LoadedCopyWithImpl(_$Loaded _value, $Res Function(_$Loaded) _then)
+class __$$LoadedImplCopyWithImpl<$Res>
+    extends _$NewHomePageStateCopyWithImpl<$Res, _$LoadedImpl>
+    implements _$$LoadedImplCopyWith<$Res> {
+  __$$LoadedImplCopyWithImpl(
+      _$LoadedImpl _value, $Res Function(_$LoadedImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -686,7 +690,7 @@ class __$$LoadedCopyWithImpl<$Res>
     Object? scrollPosition = null,
     Object? currentPage = null,
   }) {
-    return _then(_$Loaded(
+    return _then(_$LoadedImpl(
       null == scrollPosition
           ? _value.scrollPosition
           : scrollPosition // ignore: cast_nullable_to_non_nullable
@@ -701,8 +705,8 @@ class __$$LoadedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$Loaded implements Loaded {
-  const _$Loaded(this.scrollPosition, this.currentPage);
+class _$LoadedImpl implements Loaded {
+  const _$LoadedImpl(this.scrollPosition, this.currentPage);
 
   @override
   final double scrollPosition;
@@ -715,10 +719,10 @@ class _$Loaded implements Loaded {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$Loaded &&
+            other is _$LoadedImpl &&
             (identical(other.scrollPosition, scrollPosition) ||
                 other.scrollPosition == scrollPosition) &&
             (identical(other.currentPage, currentPage) ||
@@ -731,8 +735,8 @@ class _$Loaded implements Loaded {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$LoadedCopyWith<_$Loaded> get copyWith =>
-      __$$LoadedCopyWithImpl<_$Loaded>(this, _$identity);
+  _$$LoadedImplCopyWith<_$LoadedImpl> get copyWith =>
+      __$$LoadedImplCopyWithImpl<_$LoadedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -811,33 +815,35 @@ class _$Loaded implements Loaded {
 
 abstract class Loaded implements NewHomePageState {
   const factory Loaded(final double scrollPosition, final int currentPage) =
-      _$Loaded;
+      _$LoadedImpl;
 
   double get scrollPosition;
   int get currentPage;
   @JsonKey(ignore: true)
-  _$$LoadedCopyWith<_$Loaded> get copyWith =>
+  _$$LoadedImplCopyWith<_$LoadedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$ErrorCopyWith<$Res> {
-  factory _$$ErrorCopyWith(_$Error value, $Res Function(_$Error) then) =
-      __$$ErrorCopyWithImpl<$Res>;
+abstract class _$$ErrorImplCopyWith<$Res> {
+  factory _$$ErrorImplCopyWith(
+          _$ErrorImpl value, $Res Function(_$ErrorImpl) then) =
+      __$$ErrorImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$ErrorCopyWithImpl<$Res>
-    extends _$NewHomePageStateCopyWithImpl<$Res, _$Error>
-    implements _$$ErrorCopyWith<$Res> {
-  __$$ErrorCopyWithImpl(_$Error _value, $Res Function(_$Error) _then)
+class __$$ErrorImplCopyWithImpl<$Res>
+    extends _$NewHomePageStateCopyWithImpl<$Res, _$ErrorImpl>
+    implements _$$ErrorImplCopyWith<$Res> {
+  __$$ErrorImplCopyWithImpl(
+      _$ErrorImpl _value, $Res Function(_$ErrorImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$Error implements Error {
-  const _$Error();
+class _$ErrorImpl implements Error {
+  const _$ErrorImpl();
 
   @override
   String toString() {
@@ -845,9 +851,9 @@ class _$Error implements Error {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$Error);
+        (other.runtimeType == runtimeType && other is _$ErrorImpl);
   }
 
   @override
@@ -929,5 +935,5 @@ class _$Error implements Error {
 }
 
 abstract class Error implements NewHomePageState {
-  const factory Error() = _$Error;
+  const factory Error() = _$ErrorImpl;
 }

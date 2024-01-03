@@ -86,7 +86,7 @@ class HomePageSecondPart extends StatelessWidget {
                   const SizedBox(),
                 ],
               ),
-            )
+            ),
           ],
         ),
       ],

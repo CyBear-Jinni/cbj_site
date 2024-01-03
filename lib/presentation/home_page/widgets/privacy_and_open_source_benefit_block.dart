@@ -54,7 +54,7 @@ class PrivacyAndOpenSourceBenefitBlock extends StatelessWidget {
                         ),
                       ),
                     ],
-                  )
+                  ),
                 ],
               ),
               const SizedBox(

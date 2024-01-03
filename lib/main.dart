@@ -23,7 +23,7 @@ void main() async {
       supportedLocales: const <Locale>[
         Locale('en', 'US'),
       ],
-      path: 'assets/translations', // <-- change patch to your
+      path: 'assets/translations',
       fallbackLocale: const Locale('en', 'US'),
       child: MyApp(),
     ),
